@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vytera Labs Ltd — SaaS &amp; Mobile App Studio · A Dellow Holdings Company</title>
+<meta name="description" content="Vytera Labs Ltd is a software studio building SaaS platforms and mobile apps for the public and businesses. A subsidiary of Dellow Holdings Ltd, registered in England and Wales." />
+<link rel="canonical" href="https://www.vyteralabs.com/" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0B1017;
+    --ink-2:#111a26;
+    --ink-3:#0e151f;
+    --paper:#ECE6DA;
+    --paper-dim:#AEB6C2;
+    --muted:#6E7787;
+    --brass:#C2A05B;
+    --brass-soft:rgba(194,160,91,.16);
+    --line:rgba(236,230,218,.12);
+    --line-strong:rgba(236,230,218,.22);
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Inter",system-ui,-apple-system,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --wrap:1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+
+  /* subtle vertical grain of light from the top */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:radial-gradient(120% 80% at 50% -10%, rgba(194,160,91,.10), transparent 55%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--brass);color:var(--ink);}
+
+  :focus-visible{
+    outline:2px solid var(--brass);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  .wrap{
+    width:100%;
+    max-width:var(--wrap);
+    margin:0 auto;
+    padding:0 32px;
+    position:relative;
+    z-index:1;
+  }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin:0;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:20;
+    backdrop-filter:blur(10px);
+    background:rgba(11,16,23,.66);
+    border-bottom:1px solid transparent;
+    transition:border-color .4s ease, background .4s ease;
+  }
+  header.scrolled{
+    border-bottom:1px solid var(--line);
+    background:rgba(11,16,23,.86);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:70px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--paper);
+  }
+  .brand .mark{
+    width:26px;height:26px;
+    border:1px solid var(--brass);
+    display:grid;place-items:center;
+    font-family:var(--serif);
+    font-size:16px;
+    color:var(--brass);
+    letter-spacing:0;
+  }
+  .nav-links{
+    display:flex;
+    gap:34px;
+    font-size:13px;
+    font-family:var(--mono);
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--paper-dim);
+  }
+  .nav-links a{position:relative;padding:4px 0;transition:color .25s ease;}
+  .nav-links a::after{
+    content:"";
+    position:absolute;left:0;bottom:0;
+    width:0;height:1px;background:var(--brass);
+    transition:width .3s ease;
+  }
+  .nav-links a:hover{color:var(--paper);}
+  .nav-links a:hover::after{width:100%;}
+  .nav-links a.parent{color:var(--brass);}
+  .nav-links a.parent::after{background:var(--brass);}
+
+  .structure a text{transition:fill .25s ease;cursor:pointer;}
+  .structure a:hover text{fill:var(--paper);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:180px 0 110px;
+    position:relative;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(52px,8vw,104px);
+    line-height:.96;
+    letter-spacing:-.02em;
+    margin:22px 0 0;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--brass);
+  }
+  .lede{
+    margin:30px 0 0;
+    max-width:34ch;
+    font-size:clamp(18px,2.2vw,21px);
+    line-height:1.55;
+    color:var(--paper-dim);
+  }
+  .meta-row{
+    margin-top:40px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px 34px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:.06em;
+    color:var(--muted);
+  }
+  .meta-row span{display:inline-flex;gap:9px;align-items:center;}
+  .meta-row span::before{
+    content:"";width:5px;height:5px;background:var(--brass);
+    transform:rotate(45deg);flex:none;
+  }
+
+  /* structure diagram signature */
+  .structure{
+    position:relative;
+    aspect-ratio:1/1.04;
+    width:100%;
+  }
+  .structure svg{width:100%;height:100%;overflow:visible;}
+  .structure .node-label{
+    font-family:var(--mono);
+    font-size:9.2px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    fill:var(--paper-dim);
+  }
+  .structure .node-parent{
+    font-family:var(--mono);
+    font-size:9.6px;
+    letter-spacing:.16em;
+    fill:var(--brass);
+  }
+  .draw{
+    stroke-dasharray:var(--len);
+    stroke-dashoffset:var(--len);
+    animation:draw 1.6s ease forwards;
+    animation-delay:.5s;
+  }
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  .fade-node{opacity:0;animation:popNode .6s ease forwards;}
+  @keyframes popNode{to{opacity:1;}}
+
+  /* ---------- Sections ---------- */
+  section{position:relative;z-index:1;}
+  .band{
+    padding:104px 0;
+    border-top:1px solid var(--line);
+  }
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:18px;
+    margin-bottom:52px;
+  }
+  .sec-head .idx{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--brass);
+    letter-spacing:.1em;
+  }
+  .sec-head h2{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(30px,4.4vw,46px);
+    line-height:1.05;
+    letter-spacing:-.015em;
+    margin:0;
+  }
+
+  .prose-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px 64px;
+  }
+  .prose-grid p{
+    margin:0;
+    font-size:18px;
+    line-height:1.7;
+    color:var(--paper-dim);
+  }
+  .prose-grid p strong{color:var(--paper);font-weight:500;}
+  .lead-para{
+    grid-column:1 / -1;
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(22px,2.8vw,29px);
+    line-height:1.35;
+    color:var(--paper)!important;
+    letter-spacing:-.01em;
+    max-width:24ch;
+  }
+
+  /* principles */
+  .principles{
+    margin-top:64px;
+    border-top:1px solid var(--line);
+  }
+  .principle{
+    display:grid;
+    grid-template-columns:56px 1fr 2fr;
+    gap:28px;
+    align-items:start;
+    padding:30px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .principle .p-idx{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--brass);
+    padding-top:5px;
+  }
+  .principle h3{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:24px;
+    margin:0;
+    line-height:1.1;
+  }
+  .principle p{
+    margin:0;
+    color:var(--paper-dim);
+    font-size:16.5px;
+    line-height:1.65;
+  }
+
+  /* group / subsidiaries */
+  .group-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .subsid{
+    background:var(--ink);
+    padding:40px 38px 44px;
+  }
+  .subsid .s-tag{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin:0 0 22px;
+    display:flex;align-items:center;gap:11px;
+  }
+  .subsid .s-tag::before{content:"";width:24px;height:1px;background:var(--brass);}
+  .subsid h3{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:27px;
+    line-height:1.1;
+    margin:0 0 15px;
+  }
+  .subsid p{
+    margin:0;
+    color:var(--paper-dim);
+    font-size:16.5px;
+    line-height:1.66;
+  }
+  @media (max-width:900px){
+    .group-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Register ---------- */
+  .register-band{background:var(--ink-3);}
+  .register{
+    border:1px solid var(--line-strong);
+    background:linear-gradient(180deg,rgba(194,160,91,.05),transparent 40%);
+  }
+  .register-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 30px;
+    border-bottom:1px solid var(--line);
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .register-top .seal{color:var(--brass);}
+  .rows{display:grid;grid-template-columns:1fr 1fr;}
+  .rrow{
+    padding:26px 30px;
+    border-bottom:1px solid var(--line);
+    border-right:1px solid var(--line);
+  }
+  .rrow:nth-child(even){border-right:none;}
+  .rrow.full{grid-column:1 / -1;border-right:none;border-bottom:none;}
+  .rlabel{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0 0 10px;
+  }
+  .rvalue{
+    font-size:17px;
+    line-height:1.5;
+    margin:0;
+    color:var(--paper);
+  }
+  .rvalue.mono{font-family:var(--mono);font-size:15px;letter-spacing:.02em;}
+  .rvalue a{color:var(--brass);border-bottom:1px solid var(--brass-soft);transition:border-color .25s;}
+  .rvalue a:hover{border-color:var(--brass);}
+  .status-pill{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:var(--mono);font-size:14px;color:var(--paper);
+  }
+  .status-pill::before{
+    content:"";width:8px;height:8px;border-radius:50%;
+    background:#7BC47F;box-shadow:0 0 0 4px rgba(123,196,127,.15);
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-band{text-align:center;padding:120px 0;}
+  .contact-band .eyebrow{margin-bottom:24px;}
+  .contact-band h2{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(30px,5vw,54px);
+    line-height:1.05;
+    letter-spacing:-.02em;
+    margin:0 0 34px;
+  }
+  .mail-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+    font-family:var(--mono);
+    font-size:16px;
+    letter-spacing:.04em;
+    padding:18px 30px;
+    border:1px solid var(--line-strong);
+    color:var(--paper);
+    transition:border-color .3s ease, background .3s ease, color .3s ease;
+  }
+  .mail-btn:hover{
+    border-color:var(--brass);
+    background:var(--brass-soft);
+    color:var(--paper);
+  }
+  .mail-btn .arrow{color:var(--brass);transition:transform .3s ease;}
+  .mail-btn:hover .arrow{transform:translateX(4px);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    padding:56px 0 46px;
+    position:relative;
+    z-index:1;
+  }
+  .foot-grid{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+  }
+  .foot-brand{
+    font-family:var(--serif);
+    font-size:22px;
+    letter-spacing:-.01em;
+  }
+  .foot-addr{
+    font-family:var(--mono);
+    font-size:12.5px;
+    line-height:1.9;
+    color:var(--muted);
+    font-style:normal;
+  }
+  .foot-note{
+    margin-top:38px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.05em;
+    color:var(--muted);
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:48px;}
+    .structure{max-width:420px;margin:0 auto;order:2;}
+    .prose-grid{grid-template-columns:1fr;}
+    .lead-para{max-width:none;}
+    .principle{grid-template-columns:40px 1fr;gap:16px 20px;}
+    .principle p{grid-column:2;}
+    .rows{grid-template-columns:1fr;}
+    .rrow{border-right:none;}
+    .nav-links{display:none;}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 22px;}
+    body{font-size:16px;}
+    .hero{padding:140px 0 80px;}
+    .band{padding:78px 0;}
+    .foot-note{flex-direction:column;gap:8px;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;}
+    .reveal{opacity:1;transform:none;}
+    .draw{stroke-dashoffset:0;}
+    .fade-node{opacity:1;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Vytera Labs Ltd home">
+        <span class="mark">V</span>
+        <span>Vytera Labs</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#build">What we build</a>
+        <a href="#process">Process</a>
+        <a href="#register">Details</a>
+        <a class="parent" href="https://www.dellowholdings.com">↑ Dellow Holdings</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Software Studio · A Dellow Holdings Company</p>
+          <h1>Vytera<br><em>Labs</em></h1>
+          <p class="lede">A software studio building SaaS platforms and mobile apps — designed, built and published for people and businesses.</p>
+          <div class="meta-row">
+            <span>Registered in England &amp; Wales</span>
+            <span>Company 17389107</span>
+            <span>SaaS &amp; mobile</span>
+          </div>
+        </div>
+
+        <!-- Signature: the product structure, linked up to the parent -->
+        <div class="structure" aria-hidden="true">
+          <svg viewBox="0 0 300 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- parent link (dashed, up to Dellow Holdings) -->
+            <path class="draw" style="--len:22" d="M150 30 L150 48" stroke="var(--brass)" stroke-width="1" stroke-dasharray="3 3"/>
+            <!-- connecting lines -->
+            <path class="draw" style="--len:54" d="M150 96 L150 150" stroke="var(--brass)" stroke-width="1"/>
+            <path class="draw" style="--len:124" d="M150 150 L77 150 L77 200" stroke="var(--brass)" stroke-width="1"/>
+            <path class="draw" style="--len:124" d="M150 150 L223 150 L223 200" stroke="var(--brass)" stroke-width="1"/>
+
+            <!-- parent label (clickable) -->
+            <a href="https://www.dellowholdings.com" class="fade-node" style="animation-delay:.1s">
+              <text x="150" y="22" text-anchor="middle" class="node-parent">DELLOW HOLDINGS ↑</text>
+            </a>
+
+            <!-- this company -->
+            <g class="fade-node" style="animation-delay:.35s">
+              <rect x="86" y="48" width="128" height="48" stroke="var(--brass)" stroke-width="1" fill="rgba(194,160,91,.08)"/>
+              <text x="150" y="70" text-anchor="middle" class="node-parent">VYTERA</text>
+              <text x="150" y="83" text-anchor="middle" class="node-parent">LABS</text>
+            </g>
+
+            <!-- product lines -->
+            <g class="fade-node" style="animation-delay:1.6s">
+              <rect x="25" y="200" width="104" height="46" stroke="var(--line-strong)" stroke-width="1" fill="var(--ink-2)"/>
+              <text x="77" y="221" text-anchor="middle" class="node-label">SaaS</text>
+              <text x="77" y="233" text-anchor="middle" class="node-label">Platforms</text>
+            </g>
+            <g class="fade-node" style="animation-delay:1.85s">
+              <rect x="171" y="200" width="104" height="46" stroke="var(--line-strong)" stroke-width="1" fill="var(--ink-2)"/>
+              <text x="223" y="221" text-anchor="middle" class="node-label">Mobile</text>
+              <text x="223" y="233" text-anchor="middle" class="node-label">Apps</text>
+            </g>
+
+            <!-- junction dots -->
+            <circle class="fade-node" style="animation-delay:1.4s" cx="150" cy="150" r="3" fill="var(--brass)"/>
+            <circle class="fade-node" style="animation-delay:1.4s" cx="150" cy="96" r="2.4" fill="var(--brass)"/>
+            <circle class="fade-node" style="animation-delay:.3s" cx="150" cy="48" r="2.4" fill="var(--brass)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="band" id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">01</span>
+        <h2>What Vytera Labs does</h2>
+      </div>
+      <div class="prose-grid">
+        <p class="lead-para reveal">Vytera Labs is a product company. It designs, builds and publishes its own software.</p>
+        <p class="reveal">We work in two forms. <strong>SaaS platforms</strong> — subscription web software that businesses sign in to and rely on. And <strong>mobile apps</strong> — published to the App Store and Google Play for consumers and businesses alike.</p>
+        <p class="reveal">Everything is owned outright. Vytera Labs develops its own intellectual property end to end, from first prototype to published product, and takes it to market directly — sold to the public and to businesses.</p>
+        <p class="reveal">The studio is the software arm of <a href="https://www.dellowholdings.com" style="color:var(--brass);border-bottom:1px solid var(--brass-soft);">Dellow Holdings</a>, the parent company — the group's engine for building and shipping digital products.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE BUILD -->
+  <section class="band" id="build">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">02</span>
+        <h2>What we build</h2>
+      </div>
+      <div class="group-grid reveal">
+        <div class="subsid">
+          <p class="s-tag">Product line 01</p>
+          <h3>SaaS Platforms</h3>
+          <p>Subscription web software for businesses — tools teams sign in to and depend on, billed recurringly and improved continuously. Built on scalable cloud back ends that carry real users.</p>
+        </div>
+        <div class="subsid">
+          <p class="s-tag">Product line 02</p>
+          <h3>Mobile Apps</h3>
+          <p>Consumer and business applications published to the App Store and Google Play — native-quality, launched direct to the public, and maintained release after release.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="band" id="process">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">03</span>
+        <h2>How we work</h2>
+      </div>
+      <div class="principles">
+        <div class="principle reveal">
+          <span class="p-idx">01</span>
+          <h3>Design</h3>
+          <p>Every product starts as a defined problem and a prototype — scoped, shaped and validated before a line of production code is written.</p>
+        </div>
+        <div class="principle reveal">
+          <span class="p-idx">02</span>
+          <h3>Build</h3>
+          <p>Engineered to ship: modern stacks, native-quality mobile, and cloud back ends built to scale with the users they carry.</p>
+        </div>
+        <div class="principle reveal">
+          <span class="p-idx">03</span>
+          <h3>Publish</h3>
+          <p>Taken to market and maintained — released to the stores and the web, then iterated on with the people and businesses who use it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER -->
+  <section class="band register-band" id="register">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">04</span>
+        <h2>Company details</h2>
+      </div>
+      <div class="register reveal">
+        <div class="register-top">
+          <span>Registered in England &amp; Wales</span>
+          <span class="seal">◆ On the register</span>
+        </div>
+        <div class="rows">
+          <div class="rrow">
+            <p class="rlabel">Company name</p>
+            <p class="rvalue">Vytera Labs Ltd</p>
+          </div>
+          <div class="rrow">
+            <p class="rlabel">Company number</p>
+            <p class="rvalue mono">17389107</p>
+          </div>
+          <div class="rrow">
+            <p class="rlabel">Company type</p>
+            <p class="rvalue">Private company limited by shares</p>
+          </div>
+          <div class="rrow">
+            <p class="rlabel">Incorporated on</p>
+            <p class="rvalue mono">10 August 2026</p>
+          </div>
+          <div class="rrow">
+            <p class="rlabel">Parent company</p>
+            <p class="rvalue"><a href="https://www.dellowholdings.com">Dellow Holdings Ltd</a></p>
+          </div>
+          <div class="rrow">
+            <p class="rlabel">Status</p>
+            <p class="rvalue"><span class="status-pill">Active</span></p>
+          </div>
+          <div class="rrow">
+            <p class="rlabel">Enquiries</p>
+            <p class="rvalue mono"><a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
+          </div>
+          <div class="rrow">
+            <p class="rlabel">Registered office</p>
+            <p class="rvalue mono">71–75 Shelton Street<br>Covent Garden<br>London&nbsp;&nbsp;WC2H&nbsp;9JQ<br>United Kingdom</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-band" id="contact">
+    <div class="wrap reveal">
+      <p class="eyebrow">Enquiries</p>
+      <h2>Talk to the studio.</h2>
+      <a class="mail-btn" href="mailto:info@vyteralabs.com">
+        info@vyteralabs.com
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Vytera Labs Ltd</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:32ch;">Software studio building SaaS and mobile apps. A subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <address class="foot-addr">
+        Registered office<br>
+        71–75 Shelton Street<br>
+        Covent Garden<br>
+        London&nbsp;&nbsp;WC2H&nbsp;9JQ<br>
+        United Kingdom
+      </address>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="https://www.dellowholdings.com" style="color:var(--muted);">Part of Dellow Holdings</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // header shadow on scroll
+  var header = document.getElementById('site-header');
+  var onScroll = function(){
+    if(window.scrollY > 12){ header.classList.add('scrolled'); }
+    else{ header.classList.remove('scrolled'); }
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // scroll reveal
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.14, rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+</script>
+</body>
+</html>
