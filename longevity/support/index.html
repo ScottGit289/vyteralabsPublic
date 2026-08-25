@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Support — Longevity Counter · Vytera Labs</title>
+<meta name="description" content="Support and frequently asked questions for Longevity Counter by Vytera Labs." />
+<link rel="canonical" href="https://www.vyteralabs.com/longevity/support/" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/longevity/brand.css" />
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="/longevity/"><span class="mark">V</span><span>Longevity Counter</span></a>
+      <div class="nav-links">
+        <a href="/longevity/">Overview</a>
+        <a href="/longevity/support/" aria-current="page">Support</a>
+        <a href="/longevity/privacy/">Privacy</a>
+        <a href="/longevity/terms/">Terms</a>
+        <a class="parent" href="/">↑ Vytera Labs</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <p class="eyebrow">Longevity Counter</p>
+  <h1>Support</h1>
+  <p class="meta">A Vytera Labs app</p>
+
+  <div class="note">
+    <strong>Contact us</strong>
+    <p style="margin:8px 0 0;color:var(--paper-dim);">Email <a href="mailto:support@vyteralabs.com">support@vyteralabs.com</a> — we aim to respond within 2–3 business days. When emailing, it helps to include your <strong>app version</strong> (Settings → Support) and, if relevant, an exported <strong>diagnostics log</strong> (Settings → Diagnostics → Share). The log is stored only on your device unless you choose to send it.</p>
+  </div>
+
+  <div class="section"><h2>Frequently asked questions</h2></div>
+
+  <h3>Does this predict when I'll die?</h3>
+  <p>No. Longevity Counter never predicts a date of death. It estimates population-level probabilities of reaching various ages from your data, and the numbers shift as your data changes.</p>
+
+  <h3>Where is my data stored?</h3>
+  <p>Entirely on your device. Nothing is uploaded to Vytera Labs. There are no accounts and no tracking. Use Settings → Export to back up or move to a new device.</p>
+
+  <h3>How accurate is it?</h3>
+  <p>It is an evidence-assembled statistical model, not a validated clinical risk score. Treat it as a well-calibrated illustration and a way to compare scenarios — not a diagnosis. See the <a href="/longevity/legal/">Medical Disclaimer</a>.</p>
+
+  <h3>Why did my numbers change?</h3>
+  <p>New readings (typed in or synced from a wearable) update the composite risk and therefore the forecast. The Trends tab tracks this over time. A value you type is used exactly as entered and overrides any wearable average for that metric until the next sync.</p>
+
+  <h3>Which metrics move my scores?</h3>
+  <p>Each ring reflects its own inputs — Cardiovascular (blood pressure, ApoB/LDL, resting heart rate), Metabolic (HbA1c/glucose, body composition), Fitness (VO₂max, steps, exercise), Lifestyle (smoking, alcohol) and Recovery (sleep, HRV). The Forecast tab has a "How these are calculated &amp; what moves them" screen with the full breakdown.</p>
+
+  <h3>Which wearables are supported?</h3>
+  <p>Apple Health and Oura today; Garmin is planned. The app prefers 30/90/365-day averages for stability.</p>
+
+  <h3>How do I connect Apple Health?</h3>
+  <p>Wearables tab → Apple Health → grant read access, then "Sync now". Requires a real device with Health data.</p>
+
+  <h3>How do I connect Oura?</h3>
+  <p>Wearables → "Sign in with Oura". You sign in on Oura's own secure page (OAuth) — the app never sees your Oura password. The resulting tokens are stored in your device Keychain and used only to read your Oura data. Disconnect any time from the same screen.</p>
+
+  <h3>How do I delete everything?</h3>
+  <p>Settings → Delete all data. Uninstalling the app also removes on-device data.</p>
+
+  <div class="section"><h2>Legal</h2></div>
+  <ul>
+    <li><a href="/longevity/privacy/">Privacy Policy</a></li>
+    <li><a href="/longevity/terms/">Terms of Use (EULA)</a></li>
+    <li><a href="/longevity/legal/">Medical Disclaimer</a></li>
+  </ul>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Longevity Counter</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app. Vytera Labs Ltd is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/longevity/support/">Support</a>
+        <a href="/longevity/privacy/">Privacy Policy</a>
+        <a href="/longevity/terms/">Terms of Use (EULA)</a>
+        <a href="/longevity/legal/">Medical disclaimer</a>
+        <a href="mailto:support@vyteralabs.com">support@vyteralabs.com</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="/">vyteralabs.com</a></span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
