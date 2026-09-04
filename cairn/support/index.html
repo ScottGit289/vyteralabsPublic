@@ -8,7 +8,518 @@
 <link rel="canonical" href="https://vyteralabs.com/cairn/support/">
 <link rel="icon" href="../assets/cairn-icon.png">
 <link rel="apple-touch-icon" href="../assets/cairn-icon.png">
-<link rel="stylesheet" href="../assets/cairn.css">
+<!-- cairn:css:start -->
+<style>
+/* Cairn — the website.
+ *
+ * Deliberately the same shape as the app: no external requests of any kind.
+ * No web fonts, no CDN, no analytics, no trackers, no cookies, no JavaScript.
+ * A privacy-first app whose website phones Google for a typeface would be
+ * making a promise it has already broken in the footer.
+ *
+ * The palette is copied from scripts/make_colors.py, which is the single source
+ * of truth for the app's colours. Change it there first.
+ */
+
+:root {
+    color-scheme: light dark;
+
+    --canvas: #fafaf7;
+    --card: #ffffff;
+    --hairline: #e3e3e0;
+
+    --ink: #1c1c1f;
+    --ink-secondary: #6b6b73;
+    --ink-tertiary: #9999a1;
+
+    --accent: #335cb8;
+    --today: #db991f;
+    --upcoming: #b85733;
+    --anytime: #298070;
+    --someday: #736b94;
+    --inbox: #4770b3;
+    --logbook: #598c52;
+    --danger: #b8332e;
+
+    --shadow: 0 1px 2px rgba(28, 28, 31, 0.05), 0 8px 24px rgba(28, 28, 31, 0.05);
+
+    --measure: 40rem;
+    --page: 62rem;
+
+    --font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+        "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --canvas: #121214;
+        --card: #1f1f21;
+        --hairline: #36363b;
+
+        --ink: #f2f2f5;
+        --ink-secondary: #a8a8b3;
+        --ink-tertiary: #7a7a85;
+
+        --accent: #7099f5;
+        --today: #fabf47;
+        --upcoming: #f08f61;
+        --anytime: #5cc7ad;
+        --someday: #ada3db;
+        --inbox: #85adf5;
+        --logbook: #8ccc80;
+        --danger: #f57066;
+
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Reset ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Skip link -------------------------------------------------------------- */
+
+.skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 0 0 8px 0;
+    z-index: 10;
+}
+
+.skip:focus {
+    left: 0;
+}
+
+/* Layout ----------------------------------------------------------------- */
+
+.wrap {
+    max-width: var(--page);
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.masthead {
+    border-bottom: 1px solid var(--hairline);
+    background: var(--card);
+}
+
+.masthead .wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+}
+
+.masthead img {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+}
+
+.masthead .name {
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    font-size: 1.05rem;
+}
+
+.masthead nav {
+    margin-left: auto;
+    display: flex;
+    gap: 1.1rem;
+    font-size: 0.95rem;
+}
+
+.masthead nav a {
+    color: var(--ink-secondary);
+    text-decoration: none;
+}
+
+.masthead nav a:hover,
+.masthead nav a[aria-current="page"] {
+    color: var(--ink);
+}
+
+main {
+    padding: 2.5rem 0 3.5rem;
+}
+
+section {
+    margin: 0 0 3rem;
+}
+
+.measure {
+    max-width: var(--measure);
+}
+
+/* Type ------------------------------------------------------------------- */
+
+h1,
+h2,
+h3 {
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0 0 0.6rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: clamp(1.35rem, 1.1rem + 1vw, 1.7rem);
+    font-weight: 650;
+    margin-top: 2.5rem;
+}
+
+h3 {
+    font-size: 1.08rem;
+    font-weight: 620;
+    margin-top: 1.6rem;
+}
+
+p,
+ul,
+ol {
+    margin: 0 0 1rem;
+}
+
+ul,
+ol {
+    padding-left: 1.3rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+a {
+    color: var(--accent);
+    text-underline-offset: 0.16em;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+strong {
+    font-weight: 640;
+}
+
+code {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 5px;
+    padding: 0.08em 0.35em;
+}
+
+.lede {
+    font-size: 1.2rem;
+    color: var(--ink-secondary);
+    max-width: var(--measure);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    font-weight: 650;
+    color: var(--ink-tertiary);
+    margin: 0 0 0.5rem;
+}
+
+.muted {
+    color: var(--ink-secondary);
+}
+
+.small {
+    font-size: 0.9rem;
+}
+
+/* Hero ------------------------------------------------------------------- */
+
+.hero {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.hero img {
+    width: 92px;
+    height: 92px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    flex: none;
+}
+
+.hero-text {
+    flex: 1 1 22rem;
+}
+
+.status {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--anytime);
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    margin-top: 0.4rem;
+}
+
+/* Cards ------------------------------------------------------------------ */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 1.2rem 1.3rem;
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p:last-child,
+.card ul:last-child {
+    margin-bottom: 0;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.tint-inbox {
+    border-left: 3px solid var(--inbox);
+}
+.tint-today {
+    border-left: 3px solid var(--today);
+}
+.tint-upcoming {
+    border-left: 3px solid var(--upcoming);
+}
+.tint-anytime {
+    border-left: 3px solid var(--anytime);
+}
+.tint-someday {
+    border-left: 3px solid var(--someday);
+}
+.tint-logbook {
+    border-left: 3px solid var(--logbook);
+}
+
+/* The capture example ---------------------------------------------------- */
+
+.capture {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: var(--shadow);
+    max-width: var(--measure);
+}
+
+.capture .typed {
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    margin: 0 0 0.85rem;
+    word-break: break-word;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chips li {
+    font-size: 0.82rem;
+    font-weight: 560;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    padding: 0.15rem 0.65rem;
+    margin: 0;
+    color: var(--ink-secondary);
+}
+
+.chips li.is-deadline {
+    color: var(--danger);
+}
+.chips li.is-when {
+    color: var(--today);
+}
+.chips li.is-project {
+    color: var(--accent);
+}
+.chips li.is-tag {
+    color: var(--anytime);
+}
+.chips li.is-priority {
+    color: var(--upcoming);
+}
+
+/* Tables ----------------------------------------------------------------- */
+
+.table-scroll {
+    overflow-x: auto;
+    margin: 0 0 1.2rem;
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    background: var(--card);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.95rem;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+}
+
+thead th {
+    font-weight: 620;
+    color: var(--ink-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Never list ------------------------------------------------------------- */
+
+.never {
+    list-style: none;
+    padding: 0;
+    max-width: var(--measure);
+}
+
+.never li {
+    position: relative;
+    padding-left: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.never li::before {
+    content: "\2014";
+    position: absolute;
+    left: 0;
+    color: var(--anytime);
+    font-weight: 700;
+}
+
+/* FAQ -------------------------------------------------------------------- */
+
+.faq {
+    max-width: var(--measure);
+}
+
+.faq h3 {
+    margin-top: 2rem;
+}
+
+.contact {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 1.3rem;
+    box-shadow: var(--shadow);
+    max-width: var(--measure);
+}
+
+.contact .email {
+    font-size: 1.15rem;
+    font-weight: 620;
+}
+
+/* Footer ----------------------------------------------------------------- */
+
+footer {
+    border-top: 1px solid var(--hairline);
+    background: var(--card);
+    padding: 1.6rem 0 2.2rem;
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+}
+
+footer nav {
+    display: flex;
+    gap: 1.1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.7rem;
+}
+
+footer p {
+    margin: 0 0 0.3rem;
+}
+
+/* Print ------------------------------------------------------------------ */
+
+@media print {
+    .masthead nav,
+    .skip {
+        display: none;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+}
+</style>
+<!-- cairn:css:end -->
 </head>
 <body>
 
