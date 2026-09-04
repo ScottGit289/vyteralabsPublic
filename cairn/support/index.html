@@ -1,1 +1,244 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cairn — Support</title>
+<meta name="description" content="Help for Cairn: how to get in touch, answers to the questions we are asked most, and how to report a problem.">
+<link rel="canonical" href="https://vyteralabs.com/cairn/support/">
+<link rel="icon" href="../assets/cairn-icon.png">
+<link rel="apple-touch-icon" href="../assets/cairn-icon.png">
+<link rel="stylesheet" href="../assets/cairn.css">
+</head>
+<body>
 
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+    <div class="wrap">
+        <img src="../assets/cairn-icon.png" alt="">
+        <span class="name">Cairn</span>
+        <nav aria-label="Primary">
+            <a href="../">Overview</a>
+            <a href="./" aria-current="page">Support</a>
+            <a href="../privacy/">Privacy</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+
+    <p class="eyebrow">Support</p>
+    <h1>Something not working?</h1>
+    <p class="lede">
+        Cairn is made by a small team. Email a person, get a person.
+    </p>
+
+    <div class="contact" style="margin-top:1.6rem">
+        <p class="email"><a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
+        <p class="muted" style="margin-bottom:0">
+            We read every message and reply as quickly as we can. There is no
+            ticket system, no chatbot and no account to log into — because there
+            is no account at all.
+        </p>
+    </div>
+
+    <section>
+        <h2>Before you email: the fastest fixes</h2>
+        <p class="measure">
+            Cairn has a complete user guide built in. Open
+            <strong>Settings → User guide</strong>, or tap the <strong>?</strong>
+            on any screen to jump straight to the relevant section. It covers
+            everything below and rather more besides.
+        </p>
+    </section>
+
+    <section class="faq">
+        <h2>Questions we are asked most</h2>
+
+        <h3>Why does iOS ask for calendar "Full Access" when Cairn only reads?</h3>
+        <p>
+            Because iOS does not offer a read-only choice. Since iOS 17 an app
+            can hold exactly three calendar states: <em>None</em>,
+            <em>Add Events Only</em> (which grants writing without reading), and
+            <em>Full Access</em> (read and write). There is no fourth option.
+            Reading your meetings requires Full Access, so that is what Cairn has
+            to ask for.
+        </p>
+        <p>
+            <em>Add Events Only</em> is the worst choice for Cairn: it hands over
+            the one power it never uses and withholds the only one it needs. What
+            stops Cairn writing is the code, not the permission — the app
+            contains no calendar-write call, and does not declare the write-only
+            usage description iOS would require to run one.
+            <a href="../privacy/#calendar">The privacy policy sets this out in
+            full.</a>
+        </p>
+
+        <h3>I picked the wrong calendar option. How do I change it?</h3>
+        <p>
+            iOS only asks once. Open <strong>Settings → Calendar</strong> in
+            Cairn and tap <strong>Open iOS Settings</strong>, or go to
+            <strong>iOS Settings → Privacy &amp; Security → Calendars →
+            Cairn</strong> and choose <em>Full Access</em>.
+        </p>
+
+        <h3>Where is my data, and how do I move it to a new phone?</h3>
+        <p>
+            On your device, in the app's own sandbox. There is no cloud copy, so
+            moving devices is a deliberate act:
+        </p>
+        <ol>
+            <li>On the old device: <strong>Settings → Export a backup</strong>. You get a plain JSON file.</li>
+            <li>Get the file onto the new device however you like — AirDrop, Files, email to yourself.</li>
+            <li>On the new device: install Cairn, then <strong>Restore → Replace</strong>.</li>
+        </ol>
+        <p>
+            Your normal encrypted iPhone backup also includes Cairn's data, so
+            restoring a device from backup restores your library with it.
+        </p>
+
+        <h3>Why is there no sync?</h3>
+        <p>
+            Because sync requires either an account with us or your data passing
+            through iCloud, and the promise on the front page is that neither
+            happens. It is a deliberate trade, not an oversight. Export and
+            restore is the supported way to move a library between devices.
+        </p>
+
+        <h3>The weekly review said something I did not like.</h3>
+        <p>
+            Change its tone. Tap <strong>Aa</strong> on the review screen, or
+            open <strong>Settings → Weekly review</strong>, and choose
+            Supportive, Encouraging, Friendly, Just the facts, or Direct. The
+            figures and findings are identical in all five — only the wording
+            changes.
+        </p>
+        <p>
+            If a review ever comments on <em>you</em> rather than on the work,
+            that is a bug and we want to know. Please send us the exact wording.
+        </p>
+
+        <h3>Apple Intelligence features are missing or greyed out.</h3>
+        <p>Three things have to be true, and any one of them can be the cause:</p>
+        <ul>
+            <li>The device runs iOS 26 or later and supports Apple Intelligence.</li>
+            <li>Apple Intelligence is switched on in iOS Settings, and the model has finished downloading.</li>
+            <li><strong>Settings → Use Apple Intelligence</strong> is on inside Cairn.</li>
+        </ul>
+        <p>
+            <strong>Settings → What runs on this device</strong> tells you which
+            of these is true right now. If none of them are, nothing is lost:
+            the parser, planner, scorer, review engine and search are Cairn's own
+            code and run on every supported device regardless.
+        </p>
+
+        <h3>Reminders are not arriving.</h3>
+        <p>
+            Check notifications are allowed in <strong>iOS Settings →
+            Notifications → Cairn</strong>, then tap
+            <strong>Settings → Re-check notification permission</strong> in
+            Cairn, which also reschedules everything outstanding. Reminders are
+            scheduled by your device; if a to-do has no reminder time set, none
+            is scheduled.
+        </p>
+
+        <h3>Plan My Day left out something I wanted in.</h3>
+        <p>
+            By design, the automatic plan does not reach into Upcoming or Someday
+            — dragging Friday's job into Monday would overrule a decision you had
+            already made. Use <strong>Pulled in by hand</strong> on the Plan
+            screen to add anything from Upcoming, Someday or a shelved project.
+            The plan screen also lists everything it held back and why.
+        </p>
+
+        <h3>Dark mode is not following my phone.</h3>
+        <p>
+            <strong>Settings → Appearance</strong> offers System, Light and Dark.
+            System follows the device; the other two override it.
+        </p>
+
+        <h3>Is my data included in my iCloud backup?</h3>
+        <p>
+            Yes, if you use encrypted iPhone backups — Cairn's database sits in
+            the app's sandbox, which is what a device backup covers. That is
+            Apple's backup of your device, not Cairn syncing anything. Cairn
+            itself never contacts iCloud or anything else.
+        </p>
+
+        <h3>How do I delete everything?</h3>
+        <p>
+            Delete the app, and it is gone — there is nothing anywhere else,
+            because there was never anything anywhere else.
+            <strong>Settings → Start fresh</strong> does the same without
+            removing the app. Both are irreversible, so export a backup first if
+            there is any doubt.
+        </p>
+    </section>
+
+    <section>
+        <h2>Reporting a bug</h2>
+        <p class="measure">
+            Cairn has no crash reporting and no telemetry, which means we learn
+            about problems only when someone tells us. If you can include the
+            following, we can usually work it out without a second email:
+        </p>
+        <ul class="measure">
+            <li>What you did, what you expected, and what happened instead.</li>
+            <li>The app version from <strong>Settings → About → Version</strong>.</li>
+            <li>Your iOS version and device model.</li>
+            <li>A screenshot, if there is anything to see.</li>
+        </ul>
+        <p class="measure">
+            Please do <strong>not</strong> send us a backup file unless we ask —
+            it contains your entire library, and we would rather not have it.
+        </p>
+    </section>
+
+    <section>
+        <h2>Accessibility</h2>
+        <p class="measure">
+            Cairn supports VoiceOver, Dynamic Type, Reduce Motion and increased
+            contrast throughout. If you hit something that does not work with
+            assistive technology, that is a defect and we treat it as one — tell
+            us and we will fix it.
+        </p>
+    </section>
+
+    <section>
+        <h2>Feature requests</h2>
+        <p class="measure">
+            Welcome, and genuinely read. The one thing we will keep saying no to
+            is anything that requires an account, a server or a network request.
+            That constraint is the product.
+        </p>
+        <p class="measure">
+            <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
+        </p>
+    </section>
+
+</div>
+</main>
+
+<footer>
+    <div class="wrap">
+        <nav aria-label="Footer">
+            <a href="../">Overview</a>
+            <a href="./">Support</a>
+            <a href="../privacy/">Privacy</a>
+            <a href="mailto:info@vyteralabs.com">Contact</a>
+        </nav>
+        <p>Cairn is made by Vytera Labs Ltd.</p>
+        <!-- UK company law requires a company's website to show its registered
+             name, company number, place of registration and registered office
+             address. Add them here before publishing. -->
+        <p class="small">
+            This site loads no fonts, scripts, cookies or trackers from anywhere.
+            It seemed the least we could do.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
