@@ -1,1 +1,290 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cairn — Privacy Policy</title>
+<meta name="description" content="Cairn collects no data. It contains no networking code, no analytics, no crash reporting and no third-party SDKs. This policy says exactly what is stored and where.">
+<link rel="canonical" href="https://vyteralabs.com/cairn/privacy/">
+<link rel="icon" href="../assets/cairn-icon.png">
+<link rel="apple-touch-icon" href="../assets/cairn-icon.png">
+<link rel="stylesheet" href="../assets/cairn.css">
+</head>
+<body>
 
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+    <div class="wrap">
+        <img src="../assets/cairn-icon.png" alt="">
+        <span class="name">Cairn</span>
+        <nav aria-label="Primary">
+            <a href="../">Overview</a>
+            <a href="../support/">Support</a>
+            <a href="./" aria-current="page">Privacy</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>Cairn collects nothing. It cannot.</h1>
+    <p class="muted small">
+        Applies to the Cairn iOS and iPadOS app, published by Vytera Labs Ltd.
+        Last updated <time datetime="2026-09-04">4 September 2026</time>.
+    </p>
+
+    <section>
+        <h2>The short version</h2>
+        <p class="measure">
+            Cairn does not collect any data. It cannot. The app contains no
+            networking code, no analytics, no crash reporting, no advertising
+            identifier and no third-party SDKs of any kind. Your to-dos are
+            stored on your device and nowhere else.
+        </p>
+        <p class="measure">
+            There is no account to create, so there is nothing to identify you
+            by. We do not know that you use Cairn, when you use it, or what is in
+            it.
+        </p>
+    </section>
+
+    <section>
+        <h2>What is stored, and where</h2>
+        <div class="table-scroll">
+            <table>
+                <thead>
+                    <tr><th scope="col">What</th><th scope="col">Where</th><th scope="col">Who can read it</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Your to-dos, projects, areas, tags and checklists</td>
+                        <td>A database inside the app's sandbox on your device</td>
+                        <td>Only you, on that device</td>
+                    </tr>
+                    <tr>
+                        <td>Your preferences (capacity, buffer, display options, review tone)</td>
+                        <td>The app's <code>UserDefaults</code>, in the same sandbox</td>
+                        <td>Only you, on that device</td>
+                    </tr>
+                    <tr>
+                        <td>A snapshot of today's list for the home-screen widget</td>
+                        <td>A shared App Group folder on your device</td>
+                        <td>Only the app and its own widget, on that device</td>
+                    </tr>
+                    <tr>
+                        <td>Reminders</td>
+                        <td>Local notifications scheduled by your device</td>
+                        <td>Only you</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="measure">
+            All of it is protected by your device passcode and included in your
+            normal encrypted device backup if you use one.
+        </p>
+    </section>
+
+    <section>
+        <h2>What Cairn does not do</h2>
+        <ul class="never">
+            <li>No account, sign-in or registration.</li>
+            <li>No sync — not to us, not to iCloud, not to anyone.</li>
+            <li>No analytics or telemetry of any kind.</li>
+            <li>No crash reporting.</li>
+            <li>No advertising, no advertising identifier, no tracking.</li>
+            <li>No third-party libraries or SDKs.</li>
+            <li>No network requests. The app makes none, at any time, for any reason.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Apple Intelligence</h2>
+        <p class="measure">
+            On iOS 26 and later, on a device with Apple Intelligence enabled,
+            three optional features use Apple's on-device Foundation Models
+            framework:
+        </p>
+        <ol class="measure">
+            <li>tidying up a rough captured note;</li>
+            <li>suggesting next steps for a project;</li>
+            <li>writing the opening paragraph of the weekly review.</li>
+        </ol>
+        <p class="measure">
+            These run on your device using a model that ships with iOS. Nothing
+            is sent to Apple, to us, or to anyone else. All three are optional,
+            produce suggestions you choose to accept, and are unnecessary — the
+            app is fully functional without them, and they can be switched off in
+            <strong>Settings → Use Apple Intelligence</strong>.
+        </p>
+        <p class="measure">
+            Search additionally uses the Natural Language framework's sentence
+            embeddings, which likewise ship with iOS and run locally.
+        </p>
+    </section>
+
+    <section id="calendar">
+        <h2>Your calendar</h2>
+        <p class="measure">
+            If you switch on <strong>Plan around my calendar</strong>, Cairn asks
+            iOS for calendar access and reads your events so it can subtract
+            booked time from your planning capacity.
+        </p>
+        <ul class="measure">
+            <li>It is <strong>off until you turn it on</strong>. Cairn never asks on launch.</li>
+            <li>It <strong>only reads</strong>. Cairn calls exactly two calendar APIs — one to ask for access, one to fetch events for a date range. There is no write, edit or delete call anywhere in the app.</li>
+            <li>Events are held in memory for the current session and are <strong>never copied into Cairn's database</strong>, never exported, and never sent anywhere.</li>
+            <li>Revoke it at any time in iOS Settings → Cairn → Calendars, or by switching the toggle off. Everything else keeps working.</li>
+        </ul>
+
+        <h3>Why iOS asks for "Full Access"</h3>
+        <p class="measure">
+            Because iOS does not offer a read-only choice. Since iOS 17 an app
+            can hold one of exactly three calendar states:
+        </p>
+        <div class="table-scroll" style="max-width:40rem">
+            <table>
+                <thead>
+                    <tr><th scope="col">iOS choice</th><th scope="col">What it actually grants</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>None</td><td>Nothing.</td></tr>
+                    <tr><td>Add Events Only</td><td><strong>Write</strong> without read: the app can create events it can never read back.</td></tr>
+                    <tr><td>Full Access</td><td>Read <strong>and</strong> write.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="measure">
+            There is no fourth "read only" option to pick. Reading your meetings
+            requires Full Access, so Full Access is what Cairn has to ask for —
+            and <strong>"Add Events Only" is the worst choice for Cairn</strong>,
+            because it hands over the one power Cairn never uses and withholds
+            the only one it needs.
+        </p>
+        <p class="measure">
+            What stops Cairn writing is therefore the code, not the permission:
+            the app contains no calendar-write call to run. Cairn also does not
+            declare <code>NSCalendarsWriteOnlyAccessUsageDescription</code> in
+            its <code>Info.plist</code>, so iOS would not permit it to write even
+            if such a call existed.
+        </p>
+    </section>
+
+    <section>
+        <h2>Notifications</h2>
+        <p class="measure">
+            If you allow notifications, Cairn schedules local reminders for the
+            to-dos you asked to be reminded about. These are created by your
+            device, delivered by your device, and never leave it. You may
+            decline; everything else keeps working.
+        </p>
+    </section>
+
+    <section>
+        <h2>Siri, Shortcuts and the widget</h2>
+        <p class="measure">
+            Cairn offers App Intents so you can add a to-do or check today's plan
+            by voice or from a Shortcut. These are handled by iOS on your device.
+            The home-screen widget reads a small snapshot of today's list from an
+            App Group folder shared between the app and its own widget on the
+            same device. Neither leaves the device.
+        </p>
+    </section>
+
+    <section>
+        <h2>Your data is yours</h2>
+        <p class="measure">
+            <strong>Settings → Export a backup</strong> writes a plain, readable,
+            versioned JSON file containing everything.
+            <strong>Export as Markdown</strong> writes a readable outline. You
+            can restore either onto any device running Cairn, and you can open
+            both in a text editor.
+        </p>
+        <p class="measure">
+            We believe local-only storage is only a promise worth making if you
+            can always get your data out, so getting it out is a two-tap
+            operation with no format lock-in.
+        </p>
+    </section>
+
+    <section>
+        <h2>Deleting your data</h2>
+        <p class="measure">
+            Deleting the app removes everything. There is nothing left anywhere
+            else, because there was never anything anywhere else.
+            <strong>Settings → Start fresh</strong> achieves the same without
+            deleting the app.
+        </p>
+    </section>
+
+    <section>
+        <h2>Your rights under UK GDPR</h2>
+        <p class="measure">
+            Rights of access, rectification, erasure, portability and objection
+            all concern personal data held by a controller. Vytera Labs Ltd holds
+            no personal data from Cairn: we never receive any, so there is
+            nothing for us to disclose, correct, erase or transfer.
+        </p>
+        <p class="measure">
+            In practice you exercise every one of those rights on your own device
+            — export gives you portability, editing gives you rectification, and
+            deleting the app gives you erasure. If you email us, we hold that
+            email in order to reply to you, and nothing more.
+        </p>
+    </section>
+
+    <section>
+        <h2>Children</h2>
+        <p class="measure">
+            Cairn is rated 4+. It collects nothing from anyone, of any age.
+        </p>
+    </section>
+
+    <section>
+        <h2>Changes to this policy</h2>
+        <p class="measure">
+            If a future version of Cairn ever gains a network feature, this
+            policy will be updated before that version ships, and the change will
+            be described in the release notes rather than buried here.
+        </p>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <div class="contact">
+            <p class="email"><a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
+            <p class="muted" style="margin-bottom:0">
+                Vytera Labs Ltd, the data controller for any correspondence you
+                choose to send us.
+            </p>
+            <!-- Add the registered office address and company number here. -->
+        </div>
+    </section>
+
+</div>
+</main>
+
+<footer>
+    <div class="wrap">
+        <nav aria-label="Footer">
+            <a href="../">Overview</a>
+            <a href="../support/">Support</a>
+            <a href="./">Privacy</a>
+            <a href="mailto:info@vyteralabs.com">Contact</a>
+        </nav>
+        <p>Cairn is made by Vytera Labs Ltd.</p>
+        <!-- UK company law requires a company's website to show its registered
+             name, company number, place of registration and registered office
+             address. Add them here before publishing. -->
+        <p class="small">
+            This site loads no fonts, scripts, cookies or trackers from anywhere.
+            It seemed the least we could do.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
