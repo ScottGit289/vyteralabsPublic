@@ -2,158 +2,206 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anchor — pelvic floor exercises for men</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anchor — pelvic floor training for men</title>
 <meta name="description" content="A free, private iPhone app that helps men do the pelvic floor exercises they were given after prostate surgery, and keep doing them.">
-<link rel="canonical" href="https://vyteralabs.com/anchor">
-<meta name="color-scheme" content="light dark">
-<meta property="og:title" content="Anchor — pelvic floor exercises for men">
+<link rel="canonical" href="https://www.vyteralabs.com/anchor/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0B1017">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="Anchor — pelvic floor training for men">
 <meta property="og:description" content="A free, private iPhone app that helps men do the pelvic floor exercises they were given after prostate surgery, and keep doing them.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://vyteralabs.com/anchor">
-<style>
-  :root {
-    --ink: #16201e;
-    --muted: #55635f;
-    --ground: #f5f7f6;
-    --card: #ffffff;
-    --line: #dfe5e3;
-    --brand: #287873;
-    --brand-ink: #1d5a56;
-    --warn: #b8730f;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ink: #e9efed;
-      --muted: #9dadaa;
-      --ground: #111614;
-      --card: #1a2320;
-      --line: #2a3733;
-      --brand: #5cbdad;
-      --brand-ink: #8fd6c9;
-      --warn: #f0b45a;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--ground);
-    color: var(--ink);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
-  header.site { padding: 28px 0 8px; }
-  .brandmark { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
-  .brandmark .ring {
-    width: 30px; height: 30px; border-radius: 50%;
-    border: 5px solid var(--brand); position: relative; flex: none;
-  }
-  .brandmark .ring::after {
-    content: ""; position: absolute; inset: 6px; border-radius: 50%; background: var(--brand);
-  }
-  .brandmark strong { font-size: 19px; letter-spacing: -0.01em; }
-  h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.15; letter-spacing: -0.02em; margin: 28px 0 12px; }
-  h2 { font-size: 22px; letter-spacing: -0.01em; margin: 40px 0 10px; }
-  h3 { font-size: 17px; margin: 26px 0 6px; }
-  p { margin: 0 0 14px; }
-  .lead { font-size: 20px; color: var(--muted); }
-  ul { padding-left: 22px; margin: 0 0 16px; }
-  li { margin-bottom: 8px; }
-  a { color: var(--brand-ink); }
-  .card {
-    background: var(--card); border: 1px solid var(--line);
-    border-radius: 14px; padding: 20px; margin: 18px 0;
-  }
-  .cta {
-    display: inline-block; background: var(--brand); color: #fff; font-weight: 600;
-    text-decoration: none; padding: 13px 22px; border-radius: 11px; margin: 6px 0 4px;
-  }
-  .note { color: var(--muted); font-size: 15px; }
-  .warn { border-left: 4px solid var(--warn); padding-left: 14px; }
-  footer.site {
-    margin-top: 56px; padding: 24px 0 48px;
-    border-top: 1px solid var(--line); color: var(--muted); font-size: 15px;
-  }
-  footer.site a { color: var(--muted); }
-  .rowlinks { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 10px; }
-</style>
+<meta property="og:url" content="https://www.vyteralabs.com/anchor/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/anchor/brand.css?v=1">
 </head>
 <body>
-<div class="wrap">
-<header class="site">
-  <a class="brandmark" href="/anchor"><span class="ring" aria-hidden="true"></span><strong>Anchor</strong></a>
+
+<header class="site" id="siteHeader">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="/anchor/" aria-label="Anchor, by Vytera Labs">
+        <span class="mark" aria-hidden="true">V</span><span>Anchor</span>
+      </a>
+      <div class="nav-links">
+        <a href="/anchor/" aria-current="page">Overview</a>
+        <a href="/anchor/support/">Support</a>
+        <a href="/anchor/terms/">Terms</a>
+        <a href="/anchor/privacy/">Privacy</a>
+        <a class="parent optional" href="/">&uarr; Vytera Labs</a>
+      </div>
+    </nav>
+  </div>
 </header>
+
 <main>
-<h1>Pelvic floor exercises for men, built around prostate recovery.</h1>
-<p class="lead">Free. Private. Nothing to sign up to.</p>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Vytera Labs &middot; iPhone</p>
+        <h1>Pelvic floor training for men, built around <em>prostate recovery</em>.</h1>
+        <p class="lede">Free. Private. Nothing to sign up to, and nothing that leaves your phone.</p>
+        <div class="meta-row">
+          <span>iPhone &middot; iOS 17+</span>
+          <span>No account</span>
+          <span>No adverts</span>
+          <span>No tracking</span>
+        </div>
+        <div class="cta-row">
+          <!-- Replace APP_ID_HERE with the real App Store ID once the app is live. -->
+          <a class="mail-btn" href="https://apps.apple.com/gb/app/idAPP_ID_HERE">
+            Download on the App Store <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+      <div class="ringmark" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <circle class="draw" style="--len:534" cx="100" cy="100" r="85"
+                  fill="none" stroke="#C2A05B" stroke-width="1"
+                  transform="rotate(-90 100 100)"></circle>
+          <circle class="draw" style="--len:377" cx="100" cy="100" r="60"
+                  fill="none" stroke="rgba(236,230,218,.28)" stroke-width="1"
+                  stroke-dasharray="377" transform="rotate(-90 100 100)"></circle>
+          <circle class="core" cx="100" cy="100" r="15" fill="#ECE6DA"></circle>
+          <line class="draw" style="--len:30" x1="100" y1="0" x2="100" y2="30"
+                stroke="rgba(236,230,218,.18)" stroke-width="1"></line>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Replace the href below with the real App Store link once the app is live. -->
-<p><a class="cta" href="https://apps.apple.com/gb/app/idAPP_ID_HERE">Download on the App Store</a></p>
-<p class="note">iPhone, iOS 17 or later.</p>
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01</span><h2>The problem it solves</h2></div>
+    <div class="prose">
+      <p class="lead-para">After prostate surgery you are told to do pelvic floor exercises three times a day, for at least three months.</p>
+      <p>Almost nobody does. The sheet gets lost, the reminder never comes, and by the time
+      of the follow-up appointment nobody can say what was actually done.</p>
+      <p><strong>Anchor is a quiet timer, a reminder that arrives, and a record you can hand
+      to your physiotherapist.</strong> It does not assess you and it does not treat you. It
+      makes the programme you were given happen.</p>
+    </div>
+  </div>
+</section>
 
-<p>After prostate surgery you will be told to do pelvic floor exercises three times a
-day, for at least three months. Almost nobody does. Anchor is a quiet timer, a
-reminder that actually arrives, and a record you can hand to your physiotherapist.</p>
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02</span><h2>What it does</h2></div>
+    <div class="principles">
+      <div class="principle">
+        <div class="p-idx">01</div>
+        <h3>Built for where you are</h3>
+        <p>Before surgery. Catheter still in. Catheter just out. Months down the line.
+        Anchor asks, and sets a starting programme to match. If your catheter is still in it
+        holds the programme &mdash; because UK guidance is to start active exercises once it has
+        been removed. Your team decides when, not an app.</p>
+      </div>
+      <div class="principle">
+        <div class="p-idx">02</div>
+        <h3>A set, done discreetly</h3>
+        <p>A calm ring counts you through long squeezes and quick squeezes. Vibration-only
+        cues as standard, spoken cues if you would rather keep the phone in your pocket.
+        Stop early and what you did still counts &mdash; squeezing to fatigue and stopping is
+        correct technique, not a failure.</p>
+      </div>
+      <div class="principle">
+        <div class="p-idx">03</div>
+        <h3>A diary worth keeping</h3>
+        <p>Leaks, pads, drinks, trips to the toilet &mdash; how much, and what you were doing at
+        the time. Three days of honest recording tells a continence nurse more than a month
+        of describing it from memory. Share a summary and CSV files straight from your phone.</p>
+      </div>
+      <div class="principle">
+        <div class="p-idx">04</div>
+        <h3>Straight answers</h3>
+        <p>Short pieces on finding the right muscle, what to expect after surgery, the
+        mistakes that quietly stop it working, and an honest read of the evidence &mdash;
+        including where that evidence is uncertain. Every article names its published sources.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>Built for where you are</h2>
-<p>Before surgery. Catheter still in. Catheter just out. Months down the line.
-Anchor asks, and sets a starting programme to match.</p>
-<p>If your catheter is still in, it holds the programme &mdash; because UK guidance is to
-start active exercises once it has been removed. Your team decides when, not an app.</p>
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03</span><h2>Nothing leaves your phone</h2></div>
+    <div class="panel">
+      <div class="panel-top">
+        <span>Data collected</span>
+        <span class="seal">None</span>
+      </div>
+      <div class="panel-body">
+        <p>No account. No sign-in. No analytics. No cloud. Anchor contains no networking
+        code at all &mdash; your exercise record and your diary are on your device and nowhere else.</p>
+        <p>The only way anything leaves is if you tap <strong>Share summary</strong> and
+        choose where to send it. You pick the destination; Anchor has none of its own.</p>
+        <p>You can erase everything in two taps. <a href="/anchor/privacy/">Read the privacy policy</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>A set, done discreetly</h2>
-<p>A calm ring counts you through long squeezes and quick squeezes. Vibration-only
-cues as standard. Spoken cues if you would rather keep the phone in your pocket.
-Light or dark, whichever suits the room.</p>
-<p>Stop early and what you did still counts. Squeezing to fatigue and stopping is
-correct technique, not a failure.</p>
-
-<h2>A diary worth keeping</h2>
-<p>Leaks, pads, drinks, trips to the toilet. How much, and what you were doing at the
-time. Three days of honest recording tells a continence nurse more than a month of
-describing it from memory.</p>
-<p>Share a summary and CSV files straight from your phone. You choose where it goes;
-Anchor has nowhere of its own to send it.</p>
-
-<h2>Straight answers</h2>
-<p>Short pieces on finding the right muscle, what to expect after surgery, the mistakes
-that quietly stop it working, and an honest read of the evidence &mdash; including where
-that evidence is uncertain.</p>
-<p>Every article names its published sources, among them Prostate Cancer UK, Macmillan
-Cancer Support, NHS trust patient information and the Cochrane Library.</p>
-
-<h2>Nothing leaves your phone</h2>
-<div class="card">
-<p>No account. No sign-in. No analytics. No cloud. Anchor contains no networking code
-at all &mdash; your exercise record and your diary are on your device and nowhere else.</p>
-<p>You can erase all of it in two taps. <a href="/anchor/privacy">Read the privacy policy</a>.</p>
-</div>
-
-<h2>Free</h2>
-<p>All of it. Nothing to unlock, no subscription, no adverts, no upsell.</p>
-
-<div class="card warn">
-<h3>Important</h3>
-<p>Anchor is an exercise timer and a diary. It cannot assess you, and it cannot check
-that you are contracting the right muscle &mdash; that needs a men's health
-physiotherapist.</p>
-<p>Contact your clinical team or NHS&nbsp;111 if you cannot pass urine, see unexpected
-blood, or develop pain, fever or new weakness.</p>
-</div>
+<section class="band tight">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04</span><h2>Free, and staying that way</h2></div>
+    <div class="prose">
+      <p>Nothing to unlock, no subscription, no adverts, no upsell. The men who most need
+      this are the least likely to weigh up a paid medical app while coming to terms with a
+      diagnosis. Removing the price removes the last excuse not to start.</p>
+      <p>Questions, or something not working? <a href="/anchor/support/">Support is here</a>.</p>
+    </div>
+  </div>
+</section>
 </main>
 <footer class="site">
-  <div class="rowlinks">
-    <a href="/anchor">Overview</a>
-    <a href="/anchor/support">Support</a>
-    <a href="/anchor/privacy">Privacy</a>
-    <a href="https://vyteralabs.com">Vytera Labs</a>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Anchor</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">
+          A free iPhone app by <a href="https://www.vyteralabs.com" style="color:var(--brass);">Vytera Labs Ltd</a>,
+          a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.
+        </p>
+        <div class="foot-links">
+          <a href="/anchor/">Overview</a>
+          <a href="/anchor/support/">Support</a>
+          <a href="/anchor/privacy/">Privacy</a>
+          <a href="/anchor/terms/">Terms</a>
+        </div>
+      </div>
+      <address class="foot-addr">
+        Registered office<br>
+        71&ndash;75 Shelton Street<br>
+        Covent Garden<br>
+        London&nbsp;&nbsp;WC2H&nbsp;9JQ<br>
+        United Kingdom
+      </address>
+    </div>
+    <p class="disclaimer">
+      Anchor is not a medical device. It does not assess, diagnose or treat anything, and it
+      cannot check that you are exercising the right muscle. The programme your physiotherapist,
+      continence nurse or consultant gives you takes priority over anything in this app.
+    </p>
+    <div class="foot-note">
+      <span>&copy; <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="https://www.vyteralabs.com" style="color:var(--muted);">Part of Vytera Labs</a></span>
+    </div>
   </div>
-  <p>Anchor is not a medical device. It does not assess, diagnose or treat anything.
-  The programme your physiotherapist, continence nurse or consultant gives you takes
-  priority over anything in this app.</p>
-  <p>&copy; 2026 Vytera Labs.</p>
 </footer>
-</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  var h = document.getElementById("siteHeader");
+  var onScroll = function () { h.classList.toggle("scrolled", window.scrollY > 8); };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+</script>
 </body>
 </html>
