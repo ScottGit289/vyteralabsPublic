@@ -345,6 +345,68 @@
     .group-grid{grid-template-columns:1fr;}
   }
 
+  /* apps — same 1px-rule grid as .group-grid, but it has to hold five, so it
+     wraps rather than sitting in a fixed two columns and orphaning the last. */
+  .app-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,282px),1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .app{
+    background:var(--ink);
+    padding:34px 32px 36px;
+    display:flex;
+    flex-direction:column;
+    transition:background .3s ease;
+  }
+  .app:hover{background:var(--ink-2);}
+  .app .a-tag{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin:0 0 20px;
+    display:flex;align-items:center;gap:11px;
+  }
+  .app .a-tag::before{content:"";width:24px;height:1px;background:var(--brass);flex:none;}
+  .app h3{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:26px;
+    line-height:1.1;
+    margin:0 0 6px;
+  }
+  .app .a-kind{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0 0 14px;
+  }
+  .app p.a-copy{
+    margin:0 0 22px;
+    color:var(--paper-dim);
+    font-size:16px;
+    line-height:1.6;
+    flex:1;
+  }
+  .app .a-go{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--paper);
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+  }
+  .app .a-go .arrow{color:var(--brass);transition:transform .3s ease;}
+  .app:hover .a-go .arrow{transform:translateX(4px);}
+
   /* ---------- Register ---------- */
   .register-band{background:var(--ink-3);}
   .register{
@@ -513,6 +575,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#build">What we build</a>
+        <a href="#apps">Apps</a>
         <a href="#process">Process</a>
         <a href="#register">Details</a>
         <a class="parent" href="https://www.dellowholdings.com">↑ Dellow Holdings</a>
@@ -620,11 +683,64 @@
     </div>
   </section>
 
+  <!-- APPS -->
+  <section class="band" id="apps">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">03</span>
+        <h2>Published apps</h2>
+      </div>
+      <div class="app-grid reveal">
+
+        <a class="app" href="/cadence/">
+          <p class="a-tag">iPhone &amp; iPad</p>
+          <h3>Cadence</h3>
+          <p class="a-kind">Habit tracker</p>
+          <p class="a-copy">Streaks that survive a bad week, momentum that tells you the truth, and a weekly review written on your iPhone. No account, no cloud.</p>
+          <span class="a-go">Overview <span class="arrow">→</span></span>
+        </a>
+
+        <a class="app" href="/cairn/">
+          <p class="a-tag">iPhone &amp; iPad</p>
+          <h3>Cairn</h3>
+          <p class="a-kind">Offline task planner</p>
+          <p class="a-copy">A task manager that runs entirely on your device. No account, no sync, no network requests — and a day plan that tells you the truth.</p>
+          <span class="a-go">Overview <span class="arrow">→</span></span>
+        </a>
+
+        <a class="app" href="/longevity/">
+          <p class="a-tag">iPhone</p>
+          <h3>Longevity Counter</h3>
+          <p class="a-kind">Lifespan &amp; healthspan estimate</p>
+          <p class="a-copy">An evidence-based estimate of how long — and how healthily — you are likely to live, with a live counter of your estimated remaining time. Private, on-device.</p>
+          <span class="a-go">Overview <span class="arrow">→</span></span>
+        </a>
+
+        <a class="app" href="/virulla/">
+          <p class="a-tag">iPhone</p>
+          <h3>Virulla</h3>
+          <p class="a-kind">Anonymous messenger</p>
+          <p class="a-copy">End-to-end encrypted messaging with no phone number, no email and no account — an identity you create on your device and can erase in a tap.</p>
+          <span class="a-go">Overview <span class="arrow">→</span></span>
+        </a>
+
+        <a class="app" href="/anchor/">
+          <p class="a-tag">iPhone &middot; Free</p>
+          <h3>Anchor</h3>
+          <p class="a-kind">Pelvic floor training for men</p>
+          <p class="a-copy">Helps men do the pelvic floor exercises they were given after prostate surgery, and keep doing them. Free, and private.</p>
+          <span class="a-go">Overview <span class="arrow">→</span></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <!-- PROCESS -->
   <section class="band" id="process">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="idx">03</span>
+        <span class="idx">04</span>
         <h2>How we work</h2>
       </div>
       <div class="principles">
@@ -651,7 +767,7 @@
   <section class="band register-band" id="register">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="idx">04</span>
+        <span class="idx">05</span>
         <h2>Company details</h2>
       </div>
       <div class="register reveal">
