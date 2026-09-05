@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Support — Virulla · Vytera Labs</title>
+<meta name="description" content="Support and frequently asked questions for Virulla, the anonymous end-to-end encrypted messenger by Vytera Labs." />
+<link rel="canonical" href="https://www.vyteralabs.com/virulla/support/" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/virulla/brand.css?v=1" />
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="/virulla/"><span class="mark">V</span><span>Virulla</span></a>
+      <div class="nav-links">
+        <a href="/virulla/">Overview</a>
+        <a href="/virulla/support/" aria-current="page">Support</a>
+        <a href="/virulla/privacy/">Privacy</a>
+        <a href="/virulla/terms/">Terms</a>
+        <a class="parent" href="/">↑ Vytera Labs</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <p class="eyebrow">Virulla</p>
+  <h1>Support</h1>
+  <p class="meta">A Vytera Labs app</p>
+
+  <div class="note">
+    <strong>Contact us</strong>
+    <p style="margin:8px 0 0;color:var(--paper-dim);">Email <a href="mailto:support@virulla.com">support@virulla.com</a> — we aim to respond within 2–3 business days. To report abuse, use the in-app <strong>Report</strong> option (chat "•••" menu) or email <a href="mailto:abuse@virulla.com">abuse@virulla.com</a>; abuse reports are actioned within 24 hours.</p>
+  </div>
+
+  <div class="section"><h2>Frequently asked questions</h2></div>
+
+  <h3>How do I create an account?</h3>
+  <p>There's nothing to sign up for. On first launch, tap <strong>Create anonymous account</strong>, save the <strong>Recovery Key</strong> shown on the next screen, and tap Continue. That's it — no phone number or email.</p>
+
+  <h3>What is the Recovery Key, and what if I lose it?</h3>
+  <p>Because Virulla is anonymous, there is no "forgot password" and no way for us to identify you. The Recovery Key is the <strong>only</strong> way to restore your identity on a new device. Store it somewhere safe and private (a password manager is ideal). If you lose it and lose the device, the account cannot be recovered.</p>
+
+  <h3>How do I start a chat?</h3>
+  <p>Add a contact by scanning their QR code (Camera) or opening a contact link they share. Then open the chat and send text, a photo, or a video.</p>
+
+  <h3>How do credits work?</h3>
+  <p>Sending messages uses credits (text 1, photo 5, video 10). Every new account is granted <strong>50 free credits</strong> so you can start right away. After that, credits are optional one-time in-app purchases — buy a pack when you need it. There's no subscription and nothing renews automatically.</p>
+
+  <h3>Why do my chats look blank in a screenshot?</h3>
+  <p>That's intentional. For privacy, message content is excluded from screenshots, screen recordings, and the app-switcher preview, so an open chat can appear blank in a capture. The app isn't broken — the content is fully visible on your screen.</p>
+
+  <h3>How do I block or report someone?</h3>
+  <p>In a chat, open the "•••" menu → <strong>Block user</strong> to stop them, or <strong>Report user</strong> to block them and send us the offending messages as evidence. Confirmed offenders are blocked at our relay so they can no longer use the service. See our <a href="/virulla/terms/">Terms of Use</a>.</p>
+
+  <h3>How do I turn on dark mode?</h3>
+  <p>Settings → <strong>Appearance</strong> → choose <strong>System</strong>, <strong>Light</strong>, or <strong>Dark</strong>. System follows your device setting.</p>
+
+  <h3>How do I delete everything?</h3>
+  <p>Settings → <strong>Delete account &amp; wipe device</strong> removes your identity and every message and key from the device. Uninstalling the app also removes its on-device data.</p>
+
+  <h3>Is Virulla really secure?</h3>
+  <p>Messages are end-to-end encrypted with a published, modern design (X3DH + Double Ratchet over Curve25519, AES-256-GCM), keys stay on your device, and our relay only ever sees ciphertext. No app can honestly promise to be "unhackable" — but there's no account linking messages to you, and no readable copy of your conversations on our servers. Keeping your device locked and your Recovery Key private matters too.</p>
+
+  <div class="section"><h2>Legal</h2></div>
+  <ul>
+    <li><a href="/virulla/privacy/">Privacy Policy</a></li>
+    <li><a href="/virulla/terms/">Terms of Use (EULA)</a></li>
+  </ul>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Virulla</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app. Vytera Labs Ltd is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/virulla/support/">Support</a>
+        <a href="/virulla/privacy/">Privacy Policy</a>
+        <a href="/virulla/terms/">Terms of Use (EULA)</a>
+        <a href="mailto:support@virulla.com">support@virulla.com</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="/">vyteralabs.com</a></span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
