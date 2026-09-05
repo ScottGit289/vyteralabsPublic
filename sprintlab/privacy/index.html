@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — SprintLab · Vytera Labs</title>
+<meta name="description" content="SprintLab collects nothing. Your training and health data stays on your device. Published by Vytera Labs Ltd." />
+<link rel="canonical" href="https://www.vyteralabs.com/sprintlab/privacy/" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/sprintlab/style.css?v=1" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="/sprintlab/"><span class="mark">V</span><span>SprintLab</span></a>
+      <div class="nav-links">
+        <a href="/sprintlab/">Overview</a>
+        <a href="/sprintlab/support/">Support</a>
+        <a href="/sprintlab/privacy/" aria-current="page">Privacy</a>
+        <a href="/sprintlab/terms/">Terms</a>
+        <a class="parent" href="/">↑ Vytera Labs</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap doc" id="main">
+  <p class="eyebrow">SprintLab</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&nbsp;&nbsp;·&nbsp;&nbsp;<strong>Effective:</strong> 5 September 2026&nbsp;&nbsp;·&nbsp;&nbsp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
+
+  <p>SprintLab is built on a simple principle: your training data belongs to you and stays on your device.</p>
+
+  <div class="note">
+    <strong>The short version</strong>
+    <ul>
+      <li>No accounts, no sign-up, no analytics, no advertising, no tracking.</li>
+      <li>Everything you enter, and every health metric you sync, is stored <strong>on your device</strong>.</li>
+      <li>We operate no general backend and never receive a copy of your data.</li>
+      <li>The one piece of SprintLab infrastructure that exists at all is a sign-in relay for Oura, described below. It never touches your health data.</li>
+    </ul>
+  </div>
+
+  <div class="section"><h2>What we collect</h2></div>
+  <p><strong>Nothing.</strong></p>
+  <p>SprintLab has no user accounts, no sign-up, no analytics, no advertising, and no tracking of any kind. We operate no general backend, and we never receive a copy of the data you enter or the health metrics you sync.</p>
+  <p>The only time the app uses the network at all is if you choose to connect a cloud wearable. Your health data is then fetched directly between your device and the wearable maker. The single exception is the Oura sign-in step, relayed through a small SprintLab-operated service so that Oura's confidential app secret never has to ship inside the app — explained under <a href="#sources">Connecting a health source</a>.</p>
+
+  <div class="section"><h2>What the app stores, and where</h2></div>
+  <p>Everything you enter — athlete profile, personal bests, training sessions, notes, injury notes, settings — plus any health metrics you sync or read from a connected source, is stored locally on your device, inside the app's private storage area, protected by the operating system's built-in data protection.</p>
+  <p>Wearable sign-in tokens are held in the device keychain and are never written to a backup export.</p>
+
+  <div class="section" id="sources"><h2>Connecting a health source (optional, off by default)</h2></div>
+  <p>SprintLab can link to a health source — such as Oura, Garmin or Apple Health — to blend recovery data such as sleep, heart-rate variability and resting heart rate into your training readiness. This is entirely optional and switched off until you enable it and connect.</p>
+
+  <h3>Cloud wearables (Oura, Garmin)</h3>
+  <ul>
+    <li>Sign-in uses the vendor's official OAuth page. SprintLab never sees your wearable account password.</li>
+    <li>Your device fetches the health metrics you approved directly from the vendor's servers. That data flows straight to your phone and is stored there — it never passes through, or is stored on, any SprintLab service.</li>
+    <li><strong>Oura only:</strong> completing Oura sign-in requires Oura's confidential app secret, which cannot safely live inside a phone app. So the sign-in hand-off — the step that turns your approval into an access token — is relayed through a small SprintLab-operated service (running on Cloudflare at <code>auth.sprintlab.uk</code> and <code>apitoken.sprintlab.uk</code>) that holds that secret. It processes only the sign-in exchange; it is not sent, and does not store, your Oura health data. Garmin uses the direct cloud flow with no such relay.</li>
+    <li>You choose the scope of data at the vendor's consent screen, and you can disconnect at any time, which deletes the saved sign-in and all synced health data from your device.</li>
+    <li>Your use of the wearable and its own app remains governed by that vendor's privacy policy.</li>
+  </ul>
+
+  <h3>Apple Health (HealthKit)</h3>
+  <p>Apple Health works differently: it is read entirely on your device through Apple's HealthKit — no sign-in, no relay, no network involved at all. If you grant permission, SprintLab reads only the categories you allow (such as sleep, resting heart rate, heart-rate variability, respiratory rate and blood oxygen), and uses them solely to calculate your on-device readiness and analytics.</p>
+  <p>Health data read from Apple Health is <strong>never</strong> transmitted off your device, never used for advertising or marketing, and never shared with us or any third party. You can review or revoke access at any time in <strong>iOS Settings → Privacy &amp; Security → Health</strong>.</p>
+
+  <div class="section"><h2>On-device intelligence (optional, off by default)</h2></div>
+  <p>SprintLab can use Apple's on-device intelligence (Apple Intelligence / Foundation Models) to write your insights, summaries, recommendations, journal reflections and daily briefings. It is off by default and only runs on a compatible iPhone with Apple Intelligence enabled.</p>
+  <p>When you turn it on in <strong>Settings → Intelligence</strong>:</p>
+  <ul>
+    <li>Your training and recovery data is processed entirely on your device by Apple's on-device model. Nothing is sent to Apple's servers, to us, or to anyone else, and the app makes no network request to do it.</li>
+    <li>The data is never used to train any model, and never used for advertising.</li>
+    <li>If your device isn't compatible, or you leave the setting off, SprintLab uses its built-in rules-based engine instead — the app works exactly the same either way.</li>
+    <li>You can turn it off at any time.</li>
+  </ul>
+
+  <div class="section"><h2>Data that leaves your device</h2></div>
+  <p>Data leaves your device only when you explicitly export it using the <strong>Export backup</strong> button, which hands a copy to the system share sheet. You choose the destination — Files, AirDrop, email — and you are responsible for wherever you send it.</p>
+
+  <div class="section"><h2>Data deletion</h2></div>
+  <p>You can delete all SprintLab data at any time via <strong>Settings → Delete all data</strong> inside the app, or by deleting the app itself. Your entries and synced health metrics live only on your phone, so there is no copy anywhere else to delete. The Oura sign-in relay described above stores none of your data.</p>
+
+  <div class="section"><h2>Children</h2></div>
+  <p>SprintLab is suitable for all ages. Because we collect no data from anyone, we collect no data from children.</p>
+
+  <div class="section"><h2>Future features</h2></div>
+  <p>If a future version ever offers an optional online feature — AI-assisted coaching, for example — it will be off by default, require your explicit consent, show you exactly what would be shared before anything is sent, and this policy will be updated first.</p>
+
+  <div class="section"><h2>Changes</h2></div>
+  <p>Material changes to this policy will be listed in the App Store release notes of the version that introduces them, and the effective date above updated.</p>
+
+  <div class="section"><h2>Contact</h2></div>
+  <p>Questions about this policy: <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
+  <p class="small muted">Vytera Labs Ltd, 71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom. Registered in England &amp; Wales, company 17389107.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">SprintLab</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app. Vytera Labs Ltd is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/sprintlab/">Overview</a>
+        <a href="/sprintlab/support/">Support</a>
+        <a href="/sprintlab/privacy/">Privacy Policy</a>
+        <a href="/sprintlab/terms/">Terms of Service</a>
+        <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="/">vyteralabs.com</a></span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
