@@ -203,6 +203,12 @@ tbody tr:last-child th,tbody tr:last-child td{border-bottom:none;}
 td strong{color:var(--paper);font-weight:500;}
 
 code{font-family:var(--mono);font-size:.88em;color:var(--brass);}
+pre{background:var(--ink-3);border:1px solid var(--line);padding:16px 20px;overflow-x:auto;margin:18px 0;}
+pre code{color:var(--paper);font-size:13.5px;line-height:1.7;}
+
+/* The generated guide is long, so its contents list earns a little structure. */
+.doc ol li,.doc ul li{margin:7px 0;}
+.doc h1+p+ol{border-top:1px solid var(--line);padding-top:20px;}
 
 /* Footer */
 footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-index:1;}
@@ -247,6 +253,8 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
       <a class="brand" href="/cairn/"><span class="mark">V</span><span>Cairn</span></a>
       <div class="nav-links">
         <a href="/cairn/" aria-current="page">Overview</a>
+        <a href="/cairn/guide/">Guide</a>
+        <a href="/cairn/guide/">User Guide</a>
         <a href="/cairn/support/">Support</a>
         <a href="/cairn/privacy/">Privacy</a>
         <a href="/cairn/terms/">Terms</a>
@@ -333,9 +341,9 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 
       <div class="cards">
         <div class="cell">
-          <p class="s-tag">Inbox</p>
+          <p class="s-tag">Inbox · optional</p>
           <h3>Undecided</h3>
-          <p>Work waiting for a decision, rather than waiting for you to feel guilty about it.</p>
+          <p>Work waiting for a decision, rather than waiting for you to feel guilty about it. Switch it off and undecided work goes straight to Anytime.</p>
         </div>
         <div class="cell">
           <p class="s-tag">Today</p>
@@ -430,7 +438,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 
       <p>Local-only is a promise worth making only if you can always get your data out — so <strong>Export a backup</strong> writes plain, readable, versioned JSON, and <strong>Export as Markdown</strong> writes a readable outline. Both open in a text editor. There is no format lock-in, because there is nothing to lock you into.</p>
 
-      <p class="small"><a href="/cairn/privacy/">Read the full privacy policy</a> — including exactly why iOS asks for calendar "Full Access" when Cairn only ever reads.</p>
+      <p class="small"><a href="/cairn/privacy/">Read the full privacy policy</a> — including exactly why iOS asks for calendar "Full Access" when Cairn only ever reads — or <a href="/cairn/guide/">the complete user guide</a>.</p>
     </div>
   </section>
 
@@ -441,7 +449,13 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
         <h2>Everything else, and what it needs</h2>
       </div>
 
-      <p>Deadlines, reminders, repeating to-dos, checklists, tags, areas, project sections, waiting-on dependencies that hide blocked work from your plan, effort estimates, energy levels, a home-screen widget, Siri and Shortcuts, full VoiceOver support, Dynamic Type, light and dark themes, and a complete user guide inside the app.</p>
+      <p>Deadlines, reminders, repeating to-dos, checklists, tags, areas, project sections, effort estimates, energy levels, a home-screen widget, Siri and Shortcuts, full VoiceOver support, Dynamic Type, light and dark themes, and a <a href="/cairn/guide/">complete user guide</a> — inside the app and on this site.</p>
+
+      <p><strong>Waiting-on dependencies are enforced, not decorated.</strong> A to-do waiting on unfinished work is kept out of your day plan and <em>cannot be ticked done</em> — tap its padlock and Cairn names what it is waiting on. A rule the app states and does not enforce would teach you not to trust the ones it does.</p>
+
+      <p><strong>Capture inherits where you are standing.</strong> Add a to-do from Someday and it is parked in Someday; from a project or an area it is filed there; from Today it is dated today. The row above the field says where it will land and why, before you commit — and anything you type overrules it.</p>
+
+      <p><strong>Nothing is deleted unless you ask.</strong> Finished work is kept forever by default. Choose a window in Settings if you would rather the Logbook stayed navigable, and Cairn quotes exactly how much will go before it goes.</p>
 
       <div class="table-wrap">
         <table>

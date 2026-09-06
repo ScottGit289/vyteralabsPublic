@@ -197,6 +197,12 @@ tbody tr:last-child th,tbody tr:last-child td{border-bottom:none;}
 td strong{color:var(--paper);font-weight:500;}
 
 code{font-family:var(--mono);font-size:.88em;color:var(--brass);}
+pre{background:var(--ink-3);border:1px solid var(--line);padding:16px 20px;overflow-x:auto;margin:18px 0;}
+pre code{color:var(--paper);font-size:13.5px;line-height:1.7;}
+
+/* The generated guide is long, so its contents list earns a little structure. */
+.doc ol li,.doc ul li{margin:7px 0;}
+.doc h1+p+ol{border-top:1px solid var(--line);padding-top:20px;}
 
 /* Footer */
 footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-index:1;}
@@ -241,6 +247,8 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
       <a class="brand" href="/cairn/"><span class="mark">V</span><span>Cairn</span></a>
       <div class="nav-links">
         <a href="/cairn/">Overview</a>
+        <a href="/cairn/guide/">Guide</a>
+        <a href="/cairn/guide/">User Guide</a>
         <a href="/cairn/support/">Support</a>
         <a href="/cairn/privacy/">Privacy</a>
         <a href="/cairn/terms/" aria-current="page">Terms</a>
@@ -283,6 +291,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
     <p><strong>We cannot recover your data.</strong> If you delete the App, erase your device, lose it, or use <strong>Start fresh</strong>, everything in Cairn is gone. We hold no copy, because we never receive one. There is nothing for us to restore from and nothing for us to look up.</p>
     <p>Keeping backups is therefore <strong>your responsibility</strong>. Cairn gives you two ways to do it — <strong>Settings → Export a backup</strong> writes a complete, readable JSON file, and your normal encrypted device backup includes the App's data. Use at least one of them.</p>
   </div>
+  <p>The App can also delete finished work on your instruction: <strong>Settings → Keep finished work for</strong> removes completed and cancelled to-dos older than a window you choose. It is off unless you turn it on, it never touches open work, and it quotes how many will go before it does. Like everything else here, that deletion is permanent and we hold no copy to restore from.</p>
   <p>You retain all rights in the content you create in the App. We claim no licence over it, because we never receive it.</p>
 
   <div class="section"><h2>4. Your responsibilities</h2></div>

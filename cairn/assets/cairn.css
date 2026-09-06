@@ -181,6 +181,12 @@ tbody tr:last-child th,tbody tr:last-child td{border-bottom:none;}
 td strong{color:var(--paper);font-weight:500;}
 
 code{font-family:var(--mono);font-size:.88em;color:var(--brass);}
+pre{background:var(--ink-3);border:1px solid var(--line);padding:16px 20px;overflow-x:auto;margin:18px 0;}
+pre code{color:var(--paper);font-size:13.5px;line-height:1.7;}
+
+/* The generated guide is long, so its contents list earns a little structure. */
+.doc ol li,.doc ul li{margin:7px 0;}
+.doc h1+p+ol{border-top:1px solid var(--line);padding-top:20px;}
 
 /* Footer */
 footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-index:1;}

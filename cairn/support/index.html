@@ -197,6 +197,12 @@ tbody tr:last-child th,tbody tr:last-child td{border-bottom:none;}
 td strong{color:var(--paper);font-weight:500;}
 
 code{font-family:var(--mono);font-size:.88em;color:var(--brass);}
+pre{background:var(--ink-3);border:1px solid var(--line);padding:16px 20px;overflow-x:auto;margin:18px 0;}
+pre code{color:var(--paper);font-size:13.5px;line-height:1.7;}
+
+/* The generated guide is long, so its contents list earns a little structure. */
+.doc ol li,.doc ul li{margin:7px 0;}
+.doc h1+p+ol{border-top:1px solid var(--line);padding-top:20px;}
 
 /* Footer */
 footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-index:1;}
@@ -241,6 +247,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
       <a class="brand" href="/cairn/"><span class="mark">V</span><span>Cairn</span></a>
       <div class="nav-links">
         <a href="/cairn/">Overview</a>
+        <a href="/cairn/guide/">Guide</a>
         <a href="/cairn/support/" aria-current="page">Support</a>
         <a href="/cairn/privacy/">Privacy</a>
         <a href="/cairn/terms/">Terms</a>
@@ -264,7 +271,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
   </div>
 
   <div class="section"><h2>Before you email: the fastest fixes</h2></div>
-  <p>Cairn has a complete user guide built in. Open <strong>Settings → User guide</strong>, or tap the <strong>?</strong> on any screen to jump straight to the relevant section. It covers everything below and rather more besides.</p>
+  <p>Cairn has a complete user guide built in. Open <strong>⋯ → User Guide</strong>, or tap the <strong>?</strong> on any screen to jump straight to the relevant section. The same guide is <a href="/cairn/guide/">published here</a>, so you can read it without installing anything. It covers everything below and rather more besides.</p>
 
   <div class="section"><h2>Questions we are asked most</h2></div>
 
@@ -274,6 +281,18 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 
   <h3>I picked the wrong calendar option. How do I change it?</h3>
   <p>iOS only asks once. Open <strong>Settings → Calendar</strong> in Cairn and tap <strong>Open iOS Settings</strong>, or go to <strong>iOS Settings → Privacy &amp; Security → Calendars → Cairn</strong> and choose <em>Full Access</em>.</p>
+
+  <h3>I cannot tick a to-do done — it shows a padlock.</h3>
+  <p>It is waiting on another to-do that is not finished. Tap the padlock and Cairn names what. Finish that one and this becomes tickable.</p>
+  <p>This is deliberate: waiting-on is a claim about the order work has to happen in, and an app that draws the dependency then lets you tick it anyway would be decorating the rule rather than enforcing it. The one exception is completing the <em>whole project</em>, which finishes everything inside it — the ordering between two of its to-dos stops mattering once both are done.</p>
+
+  <h3>Where do I create a project or an area?</h3>
+  <p><strong>Hold the ＋ button</strong> — on the sidebar or any list — and choose <em>New Project</em> or <em>New Area</em>. A plain tap still adds a to-do. The <strong>Library</strong> section of the sidebar also carries a <em>New Area</em> row and a <em>New Project</em> row under each area.</p>
+  <p>Which one you want comes down to a single question: <strong>can this be finished?</strong> Yes, and it is a project — it completes, it can go stalled, it carries a review cadence. Never, and it is an area: <em>Health</em>, <em>Finance</em>, <em>Team</em>. You do not finish Finance.</p>
+
+  <h3>Can I stop the Logbook growing forever?</h3>
+  <p><strong>Settings → Keep finished work for.</strong> Everything by default, or 3 months, 6 months, 1 year, 2 years. Completed and cancelled to-dos past the window are removed once a day.</p>
+  <p>It is not really about space — a to-do is a few hundred bytes, so a decade of them weighs less than one photograph. The reason to set a window is a Logbook you can still navigate, especially if a daily repeating to-do is filling it. Open work is never touched however old it is, deletion is permanent with no copy anywhere else, and Cairn tells you exactly how many will go before you agree.</p>
 
   <h3>Where is my data, and how do I move it to a new phone?</h3>
   <p>On your device, in the app's own sandbox. There is no cloud copy, so moving devices is a deliberate act:</p>
@@ -346,6 +365,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
       </div>
       <div class="foot-links">
         <a href="/cairn/">Overview</a>
+        <a href="/cairn/guide/">User Guide</a>
         <a href="/cairn/support/">Support</a>
         <a href="/cairn/privacy/">Privacy Policy</a>
         <a href="/cairn/terms/">Terms of Use (EULA)</a>

@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>User Guide — Cairn · Vytera Labs</title>
+<meta name="description" content="The complete Cairn user guide: capture, the lists, projects and areas, Plan My Day, the weekly review, and every setting explained." />
+<link rel="canonical" href="https://www.vyteralabs.com/cairn/guide/" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<!-- cairn:css:start -->
+<style>
+/* Cairn — product pages on www.vyteralabs.com, served under /cairn/.
+ *
+ * The Vytera Labs house style: ink + brass, Fraunces / Inter / IBM Plex Mono.
+ * Tokens, header, bands, doc mode and footer are taken from the studio site and
+ * longevity/brand.css so the three sites are one object. Everything below the
+ * "Cairn's own components" rule is specific to this product and written in the
+ * same language: square corners, hairline rules, mono for labels, serif for
+ * anything that carries a voice.
+ *
+ * Build with scripts/build_web.py, which inlines this into each page.
+ */
+
+:root{
+  --ink:#0B1017;
+  --ink-2:#111a26;
+  --ink-3:#0e151f;
+  --paper:#ECE6DA;
+  --paper-dim:#AEB6C2;
+  --muted:#6E7787;
+  --brass:#C2A05B;
+  --brass-soft:rgba(194,160,91,.16);
+  --line:rgba(236,230,218,.12);
+  --line-strong:rgba(236,230,218,.22);
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --wrap:960px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;
+  background:radial-gradient(120% 80% at 50% -10%, rgba(194,160,91,.10), transparent 55%);
+  pointer-events:none;z-index:0;
+}
+img{max-width:100%;height:auto;}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--brass);color:var(--ink);}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px;}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 32px;position:relative;z-index:1;}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);margin:0;}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:40;background:var(--brass);color:var(--ink);font-family:var(--mono);font-size:13px;padding:12px 18px;}
+.skip:focus{left:0;}
+
+/* Header */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:20;
+  backdrop-filter:blur(10px);background:rgba(11,16,23,.72);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px;}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--paper);}
+.brand .mark{width:26px;height:26px;flex:none;border:1px solid var(--brass);display:grid;place-items:center;font-family:var(--serif);font-size:16px;color:var(--brass);letter-spacing:0;}
+/* Links sit on one row and scroll horizontally if they don't fit, so every item
+   stays reachable on narrow screens (body overflow-x:hidden would otherwise clip
+   them). The nav's own overflow container keeps the header a fixed 70px tall. */
+.nav-links{display:flex;flex:0 1 auto;min-width:0;gap:28px;font-size:13px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim);overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.nav-links::-webkit-scrollbar{display:none;}
+.nav-links a{position:relative;padding:4px 0;flex:none;transition:color .25s ease;}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--brass);transition:width .3s ease;}
+.nav-links a:hover{color:var(--paper);}
+.nav-links a:hover::after,.nav-links a[aria-current="page"]::after{width:100%;}
+.nav-links a[aria-current="page"]{color:var(--brass);}
+.nav-links a.parent{color:var(--brass);}
+
+/* Hero */
+.hero{padding:150px 0 60px;}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,8vw,84px);line-height:.98;letter-spacing:-.02em;margin:20px 0 0;}
+.hero h1 em{font-style:italic;color:var(--brass);}
+.lede{margin:26px 0 0;max-width:46ch;font-size:clamp(18px,2.2vw,21px);line-height:1.55;color:var(--paper-dim);}
+.meta-row{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px 30px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--muted);}
+.meta-row span{display:inline-flex;gap:9px;align-items:center;}
+.meta-row span::before{content:"";width:5px;height:5px;background:var(--brass);transform:rotate(45deg);flex:none;}
+
+.hero-head{display:flex;align-items:flex-start;gap:26px;flex-wrap:wrap;}
+.hero-head .appicon{width:88px;height:88px;flex:none;}
+.hero-head .hero-copy{flex:1 1 22rem;min-width:0;}
+
+.btn-row{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.mail-btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:15px;letter-spacing:.04em;padding:15px 26px;border:1px solid var(--line-strong);color:var(--paper);transition:border-color .3s,background .3s;}
+.mail-btn:hover{border-color:var(--brass);background:var(--brass-soft);}
+.mail-btn .arrow{color:var(--brass);transition:transform .3s;}
+.mail-btn:hover .arrow{transform:translateX(4px);}
+.mail-btn.solid{border-color:var(--brass);background:var(--brass-soft);}
+.pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);border:1px solid var(--brass-soft);padding:9px 18px;}
+.pill::before{content:"";width:6px;height:6px;background:var(--brass);transform:rotate(45deg);flex:none;}
+
+/* Sections */
+section{position:relative;z-index:1;}
+.band{padding:76px 0;border-top:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:40px;}
+.sec-head .idx{font-family:var(--mono);font-size:12px;color:var(--brass);letter-spacing:.1em;}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,4.4vw,40px);line-height:1.05;letter-spacing:-.015em;margin:0;}
+
+.band p{color:var(--paper-dim);margin:0 0 16px;max-width:62ch;}
+.band p:last-child{margin-bottom:0;}
+.band p strong{color:var(--paper);font-weight:500;}
+.band p em{font-style:italic;color:var(--paper);}
+.band a{color:var(--brass);border-bottom:1px solid var(--brass-soft);transition:border-color .25s;}
+.band a:hover{border-color:var(--brass);}
+
+.lead-para{font-family:var(--serif);font-weight:400;font-size:clamp(21px,2.8vw,28px);line-height:1.35;color:var(--paper)!important;letter-spacing:-.01em;max-width:30ch!important;margin:0 0 26px!important;}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);}
+.cards .cell{background:var(--ink);padding:28px 26px;}
+.cards .cell h3{font-family:var(--serif);font-weight:400;font-size:21px;margin:0 0 10px;}
+.cards .cell .s-tag{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin:0 0 18px;display:flex;align-items:center;gap:11px;}
+.cards .cell .s-tag::before{content:"";width:24px;height:1px;background:var(--brass);flex:none;}
+.cards .cell p{margin:0;color:var(--paper-dim);font-size:15.5px;line-height:1.6;max-width:none;}
+
+.callout{border:1px solid var(--line-strong);background:linear-gradient(180deg,rgba(194,160,91,.05),transparent 45%);padding:22px 26px;margin:26px 0;color:var(--paper-dim);}
+.callout strong{color:var(--paper);font-weight:500;}
+.callout p{max-width:none;}
+.callout p:last-child{margin-bottom:0;}
+
+/* The principle rows: mono index, serif heading, dim prose. */
+.principles{border-top:1px solid var(--line);margin-top:8px;}
+.principle{display:grid;grid-template-columns:56px 1fr 2fr;gap:28px;align-items:start;padding:28px 0;border-bottom:1px solid var(--line);}
+.principle .p-idx{font-family:var(--mono);font-size:12px;color:var(--brass);padding-top:5px;}
+.principle h3{font-family:var(--serif);font-weight:400;font-size:23px;margin:0;line-height:1.1;}
+.principle p{margin:0;color:var(--paper-dim);font-size:16px;line-height:1.65;max-width:none;}
+
+/* Long-form legal / support.
+   Use element+class specificity and longhand padding so the mobile `.wrap`
+   padding rule can't reset the top clearance (which would slide the title under
+   the fixed header). Horizontal gutters still come from `.wrap`. */
+main.doc{padding-top:118px;padding-bottom:24px;}
+.doc h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,52px);line-height:1.02;letter-spacing:-.02em;margin:0 0 14px;}
+.doc .meta{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--muted);margin:0 0 12px;line-height:1.9;}
+.doc h2{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-.01em;margin:0;padding-top:30px;}
+.doc h3{font-family:var(--sans);font-weight:600;font-size:17px;color:var(--paper);margin:26px 0 4px;}
+.doc p{color:var(--paper-dim);margin:12px 0;}
+.doc p strong{color:var(--paper);font-weight:500;}
+.doc ul,.doc ol{padding-left:20px;color:var(--paper-dim);}
+.doc li{margin:7px 0;}
+.doc a{color:var(--brass);border-bottom:1px solid var(--brass-soft);transition:border-color .25s;}
+.doc a:hover{border-color:var(--brass);}
+.doc .section{border-top:1px solid var(--line);margin-top:8px;}
+.doc .note{border:1px solid var(--line-strong);background:var(--ink-3);border-left:2px solid var(--brass);padding:16px 20px;margin:22px 0;}
+.doc .note ul{margin:8px 0 0;}
+.doc .note p:first-child{margin-top:0;}
+.doc .note p:last-child{margin-bottom:0;}
+.small{font-size:14px;}
+.muted{color:var(--muted);}
+
+/* ---------------------------------------------------- Cairn's own components */
+
+/* The capture example: what you type, and every inference shown as a chip. */
+.capture{border:1px solid var(--line-strong);background:var(--ink-3);padding:22px 26px;margin:0 0 22px;}
+.capture .typed{font-family:var(--mono);font-size:15px;color:var(--paper);margin:0 0 16px;word-break:break-word;max-width:none;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;}
+.chips li{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:5px 12px;margin:0;color:var(--paper-dim);}
+.chips li.is-inferred{color:var(--brass);border-color:var(--brass-soft);}
+
+/* "What Cairn will never do" — brass diamonds, the studio's own list marker. */
+.never{list-style:none;padding:0;margin:0 0 20px;max-width:62ch;}
+.never li{position:relative;padding-left:22px;margin:0 0 10px;color:var(--paper-dim);}
+.never li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;background:var(--brass);transform:rotate(45deg);}
+
+/* Tables, in the register idiom from the studio site. */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);margin:0 0 22px;}
+table{border-collapse:collapse;width:100%;font-size:15.5px;min-width:22rem;}
+th,td{text-align:left;padding:14px 20px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--paper-dim);}
+thead th{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:400;}
+tbody th{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--paper);font-weight:400;white-space:nowrap;}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:none;}
+td strong{color:var(--paper);font-weight:500;}
+
+code{font-family:var(--mono);font-size:.88em;color:var(--brass);}
+pre{background:var(--ink-3);border:1px solid var(--line);padding:16px 20px;overflow-x:auto;margin:18px 0;}
+pre code{color:var(--paper);font-size:13.5px;line-height:1.7;}
+
+/* The generated guide is long, so its contents list earns a little structure. */
+.doc ol li,.doc ul li{margin:7px 0;}
+.doc h1+p+ol{border-top:1px solid var(--line);padding-top:20px;}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-index:1;}
+.foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.foot-brand{font-family:var(--serif);font-size:22px;letter-spacing:-.01em;}
+.foot-links{display:flex;flex-direction:column;gap:8px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--paper-dim);}
+.foot-links a:hover{color:var(--paper);}
+.foot-addr{font-family:var(--mono);font-size:12.5px;line-height:1.9;color:var(--muted);font-style:normal;}
+.foot-note{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.foot-note a{color:var(--muted);}
+
+@media (max-width:720px){
+  .nav-links{gap:18px;font-size:12px;}
+  .nav-links a.parent{display:none;}
+  .wrap{padding:0 22px;}
+  main.doc{padding-top:104px;}
+  .hero{padding:120px 0 48px;}
+  .band{padding:56px 0;}
+  .principle{grid-template-columns:40px 1fr;gap:14px 20px;}
+  .principle p{grid-column:2;}
+  .foot-note{flex-direction:column;gap:8px;}
+}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}html{scroll-behavior:auto;}}
+
+@media print{
+  header,.skip{display:none;}
+  body{background:#fff;color:#000;}
+  body::before{display:none;}
+  a{color:#000;}
+}
+</style>
+<!-- cairn:css:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="/cairn/"><span class="mark">V</span><span>Cairn</span></a>
+      <div class="nav-links">
+        <a href="/cairn/">Overview</a>
+        <a href="/cairn/guide/" aria-current="page">Guide</a>
+        <a href="/cairn/support/">Support</a>
+        <a href="/cairn/privacy/">Privacy</a>
+        <a href="/cairn/terms/">Terms</a>
+        <a class="parent" href="/">↑ Vytera Labs</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap doc" id="main">
+
+  <p class="eyebrow">Cairn</p>
+<h1 id="cairn-user-guide">Cairn — User Guide</h1>
+
+<p>Everything in this guide also ships inside the app, under <strong>⋯ → User Guide</strong>, so it works with no signal.</p>
+
+<div class="section"><h2 id="contents">Contents</h2></div>
+
+<ol>
+<li><a href="#1-the-idea-in-one-paragraph">The idea in one paragraph</a></li>
+<li><a href="#2-your-first-five-minutes">Your first five minutes</a></li>
+<li><a href="#3-capturing-anything">Capturing anything</a></li>
+<li><a href="#4-the-six-lists">The six lists</a></li>
+<li><a href="#5-projects-areas-sections-and-tags">Projects, areas, sections and tags</a></li>
+<li><a href="#6-waiting-on-dependencies">Waiting on: dependencies</a></li>
+<li><a href="#7-effort-energy-and-estimates">Effort, energy and estimates</a></li>
+<li><a href="#8-plan-my-day">Plan My Day</a></li>
+<li><a href="#9-the-weekly-review">The weekly review</a></li>
+<li><a href="#10-insights">Insights</a></li>
+<li><a href="#11-repeating-to-dos">Repeating to-dos</a></li>
+<li><a href="#12-search">Search</a></li>
+<li><a href="#13-the-widget-and-links">The widget and links</a></li>
+<li><a href="#14-gestures-and-shortcuts">Gestures and shortcuts</a></li>
+<li><a href="#15-what-runs-on-your-device">What runs on your device</a></li>
+<li><a href="#16-backup-export-and-restore">Backup, export and restore</a></li>
+<li><a href="#17-settings-reference">Settings reference</a></li>
+<li><a href="#18-accessibility">Accessibility</a></li>
+<li><a href="#19-troubleshooting">Troubleshooting</a></li>
+<li><a href="#20-coming-from-things-3">Coming from Things 3</a></li>
+</ol>
+
+<div class="section"><h2 id="1-the-idea-in-one-paragraph">1. The idea in one paragraph</h2></div>
+
+<p>Capture everything in one field. Decide what each thing is, once. Let the app work out what will actually fit in today, and tell you what will not. Review once a week. Nothing leaves your device at any point.</p>
+
+<div class="section"><h2 id="2-your-first-five-minutes">2. Your first five minutes</h2></div>
+
+<p><strong>1. Capture three things.</strong> Tap <strong>＋</strong> and type whatever is on your mind. Do not organise it yet. It lands in the <strong>Inbox</strong> — or, if you tapped <strong>＋</strong> from inside a list or project, in that list or project. The row above the field tells you which, before you commit.</p>
+
+<p><strong>2. Give one of them a date.</strong> Open it and set <em>When</em> to <strong>Today</strong>. <em>When</em> is a promise to yourself.</p>
+
+<p><strong>3. Set a deadline on something real.</strong> Only when somebody else is waiting. Deadlines are the one thing the planner will never quietly drop.</p>
+
+<p><strong>4. Add an estimate.</strong> Tap a preset — 15m, 45m, 2h. This is what makes Plan My Day work.</p>
+
+<p><strong>5. Run Plan My Day.</strong> It builds an honest day from your real capacity and shows you what it held back. Nothing changes until you tap <strong>Use this plan</strong>.</p>
+
+<h3 id="the-one-habit-that-matters">The one habit that matters</h3>
+
+<p>Empty the Inbox. Not the whole list — just the Inbox. Every item gets a date, a project, or the bin. Undecided work is where the low-grade dread comes from.</p>
+
+<div class="section"><h2 id="3-capturing-anything">3. Capturing anything</h2></div>
+
+<p>Tap <strong>＋</strong> and type. As you type, Cairn takes the sentence apart and shows every inference as a chip. If a chip is wrong, edit the words. Nothing is hidden and nothing is guessed behind your back.</p>
+
+<h3 id="shorthand">Shorthand</h3>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">You type</th><th scope="col">You get</th></tr></thead>
+<tbody>
+<tr><td><code>#work</code></td><td>The tag <em>work</em></td></tr>
+<tr><td><code>@Board pack</code></td><td>The project or area <em>Board pack</em></td></tr>
+<tr><td><code>@"Q4 board pack"</code></td><td>Quoted, for names with spaces</td></tr>
+<tr><td><code>!</code> <code>!!</code> <code>!!!</code></td><td>Low, medium, high priority</td></tr>
+<tr><td><code>~45m</code> <code>~2h</code> <code>~1h30</code> <code>~1.5h</code></td><td>An estimate</td></tr>
+<tr><td><code>// call Jo first</code></td><td>A note</td></tr>
+<tr><td>A new line starting <code>-</code></td><td>A checklist item</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>If <code>@Something</code> does not match an existing project or area, Cairn creates a project with that name. That is nearly always what you meant.</p>
+
+<h3 id="dates-it-understands">Dates it understands</h3>
+
+<p><code>today</code> · <code>tonight</code> · <code>this evening</code> · <code>tomorrow</code> · <code>tomorrow evening</code> · <code>day after tomorrow</code> · <code>monday</code>…<code>sunday</code> · <code>next tuesday</code> · <code>next week</code> · <code>this weekend</code> · <code>next month</code> · <code>end of month</code> (<code>eom</code>) · <code>end of week</code> (<code>eow</code>) · <code>in 3 days</code> · <code>in two weeks</code> · <code>in a fortnight</code> · <code>someday</code></p>
+
+<p>Plus any formal date your phone already recognises — <code>3 March</code>, <code>12/04</code>, <code>3 March 2027</code>.</p>
+
+<h3 id="deadlines-versus-dates">Deadlines versus dates</h3>
+
+<p>Put <code>by</code>, <code>due</code> or <code>deadline</code> in front of a date and it becomes a <strong>deadline</strong> rather than a plan.</p>
+
+<ul>
+<li><em>Draft the report <strong>tomorrow</strong></em> — you intend to do it tomorrow.</li>
+<li><em>Draft the report <strong>by Friday</strong></em> — somebody is expecting it on Friday.</li>
+</ul>
+
+<p>That distinction is the difference between a plan you can move freely and a promise you cannot. It is the single most important thing in this guide.</p>
+
+<p>Cairn will not hijack an ordinary "by": <em>"stand by the door and wait for Monday"</em> gives you a plan for Monday, not a deadline.</p>
+
+<h3 id="times">Times</h3>
+
+<p><code>at 9am</code>, <code>at 15:30</code> — sets a reminder. A bare number is treated as a quantity, not a time, so <em>"buy 3 bulbs"</em> does not become a 3 o'clock alarm.</p>
+
+<h3 id="repeats">Repeats</h3>
+
+<p><code>every day</code> · <code>every Monday</code> · <code>every other Tuesday</code> · <code>every 2 weeks</code> · <code>every month</code> · <code>every weekday</code> · or simply <code>daily</code>, <code>weekly</code>, <code>monthly</code>, <code>yearly</code>.</p>
+
+<h3 id="worked-example">Worked example</h3>
+
+<pre><code>Draft the board narrative by friday ~90m @QBR #deep !!</code></pre>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Chip</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><td>Due Friday</td><td>Deadline, not a plan</td></tr>
+<tr><td>1h 30m</td><td>Estimate</td></tr>
+<tr><td>QBR</td><td>Project (created if it does not exist)</td></tr>
+<tr><td>#deep</td><td>Tag</td></tr>
+<tr><td>Medium priority</td><td>From <code>!!</code></td></tr>
+<tr><td>Deep focus</td><td>Inferred from the verb "draft"</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Title saved: <strong>Draft the board narrative</strong>.</p>
+
+<h3 id="tidy-this-up">Tidy this up</h3>
+
+<p>On a device with Apple Intelligence, longer input gets a <strong>Tidy this up</strong> button. It rewrites a rambling note into a crisp task and pulls out sub-steps.</p>
+
+<p>The model only ever contributes <strong>wording</strong>. Your date, deadline, tags, project, estimate and priority come from Cairn's own parse of what you actually typed, and they survive the rewrite untouched — the model is told never to invent them, so it cannot be trusted to preserve them either. Sub-steps it suggests are added after your own bullets, never duplicating one you already wrote.</p>
+
+<div class="section"><h2 id="4-the-six-lists">4. The six lists</h2></div>
+
+<h3 id="inbox">Inbox</h3>
+
+<p>Everything captured but not yet decided on. A to-do lands here when it has no date, no project and no area. The Inbox is not a to-do list — it is a decision queue.</p>
+
+<p>It sits <strong>on its own in the sidebar</strong>, above the five time-based lists, with a line under it saying what is in it. That is deliberate. Today, Upcoming, Anytime, Someday and Logbook are all states of work you have already decided about; the Inbox is the one list of work you have not. Its name — a container borrowed from the post — says where a thing was put rather than what state it is in, so the grouping carries the meaning the name does not.</p>
+
+<p><strong>Capture inherits where you are standing.</strong> Add a to-do while you are looking at Someday and it is parked in Someday; from Anytime it is filed in Anytime; from a project it is filed in that project; from an area, that area; from a tag, tagged; from Today it is dated today, and from Upcoming, tomorrow. The row above the field always names where it will land and why, before you commit it — and anything you type overrules it. Type "tomorrow" while standing in Someday and you get tomorrow.</p>
+
+<p>Only genuinely context-free capture reaches the Inbox: the widget, Siri, a Shortcut, or the ＋ from the sidebar with nothing open.</p>
+
+<p><strong>Getting out of the Inbox without inventing anything.</strong> "I have decided about this, it just has no home" is a real answer. Swipe an Inbox row right and tap <strong>Anytime</strong>: it moves out of the Inbox without a date and without a project.</p>
+
+<p><strong>And you can switch the Inbox off.</strong> <em>Settings → Use the Inbox</em>. With it off, work that has no date and no home goes straight to <strong>Anytime</strong> and the list leaves the sidebar. Nothing is hidden and nothing is deleted — the Inbox was only ever a <em>view</em> of to-dos with no date and no project, so those to-dos simply appear in Anytime instead. Turn it back on and they are in the Inbox again.</p>
+
+<p>Keep it if you capture faster than you decide; that is what it is for. Turn it off if you decide as you capture, because then it is a second filing step for work you had already filed.</p>
+
+<h3 id="today">Today</h3>
+
+<p>What you will actually do today, in two bands: the main day, and <strong>This Evening</strong> for anything deliberately pushed past the working day.</p>
+
+<p>Below them sits <strong>Tomorrow</strong> — the next five items and the time they already hold, meetings included. Today is the commitment; tomorrow is the warning. Seeing what is already stacked up is what stops you agreeing to a seventh thing. Turn it off in Settings if you would rather not look.</p>
+
+<p>At the top: today's committed time against your capacity. When the bar goes red you have promised more than the day holds. That is information, not a scolding — but ignoring it is how days fall over.</p>
+
+<p>At the bottom: <strong>Move what is left to tomorrow</strong> — the honest end-of-day escape hatch, with an Undo.</p>
+
+<h3 id="upcoming">Upcoming</h3>
+
+<p>Dated work day by day, each day showing the total time it already holds. Deadlines appear here even when the to-do itself has no date, because that is exactly when you need the warning.</p>
+
+<h3 id="anytime">Anytime</h3>
+
+<p>Live work with no date. The list you pull from when you finish early.</p>
+
+<p>Anytime is <strong>ranked</strong>, not merely sorted. The most deserving work floats up and each row says why: <em>"Due in 2 days"</em>, <em>"Waiting 41 days"</em>, <em>"High priority"</em>.</p>
+
+<h3 id="someday">Someday</h3>
+
+<p>Parked ideas. Out of the way, never lost, never counted against your capacity, never included in a day plan.</p>
+
+<h3 id="logbook">Logbook</h3>
+
+<p>Everything finished, grouped by day. It exists so that on a bad week you can see, in numbers, that you did in fact do things.</p>
+
+<div class="section"><h2 id="5-projects-areas-sections-and-tags">5. Projects, areas, sections and tags</h2></div>
+
+<h3 id="which-one-is-it">Which one is it?</h3>
+
+<p>Ask one question: <strong>can this be finished?</strong></p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col"></th><th scope="col">Project</th><th scope="col">Area</th></tr></thead>
+<tbody>
+<tr><td>Finishes</td><td>Yes — it has an end state</td><td>Never</td></tr>
+<tr><td>Example</td><td><em>Refit the kitchen</em></td><td><em>Health</em>, <em>Finance</em>, <em>Team</em></td></tr>
+<tr><td>Can go stalled</td><td>Yes, and the review says so</td><td>No — a quiet week under Health is normal</td></tr>
+<tr><td>Review cadence</td><td>Yes</td><td>No</td></tr>
+<tr><td>Drives the balance report</td><td>No</td><td>Yes</td></tr>
+<tr><td>Contains</td><td>To-dos, in sections</td><td>Projects, and loose to-dos</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Most people end up with a handful of areas that map to their life and barely change, and projects that come and go inside them.</p>
+
+<h3 id="making-one">Making one</h3>
+
+<p>Three routes, all equivalent:</p>
+
+<ul>
+<li><strong>Hold the ＋ button</strong> — on the sidebar or any list — and choose <em>New Project</em> or <em>New Area</em>. A plain tap still adds a to-do.</li>
+<li><strong>The Library section of the sidebar</strong>, which always shows a <em>New Area</em> row and a <em>New Project</em> row under each area. A project made from inside an area starts in that area.</li>
+<li><strong>Type <code>@name</code> when capturing.</strong> If nothing matches, Cairn creates a project with that name. It only ever creates projects this way, never areas.</li>
+</ul>
+
+<h3 id="projects">Projects</h3>
+
+<p>Work with a finish line. Shows a progress ring, can carry a deadline, and can be split into <strong>sections</strong> when it gets big.</p>
+
+<p><strong>When a project's deadline passes.</strong> Three things happen, and deliberately not a fourth:</p>
+
+<ul>
+<li>Every open to-do inside it carries a <strong>Project overdue</strong> chip in the lists — amber, not red. Red is reserved for a promise <em>you</em> broke about that one to-do; amber says the project around it is late. They are different facts.</li>
+<li>Its work is pushed up the ranking, and keeps rising the later the project gets. It stays below the same to-do's own overdue deadline, because a promise about one line outranks a promise about a body of work.</li>
+<li>The weekly review raises it: <em>"QBR passed its deadline 12 days ago, 6 to-dos still open."</em> If nothing is open inside it, the review says so instead — either it is finished and should be marked so, or the next step was never written down.</li>
+</ul>
+
+<p>What does <strong>not</strong> happen: its to-dos are not counted as overdue. Conflating the two would inflate the overdue tally until it stopped meaning anything.</p>
+
+<p><strong>Stalled projects.</strong> A project with no open to-dos is stalled — it looks alive in the sidebar but cannot move. Cairn flags it with a warning triangle and raises it in the weekly review. This one check catches more dropped balls than any other feature in the app.</p>
+
+<p><strong>Review cadence.</strong> Weekly by default. Projects not looked at within their cadence surface in the weekly review. Mark one reviewed from its <strong>⋯</strong> menu.</p>
+
+<p><strong>Suggest next steps.</strong> On a stalled project — or from the <strong>⋯</strong> menu at any time — Cairn proposes concrete next actions. On a device with Apple Intelligence these come from Apple's on-device model; otherwise you get a five-step scaffold that applies to almost any project. Nothing is added until you tap the plus.</p>
+
+<h3 id="areas">Areas</h3>
+
+<p>A standing responsibility that never completes: <em>Work</em>, <em>Home</em>, <em>Health</em>, <em>Finance</em>. Projects live inside areas; so can loose to-dos.</p>
+
+<p>You do not finish Finance. That is the whole distinction, and it is why areas are never flagged as stalled and never carry a review cadence: "nothing open under Health" is a normal Tuesday, not a dropped ball.</p>
+
+<p>Areas also drive the balance report in Insights — where your finished effort actually went, versus where you assume it went.</p>
+
+<h3 id="sections">Sections</h3>
+
+<p>Headings inside a project. Purely organisational, and worth adding the moment a project passes about eight items.</p>
+
+<h3 id="tags">Tags</h3>
+
+<p>Tags cut across everything. Use them for <strong>context</strong>, not category: a place, a person, a tool, a mode. <code>#calls</code>, <code>#offline</code>, <code>#waiting-on-jo</code>.</p>
+
+<div class="section"><h2 id="6-waiting-on-dependencies">6. Waiting on: dependencies</h2></div>
+
+<p>Any to-do can be blocked by another. Open a to-do, <strong>Waiting on → Add a blocker</strong>.</p>
+
+<p>A blocked to-do:</p>
+
+<ul>
+<li>shows a <strong>Blocked</strong> chip in every list, and a padlock where its tick would be;</li>
+<li><strong>cannot be completed.</strong> Tap the padlock and Cairn tells you what it is waiting on rather than doing nothing. Waiting-on is a claim about the order the work has to happen in, and an app that draws the dependency then lets you tick it anyway is decorating the rule, not enforcing it;</li>
+<li>is excluded from Plan My Day entirely — you cannot start it, so it should not be competing for today;</li>
+<li>unblocks itself the moment its blocker is completed.</li>
+</ul>
+
+<p>The one exception is completing the <strong>whole project</strong>. That is a statement about all of its work at once, and the ordering between two of its to-dos stops mattering the moment both are finished — so the project completes, blocked items included, rather than leaving open to-dos inside a finished project.</p>
+
+<p>Cairn refuses to create a circular dependency, because two to-dos each waiting on the other would deadlock the planner and, more importantly, deadlock you.</p>
+
+<div class="section"><h2 id="7-effort-energy-and-estimates">7. Effort, energy and estimates</h2></div>
+
+<p>Three fields the plan depends on.</p>
+
+<p><strong>Estimate.</strong> Tap a preset or type <code>~45m</code> at capture. Anything without an estimate is assumed to take 25 minutes — an hour if it is deep work, ten minutes if it is admin. A rough number beats no number.</p>
+
+<p><strong>Effort needed.</strong> Deep focus / Regular / Low energy. Cairn guesses from the verb ("draft", "design", "analyse" → deep; "email", "book", "pay" → low) and you can override it. This is the axis every other task manager ignores, and it is what makes a generated day feel humane rather than mechanical.</p>
+
+<p><strong>Priority.</strong> None / Low / Medium / High. Deliberately coarse. If everything is high priority, nothing is.</p>
+
+<div class="section"><h2 id="8-plan-my-day">8. Plan My Day</h2></div>
+
+<h3 id="your-capacity">Your capacity</h3>
+
+<p>Three numbers, editable on the Plan screen and in Settings:</p>
+
+<ul>
+<li><strong>Working time</strong> — minutes you are prepared to commit today.</li>
+<li><strong>Buffer</strong> — the share held back for the unexpected. Default 20%. Not optional padding: days with no slack are the days that fall over.</li>
+<li><strong>Evening</strong> — a separate, smaller budget for anything marked <em>This Evening</em>.</li>
+</ul>
+
+<p>Plannable time = working time − buffer.</p>
+
+<h3 id="your-calendar">Your calendar</h3>
+
+<p>Turn on <strong>Settings → Plan around my calendar</strong> and Cairn reads your meetings and <strong>subtracts them from the time it is allowed to plan into</strong>. Today shows them under <em>Already committed</em>, and the capacity bar reflects what is genuinely left.</p>
+
+<p>This is the difference between showing you your calendar and planning around it. A day plan that ignores four hours of meetings is not a plan, it is a wish.</p>
+
+<p>All-day entries are ignored on purpose: "annual leave" and "Jo's birthday" are not four hours of work, and counting them would make the planner useless on exactly the days it matters most.</p>
+
+<p>Cairn never writes to your calendar, never copies events into its own database, and asks for access only when you switch this on.</p>
+
+<p><strong>iOS will ask for "Full Access", and you have to grant it.</strong> That is not Cairn being greedy — iOS has no read-only setting for calendars. The three choices are None, <em>Add Events Only</em> (which grants writing without reading) and <em>Full Access</em> (read and write). Reading your meetings needs the third one. <em>Add Events Only</em> is exactly backwards for Cairn: it gives away the power Cairn never uses and withholds the one it does, so the toggle stays off if you pick it.</p>
+
+<p>If you have already answered and want to change it, iOS will not ask a second time. Use <strong>Open iOS Settings</strong> in the calendar section, or go to Settings → Privacy &amp; Security → Calendars → Cairn, and choose Full Access.</p>
+
+<h3 id="how-the-order-is-decided">How the order is decided</h3>
+
+<p><strong>Step one: commitments.</strong> Anything with a deadline today or already past goes in first, whatever the load. That is what "commitment" means.</p>
+
+<p><strong>Step two: everything else, ranked.</strong> Each candidate scores on:</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Signal</th><th scope="col">Effect</th></tr></thead>
+<tbody>
+<tr><td>Overdue deadline</td><td>Largest single factor, growing with how late it is</td></tr>
+<tr><td>Due today</td><td>Very large</td></tr>
+<tr><td>Due within a fortnight</td><td>Sliding scale, closer is higher</td></tr>
+<tr><td>Already planned for today, or for a day now past</td><td>Large</td></tr>
+<tr><td>Priority you set</td><td>Proportional</td></tr>
+<tr><td>How long it has been waiting</td><td>Small and capped, so old work does not rot</td></tr>
+<tr><td>Project deadline closing in</td><td>Moderate</td></tr>
+<tr><td>Project deadline already passed</td><td>Larger, and growing with how late it is — but always below the same to-do's own overdue deadline</td></tr>
+<tr><td>Under ten minutes</td><td>Small quick-win bonus</td></tr>
+<tr><td>Blocked, or in Someday</td><td>Excluded outright</td></tr>
+</tbody>
+</table>
+</div>
+
+<p><strong>Step three: packing.</strong> Items go into bands — <strong>Deep focus</strong> first, then the <strong>Main block</strong>, then an <strong>Admin sweep</strong>, then <strong>This evening</strong>. Deep-focus work is limited to one protected block, and no single area may take more than about 70% of the day.</p>
+
+<h3 id="bringing-in-work-the-plan-left-out">Bringing in work the plan left out</h3>
+
+<p>Upcoming, Someday and shelved-project work never enters the automatic plan. That is deliberate: a planner that dragged Friday's job into Monday would be overruling a decision you had already made.</p>
+
+<p>Wanting it today anyway is a fair choice — it just has to be yours. <strong>Pulled in by hand → Add</strong> opens Upcoming, Someday and shelved work, searchable. Ticking one moves its date to today and takes it out of Someday, and the chip on the plan says where it came from so the consequence is visible before you apply.</p>
+
+<h3 id="choosing-what-actually-goes-in">Choosing what actually goes in</h3>
+
+<p>The engine proposes; you decide.</p>
+
+<ul>
+<li>Every line has a <strong>tick</strong>. Tap it to drop that item from today — it stays in your lists, it just loses its claim on the day.</li>
+<li><strong>Held back</strong> at the bottom lists everything that did not fit. Tick any of those to force it in anyway.</li>
+<li>The header count, the time and the capacity bar all follow your selection, so you can see the cost of adding one more thing before you commit to it.</li>
+<li>The chevron opens the to-do.</li>
+</ul>
+
+<p>The tick is a <strong>selection</strong> control, not a completion one. You come to this screen to decide what to do, not to record what you have done — completing work happens in Today.</p>
+
+<p>Nothing is written to your lists until you tap <strong>Use this plan</strong>. Anything you ticked out releases today; a date you had set in the future is left alone.</p>
+
+<h3 id="arguing-with-it">Arguing with it</h3>
+
+<p>The plan is deterministic: same inputs, same plan, every time. If you disagree, change an input — an estimate, a priority, a deadline, your capacity — and rebuild. That is a feature. A planner that changed its mind on its own would be a planner you stopped trusting.</p>
+
+<div class="section"><h2 id="9-the-weekly-review">9. The weekly review</h2></div>
+
+<p>Ten minutes a week is the difference between a task list you trust and one you avoid. Cairn does the arithmetic; you make the decisions.</p>
+
+<p><strong>The numbers.</strong> Finished this week versus last, captured, still open, sitting in the Inbox, deadlines blown, projects stalled, and your current streak.</p>
+
+<p><strong>The numbers are tappable.</strong> Finished opens the Logbook, Inbox opens the Inbox, Overdue opens Today, and Stalled or Late projects jump to the findings below, which name each project. Captured and Still open stay plain — they span every list and have no single view to open, and a tile that led nowhere would be worse than one that admits it. A chevron marks the ones that do lead somewhere.</p>
+
+<p><strong>The findings</strong>, ordered by severity, each tapping straight through:</p>
+
+<ul>
+<li>Inbox backing up</li>
+<li>Deadlines already passed</li>
+<li>Projects past their own deadline</li>
+<li>Projects with no next step</li>
+<li>Projects overdue a review</li>
+<li>To-dos older than a month</li>
+<li>Today holding more than a full working day</li>
+<li>Capturing far faster than you are finishing</li>
+<li>One area swallowing the week</li>
+</ul>
+
+<p><strong>The paragraph.</strong> With Apple Intelligence available, the opening summary is written by Apple's on-device model from the real figures, with explicit instructions not to invent any. Without it you get the same facts, written by Cairn.</p>
+
+<h3 id="choose-how-it-talks-to-you">Choose how it talks to you</h3>
+
+<p>A review you dread is a review you stop opening, and a review you stop opening cannot help you. So the voice is yours to set — from the <strong>Aa</strong> button on the review screen, or <strong>Settings → Weekly review → Tone</strong>:</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Tone</th><th scope="col">What it sounds like</th></tr></thead>
+<tbody>
+<tr><td><strong>Supportive</strong></td><td>Assumes the week was hard and says so kindly. No targets, no pressure.</td></tr>
+<tr><td><strong>Encouraging</strong></td><td>Leads with what went well, then points at the next achievable win.</td></tr>
+<tr><td><strong>Friendly</strong> <em>(default)</em></td><td>Plain and level-headed. What happened, and what is worth a look.</td></tr>
+<tr><td><strong>Just the facts</strong></td><td>The figures and their movement. No opinion, and no suggestion at all.</td></tr>
+<tr><td><strong>Direct</strong></td><td>Blunt about the gap between plan and outcome.</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Two things are worth knowing about how this works.</p>
+
+<p><strong>The tone changes the wording and nothing else.</strong> The statistics, the findings and their severity are byte-for-byte identical in all five. A review that could flatter you by choosing kinder arithmetic would be worthless, so it cannot.</p>
+
+<p><strong>Every tone, Direct included, is held to the same floor: blunt about the work, never about you.</strong> Cairn will tell you that nothing was finished this week. It will not tell you that you are a failure — it is a to-do list working from nine integers, and it has no idea whether you spent the week in hospital. That floor is enforced on Cairn's own writing and given to Apple's model as a hard instruction.</p>
+
+<p>The tone applies whether or not you have Apple Intelligence. Cairn writes each tone itself; the model, when present, rewrites it in the same voice.</p>
+
+<h3 id="working-through-it">Working through it</h3>
+
+<p>Start with the Inbox. Then the blown deadlines: renegotiate, move, or delete — a deadline you have sailed past is not a deadline. Then give every stalled project one concrete next action, or mark it complete. Then mark each project reviewed.</p>
+
+<div class="section"><h2 id="10-insights">10. Insights</h2></div>
+
+<p>Three questions worth answering, over two, four or twelve weeks.</p>
+
+<p><strong>Am I finishing things?</strong> Completed per day, with a daily average.</p>
+
+<p><strong>Where did the effort go?</strong> Finished minutes by area. Not where you assume — where it actually went.</p>
+
+<p><strong>Is the backlog healthy?</strong> Median age of open work, how much is older than thirty days, how much is blocked, and what share of your backlog carries a real estimate.</p>
+
+<div class="section"><h2 id="11-repeating-to-dos">11. Repeating to-dos</h2></div>
+
+<p>Set from capture (<code>every Monday</code>) or in the editor.</p>
+
+<p>Two modes, and the difference matters:</p>
+
+<ul>
+<li><strong>Fixed schedule</strong> — "every Monday" stays on Mondays whether or not you did it last week. Right for rent, bins, standing meetings.</li>
+<li><strong>Count from when I finish it</strong> — the clock starts when you tick the box. Right for watering plants, servicing things, following up.</li>
+</ul>
+
+<p>Each occurrence is its own to-do, so the Logbook keeps a real record rather than pretending you only ever did it once. Checklists are copied to each occurrence.</p>
+
+<div class="section"><h2 id="12-search">12. Search</h2></div>
+
+<p>Pull down on the sidebar and type.</p>
+
+<p>Literal matches appear instantly. Beyond that, Cairn uses Apple's on-device sentence embeddings, so searching <em>"vehicle cover"</em> finds <em>"Renew the car insurance"</em>. Results found by meaning rather than by spelling say so, so the list never feels arbitrary.</p>
+
+<p>The embedding model ships with iOS. Nothing is downloaded and nothing is sent anywhere.</p>
+
+<div class="section"><h2 id="13-the-widget-and-links">13. The widget and links</h2></div>
+
+<h3 id="widget">Widget</h3>
+
+<p>Add <strong>Cairn → Today</strong> to your home screen. Small, medium and large. It shows today's list, how much time it holds against your capacity, and how many items are waiting in the Inbox. Tapping a row opens it.</p>
+
+<p>The widget reads a small snapshot the app writes into a shared folder on your device. It makes no network requests and cannot: there is nothing to request.</p>
+
+<h3 id="siri-and-shortcuts">Siri and Shortcuts</h3>
+
+<p>Three built-in actions, all handled on device:</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Say</th><th scope="col">Effect</th></tr></thead>
+<tbody>
+<tr><td>"Add a to-do to Cairn"</td><td>Siri asks what needs doing, then runs it through the same parser as the capture sheet — shorthand and all — and tells you which list it landed in</td></tr>
+<tr><td>"What's on today in Cairn"</td><td>Reads back how many to-dos, roughly how long they will take, whether that exceeds your capacity, and the first three</td></tr>
+<tr><td>"Plan my day in Cairn"</td><td>Opens the app on the plan screen</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>All three also appear in the Shortcuts app, so you can build them into automations — for example, run <em>What's on today</em> every weekday at 08:30.</p>
+
+<h3 id="links">Links</h3>
+
+<p>Cairn answers <code>cairn://</code> links, so Shortcuts and home-screen icons can drive it:</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Link</th><th scope="col">Effect</th></tr></thead>
+<tbody>
+<tr><td><code>cairn://add?text=Call%20the%20plumber%20tomorrow</code></td><td>Opens capture, pre-filled, with the full shorthand applied</td></tr>
+<tr><td><code>cairn://today</code> <code>cairn://inbox</code> <code>cairn://upcoming</code> <code>cairn://anytime</code></td><td>Opens that list</td></tr>
+<tr><td><code>cairn://plan</code></td><td>Opens Plan My Day</td></tr>
+<tr><td><code>cairn://review</code></td><td>Opens the weekly review</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>All handled on device.</p>
+
+<div class="section"><h2 id="14-gestures-and-shortcuts">14. Gestures and shortcuts</h2></div>
+
+<h3 id="anywhere">Anywhere</h3>
+
+<p><strong>Pull down to refresh.</strong> Every list, the plan, the review and Insights re-read the database — and your calendar, if that is switched on.</p>
+
+<h3 id="on-a-row">On a row</h3>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Gesture</th><th scope="col">Effect</th></tr></thead>
+<tbody>
+<tr><td>Swipe right</td><td>Today, or Tomorrow</td></tr>
+<tr><td>Swipe left</td><td>Someday, or Delete</td></tr>
+<tr><td>Tap</td><td>Open it</td></tr>
+<tr><td>Tap the circle</td><td>Complete it — an Undo appears for six seconds</td></tr>
+<tr><td>Long press</td><td>Priority, effort, scheduling and delete without opening anything</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="reordering">Reordering</h3>
+
+<p>Tap <strong>Edit</strong> in the Inbox, Anytime, Someday or a project to drag rows into the order you want, or to delete several at once. Today is ordered by the plan and Upcoming by date, so neither is hand-sortable — change the date instead.</p>
+
+<h3 id="keyboard-with-a-hardware-keyboard">Keyboard (with a hardware keyboard)</h3>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Keys</th><th scope="col">Effect</th></tr></thead>
+<tbody>
+<tr><td>⌘N</td><td>New to-do</td></tr>
+<tr><td>⌘↩</td><td>Save the to-do you are typing</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section"><h2 id="15-what-runs-on-your-device">15. What runs on your device</h2></div>
+
+<h3 id="layer-one-cairns-own-engine-always">Layer one — Cairn's own engine, always</h3>
+
+<p>Ordinary Swift, running locally, no model in the loop:</p>
+
+<ul>
+<li><strong>The capture parser</strong> — dates, deadlines, times, repeats, tags, projects, estimates, priorities, checklists, notes.</li>
+<li><strong>The focus scorer</strong> — the ranking behind Anytime and Plan My Day.</li>
+<li><strong>The day planner</strong> — capacity, banding, area balance, deferrals.</li>
+<li><strong>The review engine</strong> — every statistic and every finding.</li>
+<li><strong>Search</strong> — literal matching plus Apple's Natural Language sentence embeddings, a model that ships with iOS.</li>
+</ul>
+
+<p>All of it works on every supported device, offline, with Apple Intelligence switched off entirely.</p>
+
+<h3 id="layer-two-apples-on-device-language-model-when-available">Layer two — Apple's on-device language model, when available</h3>
+
+<p>On iOS 26 and later with Apple Intelligence enabled, Cairn additionally uses Apple's on-device foundation model for exactly three things:</p>
+
+<ol>
+<li><strong>Tidy this up</strong> — rewriting a rambling capture.</li>
+<li><strong>Suggest next steps</strong> — breaking a project into actions.</li>
+<li><strong>The weekly review paragraph</strong> — turning real figures into prose.</li>
+</ol>
+
+<p>Each is optional, produces a suggestion you accept, and sits off the critical path. Saving a to-do never waits for a model.</p>
+
+<p>There is no layer three. Cairn has no server, no account, and makes no network requests of any kind.</p>
+
+<h3 id="turning-it-off">Turning it off</h3>
+
+<p><strong>Settings → Use Apple Intelligence.</strong> Off removes exactly three things: the <em>Tidy this up</em> button, model-written project steps, and the model-written review paragraph. The parser, planner, scorer, review engine and search are untouched, because none of them ever used a model.</p>
+
+<h3 id="if-the-model-is-not-available">If the model is not available</h3>
+
+<p>The sidebar footer names what is running — <strong>Cairn engine</strong>, or <strong>Cairn engine + Apple Intelligence</strong> — and the lock beside it says <strong>On device</strong>, which is a statement about where your data is, not about whether anything is working. <em>Suggest next steps</em> falls back to a generic but genuinely useful five-step scaffold.</p>
+
+<div class="section"><h2 id="16-backup-export-and-restore">16. Backup, export and restore</h2></div>
+
+<h3 id="export-a-backup">Export a backup</h3>
+
+<p><strong>Settings → Export a backup</strong> writes a single JSON file with every area, project, section, to-do, checklist item, tag, dependency and repeat rule. Save it wherever you like.</p>
+
+<p>The format is plain, pretty-printed, ISO-8601-dated and versioned. You can read it in a text editor. That is deliberate: local-only storage is only a promise worth making if you can always get your data out.</p>
+
+<p><strong>Do this monthly.</strong> Put it somewhere you control.</p>
+
+<h3 id="export-as-markdown">Export as Markdown</h3>
+
+<p>A readable outline — areas, projects, to-dos, with checkboxes. Good for printing, pasting into a status update, or keeping a snapshot elsewhere.</p>
+
+<h3 id="restore">Restore</h3>
+
+<p><strong>Settings → Restore from a backup</strong>, then choose:</p>
+
+<ul>
+<li><strong>Merge</strong> — anything already present is updated in place, anything missing is added. Matching is by identifier, so restoring the same file twice is harmless.</li>
+<li><strong>Replace</strong> — wipes the library first, then restores. Use this when moving to a new phone.</li>
+</ul>
+
+<p>Reminders are rescheduled automatically after a restore.</p>
+
+<h3 id="moving-to-a-new-device">Moving to a new device</h3>
+
+<ol>
+<li>Export a backup on the old device.</li>
+<li>Get the file onto the new one however you like.</li>
+<li>Install Cairn, then <strong>Restore → Replace</strong>.</li>
+</ol>
+
+<h3 id="keeping-finished-work">Keeping finished work</h3>
+
+<p><strong>Settings → Keep finished work for.</strong> <em>Everything</em> by default, or 3 months, 6 months, 1 year, 2 years. Anything completed or cancelled before the window is deleted; the policy runs once a day at launch.</p>
+
+<p>Two honest notes before you turn it on.</p>
+
+<p><strong>It is not really about space.</strong> A to-do is a few hundred bytes, so a decade of them weighs less than one photograph. The reason to set a window is a Logbook you can still navigate — particularly if a daily repeating to-do is filling it, since each occurrence is kept as its own honest record.</p>
+
+<p><strong>It is permanent, and there is no copy anywhere else.</strong> The setting quotes exactly how many will go before you agree, and Settings shows the running count under the picker. Export a backup first.</p>
+
+<p>Three months is the shortest offered because Insights looks back twelve weeks, and a shorter window would quietly hollow out its charts. Open work is never touched, however old: age is not staleness, and a to-do you have not done is still work.</p>
+
+<h3 id="start-fresh">Start fresh</h3>
+
+<p>Deletes everything and cancels every pending reminder. It asks twice. There is no undo — export first.</p>
+
+<div class="section"><h2 id="17-settings-reference">17. Settings reference</h2></div>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col">Setting</th><th scope="col">Default</th><th scope="col">What it changes</th></tr></thead>
+<tbody>
+<tr><td>Working time</td><td>4h</td><td>Total minutes Plan My Day may commit</td></tr>
+<tr><td>Evening time</td><td>1h</td><td>Separate budget for <em>This Evening</em></td></tr>
+<tr><td>Longest deep block</td><td>1h 30m</td><td>Cap on the protected deep-focus band</td></tr>
+<tr><td>Buffer</td><td>20%</td><td>Share of working time held back</td></tr>
+<tr><td>Show the This Evening band</td><td>On</td><td>Hides the evening band in Today when off</td></tr>
+<tr><td>Default reminder time</td><td>09:00</td><td>Used when you switch a reminder on</td></tr>
+<tr><td>Appearance</td><td>System</td><td>System, Light or Dark</td></tr>
+<tr><td>Weekly review tone</td><td>Friendly</td><td>How the review is worded. Never changes a figure or a finding</td></tr>
+<tr><td>Keep finished work for</td><td>Everything</td><td>Deletes completed and cancelled work past the window, once a day</td></tr>
+<tr><td>Use the Inbox</td><td>On</td><td>Off sends undated, unfiled work straight to Anytime and removes the list</td></tr>
+<tr><td>Plan around my calendar</td><td>Off</td><td>Reads your calendar and subtracts booked meetings from your planning capacity. Read-only; needs Full Access because iOS has no read-only option</td></tr>
+<tr><td>Use Apple Intelligence</td><td>On</td><td>Master switch for the three optional written suggestions. Off leaves Cairn's own engine — which is the whole app — untouched</td></tr>
+<tr><td>Show tomorrow on Today</td><td>On</td><td>The Tomorrow section under Today</td></tr>
+<tr><td>Logbook grouping</td><td>Day</td><td>Day, Area, Project or Tag</td></tr>
+<tr><td>Offer to tidy up long captures</td><td>On</td><td>Shows the Apple Intelligence button in capture</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section"><h2 id="18-accessibility">18. Accessibility</h2></div>
+
+<ul>
+<li>Every control carries a VoiceOver label; rows are combined into a single element with their metadata read out ("Draft the narrative, 2 days overdue, 1h 30m").</li>
+<li>The completion circle has a 44×44pt hit area.</li>
+<li>All text scales with Dynamic Type.</li>
+<li>Colour is never the only signal: overdue work also carries a flag icon and explicit text, blocked work carries a padlock and the word "Blocked".</li>
+<li>The interface honours light and dark appearance. Every colour is defined separately for both, so nothing is merely inverted — dark mode is a designed palette, not a filter. <strong>Settings → Appearance</strong> overrides the device if you want one or the other permanently.</li>
+</ul>
+
+<div class="section"><h2 id="19-troubleshooting">19. Troubleshooting</h2></div>
+
+<p><strong>A to-do is not showing in Today.</strong> Check three things, in order: is it <strong>blocked</strong> by an unfinished to-do; is it parked in <strong>Someday</strong>; is its date in the <strong>future</strong>? Each is shown on the to-do's own screen.</p>
+
+<p><strong>Plan My Day held back something important.</strong> It only ever protects deadlines. If something matters but has no deadline, give it one, raise its priority, or shorten its estimate — then rebuild. If the plan is consistently too small, raise your working time or lower the buffer.</p>
+
+<p><strong>Everything is estimated at 25 minutes.</strong> That is the default for anything un-estimated. Insights → Estimate coverage shows how much of your backlog carries real numbers.</p>
+
+<p><strong>The date in my capture was read wrongly.</strong> Look at the chips before you save. Deadlines need <code>by</code>, <code>due</code> or <code>deadline</code> in front of them.</p>
+
+<p><strong>Reminders are not arriving.</strong> iOS Settings → Cairn → Notifications. Reminders are scheduled only for open to-dos with a time still in the future.</p>
+
+<p><strong>The sparkle buttons have gone.</strong> They appear only on iOS 26 or later with Apple Intelligence enabled and the model downloaded. Everything else is unaffected.</p>
+
+<p><strong>I deleted something by accident.</strong> Deleted to-dos sit in <strong>Trash</strong> until you empty it. <strong>Undo</strong> is also offered for six seconds after a completion or delete.</p>
+
+<div class="section"><h2 id="20-coming-from-things-3">20. Coming from Things 3</h2></div>
+
+<p>Most of the vocabulary is identical on purpose. What is the same:</p>
+
+<p>Inbox · Today · This Evening · Upcoming · Anytime · Someday · Logbook · Areas · Projects · Headings (called <em>Sections</em>) · Checklists · Tags · Deadlines separate from dates · Repeating to-dos · The Trash.</p>
+
+<p>What is new:</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th scope="col"></th><th scope="col"></th></tr></thead>
+<tbody>
+<tr><td><strong>Capacity</strong></td><td>Today shows committed time against what the day actually holds</td></tr>
+<tr><td><strong>Estimates and energy</strong></td><td>Two fields that make automatic planning possible</td></tr>
+<tr><td><strong>Plan My Day</strong></td><td>Builds the day, explains every choice, lists what it dropped</td></tr>
+<tr><td><strong>Ranked Anytime</strong></td><td>Most deserving work floats up, with the reason shown</td></tr>
+<tr><td><strong>Waiting on</strong></td><td>Dependencies; blocked work is hidden from the plan</td></tr>
+<tr><td><strong>Stalled projects</strong></td><td>Flagged and raised in the review</td></tr>
+<tr><td><strong>Weekly review</strong></td><td>Computed findings rather than a manual ritual</td></tr>
+<tr><td><strong>Insights</strong></td><td>Throughput, area balance, backlog health</td></tr>
+<tr><td><strong>Semantic search</strong></td><td>Finds by meaning as well as spelling</td></tr>
+<tr><td><strong>Local-only</strong></td><td>No cloud, no account, no network</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>What is deliberately absent:</p>
+
+<ul>
+<li><strong>Sync.</strong> There is no cloud. One device, plus a backup file you control.</li>
+<li><strong>A Mac app and an Apple Watch app.</strong> Not yet. Cairn is iPhone and iPad.</li>
+<li><strong>Email-to-inbox.</strong> It would require a server, and there isn't one.</li>
+</ul>
+
+<h3 id="bringing-your-data-across">Bringing your data across</h3>
+
+<p>Things can export a project as Markdown or plain text. Paste the lines into Cairn's capture field one at a time — the shorthand handles dates, tags and estimates as you go — or hand-write a JSON file in Cairn's backup format and use <strong>Restore → Merge</strong>. The format is documented and readable; see <code>App/Sources/Store/BackupService.swift</code>.</p>
+
+  <div class="btn-row">
+    <a class="mail-btn" href="/cairn/support/">Support &amp; FAQ <span class="arrow">→</span></a>
+    <a class="mail-btn solid" href="mailto:info@vyteralabs.com">info@vyteralabs.com <span class="arrow">→</span></a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Cairn</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app. Vytera Labs Ltd is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/cairn/">Overview</a>
+        <a href="/cairn/guide/">User Guide</a>
+        <a href="/cairn/support/">Support</a>
+        <a href="/cairn/privacy/">Privacy Policy</a>
+        <a href="/cairn/terms/">Terms of Use (EULA)</a>
+        <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
+      </div>
+      <address class="foot-addr">
+        Registered office<br>
+        71–75 Shelton Street<br>
+        Covent Garden<br>
+        London&nbsp;&nbsp;WC2H&nbsp;9JQ<br>
+        United Kingdom
+      </address>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. Registered in England &amp; Wales, company 17389107.</span>
+      <span><a href="/">vyteralabs.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
