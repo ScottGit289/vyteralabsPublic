@@ -275,6 +275,10 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 
   <div class="section"><h2>Questions we are asked most</h2></div>
 
+  <h3>What does Cairn cost, and will that change?</h3>
+  <p><strong>£5.99 in the UK, bought once.</strong> Apple sets the equivalent price in other territories, and the App Store shows you the figure that applies before you buy.</p>
+  <p>There is no subscription, no in-app purchase, no feature held back behind a paid tier, and no upgrade price at the next major version. This is not generosity: an app that makes <em>no network requests</em> cannot check whether a subscription is still live, so charging monthly would mean breaking the promise the whole app is built on. If the price of a future release ever changes, that affects new buyers, not you — Apple does not re-charge for an app you already own.</p>
+
   <h3>Why does iOS ask for calendar "Full Access" when Cairn only reads?</h3>
   <p>Because iOS does not offer a read-only choice. Since iOS 17 an app can hold exactly three calendar states: <em>None</em>, <em>Add Events Only</em> (which grants writing without reading), and <em>Full Access</em> (read and write). There is no fourth option. Reading your meetings requires Full Access, so that is what Cairn has to ask for.</p>
   <p><em>Add Events Only</em> is the worst choice for Cairn: it hands over the one power it never uses and withholds the only one it needs. What stops Cairn writing is the code, not the permission — the app contains no calendar-write call, and does not declare the write-only usage description iOS would require to run one. <a href="/cairn/privacy/#calendar">The privacy policy sets this out in full.</a></p>
