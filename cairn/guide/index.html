@@ -699,20 +699,27 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 
 <h3 id="siri-and-shortcuts">Siri and Shortcuts</h3>
 
-<p>Three built-in actions, all handled on device:</p>
+<p>Four built-in actions, all handled on device:</p>
 
 <div class="table-wrap">
 <table>
 <thead><tr><th scope="col">Say</th><th scope="col">Effect</th></tr></thead>
 <tbody>
 <tr><td>"Add a to-do to Cairn"</td><td>Siri asks what needs doing, then runs it through the same parser as the capture sheet — shorthand and all — and tells you which list it landed in</td></tr>
+<tr><td>"Add a to-do to <em>Q4 Planning</em> in Cairn"</td><td>The same, but filed straight into that project or area. Say the name of any open project or any area</td></tr>
 <tr><td>"What's on today in Cairn"</td><td>Reads back how many to-dos, roughly how long they will take, whether that exceeds your capacity, and the first three</td></tr>
 <tr><td>"Plan my day in Cairn"</td><td>Opens the app on the plan screen</td></tr>
 </tbody>
 </table>
 </div>
 
-<p>All three also appear in the Shortcuts app, so you can build them into automations — for example, run <em>What's on today</em> every weekday at 08:30.</p>
+<p><em>Task</em> works as well as <em>to-do</em> in all of these.</p>
+
+<p><strong>Why Siri asks a second question.</strong> A spoken trigger phrase can only carry a parameter Siri can match against a known list — one of your projects, one of your areas. Free text cannot go in the phrase, which is an Apple constraint rather than a choice: it is why "add buy milk to Cairn" is not something any app can offer today. So the destination can be said out loud, and the to-do itself is dictated when Siri asks. Everything you dictate still goes through the full shorthand, so "draft the narrative by Friday ~90m !!" works by voice exactly as it does by keyboard.</p>
+
+<p>Projects appear as soon as you create them and disappear when you finish them — Siri is not offered a project you closed last quarter. Areas appear unless archived.</p>
+
+<p>All four also appear in the Shortcuts app, so you can build them into automations — for example, run <em>What's on today</em> every weekday at 08:30.</p>
 
 <h3 id="links">Links</h3>
 
