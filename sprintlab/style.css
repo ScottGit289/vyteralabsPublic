@@ -150,6 +150,8 @@ main.doc{padding-top:118px;padding-bottom:24px;}
 .doc p{color:var(--paper-dim);margin:12px 0;}
 .doc p strong{color:var(--paper);font-weight:500;}
 .doc ul{padding-left:20px;color:var(--paper-dim);}
+.doc ol{padding-left:20px;color:var(--paper-dim);}
+.doc ol li{margin:7px 0;}
 .doc li{margin:7px 0;}
 .doc a{color:var(--brass);border-bottom:1px solid var(--brass-soft);transition:border-color .25s;}
 .doc a:hover{border-color:var(--brass);}

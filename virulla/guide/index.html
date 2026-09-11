@@ -9,6 +9,7 @@
 <meta name="theme-color" content="#0B1017" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -34,101 +35,172 @@
 <main class="wrap doc" id="main">
   <p class="eyebrow">Virulla</p>
   <h1>User Guide</h1>
-  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&nbsp;&nbsp;·&nbsp;&nbsp;<strong>For:</strong> Virulla on iPhone&nbsp;&nbsp;·&nbsp;&nbsp;<a href="mailto:support@virulla.com">support@virulla.com</a></p>
-
-  <p>Virulla is an anonymous, end-to-end encrypted messenger. There is no phone number, no email and no account — just an identity created on your device. This guide covers setting it up, the one thing you must not lose, and how the privacy features behave so they do not surprise you.</p>
+  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&nbsp;&nbsp;·&nbsp;&nbsp;<strong>For:</strong> Virulla on iPhone, iOS 17 or newer&nbsp;&nbsp;·&nbsp;&nbsp;<a href="mailto:support@virulla.com">support@virulla.com</a></p>
 
   <div class="note">
     <strong>Read this first</strong>
-    <ul>
-      <li>Your <strong>Recovery Key</strong> is the only way to restore your identity. We cannot reset it, because we do not know who you are.</li>
-      <li>Chats look blank in screenshots and in the app switcher. That is deliberate, not a fault.</li>
-      <li>Sending messages uses credits. Every new account starts with 50 free.</li>
-      <li>Virulla is rated 17+ and has zero tolerance for abusive behaviour. Reports are actioned within 24 hours.</li>
-    </ul>
+    <p>Your <strong>Recovery Key</strong> is the only way to restore your identity. Because Virulla is anonymous, we cannot reset it for you — if you lose the key and the device, the account is gone. Store it in a password manager before you do anything else.</p>
   </div>
 
   <div class="section"><h2 id="contents">Contents</h2></div>
   <ul>
-    <li><a href="#account">1. Creating your identity</a></li>
-    <li><a href="#key">2. The Recovery Key</a></li>
-    <li><a href="#contacts">3. Adding a contact</a></li>
-    <li><a href="#messaging">4. Sending messages</a></li>
-    <li><a href="#credits">5. How credits work</a></li>
-    <li><a href="#disappearing">6. Disappearing messages</a></li>
-    <li><a href="#screenshots">7. Why your chats look blank in a screenshot</a></li>
-    <li><a href="#blocking">8. Blocking and reporting</a></li>
-    <li><a href="#appearance">9. Appearance</a></li>
-    <li><a href="#crypto">10. How the encryption works</a></li>
-    <li><a href="#delete">11. Deleting everything</a></li>
-    <li><a href="#help">12. Getting help</a></li>
+    <li><a href="#what-virulla-is">What Virulla is</a></li>
+    <li><a href="#set-up-in-a-couple-of-minutes">Set up in a couple of minutes</a></li>
+    <li><a href="#connect-with-someone">Connect with someone</a></li>
+    <li><a href="#send-messages-and-media">Send messages &amp; media</a></li>
+    <li><a href="#buying-and-redeeming-credits">Buying &amp; redeeming credits</a></li>
+    <li><a href="#messages-that-dont-stick-around">Messages that don't stick around</a></li>
+    <li><a href="#private-group-chats">Private group chats</a></li>
+    <li><a href="#the-features-that-protect-you">The features that protect you</a></li>
+    <li><a href="#alerts-and-quiet-hours">Alerts &amp; quiet hours</a></li>
+    <li><a href="#restore-wipe-and-delete">Restore, wipe &amp; delete</a></li>
+    <li><a href="#blocking-and-reporting">Blocking &amp; reporting</a></li>
+    <li><a href="#quick-answers">Quick answers</a></li>
   </ul>
 
-  <div class="section"><h2 id="account">1. Creating your identity</h2></div>
-  <p>There is nothing to sign up for. On first launch, tap <strong>Create anonymous account</strong>, save the Recovery Key shown on the next screen, and tap <strong>Continue</strong>.</p>
-  <p>No phone number, email or name is ever asked for or stored. The identity is generated on your device, and the keys stay there.</p>
+<div class="section"><h2 id="what-virulla-is">1. What Virulla is</h2></div>
+<p>Virulla is a privacy-first messenger for people who want their conversations to stay private — really private.</p>
+<p>Unlike most apps, Virulla asks for <strong>no phone number, no email, and no name</strong>. When you open it the first time, it creates an anonymous identity right on your phone. There is no central account for anyone to look up, leak, or hand over.</p>
+<p>Every message, photo and video is <strong>end-to-end encrypted</strong> — scrambled on your device and only unscrambled on your contact's device. Not even Virulla's servers can read them. You can also set messages to <strong>disappear</strong> after a chosen time, after which they are permanently gone.</p>
+<p>Virulla is a <strong>one-time purchase</strong> with no subscription and no ads. Sending messages uses <strong>credits</strong>, which you buy in small packs or receive as gift codes — more on that inside.</p>
+<h3>Anonymous</h3>
+<p>No phone, email or name. Your identity lives only on your device.</p>
+<h3>Encrypted end to end</h3>
+<p>Signal-grade cryptography. Only you and your contact can read messages.</p>
+<h3>Disappearing</h3>
+<p>Set a timer; when it ends the message is unrecoverable on both sides.</p>
+<h3>Photos &amp; video</h3>
+<p>Share media that's encrypted before it ever leaves your phone.</p>
+<h3>Private groups</h3>
+<p>Group chats where an admin controls exactly who is in the room.</p>
+<h3>Extra protection</h3>
+<p>Face ID lock, screenshot blocking, contact verification and more.</p>
+<div class="section"><h2 id="set-up-in-a-couple-of-minutes">2. Set up in a couple of minutes</h2></div>
+<p>There's no sign-up form. You create an anonymous identity and save one important key — that's it.</p>
+<h3>Install Virulla</h3>
+<p>Get Virulla from the App Store on your iPhone (iOS 17 or newer) and open it.</p>
+<h3>Create your anonymous account</h3>
+<p>Tap <strong>Create anonymous account</strong>. Virulla generates your private identity on the device. Nothing is sent to a server, and you're never asked for personal details.</p>
+<h3>Save your Recovery Key</h3>
+<p>You'll be shown a <strong>Recovery Key</strong> — a long secret code. This is the only way to restore your identity if you lose your phone. Copy it somewhere safe (a password manager is ideal), then tap <strong>Continue</strong>.</p>
+<h3>You're in — with 50 free credits</h3>
+<p>You'll land on the <strong>Chats</strong> screen, and your new account starts with <strong>50 free credits</strong> so you can message straight away. A small status indicator shows Secure once you're connected. You're ready to add a contact.</p>
+<div class="note"><strong>Important — your Recovery Key is everything</strong><p>Because Virulla is anonymous, there is no "forgot password" and no support team who can recover your account. If you lose your phone <em>and</em> your Recovery Key, your identity and messages cannot be restored. Save the key before you continue.</p></div>
+<h3>Why there's no phone number or email</h3>
+<p>Most messengers tie your account to a phone number, which links every message back to your real identity. Virulla deliberately doesn't. Your identity is a cryptographic key that lives on your device — which is exactly why the Recovery Key matters.</p>
+<div class="section"><h2 id="connect-with-someone">3. Connect with someone</h2></div>
+<p>You add people by exchanging a <strong>contact code</strong> — never a phone number. You only need to do it one way; the first message links you both.</p>
+<h3>Show your code</h3>
+<p>Open <strong>Add contact</strong> to display your own QR code and a text code, with a <strong>Share my code</strong> button.</p>
+<h3>Scan theirs</h3>
+<p>Tap <strong>Scan</strong> and point your camera at the other person's QR code.</p>
+<h3>Paste a code</h3>
+<p>If you can't scan, paste the text code they sent you and tap <strong>Add contact</strong>.</p>
+<h3>Send a link</h3>
+<p>Share your contact link by message or email; tapping it on an iPhone opens Virulla.</p>
+<div class="note"><strong>Your code contains no personal data</strong><p>A contact code is just your anonymous address and public keys. Sharing it doesn't reveal your phone number, name, or location — it only lets someone start an encrypted conversation with you.</p></div>
+<h3>Verify it's really them (optional but recommended)</h3>
+<p>For sensitive conversations, open the chat menu and choose <strong>Verify safety number</strong>. Compare the number shown on both phones — in person or over a trusted channel. If they match, no one is secretly sitting in the middle of your conversation, and the contact gets a green shield. See section&nbsp;7 for more.</p>
+<div class="section"><h2 id="send-messages-and-media">4. Send messages &amp; media</h2></div>
+<p>Open a chat and type as you would in any messenger. Text, photos and video are all encrypted on your device before they're sent.</p>
+<h3>What sending costs</h3>
+<p>Virulla uses <strong>credits</strong> so there's no subscription and no advertising. Each thing you send spends a small number of credits:</p>
+<div class="table-wrap"><table><tr><th>You send</th><th>Credits</th><th>Notes</th></tr><tr><td>A text message</td><td>1</td><td>Any length of text.</td></tr><tr><td>A photo</td><td>5</td><td>Encrypted before upload.</td></tr><tr><td>A video</td><td>10</td><td>Plays in-app; never written to disk unencrypted.</td></tr><tr><td>Receiving anything</td><td>Free</td><td>You're only charged for what you send.</td></tr></table></div>
+<p>Your current balance is shown at the top of the chat list. If you run low, Virulla prompts you to top up — see section&nbsp;4.</p>
+<h3>Photos &amp; video</h3>
+<p>Tap the attachment button in a chat to pick a photo or video. It's encrypted on your device, and only your contact can open it. Videos play inside Virulla and are never saved to your phone in readable form.</p>
+<h3>Read receipts</h3>
+<p>When both people have read receipts enabled, you'll see a <strong>Read</strong> marker once your message has been opened. You can turn receipts off in <strong>Settings</strong> if you'd rather not share when you've read a message.</p>
+<div class="note"><strong>Tip</strong><p>Sending fails with "not enough credits"? Tap the prompt to open the top-up screen, add a pack or redeem a gift code, and your message sends right away.</p></div>
+<div class="section"><h2 id="buying-and-redeeming-credits">5. Buying &amp; redeeming credits</h2></div>
+<p>Your account starts with <strong>50 free credits</strong>. After that, credits are one-time purchases — buy what you need, when you need it. There's no subscription and nothing renews automatically.</p>
+<div class="note"><strong>Welcome credits</strong><p>Every new account is loaded with <strong>50 credits</strong> — enough for around 50 text messages — so you can start chatting before you buy anything.</p></div>
+<h3>Buy a credit pack</h3>
+<p>Open <strong>Credits</strong> from the chat list (the balance chip) and choose a pack. Payment is handled securely by Apple; Virulla never sees your card details.</p>
+<div class="table-wrap"><table><tr><th>Pack</th><th>Credits</th><th>Good for roughly…</th></tr><tr><td>Starter</td><td>100</td><td>100 texts, or 20 photos.</td></tr><tr><td>Regular</td><td>500</td><td>500 texts, or 100 photos.</td></tr><tr><td>Value</td><td>2000</td><td>Heavy use, media, and groups.</td></tr></table></div>
+<p>Prices are shown in your local currency in the app. Credits never expire.</p>
+<h3>Redeem a gift code</h3>
+<p>If you've been given a Virulla gift code, open <strong>Credits ▸ Redeem a gift code</strong> and either scan it or paste it in. Valid credits are added to your balance instantly. Each code can be redeemed once on your device.</p>
+<div class="note"><strong>About gift codes</strong><p>Gift codes are issued by Vytera Labs and are cryptographically signed, so they can't be forged. If a code says it's invalid or already redeemed, check you copied all of it — or ask whoever gave it to you for a fresh one.</p></div>
+<div class="section"><h2 id="messages-that-dont-stick-around">6. Messages that don't stick around</h2></div>
+<p>Set a timer on a conversation and messages delete themselves after the time you choose — on both your phone and your contact's.</p>
+<h3>Set a timer</h3>
+<p>In a chat, choose a disappearing-message duration. New messages in that chat will carry the timer.</p>
+<h3>The clock starts when it's read</h3>
+<p>An incoming message begins counting down once it's opened, so a short timer won't erase something before you've seen it.</p>
+<h3>Then it's gone</h3>
+<p>When the timer ends, the message is deleted and the key that could decrypt it is destroyed — so it can't be brought back.</p>
+<div class="note"><strong>"Unrecoverable" means unrecoverable</strong><p>Disappearing messages are removed by throwing away their encryption key (crypto-shredding), not just hidden. Once gone, neither you, your contact, nor Virulla can restore them.</p></div>
+<div class="note"><strong>One honest limit</strong><p>Virulla can hide message content from screenshots and screen recordings on the device, but it cannot stop someone from photographing their screen with a second camera. Disappearing messages protect what's <em>stored</em>, not what another person chooses to capture in the moment.</p></div>
+<div class="section"><h2 id="private-group-chats">7. Private group chats</h2></div>
+<p>Groups work like one-to-one chats — end-to-end encrypted — with an admin who decides exactly who is in the room.</p>
+<h3>Create a group</h3>
+<p>Start a new group, give it a name, and pick contacts to add. You become the group <strong>admin</strong>.</p>
+<p>Invite more people any time with an <strong>invite link or QR code</strong> from the group info screen — handy for adding someone who isn't a contact yet.</p>
+<p>Everyone sends and receives normally; sending spends credits at the same rates as one-to-one chats.</p>
+<h3>Admin controls</h3>
+<h3>Add &amp; remove</h3>
+<p>Admins decide who joins and can remove members. Every change is cryptographically verified, so no one can sneak in.</p>
+<h3>Promote admins</h3>
+<p>Give another trusted member admin rights to help manage the group.</p>
+<h3>Invite links</h3>
+<p>Share a link or QR so new people create an account (if needed) and join automatically.</p>
+<h3>Leave any time</h3>
+<p>Anyone can leave a group; admins keep control of membership.</p>
+<div class="note"><strong>Membership can't be forged</strong><p>Every add, remove or promotion is signed by an admin's key and checked by each member's app — there's no server deciding who's in the group, so membership can't be tampered with.</p></div>
+<div class="section"><h2 id="the-features-that-protect-you">8. The features that protect you</h2></div>
+<p>Virulla layers several protections on top of end-to-end encryption. Here's what each one does and when to use it.</p>
+<h3>End-to-end encryption</h3>
+<p>Messages are encrypted on your device and decrypted only on your contact's, using X3DH, the Double Ratchet and AES-256 — the same approach trusted secure messengers use.</p>
+<h3>Verify a contact</h3>
+<p>Compare <strong>safety numbers</strong> to confirm no one is intercepting your chat. Verified contacts show a green shield.</p>
+<h3>Sealed sender</h3>
+<p>The server routes your message without learning who sent it — the sender's identity travels sealed inside the encryption.</p>
+<h3>Traffic-shape padding</h3>
+<p>Messages are padded to fixed sizes so the length of what you send can't be inferred from the network.</p>
+<h3>Face ID app lock</h3>
+<p>Require Face ID or Touch ID to open Virulla, so only you can read your chats. Turn it on in <strong>Settings</strong>.</p>
+<h3>PIN &amp; duress PIN</h3>
+<p>Add a PIN, plus an optional <strong>duress PIN</strong> that silently wipes everything if you're forced to unlock the app.</p>
+<h3>Screenshot blocking</h3>
+<p>Message content is hidden from screenshots and screen recordings, and the app blanks itself in the app switcher.</p>
+<h3>Route over Tor</h3>
+<p>Optionally send your traffic through Tor/Orbot to hide your network location from the relay. Enable it in <strong>Settings</strong>.</p>
+<h3>Keyboard hardening</h3>
+<p>Third-party keyboards are blocked inside Virulla, so keystroke-logging keyboards can't see what you type.</p>
+<h3>Clipboard care</h3>
+<p>Copying your Recovery Key uses a local, auto-expiring clipboard that doesn't sync to your other devices.</p>
+<div class="note"><strong>An honest word on security</strong><p>No software is unhackable, and Virulla doesn't claim to be. What it does give you is strong, well-understood protection for your message <em>content</em> and its <em>deletion</em>. The weakest link is usually a device itself — so keep your iPhone updated, locked, and in your control.</p></div>
+<div class="section"><h2 id="alerts-and-quiet-hours">9. Alerts &amp; quiet hours</h2></div>
+<p>Notifications are off by default and, when on, never reveal message content on your lock screen.</p>
+<h3>Private alerts</h3>
+<p>Turn on notifications in <strong>Settings</strong> to get a simple "New message" alert — never the sender or the text.</p>
+<h3>Quiet hours</h3>
+<p>Set a Do-Not-Disturb window (for example overnight) during which Virulla stays silent.</p>
+<h3>Quiet-hours allow list</h3>
+<p>Choose specific contacts who can still reach you during quiet hours — for the people who matter.</p>
+<div class="note"><strong>Tip</strong><p>Because alerts never contain content, someone glancing at your lock screen learns only that a message arrived — not who from or what it said.</p></div>
+<div class="section"><h2 id="restore-wipe-and-delete">10. Restore, wipe &amp; delete</h2></div>
+<p>You're always in control of your identity and your data — with the Recovery Key as the one thing only you hold.</p>
+<h3>Move to a new phone</h3>
+<p>Install Virulla on the new device and choose to <strong>restore with your Recovery Key</strong>. Enter the key you saved during setup and your identity comes back. Without the key, restoration isn't possible — by design.</p>
+<h3>Panic wipe</h3>
+<p>Virulla includes a fast <strong>wipe</strong> that clears your identity and messages from the device immediately. Use it if your phone is about to leave your control. If you've set a <strong>duress PIN</strong>, entering it at the lock screen triggers the same silent wipe.</p>
+<h3>Delete your account</h3>
+<p>You can delete everything from within the app at any time. Because Virulla stores your data on your device (not on a server tied to your name), deleting removes it at the source.</p>
+<div class="note"><strong>There's no undo</strong><p>Wiping or deleting is permanent and cannot be reversed. Make sure you have your Recovery Key saved first if you intend to restore later.</p></div>
+<div class="section"><h2 id="blocking-and-reporting">11. Blocking &amp; reporting</h2></div>
+<p>You decide who can reach you, and reporting abuse takes real action — even though Virulla is anonymous.</p>
+<h3>Block a contact</h3>
+<p>From a chat's <strong>•••</strong> menu, block someone to stop receiving their messages. Unblock any time from <strong>Settings → Blocked users</strong>.</p>
+<h3>Report a user</h3>
+<p>From the <strong>•••</strong> menu, tap <strong>Report user</strong> and pick a reason. Virulla <strong>automatically attaches the recent messages you received</strong> as evidence and blocks them for you — no copying needed.</p>
+<h3>What happens after you report</h3>
+<p>Your report goes to the Vytera Labs moderation team at <a href="mailto:abuse@virulla.com">abuse@virulla.com</a>, which is monitored and responded to <strong>within 24&nbsp;hours</strong>. Confirmed offenders can be <strong>blocked from the whole service</strong> — not just from you — and illegal content is reported to the authorities. Virulla has a zero-tolerance policy for objectionable content and abusive behaviour.</p>
+<div class="note"><strong>Privacy and safety together</strong><p>Being private doesn't mean being lawless. Because accounts are anonymous, we act on the abusive <em>account</em> rather than a person's identity — but that block is real and service-wide. Blocking, reporting and clear community rules keep Virulla a place people can trust.</p></div>
+<div class="section"><h2 id="quick-answers">12. Quick answers</h2></div>
 
-  <div class="section"><h2 id="key">2. The Recovery Key</h2></div>
-  <p>This is the single most important screen in the app, so it is worth being blunt about it.</p>
-  <p>Because Virulla is anonymous, there is no "forgot password" and no way for us to identify you. The Recovery Key is the <strong>only</strong> way to restore your identity on a new device.</p>
-  <p>Store it somewhere safe and private — a password manager is ideal. <strong>If you lose it and lose the device, the account cannot be recovered.</strong> That is not a policy we can make an exception to; it is a consequence of us holding nothing about you.</p>
-
-  <div class="section"><h2 id="contacts">3. Adding a contact</h2></div>
-  <p>Add a contact by scanning their QR code with the camera, or by opening a contact link they share with you.</p>
-  <p>Because there are no phone numbers and no address book on our side, this exchange is how two people find each other. There is no directory to search.</p>
-
-  <div class="section"><h2 id="messaging">4. Sending messages</h2></div>
-  <p>Open the chat and send text, a photo, or a video. Media is shared in 1:1 chats and groups, and is encrypted exactly the same way as text.</p>
-
-  <div class="section"><h2 id="credits">5. How credits work</h2></div>
-  <p>Sending a message uses credits:</p>
-  <ul>
-    <li><strong>Text</strong> — 1 credit</li>
-    <li><strong>Photo</strong> — 5 credits</li>
-    <li><strong>Video</strong> — 10 credits</li>
-  </ul>
-  <p>Every new account is granted <strong>50 free credits</strong> so you can start straight away. After that, credits are optional one-time in-app purchases — buy a pack when you need one.</p>
-  <p>There is no subscription and nothing renews automatically.</p>
-
-  <div class="section"><h2 id="disappearing">6. Disappearing messages</h2></div>
-  <p>Set messages to self-destruct after they are read, or after a timer, so conversations do not linger on either device.</p>
-
-  <div class="section"><h2 id="screenshots">7. Why your chats look blank in a screenshot</h2></div>
-  <p>Message content is deliberately excluded from screenshots, screen recordings and the app-switcher preview. An open chat can therefore appear blank in a capture.</p>
-  <p>The app is not broken — the content is fully visible on your screen. The point is that a glance over your shoulder, or a capture, does not spill a conversation.</p>
-  <p>Worth being realistic about the limit: this protects against the device's own capture paths. It cannot stop someone photographing your screen with another camera.</p>
-
-  <div class="section"><h2 id="blocking">8. Blocking and reporting</h2></div>
-  <p>In a chat, open the <strong>•••</strong> menu:</p>
-  <ul>
-    <li><strong>Block user</strong> stops them contacting you.</li>
-    <li><strong>Report user</strong> blocks them and sends us the offending messages as evidence.</li>
-  </ul>
-  <p>Confirmed offenders are blocked at our relay so they can no longer use the service. Abuse reports are actioned within 24 hours, and can also be sent to <a href="mailto:abuse@virulla.com">abuse@virulla.com</a>.</p>
-  <p>Every user agrees to the <a href="/virulla/terms/">Terms of Use</a> before messaging.</p>
-
-  <div class="section"><h2 id="appearance">9. Appearance</h2></div>
-  <p><strong>Settings → Appearance</strong> — choose <strong>System</strong>, <strong>Light</strong> or <strong>Dark</strong>. System follows your device setting.</p>
-
-  <div class="section"><h2 id="crypto">10. How the encryption works</h2></div>
-  <p>Virulla uses a published, modern encryption design: <strong>X3DH</strong> key agreement and the <strong>Double Ratchet</strong>, over <strong>Curve25519</strong>, with <strong>AES-256-GCM</strong> — the same family of techniques used by other serious private messengers.</p>
-  <p>Keys live only on your devices. Messages and media are encrypted on your device and decrypted only on your contact's.</p>
-  <p>The server is a <strong>zero-knowledge relay</strong>: it routes encrypted envelopes between devices and deletes them on delivery. It holds no identities, no address books and no keys, so there is nothing on it to read, sell, or hand over.</p>
-
-  <div class="note">
-    <strong>Honest about security</strong>
-    <p>No app can promise to be "unhackable", and we do not. What we can say plainly is how Virulla is built: end-to-end encryption with keys on your device, a server that only ever sees ciphertext, and no account tying messages to a real-world you.</p>
-    <p>Strong encryption reduces risk; it does not remove the need for good habits. Keep your device locked and your Recovery Key private.</p>
-  </div>
-
-  <div class="section"><h2 id="delete">11. Deleting everything</h2></div>
-  <p><strong>Settings → Delete account &amp; wipe device</strong> removes your identity and every message and key from the device. Uninstalling the app also removes its on-device data.</p>
-  <p>Because nothing about you is stored server-side, that removes everything. There is no account left behind for us to close.</p>
-
-  <div class="section"><h2 id="help">12. Getting help</h2></div>
-  <p>Email <a href="mailto:support@virulla.com">support@virulla.com</a> — we aim to respond within 2–3 business days.</p>
-  <p>To report abuse, use the in-app <strong>Report</strong> option in the chat <strong>•••</strong> menu, or email <a href="mailto:abuse@virulla.com">abuse@virulla.com</a>. Abuse reports are actioned within 24 hours.</p>
-  <p>See also the <a href="/virulla/support/">support page</a>, the <a href="/virulla/privacy/">privacy policy</a> and the <a href="/virulla/terms/">terms of use</a>.</p>
+  <p class="small muted">Need a hand? Email <a href="mailto:support@virulla.com">support@virulla.com</a> — we aim to respond within 2–3 business days. To report abuse, use the in-app <strong>Report</strong> option or email <a href="mailto:abuse@virulla.com">abuse@virulla.com</a>; abuse reports are actioned within 24 hours. See also the <a href="/virulla/support/">support page</a>, the <a href="/virulla/privacy/">privacy policy</a> and the <a href="/virulla/terms/">terms of use</a>.</p>
 </main>
 
 <footer>
