@@ -79,20 +79,27 @@ header{
   backdrop-filter:blur(10px);background:rgba(11,16,23,.72);
   border-bottom:1px solid var(--line);
 }
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px;}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px;flex-wrap:wrap;}
 .brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--paper);}
+
+/* The route back to the studio site lives in the fixed brand bar, never in the
+   nav strip. The strip may wrap; this never moves, so the way home is visible
+   at every width, on every page. */
+.brandbar{display:flex;align-items:center;gap:10px;flex:0 0 auto;min-width:0;}
+.homelink{display:flex;align-items:center;gap:10px;flex:none;color:var(--brass);font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;transition:color .25s ease;}
+.homelink:hover{color:var(--paper);}
+.brandsep{color:var(--muted);flex:none;font-size:14px;}
+.homelink .mark,
 .brand .mark{width:26px;height:26px;flex:none;border:1px solid var(--brass);display:grid;place-items:center;font-family:var(--serif);font-size:16px;color:var(--brass);letter-spacing:0;}
-/* Links sit on one row and scroll horizontally if they don't fit, so every item
-   stays reachable on narrow screens (body overflow-x:hidden would otherwise clip
-   them). The nav's own overflow container keeps the header a fixed 70px tall. */
-.nav-links{display:flex;flex:0 1 auto;min-width:0;gap:28px;font-size:13px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim);overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
-.nav-links::-webkit-scrollbar{display:none;}
+/* Links wrap onto further rows when they do not fit, and the header grows to
+   suit. They are never put in a scrolling container: a hidden scrollbar
+   makes whatever overflows invisible rather than merely off-screen. */
+.nav-links{display:flex;flex:0 1 auto;min-width:0;gap:28px;font-size:13px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim);flex-wrap:wrap;}
 .nav-links a{position:relative;padding:4px 0;flex:none;transition:color .25s ease;}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--brass);transition:width .3s ease;}
 .nav-links a:hover{color:var(--paper);}
 .nav-links a:hover::after,.nav-links a[aria-current="page"]::after{width:100%;}
 .nav-links a[aria-current="page"]{color:var(--brass);}
-.nav-links a.parent{color:var(--brass);}
 
 /* Hero */
 .hero{padding:150px 0 60px;}
@@ -220,11 +227,10 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 .foot-note a:hover{color:var(--paper);border-color:var(--brass);}
 
 @media (max-width:720px){
-  .nav-links{gap:18px;font-size:12px;}
-  /* Keep the route back to the studio site reachable on phones: the link leads
-     the scrolling nav strip instead of being dropped, so it is visible without
-     scrolling and the fixed header carries it on every page. */
-  .nav-links a.parent{order:-1;}
+  /* Wrap, never scroll. A hidden-scrollbar strip silently swallows whatever
+     does not fit, which is exactly how the link home went missing. */
+  .nav{flex-wrap:wrap;gap:8px 16px;padding:12px 0;}
+  .nav-links{width:100%;flex-wrap:wrap;gap:10px 18px;font-size:12px;}
   .wrap{padding:0 22px;}
   main.doc{padding-top:104px;}
   .hero{padding:120px 0 48px;}
@@ -242,6 +248,25 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
   body::before{display:none;}
   a{color:#000;}
 }
+
+/* The header is fixed and grows as the nav wraps, so the space reserved for it
+   grows too. Measured: <=71px on one row, <=86px on two, <=123px on three. */
+@media (max-width:720px){
+  main.doc{padding-top:118px;}
+  .hero{padding-top:132px;}
+}
+@media (max-width:460px){
+  main.doc{padding-top:155px;}
+  .hero{padding-top:168px;}
+  /* Below this the 22rem floor is wider than the screen, and a table not
+     inside a .table-wrap would push the whole page sideways. */
+  table{min-width:0;}
+  /* Long unbroken strings (inline code, example commands) must wrap rather
+     than push the page sideways. */
+  code,kbd,samp{overflow-wrap:anywhere;}
+  th,td{padding:8px 10px;overflow-wrap:anywhere;}
+  .doc .meta{overflow-wrap:anywhere;}
+}
 </style>
 <!-- cairn:css:end -->
 </head>
@@ -252,14 +277,17 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <header>
   <div class="wrap">
     <nav class="nav">
-      <a class="brand" href="/cairn/"><span class="mark">V</span><span>Cairn</span></a>
+      <div class="brandbar">
+        <a class="homelink" href="/" aria-label="Vytera Labs home"><span class="mark" aria-hidden="true">V</span><span>Vytera&nbsp;Labs</span></a>
+        <span class="brandsep" aria-hidden="true">&rsaquo;</span>
+        <a class="brand" href="/cairn/">Cairn</a>
+      </div>
       <div class="nav-links">
         <a href="/cairn/">Overview</a>
         <a href="/cairn/guide/">Guide</a>
         <a href="/cairn/support/">Support</a>
         <a href="/cairn/privacy/" aria-current="page">Privacy</a>
         <a href="/cairn/terms/">Terms</a>
-        <a class="parent" href="/">↑ Vytera Labs</a>
       </div>
     </nav>
   </div>
