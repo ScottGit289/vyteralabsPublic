@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/anchor/brand.css?v=1">
+<link rel="stylesheet" href="/anchor/brand.css?v=2">
 </head>
 <body>
 
@@ -30,6 +30,7 @@
       </a>
       <div class="nav-links">
         <a href="/anchor/">Overview</a>
+        <a href="/anchor/guide/">Guide</a>
         <a href="/anchor/support/">Support</a>
         <a href="/anchor/terms/">Terms</a>
         <a href="/anchor/privacy/" aria-current="page">Privacy</a>
@@ -46,7 +47,7 @@
     <h1>Everything stays on <em>your phone</em>.</h1>
     <p class="lede">Anchor sends nothing anywhere. This is the whole policy, not the summary of one.</p>
     <div class="meta-row">
-      <span>Last updated 4 September 2026</span>
+      <span>Last updated 11 September 2026</span>
       <span>Vytera Labs Ltd</span>
     </div>
   </div>
@@ -63,9 +64,10 @@
       <div class="panel-body">
         <p><strong>Nothing.</strong> There is no account, no sign-in, no email address, no
         analytics, no crash reporting, no advertising identifier, and no third-party SDK of
-        any kind.</p>
-        <p>Vytera Labs cannot see your exercise record, your bladder diary, your notes, or
-        even that you have installed the app.</p>
+        any kind. The only frameworks Anchor uses are Apple&rsquo;s own, shipped with iOS.</p>
+        <p>Anchor makes no network requests of its own and we run no server for it. Vytera Labs
+        cannot see your exercise record, your bladder diary, your notes, or even that you have
+        installed the app.</p>
       </div>
     </div>
   </div>
@@ -84,14 +86,34 @@
         <li>a small summary &mdash; sets today, target, streak &mdash; that the widget reads</li>
       </ul>
       <p>Deleting the app deletes all of it. <strong>Settings &rsaquo; Erase everything</strong>
-      deletes it without deleting the app.</p>
+      deletes it without deleting the app. The one exception is described under
+      <em>the rating prompt</em> below.</p>
     </div>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap narrow">
-    <div class="sec-head"><span class="idx">03</span><h2>Sharing, notifications and backups</h2></div>
+    <div class="sec-head"><span class="idx">03</span><h2>The rating prompt</h2></div>
+    <div class="prose">
+      <p>Once you have completed a few sets, Anchor may ask iOS to show Apple&rsquo;s standard
+      &ldquo;rate this app&rdquo; sheet. That sheet belongs to Apple, not to us. If you choose to
+      rate the app, the rating goes to the App Store exactly as it would if you left one there
+      yourself. It does not pass through Anchor, and it carries nothing about your exercise
+      record, your diary or your settings. We never learn whether you were shown the sheet, and
+      we see only the same public ratings and reviews that any visitor to the App Store can see.</p>
+      <p>So that it cannot nag you, Anchor keeps three small values on your device: how many sets
+      you have completed since it last asked, which version of the app last asked, and the date
+      it last asked. Nothing else, and none of it leaves the phone. Those three values are the
+      one thing <strong>Erase everything</strong> deliberately does not clear &mdash; wiping them
+      would let the app start asking again immediately. Deleting the app removes them.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <div class="sec-head"><span class="idx">04</span><h2>Sharing, notifications and backups</h2></div>
     <div class="prose">
       <h3>Sharing</h3>
       <p>The only way data leaves your phone is if you tap <strong>Share summary</strong> and
@@ -118,7 +140,7 @@
 
 <section class="band">
   <div class="wrap narrow">
-    <div class="sec-head"><span class="idx">04</span><h2>Your rights</h2></div>
+    <div class="sec-head"><span class="idx">05</span><h2>Your rights</h2></div>
     <div class="prose">
       <p>Because we hold no personal data about you, there is nothing for us to disclose,
       correct or delete under the UK GDPR. If you want your data off your phone, use
@@ -141,6 +163,7 @@
         </p>
         <div class="foot-links">
           <a href="/anchor/">Overview</a>
+          <a href="/anchor/guide/">Guide</a>
           <a href="/anchor/support/">Support</a>
           <a href="/anchor/privacy/">Privacy</a>
           <a href="/anchor/terms/">Terms</a>
