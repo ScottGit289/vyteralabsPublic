@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>User Guide — Longevity Counter · Vytera Labs</title>
+<meta name="description" content="How to use Longevity Counter: the live counter, lifespan and healthspan, the six scores, scenario modelling, connecting Apple Health and Oura, and what the model can and cannot say." />
+<link rel="canonical" href="https://www.vyteralabs.com/longevity/guide/" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/longevity/brand.css?v=2" />
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="/longevity/"><span class="mark">V</span><span>Longevity Counter</span></a>
+      <div class="nav-links">
+        <a href="/longevity/">Overview</a>
+        <a href="/longevity/guide/" aria-current="page">Guide</a>
+        <a href="/longevity/support/">Support</a>
+        <a href="/longevity/privacy/">Privacy</a>
+        <a href="/longevity/terms/">Terms</a>
+        <a class="parent" href="/">↑ Vytera Labs</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap doc" id="main">
+  <p class="eyebrow">Longevity Counter</p>
+  <h1>User Guide</h1>
+  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&nbsp;&nbsp;·&nbsp;&nbsp;<strong>For:</strong> Longevity Counter on iPhone and iPad&nbsp;&nbsp;·&nbsp;&nbsp;<a href="mailto:support@vyteralabs.com">support@vyteralabs.com</a></p>
+
+  <p>Longevity Counter turns your health numbers into an evidence-based estimate of how long — and how healthily — you are likely to live, and shows you which of those numbers are worth changing. This guide explains what each screen means, how to feed it good data, and what the model can and cannot tell you.</p>
+
+  <div class="note">
+    <strong>Read this first</strong>
+    <ul>
+      <li>The app <strong>never predicts a date of death.</strong> It estimates population-level probabilities of reaching various ages from your data.</li>
+      <li>It is an evidence-assembled statistical model, <strong>not a validated clinical risk score</strong> and not a diagnosis.</li>
+      <li>Your data stays on your device. Nothing is uploaded to Vytera Labs, and there are no accounts and no tracking.</li>
+      <li>Always consult a qualified clinician about health decisions. See the <a href="/longevity/legal/">medical disclaimer</a>.</li>
+    </ul>
+  </div>
+
+  <div class="section"><h2 id="contents">Contents</h2></div>
+  <ul>
+    <li><a href="#start">1. Getting started</a></li>
+    <li><a href="#counter">2. The live counter</a></li>
+    <li><a href="#forecast">3. Lifespan, healthspan and survival odds</a></li>
+    <li><a href="#scores">4. The six scores, and what moves them</a></li>
+    <li><a href="#factors">5. Your key factors</a></li>
+    <li><a href="#scenarios">6. Scenario modelling</a></li>
+    <li><a href="#wearables">7. Connecting Apple Health and Oura</a></li>
+    <li><a href="#manual">8. Typed values, averages and why numbers change</a></li>
+    <li><a href="#evidence">9. How the model works</a></li>
+    <li><a href="#limits">10. What it cannot tell you</a></li>
+    <li><a href="#data">11. Export, import and delete</a></li>
+    <li><a href="#help">12. Getting help</a></li>
+  </ul>
+
+  <div class="section"><h2 id="start">1. Getting started</h2></div>
+  <p>There is no sign-in and no account. Open the app and start entering what you know.</p>
+  <p>You do not need every metric to get a result, but the estimate is only as good as its inputs. The highest-value numbers to get right early are blood pressure, smoking status, HbA1c or glucose, ApoB or LDL cholesterol, and a measure of fitness such as VO₂max — these carry the most weight in the published evidence the model is built on.</p>
+  <p>If you have recent blood results from your GP or a private panel, enter them. Typed values are used exactly as entered.</p>
+
+  <div class="section"><h2 id="counter">2. The live counter</h2></div>
+  <p>Your estimated remaining time appears on the Home screen and as a Home-Screen or Lock-Screen widget.</p>
+  <p>It is a running expression of the same forecast the rest of the app produces — not a countdown to an event. When your inputs improve, it moves.</p>
+
+  <div class="section"><h2 id="forecast">3. Lifespan, healthspan and survival odds</h2></div>
+  <p>The Forecast tab gives you four related figures:</p>
+  <ul>
+    <li><strong>Estimated lifespan</strong>, with a likely range rather than a single false-precision number.</li>
+    <li><strong>Your "longevity age"</strong> against your real age — the age your risk profile actually resembles.</li>
+    <li><strong>Disability-free years</strong>, which is the healthspan question rather than the lifespan one, and usually the more useful of the two.</li>
+    <li><strong>Survival odds</strong>: your probability of reaching 70, 75, 80, 85, 90, 95 and 100.</li>
+  </ul>
+  <p>The Forecast tab also carries a <strong>"How these are calculated &amp; what moves them"</strong> screen with the full breakdown. If a number surprises you, start there.</p>
+
+  <div class="section"><h2 id="scores">4. The six scores, and what moves them</h2></div>
+  <p>There are six scores: overall, plus five rings that each reflect their own inputs.</p>
+  <ul>
+    <li><strong>Cardiovascular</strong> — blood pressure, ApoB/LDL, resting heart rate.</li>
+    <li><strong>Metabolic</strong> — HbA1c/glucose, body composition.</li>
+    <li><strong>Fitness</strong> — VO₂max, steps, exercise.</li>
+    <li><strong>Lifestyle</strong> — smoking, alcohol.</li>
+    <li><strong>Recovery</strong> — sleep, HRV.</li>
+  </ul>
+  <p>Each score explains what moves it, so you can see which single input is holding a ring down rather than guessing.</p>
+
+  <div class="section"><h2 id="factors">5. Your key factors</h2></div>
+  <p>The app identifies what is helping you and what is hurting you, and ranks the highest-leverage things you could change.</p>
+  <p>This is the part to act on. A risk factor you cannot change is context; a modifiable one with a large hazard ratio is a decision.</p>
+
+  <div class="section"><h2 id="scenarios">6. Scenario modelling</h2></div>
+  <p>Scenario modelling shows what happens if you optimise your modifiable risks — or if they slide.</p>
+  <p>Treat it as a well-calibrated comparison between two versions of you rather than a promise about either. The relative difference between scenarios is more trustworthy than the absolute figure in any one of them.</p>
+
+  <div class="section"><h2 id="wearables">7. Connecting Apple Health and Oura</h2></div>
+  <p>Apple Health and Oura are supported today. Garmin is planned.</p>
+
+  <h3>Apple Health</h3>
+  <p>Go to the <strong>Wearables</strong> tab → <strong>Apple Health</strong> → grant read access, then <strong>Sync now</strong>. Access is read-only. This needs a real device with Health data on it.</p>
+
+  <h3>Oura</h3>
+  <p>Go to <strong>Wearables → Sign in with Oura</strong>. You sign in on Oura's own secure page, so the app never sees your Oura password. The resulting tokens are stored in your device Keychain and used only to read your Oura data. Disconnect at any time from the same screen.</p>
+
+  <div class="section"><h2 id="manual">8. Typed values, averages and why numbers change</h2></div>
+  <p>The app prefers <strong>30-, 90- and 365-day averages</strong> over single readings, because one bad night's sleep should not move a lifespan estimate.</p>
+  <p>A value you type is used exactly as entered, and overrides any wearable average for that metric until the next sync. That is what you want when you have a proper clinical measurement and the wearable's estimate disagrees with it.</p>
+  <p>New readings — typed or synced — update the composite risk and therefore the forecast. The <strong>Trends</strong> tab tracks this over time, which is the right place to judge whether something is genuinely improving or merely fluctuating.</p>
+
+  <div class="section"><h2 id="evidence">9. How the model works</h2></div>
+  <p>The model starts from an age- and sex-specific mortality baseline and adjusts it using published, all-cause hazard ratios from large cohort studies and meta-analyses: blood pressure, smoking, diabetes and HbA1c, ApoB and cholesterol, fitness and VO₂max, adiposity, activity, alcohol, kidney disease and more.</p>
+  <p>Two deliberate design choices are worth knowing:</p>
+  <ul>
+    <li><strong>Correlated inputs are grouped</strong> so they are not double-counted. Entering four measures of the same underlying thing does not quadruple its effect.</li>
+    <li><strong>Consumer-wearable signals such as HRV are deliberately kept from dominating</strong>, because their measurement quality does not justify the weight a naive model would give them.</li>
+  </ul>
+  <p>Every component shows its source, study, population, effect size and evidence strength. If you want to challenge a number, the app gives you what you need to do it.</p>
+
+  <div class="section"><h2 id="limits">10. What it cannot tell you</h2></div>
+  <p>It cannot predict your exact lifespan, it never predicts a date of death, and it is not a medical diagnosis or a substitute for professional care.</p>
+  <p>It is an evidence-assembled statistical model rather than a validated clinical risk score. Treat it as a well-calibrated illustration and a way to compare scenarios. Always consult a qualified clinician about health decisions — the <a href="/longevity/legal/">medical disclaimer</a> sets this out in full.</p>
+
+  <div class="section"><h2 id="data">11. Export, import and delete</h2></div>
+  <p>Everything is stored on your device. Nothing is uploaded to Vytera Labs, there are no accounts, and there is no tracking.</p>
+  <ul>
+    <li><strong>Export or move to a new device:</strong> <strong>Settings → Export</strong>, then import the file on the new device.</li>
+    <li><strong>Delete everything:</strong> <strong>Settings → Delete all data</strong>. Uninstalling the app also removes its on-device data.</li>
+  </ul>
+  <p>Because nobody else holds a copy, an export is the only backup there is. Make one before changing phones.</p>
+
+  <div class="section"><h2 id="help">12. Getting help</h2></div>
+  <p>Email <a href="mailto:support@vyteralabs.com">support@vyteralabs.com</a> — we aim to respond within 2–3 business days.</p>
+  <p>It helps to include your app version (<strong>Settings → Support</strong>) and, if relevant, an exported diagnostics log (<strong>Settings → Diagnostics → Share</strong>). That log is stored only on your device unless you choose to send it.</p>
+  <p>See also the <a href="/longevity/support/">support page</a>, the <a href="/longevity/privacy/">privacy policy</a>, the <a href="/longevity/terms/">terms of use</a> and the <a href="/longevity/legal/">medical disclaimer</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Longevity Counter</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app. Vytera Labs Ltd is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/longevity/guide/">User Guide</a>
+        <a href="/longevity/support/">Support</a>
+        <a href="/longevity/privacy/">Privacy Policy</a>
+        <a href="/longevity/terms/">Terms of Use (EULA)</a>
+        <a href="/longevity/legal/">Medical disclaimer</a>
+        <a href="mailto:support@vyteralabs.com">support@vyteralabs.com</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="/">vyteralabs.com</a></span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

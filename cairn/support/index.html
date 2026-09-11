@@ -159,6 +159,9 @@ main.doc{padding-top:118px;padding-bottom:24px;}
 .doc .meta{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--muted);margin:0 0 12px;line-height:1.9;}
 .doc h2{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-.01em;margin:0;padding-top:30px;}
 .doc h3{font-family:var(--sans);font-weight:600;font-size:17px;color:var(--paper);margin:26px 0 4px;}
+/* In-page links (guide contents lists) must clear the fixed 70px header,
+   otherwise the heading you jumped to sits hidden underneath it. */
+.doc h2[id],.doc h3[id]{scroll-margin-top:92px;}
 .doc p{color:var(--paper-dim);margin:12px 0;}
 .doc p strong{color:var(--paper);font-weight:500;}
 .doc ul,.doc ol{padding-left:20px;color:var(--paper-dim);}
