@@ -179,7 +179,10 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 
 @media (max-width:720px){
   .nav-links{gap:18px;font-size:12px;}
-  .nav-links a.parent{display:none;}
+  /* Keep the route back to the studio site reachable on phones: the link leads
+     the scrolling nav strip instead of being dropped, so it is visible without
+     scrolling and the fixed header carries it on every page. */
+  .nav-links a.parent{order:-1;}
   .wrap{padding:0 22px;}
   main.doc{padding-top:104px;}
   .hero{padding:120px 0 48px;}
