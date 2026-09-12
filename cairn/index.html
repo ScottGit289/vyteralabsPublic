@@ -229,6 +229,10 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 .foot-links a:hover{color:var(--paper);}
 .foot-addr{font-family:var(--mono);font-size:12.5px;line-height:1.9;color:var(--muted);font-style:normal;}
 .foot-note{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+/* Both company names in the footer blurb are links; give them the same
+   underline the rest of the footer uses so they read as links. */
+.foot-grid p a{border-bottom:1px solid var(--brass-soft);transition:border-color .25s;}
+.foot-grid p a:hover{border-color:var(--brass);}
 .foot-note a{color:var(--brass);border-bottom:1px solid var(--brass-soft);transition:border-color .25s,color .25s;}
 .foot-note a:hover{color:var(--paper);border-color:var(--brass);}
 
@@ -524,7 +528,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
     <div class="foot-grid">
       <div>
         <div class="foot-brand">Cairn</div>
-        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app. Vytera Labs Ltd is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app. <a href="/" style="color:var(--brass);">Vytera Labs Ltd</a> is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
       </div>
       <div class="foot-links">
         <a href="/cairn/">Overview</a>
