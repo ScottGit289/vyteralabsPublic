@@ -30,7 +30,6 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
-  overflow-x:hidden;
 }
 body::before{
   content:"";position:fixed;inset:0;
@@ -46,7 +45,7 @@ a{color:inherit;text-decoration:none;}
 
 /* Header */
 header{
-  position:fixed;top:0;left:0;right:0;z-index:20;
+  position:sticky;top:0;z-index:20;
   backdrop-filter:blur(10px);background:rgba(11,16,23,.72);
   border-bottom:1px solid var(--line);
 }
@@ -56,10 +55,14 @@ header{
 /* The route back to the studio site lives in the fixed brand bar, never in the
    nav strip. The strip may wrap; this never moves, so the way home is visible
    at every width, on every page. */
-.brandbar{display:flex;align-items:center;gap:10px;flex:0 0 auto;min-width:0;}
+.brandbar{display:flex;align-items:center;gap:6px 10px;flex:0 1 auto;min-width:0;flex-wrap:wrap;}
 .homelink{display:flex;align-items:center;gap:10px;flex:none;color:var(--brass);font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;transition:color .25s ease;}
 .homelink:hover{color:var(--paper);}
 .brandsep{color:var(--muted);flex:none;font-size:14px;}
+/* The chevron travels with the product name, so a long name wraps as a
+   unit instead of stranding the separator at the end of the line. */
+.brandtail{display:inline-flex;align-items:center;gap:10px;min-width:0;}
+.brandbar .brand{min-width:0;}
 .homelink .mark,
 .brand .mark{width:26px;height:26px;flex:none;border:1px solid var(--brass);display:grid;place-items:center;font-family:var(--serif);font-size:16px;color:var(--brass);}
 /* Links wrap onto further rows when they do not fit, and the header grows to
@@ -73,7 +76,7 @@ header{
 .nav-links a[aria-current="page"]{color:var(--brass);}
 
 /* Hero */
-.hero{padding:150px 0 60px;}
+.hero{padding:56px 0 60px;}
 /* The product's app icon, above the hero eyebrow. Square source art, given
    the iOS corner radius here so all six products present identically. */
 .appicon{display:block;width:88px;height:88px;border-radius:22.37%;margin:0 0 22px;}
@@ -111,7 +114,7 @@ section{position:relative;z-index:1;}
    Use element+class specificity and longhand padding so the mobile `.wrap`
    padding rule can't reset the top clearance (which would slide the title under
    the fixed header). Horizontal gutters still come from `.wrap`. */
-main.doc{padding-top:118px;padding-bottom:24px;}
+main.doc{padding-top:44px;padding-bottom:24px;}
 .doc h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,52px);line-height:1.02;letter-spacing:-.02em;margin:0 0 14px;}
 .doc .meta{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--muted);margin:0 0 12px;line-height:1.9;}
 .doc h2{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-.01em;margin:0;padding-top:30px;}
@@ -155,26 +158,18 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 .foot-note a:hover{color:var(--paper);border-color:var(--brass);}
 
 @media (max-width:720px){
+  .hero{padding:40px 0 48px;}
   /* Wrap, never scroll. A hidden-scrollbar strip silently swallows whatever
      does not fit, which is exactly how the link home went missing. */
   .nav{flex-wrap:wrap;gap:8px 16px;padding:12px 0;}
   .nav-links{width:100%;flex-wrap:wrap;gap:10px 18px;font-size:12px;}
   .wrap{padding:0 22px;}
-  main.doc{padding-top:104px;}
   .band{padding:56px 0;}
   .foot-note{flex-direction:column;gap:8px;}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}html{scroll-behavior:auto;}}
 
-/* The header is fixed and grows as the nav wraps, so the space reserved for it
-   grows too. Measured: <=71px on one row, <=86px on two, <=123px on three. */
-@media (max-width:720px){
-  main.doc{padding-top:118px;}
-  .hero{padding-top:132px;}
-}
 @media (max-width:460px){
-  main.doc{padding-top:155px;}
-  .hero{padding-top:168px;}
   /* Below this the 24rem floor is wider than the screen, and a table not
      inside a .table-wrap would push the whole page sideways. */
   table{min-width:0;}
