@@ -158,6 +158,11 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 .foot-note a:hover{color:var(--paper);border-color:var(--brass);}
 
 @media (max-width:720px){
+  /* Once the header stacks, the product name takes its own row flush with
+     the gutter, so the brand mark, the product name and the menu all share
+     one left edge instead of sitting at three different ones. */
+  .brandtail{width:100%;}
+  .brandsep{display:none;}
   .hero{padding:40px 0 48px;}
   /* Wrap, never scroll. A hidden-scrollbar strip silently swallows whatever
      does not fit, which is exactly how the link home went missing. */
