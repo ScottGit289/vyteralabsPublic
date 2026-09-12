@@ -103,6 +103,10 @@ header{
 
 /* Hero */
 .hero{padding:150px 0 60px;}
+/* The product's app icon, above the hero eyebrow. Square source art, given
+   the iOS corner radius here so all six products present identically. */
+.appicon{display:block;width:88px;height:88px;border-radius:22.37%;margin:0 0 22px;}
+@media (max-width:460px){.appicon{width:72px;height:72px;margin-bottom:18px;}}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,8vw,84px);line-height:.98;letter-spacing:-.02em;margin:20px 0 0;}
 .hero h1 em{font-style:italic;color:var(--brass);}
 .lede{margin:26px 0 0;max-width:46ch;font-size:clamp(18px,2.2vw,21px);line-height:1.55;color:var(--paper-dim);}
@@ -110,9 +114,6 @@ header{
 .meta-row span{display:inline-flex;gap:9px;align-items:center;}
 .meta-row span::before{content:"";width:5px;height:5px;background:var(--brass);transform:rotate(45deg);flex:none;}
 
-.hero-head{display:flex;align-items:flex-start;gap:26px;flex-wrap:wrap;}
-.hero-head .appicon{width:88px;height:88px;flex:none;}
-.hero-head .hero-copy{flex:1 1 22rem;min-width:0;}
 
 .btn-row{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
 .mail-btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:15px;letter-spacing:.04em;padding:15px 26px;border:1px solid var(--line-strong);color:var(--paper);transition:border-color .3s,background .3s;}

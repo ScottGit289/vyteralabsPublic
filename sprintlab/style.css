@@ -81,6 +81,10 @@ header{
 
 /* Hero */
 .hero{padding:150px 0 60px;}
+/* The product's app icon, above the hero eyebrow. Square source art, given
+   the iOS corner radius here so all six products present identically. */
+.appicon{display:block;width:88px;height:88px;border-radius:22.37%;margin:0 0 22px;}
+@media (max-width:460px){.appicon{width:72px;height:72px;margin-bottom:18px;}}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,8vw,84px);line-height:.98;letter-spacing:-.02em;margin:20px 0 0;}
 .hero h1 em{font-style:italic;color:var(--brass);}
 .lede{margin:26px 0 0;max-width:46ch;font-size:clamp(18px,2.2vw,21px);line-height:1.55;color:var(--paper-dim);}

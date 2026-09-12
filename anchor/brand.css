@@ -123,6 +123,10 @@ header.site.scrolled {
 
 /* ---------- Hero ---------- */
 .hero { padding: 168px 0 84px; }
+/* The product's app icon, above the hero eyebrow. Square source art, given
+   the iOS corner radius here so all six products present identically. */
+.appicon{display:block;width:88px;height:88px;border-radius:22.37%;margin:0 0 22px;}
+@media (max-width:460px){.appicon{width:72px;height:72px;margin-bottom:18px;}}
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
 .hero h1 {
   font-family: var(--serif); font-weight: 400;
