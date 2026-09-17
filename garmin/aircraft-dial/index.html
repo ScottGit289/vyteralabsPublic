@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aircraft Dial — analogue instrument watch face for Garmin · Vytera Labs</title>
+<meta name="description" content="A Garmin Connect IQ watch face styled as a panel-mounted aircraft instrument: screwed bezel, three configurable sub-dials, a Kollsman-style window, four instrument lighting themes and a battery-first redraw schedule. Instructions for use included." />
+<link rel="canonical" href="https://www.vyteralabs.com/garmin/aircraft-dial/" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/garmin/style.css?v=1" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Aircraft Dial — analogue instrument watch face for Garmin · Vytera Labs" />
+<meta property="og:description" content="An analogue Connect IQ face built like a panel instrument: screwed bezel, three configurable sub-dials and four instrument lighting themes." />
+<meta property="og:url" content="https://www.vyteralabs.com/garmin/aircraft-dial/" />
+<meta property="og:site_name" content="Vytera Labs" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brandbar">
+        <a class="homelink" href="/" aria-label="Vytera Labs home"><span class="mark" aria-hidden="true">V</span><span>Vytera&nbsp;Labs</span></a>
+        <span class="brandtail"><span class="brandsep" aria-hidden="true">&rsaquo;</span><a class="brand" href="/garmin/aircraft-dial/">Aircraft&nbsp;Dial</a></span>
+      </div>
+      <div class="nav-links">
+        <a href="/garmin/">All Garmin apps</a>
+        <a href="/garmin/sprint-start/">Sprint Start</a>
+        <a href="/garmin/aircraft-dial/" aria-current="page">Aircraft Dial</a>
+        <a href="/garmin/sprintlab/">SprintLab Track</a>
+        <a href="/garmin/compass/">Compass</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">A Vytera Labs watch face · Garmin Connect IQ</p>
+      <h1>A panel instrument,<br><em>on your wrist.</em></h1>
+      <p class="lede">An analogue face with a screwed bezel, a full 60-tick ring, a luminous twelve o'clock index, three sub-dials and a rectangular readout where an altimeter puts its Kollsman window. Every sub-dial and that window is a data field you choose.</p>
+      <div class="meta-row">
+        <span>28 Garmin watches</span>
+        <span>Four instrument themes</span>
+        <span>Built for battery</span>
+      </div>
+      <div class="btn-row">
+        <span class="mail-btn pending">Coming soon to the Connect&nbsp;IQ Store</span>
+        <a class="mail-btn" href="#instructions">Instructions for use <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">01</span>
+        <h2>The face</h2>
+      </div>
+      <p>Four themes, four configurable slots, and a second hand you can put in a sub-dial, sweep from the centre, or switch off entirely.</p>
+      <figure class="shot">
+        <img src="/garmin/aircraft-dial/preview.png" alt="Aircraft Dial in its four themes — Night, NVG Green, Amber Nav and Day VFR — at two screen sizes, showing the seconds sub-dial, centre sweep hand, altitude and barometer configurations, and the burn-in-safe always-on view." width="1160" height="1594" loading="lazy" />
+        <figcaption>A preview render, not a photograph. Every dial above is drawn by the face's own geometry — the same integer sine table, the same truncating division, the same constants — run outside the watch so the layout could be checked at each screen size. System fonts are substituted, so text fits slightly tighter on the watch than it appears here.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">02</span>
+        <h2>What sits where</h2>
+      </div>
+      <div class="cards">
+        <div class="cell">
+          <h3>Top sub-dial</h3>
+          <p>The seconds sweep by default. Set the second hand elsewhere and the slot becomes a gauge field of your choosing — battery, body battery, anything with a range.</p>
+        </div>
+        <div class="cell">
+          <h3>Left and right sub-dials</h3>
+          <p>A needle and a value. Steps on the left and heart rate on the right by default.</p>
+        </div>
+        <div class="cell">
+          <h3>Bottom window</h3>
+          <p>A label and a value in the Kollsman position. Date by default; barometric pressure is the one it was designed around.</p>
+        </div>
+        <div class="cell">
+          <h3>The needle means something</h3>
+          <p>Fields with a natural range — battery, steps and floors against their goals, heart rate against your zones, body battery, stress — drive the needle across a 270° sweep. The rest show a value with the needle hidden.</p>
+        </div>
+      </div>
+      <p style="margin-top:26px">Fields whose sensor your watch does not have read <code>--</code> rather than an invented number.</p>
+    </div>
+  </section>
+
+  <section class="band" id="instructions">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">03</span>
+        <h2>Instructions for use</h2>
+      </div>
+
+      <h3>Applying the face</h3>
+      <p>Open the watch face list on your watch, scroll to <strong>Aircraft Dial</strong>, and choose <strong>Apply</strong>.</p>
+
+      <h3>Changing what it shows</h3>
+      <p>There are two ways in, and both edit the same settings:</p>
+      <ul>
+        <li><strong>On the watch</strong> — select the face and choose <strong>Customize</strong>, the option beside Apply. Changes apply immediately.</li>
+        <li><strong>From the phone</strong> — <strong>Garmin Connect → your device → Watch Face Settings</strong>.</li>
+      </ul>
+      <div class="note">
+        <strong>If you sideloaded the face, use Customize on the watch.</strong> Garmin Connect can only edit settings for apps installed from the store, so a sideloaded face appears in the app count but cannot be opened from the phone. Customize does not involve the store. Older watches without on-device settings support show only Apply, and are limited to the phone route.
+      </div>
+
+      <h3>Every setting</h3>
+      <div class="table-wrap"><table>
+        <tr><th>Setting</th><th>Options</th><th>Default</th></tr>
+        <tr><td><strong>Instrument Lighting</strong></td><td>Night (white on black) · NVG Green · Amber Nav · Day VFR</td><td>Night</td></tr>
+        <tr><td><strong>Second Hand</strong></td><td>Off · Sub-dial, wrist-up · Sub-dial, always on · Centre sweep, wrist-up</td><td>Sub-dial, wrist-up</td></tr>
+        <tr><td><strong>Top Sub-dial</strong></td><td>Any data field</td><td>Battery</td></tr>
+        <tr><td><strong>Left Sub-dial</strong></td><td>Any data field</td><td>Steps</td></tr>
+        <tr><td><strong>Right Sub-dial</strong></td><td>Any data field</td><td>Heart Rate</td></tr>
+        <tr><td><strong>Bottom Window</strong></td><td>Any data field</td><td>Date</td></tr>
+        <tr><td><strong>Units</strong></td><td>Match watch settings · Metric · Statute</td><td>Match watch</td></tr>
+        <tr><td><strong>Pressure Unit</strong></td><td>hPa · inHg</td><td>hPa</td></tr>
+        <tr><td><strong>Luminous Markings</strong></td><td>On · Off</td><td>On</td></tr>
+      </table></div>
+
+      <h3>The data fields you can choose from</h3>
+      <p>Off, Date, Battery, Steps, Heart Rate, Calories, Distance, Floors Climbed, Active Minutes, Body Battery, Stress, Altitude, Barometric Pressure, Temperature, Notifications, and Time to Recovery.</p>
+
+      <h3>Two behaviours worth knowing</h3>
+      <p><strong>The Top Sub-dial setting is ignored while the second hand is in a sub-dial mode</strong>, because the seconds sweep occupies that slot. The on-device menu shows that row as "Seconds sub-dial" rather than offering a field that would have no effect. Set the second hand to <em>Off</em> or <em>Centre sweep</em> and the slot becomes yours.</p>
+      <p><strong>Asleep, the seconds needle parks at twelve</strong> rather than freezing wherever the once-a-minute redraw happened to land.</p>
+
+      <h3>Battery, and how to spend it</h3>
+      <p>The cost of the face is driven by its redraw schedule, not by how many data fields you switch on — an unused sensor is never opened at all.</p>
+      <div class="table-wrap"><table>
+        <tr><th>State</th><th>Work done</th></tr>
+        <tr><td>Asleep · seconds Off or wrist-up</td><td>One full redraw per minute.</td></tr>
+        <tr><td>Asleep · burn-in display (AMOLED)</td><td>One minimal, pixel-shifted redraw per minute.</td></tr>
+        <tr><td>Asleep · seconds Always on</td><td>The above, plus one small clipped repaint per second.</td></tr>
+        <tr><td>Wrist up · any second hand</td><td>One full redraw per second, while the wrist is up.</td></tr>
+      </table></div>
+      <p><strong>Second Hand → Off</strong> is the cheapest setting. <strong>Always on</strong> is the only one that costs anything while the watch is asleep — and if your watch reports that the per-second repaint is too expensive, the face drops itself back to wrist-up rather than letting the system freeze it.</p>
+
+      <h3>On watches that need burn-in protection</h3>
+      <p>Asleep on an AMOLED watch, the face draws outline-only hands, four ticks and nothing else, drifting inside a five-pixel box so no pixel is held lit.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">04</span>
+        <h2>Built to be cheap to draw</h2>
+      </div>
+      <p><strong>No runtime trigonometry.</strong> Every angle the face uses lands on a whole degree, so a 360-entry fixed-point sine table built once at startup replaces every sine call. Hand, tick and needle geometry is integer arithmetic throughout.</p>
+      <p><strong>No allocation in the draw path.</strong> The polygon buffer, the clip rectangle and the reading objects are allocated once and reused.</p>
+      <p><strong>Data sampled once a minute, not once a draw.</strong> However often the face repaints, the activity and sensor sources are read at most once per minute — and only if a slot is actually configured to use them.</p>
+      <p><strong>Tight partial updates.</strong> The always-on second hand repaints only the top sub-dial's bounding box: roughly two dozen primitives inside a small rectangle, rather than a full-screen redraw.</p>
+      <p><strong>One resource tree.</strong> All geometry is derived from the device's screen size at runtime, so there are no per-resolution layouts and no bitmaps to load beyond the launcher icon. A new watch needs no new artwork.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">05</span>
+        <h2>Devices and data</h2>
+      </div>
+      <p><strong>Watches:</strong> 28 models on Connect IQ 3.2 or later — epix (Gen 2); fēnix 6, 6S, 6 Pro, 6S Pro and 6X Pro; fēnix 7, 7S and 7X; Forerunner 255, 255S, 265, 265S, 745, 945, 955 and 965; Venu, Venu 2, Venu 2S, Venu 2 Plus, Venu 3, Venu 3S, Venu Sq and Venu Sq 2; vívoactive 4, 4S and 5.</p>
+      <p><strong>Permissions:</strong> two. <strong>Sensor History</strong> backs the optional altitude, barometric pressure, temperature, Body Battery and Stress fields. <strong>User Profile</strong> supplies the resting rate and zone ceiling that scale the heart-rate needle — without it, that gauge would need an invented range. Steps, calories and the rest need no permission at all.</p>
+      <p><strong>Data:</strong> the face reads what your watch already knows and displays it. There is no network code, no account, and nothing is sent anywhere. Your settings live in the watch's own storage.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Aircraft Dial</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs watch face for Garmin. <a href="/" style="color:var(--brass);">Vytera Labs Ltd</a> is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/garmin/">All Garmin apps</a>
+        <a href="/garmin/aircraft-dial/">Overview</a>
+        <a href="#instructions">Instructions for use</a>
+        <a href="/garmin/compass/">Vytera Compass</a>
+        <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="/">vyteralabs.com</a></span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

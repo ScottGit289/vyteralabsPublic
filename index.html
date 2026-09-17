@@ -404,6 +404,10 @@
     align-items:center;
     gap:9px;
   }
+  /* Four cards against a three-column track would leave one orphaned beside
+     the grid's own rule background, so the Garmin grid takes a wider floor
+     and settles at two columns. */
+  .app-grid.four{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));}
   .app .a-go .arrow{color:var(--brass);transition:transform .3s ease;}
   .app:hover .a-go .arrow{transform:translateX(4px);}
 
@@ -576,6 +580,7 @@
         <a href="#about">About</a>
         <a href="#build">What we build</a>
         <a href="#apps">Apps</a>
+        <a href="#garmin">Garmin</a>
         <a href="#process">Process</a>
         <a href="#register">Details</a>
         <a class="parent" href="https://www.dellowholdings.com">↑ Dellow Holdings</a>
@@ -744,11 +749,57 @@
     </div>
   </section>
 
+  <!-- GARMIN -->
+  <section class="band" id="garmin">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">04</span>
+        <h2>Garmin apps</h2>
+      </div>
+      <div class="app-grid four reveal">
+
+        <a class="app" href="/garmin/sprint-start/">
+          <p class="a-tag">Garmin &middot; Watch app</p>
+          <h3>Sprint Start</h3>
+          <p class="a-kind">Random start commands &amp; stopwatch</p>
+          <p class="a-copy">Get Ready, On Your Marks, Set, Go — with the holds drawn at random to the millisecond, so an athlete cannot learn to time the gun. Then a stopwatch to a thousandth of a second.</p>
+          <span class="a-go">Overview <span class="arrow">&rarr;</span></span>
+        </a>
+
+        <a class="app" href="/garmin/aircraft-dial/">
+          <p class="a-tag">Garmin &middot; Watch face</p>
+          <h3>Aircraft Dial</h3>
+          <p class="a-kind">Analogue instrument face</p>
+          <p class="a-copy">An analogue face built like a panel-mounted aircraft instrument: screwed bezel, three sub-dials and a Kollsman-style window, each one a data field you choose.</p>
+          <span class="a-go">Overview <span class="arrow">&rarr;</span></span>
+        </a>
+
+        <a class="app" href="/garmin/sprintlab/">
+          <p class="a-tag">Garmin &middot; Watch app</p>
+          <h3>SprintLab Track</h3>
+          <p class="a-kind">Rep timing for 60m&ndash;400m</p>
+          <p class="a-copy">Times reps, runs the rest clock, calls the drop-off when quality goes, and saves a normal FIT activity that lands in Garmin Connect like any other run.</p>
+          <span class="a-go">Overview <span class="arrow">&rarr;</span></span>
+        </a>
+
+        <a class="app" href="/garmin/compass/">
+          <p class="a-tag">Garmin &middot; Watch app</p>
+          <h3>Vytera Compass</h3>
+          <p class="a-kind">Compass, weather, time &amp; sun</p>
+          <p class="a-copy">A compass dial with a bearing lock, the wind and the sun drawn on the dial itself, the weather the watch already holds, and local or UTC time one press apart.</p>
+          <span class="a-go">Overview <span class="arrow">&rarr;</span></span>
+        </a>
+
+      </div>
+      <p style="margin:26px 0 0;color:var(--paper-dim);font-size:16.5px;line-height:1.66;max-width:62ch;">Connect IQ apps and faces that do their whole job on the watch — no companion phone app, no account, no cloud. <a href="/garmin/" style="color:var(--brass);border-bottom:1px solid var(--brass-soft);">All four, with instructions for use&nbsp;&rarr;</a></p>
+    </div>
+  </section>
+
   <!-- PROCESS -->
   <section class="band" id="process">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="idx">04</span>
+        <span class="idx">05</span>
         <h2>How we work</h2>
       </div>
       <div class="principles">
@@ -775,7 +826,7 @@
   <section class="band register-band" id="register">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="idx">05</span>
+        <span class="idx">06</span>
         <h2>Company details</h2>
       </div>
       <div class="register reveal">

@@ -1,0 +1,275 @@
+/* Garmin apps — Connect IQ product pages on www.vyteralabs.com
+   Byte-for-byte the shared product stylesheet used by /sprintlab/ and
+   /cadence/, so the Garmin section reads as the same site: the token block,
+   header, .band / .sec-head, .cards, .callout, .doc and the footer are all
+   identical. What is added at the foot is only what these pages need — the
+   preview figure, and the four-app index grid.
+   Served under /garmin/. */
+
+:root{
+  --ink:#0B1017;
+  --ink-2:#111a26;
+  --ink-3:#0e151f;
+  --paper:#ECE6DA;
+  --paper-dim:#AEB6C2;
+  --muted:#6E7787;
+  --brass:#C2A05B;
+  --brass-soft:rgba(194,160,91,.16);
+  --line:rgba(236,230,218,.12);
+  --line-strong:rgba(236,230,218,.22);
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --wrap:960px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body::before{
+  content:"";position:fixed;inset:0;
+  background:radial-gradient(120% 80% at 50% -10%, rgba(194,160,91,.10), transparent 55%);
+  pointer-events:none;z-index:0;
+}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--brass);color:var(--ink);}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px;}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 32px;position:relative;z-index:1;}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);margin:0;}
+
+.skip{position:absolute;left:-9999px;background:var(--brass);color:var(--ink);font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:10px 16px;z-index:30;}
+.skip:focus{left:0;top:0;}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:blur(10px);background:rgba(11,16,23,.72);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--paper);}
+
+/* The route back to the studio site lives in the fixed brand bar, never in the
+   nav strip. The strip may wrap; this never moves, so the way home is visible
+   at every width, on every page. */
+.brandbar{display:flex;align-items:center;gap:6px 10px;flex:0 1 auto;min-width:0;flex-wrap:wrap;}
+.homelink{display:flex;align-items:center;gap:10px;flex:none;color:var(--brass);font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;transition:color .25s ease;}
+.homelink:hover{color:var(--paper);}
+.brandsep{color:var(--muted);flex:none;font-size:14px;}
+/* The chevron travels with the product name, so a long name wraps as a
+   unit instead of stranding the separator at the end of the line. */
+.brandtail{display:inline-flex;align-items:center;gap:10px;min-width:0;}
+.brandbar .brand{min-width:0;}
+.homelink .mark,
+.brand .mark{width:26px;height:26px;flex:none;border:1px solid var(--brass);display:grid;place-items:center;font-family:var(--serif);font-size:16px;color:var(--brass);}
+/* Links wrap onto further rows when they do not fit, and the header grows to
+   suit. They are never put in a scrolling container: a hidden scrollbar
+   makes whatever overflows invisible rather than merely off-screen. */
+.nav-links{display:flex;flex:0 1 auto;min-width:0;gap:28px;font-size:13px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim);flex-wrap:wrap;}
+.nav-links a{position:relative;padding:4px 0;flex:none;transition:color .25s ease;}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--brass);transition:width .3s ease;}
+.nav-links a:hover{color:var(--paper);}
+.nav-links a:hover::after,.nav-links a[aria-current="page"]::after{width:100%;}
+.nav-links a[aria-current="page"]{color:var(--brass);}
+
+/* Hero */
+.hero{padding:56px 0 60px;}
+/* The product's app icon, above the hero eyebrow. Square source art, given
+   the iOS corner radius here so all six products present identically. */
+.appicon{display:block;width:88px;height:88px;border-radius:22.37%;margin:0 0 22px;}
+@media (max-width:460px){.appicon{width:72px;height:72px;margin-bottom:18px;}}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,8vw,84px);line-height:.98;letter-spacing:-.02em;margin:20px 0 0;}
+.hero h1 em{font-style:italic;color:var(--brass);}
+.lede{margin:26px 0 0;max-width:46ch;font-size:clamp(18px,2.2vw,21px);line-height:1.55;color:var(--paper-dim);}
+.meta-row{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px 30px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--muted);}
+.meta-row span{display:inline-flex;gap:9px;align-items:center;}
+.meta-row span::before{content:"";width:5px;height:5px;background:var(--brass);transform:rotate(45deg);flex:none;}
+
+.btn-row{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.mail-btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:15px;letter-spacing:.04em;padding:15px 26px;border:1px solid var(--line-strong);color:var(--paper);transition:border-color .3s,background .3s;}
+.mail-btn:hover{border-color:var(--brass);background:var(--brass-soft);}
+.mail-btn .arrow{color:var(--brass);transition:transform .3s;}
+.mail-btn:hover .arrow{transform:translateX(4px);}
+.mail-btn.solid{border-color:var(--brass);background:var(--brass-soft);}
+/* Not a link yet: the listing does not exist, so it must not look clickable. */
+.mail-btn.pending{color:var(--muted);border-style:dashed;cursor:default;}
+.mail-btn.pending:hover{border-color:var(--line-strong);background:none;}
+
+/* Sections */
+section{position:relative;z-index:1;}
+.band{padding:76px 0;border-top:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:40px;}
+.sec-head .idx{font-family:var(--mono);font-size:12px;color:var(--brass);letter-spacing:.1em;}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,4.4vw,40px);line-height:1.05;letter-spacing:-.015em;margin:0;}
+
+.band p{color:var(--paper-dim);margin:0 0 16px;max-width:62ch;}
+.band p:last-child{margin-bottom:0;}
+.band p strong{color:var(--paper);font-weight:500;}
+.band a{color:var(--brass);border-bottom:1px solid var(--brass-soft);transition:border-color .25s;}
+.band a:hover{border-color:var(--brass);}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px;}
+.cards .cell{background:var(--ink);padding:28px 26px;}
+.cards .cell h3{font-family:var(--serif);font-weight:400;font-size:21px;margin:0 0 10px;}
+.cards .cell p{margin:0;color:var(--paper-dim);font-size:15.5px;line-height:1.6;max-width:none;}
+
+.callout{border:1px solid var(--line-strong);background:linear-gradient(180deg,rgba(194,160,91,.05),transparent 45%);padding:22px 26px;margin:26px 0;color:var(--paper-dim);}
+.callout strong{color:var(--paper);font-weight:500;}
+.callout p{margin:0;max-width:none;}
+.callout p + p{margin-top:12px;}
+
+/* The two numbers, which are the whole argument for the app.
+   Same 1px-gap grid as .cards so it reads as part of the same system. */
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px;}
+.stat{background:var(--ink);padding:30px 26px;}
+.stat .figure{font-family:var(--serif);font-weight:400;font-size:52px;line-height:1;letter-spacing:-.02em;color:var(--brass);font-variant-numeric:tabular-nums;}
+.stat .figure .of{font-size:20px;color:var(--muted);letter-spacing:0;}
+.stat .label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:14px 0 10px;display:flex;align-items:center;gap:11px;}
+.stat .label::before{content:"";width:24px;height:1px;background:var(--brass);flex:none;}
+.stat p{margin:0;color:var(--paper-dim);font-size:15.5px;line-height:1.6;max-width:none;}
+
+/* Questions. A list of rules, not a stack of boxes. */
+.faq{border-top:1px solid var(--line);margin-top:8px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:16px;padding:20px 0;font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.3;color:var(--paper);}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::before{content:"+";font-family:var(--mono);font-size:14px;color:var(--brass);width:1em;flex:none;}
+.faq details[open] summary::before{content:"–";}
+.faq details > *:not(summary){margin-left:calc(1em + 16px);}
+.faq details p{color:var(--paper-dim);font-size:16px;margin:0 0 16px;max-width:60ch;}
+.faq details > p:last-child{padding-bottom:20px;}
+
+/* Long-form legal / support.
+   Use element+class specificity and longhand padding so the mobile `.wrap`
+   padding rule can't reset the top clearance (which would slide the title under
+   the fixed header). Horizontal gutters still come from `.wrap`. */
+main.doc{padding-top:44px;padding-bottom:24px;}
+.doc h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,52px);line-height:1.02;letter-spacing:-.02em;margin:0 0 14px;}
+.doc .meta{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--muted);margin:0 0 12px;line-height:1.9;}
+.doc h2{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-.01em;margin:0;padding-top:30px;}
+.doc h3{font-family:var(--sans);font-weight:600;font-size:17px;color:var(--paper);margin:26px 0 4px;}
+/* In-page links (guide contents lists) must clear the fixed 70px header,
+   otherwise the heading you jumped to sits hidden underneath it. */
+.doc h2[id],.doc h3[id]{scroll-margin-top:92px;}
+.doc p{color:var(--paper-dim);margin:12px 0;}
+.doc p strong{color:var(--paper);font-weight:500;}
+.doc ul{padding-left:20px;color:var(--paper-dim);}
+.doc ol{padding-left:20px;color:var(--paper-dim);}
+.doc ol li{margin:7px 0;}
+.doc li{margin:7px 0;}
+.doc a{color:var(--brass);border-bottom:1px solid var(--brass-soft);transition:border-color .25s;}
+.doc a:hover{border-color:var(--brass);}
+.doc .section{border-top:1px solid var(--line);margin-top:8px;}
+.doc .note{border:1px solid var(--line-strong);background:var(--ink-3);border-left:2px solid var(--brass);padding:16px 20px;margin:22px 0;}
+.doc .note ul{margin:8px 0 0;}
+.doc .faq{margin-top:18px;}
+.small{font-size:14px;}
+.muted{color:var(--muted);}
+
+/* Tables — the privacy collection list and the export/delete routes.
+   Ruled rows only, in keeping with the register block on the home page. */
+.table-wrap{overflow-x:auto;margin:22px 0;}
+table{border-collapse:collapse;width:100%;min-width:24rem;font-size:15.5px;}
+th,td{text-align:left;padding:13px 18px 13px 0;border-bottom:1px solid var(--line);vertical-align:top;color:var(--paper-dim);}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:400;}
+td strong{color:var(--paper);font-weight:500;}
+
+code{font-family:var(--mono);font-size:.88em;color:var(--paper);background:var(--brass-soft);padding:1px 6px;}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-index:1;}
+.foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.foot-brand{font-family:var(--serif);font-size:22px;letter-spacing:-.01em;}
+.foot-links{display:flex;flex-direction:column;gap:8px;font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--paper-dim);}
+.foot-links a:hover{color:var(--paper);}
+.foot-addr{font-family:var(--mono);font-size:12.5px;line-height:1.9;color:var(--muted);font-style:normal;}
+.foot-note{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+/* Both company names in the footer blurb are links; give them the same
+   underline the rest of the footer uses so they read as links. */
+.foot-grid p a{border-bottom:1px solid var(--brass-soft);transition:border-color .25s;}
+.foot-grid p a:hover{border-color:var(--brass);}
+.foot-note a{color:var(--brass);border-bottom:1px solid var(--brass-soft);transition:border-color .25s,color .25s;}
+.foot-note a:hover{color:var(--paper);border-color:var(--brass);}
+
+@media (max-width:720px){
+  /* Once the header stacks, the product name takes its own row flush with
+     the gutter, so the brand mark, the product name and the menu all share
+     one left edge instead of sitting at three different ones. */
+  .brandtail{width:100%;}
+  .brandsep{display:none;}
+  /* Wrap, never scroll. A hidden-scrollbar strip silently swallows whatever
+     does not fit, which is exactly how the link home went missing. */
+  .nav{flex-wrap:wrap;gap:8px 16px;padding:12px 0;}
+  .nav-links{width:100%;flex-wrap:wrap;gap:10px 18px;font-size:12px;}
+  .wrap{padding:0 22px;}
+  .hero{padding:40px 0 48px;}
+  .band{padding:56px 0;}
+  .stat .figure{font-size:44px;}
+  .foot-note{flex-direction:column;gap:8px;}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}html{scroll-behavior:auto;}}
+@media print{header,.skip{display:none;}body{background:#fff;color:#000;}body::before{display:none;}a{color:#000;}}
+
+@media (max-width:460px){
+  /* Below this the 24rem floor is wider than the screen, and a table not
+     inside a .table-wrap would push the whole page sideways. */
+  table{min-width:0;}
+  /* Long unbroken strings (inline code, example commands) must wrap rather
+     than push the page sideways. */
+  code,kbd,samp{overflow-wrap:anywhere;}
+  th,td{padding:8px 10px;overflow-wrap:anywhere;}
+  .doc .meta{overflow-wrap:anywhere;}
+}
+
+
+/* ---------- Added for /garmin/ ---------- */
+
+/* The index of apps. Same 1px-rule grid as the home page's .app-grid, so the
+   Garmin listing and the iPhone listing are visibly one system. */
+.app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px;}
+.app{background:var(--ink);padding:30px 28px 32px;display:flex;flex-direction:column;transition:background .3s ease;}
+.app:hover{background:var(--ink-2);}
+.app .a-tag{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin:0 0 18px;display:flex;align-items:center;gap:11px;}
+.app .a-tag::before{content:"";width:24px;height:1px;background:var(--brass);flex:none;}
+.app h3{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.1;margin:0 0 6px;}
+.app .a-kind{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;}
+.app p.a-copy{margin:0 0 22px;color:var(--paper-dim);font-size:15.5px;line-height:1.6;max-width:none;flex:1;}
+.app .a-go{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper);display:inline-flex;align-items:center;gap:9px;}
+.app .a-go .arrow{color:var(--brass);transition:transform .3s ease;}
+.app:hover .a-go .arrow{transform:translateX(4px);}
+/* The cards are links; the .band anchor rule would otherwise underline them. */
+.band a.app,.band a.app:hover{border-bottom:none;color:inherit;}
+
+/* Sub-headings inside a .band. The iPhone product pages never needed one —
+   their long-form copy lives in /guide/ — but each Garmin app carries its
+   instructions on its own page, so the bands here have sections within
+   sections. Matches .doc h3 exactly. */
+.band h3{font-family:var(--sans);font-weight:600;font-size:17px;color:var(--paper);margin:30px 0 8px;}
+.band h3 + p{margin-top:0;}
+.cards .cell h3,.app h3{font-family:var(--serif);font-weight:400;color:var(--paper);}
+/* The note panel and lists exist in the stylesheet only under .doc, because on
+   the iPhone pages that is the only place long-form copy appears. Here the
+   same copy lives inside a .band, so the same rules are extended to it. */
+.band .note{border:1px solid var(--line-strong);background:var(--ink-3);border-left:2px solid var(--brass);padding:16px 20px;margin:22px 0;color:var(--paper-dim);}
+.band .note strong{color:var(--paper);font-weight:500;}
+.band .note ul{margin:8px 0 0;}
+.band ul,.band ol{padding-left:20px;color:var(--paper-dim);max-width:62ch;}
+.band li{margin:7px 0;}
+/* Anchored sections must clear the sticky 70px header. */
+.band[id]{scroll-margin-top:92px;}
+
+/* A rendered preview. Ruled like the tables rather than boxed, and always
+   captioned with what it is, because a render is not a photograph. */
+figure.shot{margin:26px 0 0;border:1px solid var(--line);background:var(--ink-3);padding:18px;}
+figure.shot img{display:block;width:100%;height:auto;}
+figure.shot figcaption{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;line-height:1.7;color:var(--muted);margin-top:16px;}
