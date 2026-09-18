@@ -404,10 +404,12 @@
     align-items:center;
     gap:9px;
   }
-  /* Four cards against a three-column track would leave one orphaned beside
-     the grid's own rule background, so the Garmin grid takes a wider floor
-     and settles at two columns. */
-  .app-grid.four{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));}
+  /* Against a three-column track the Garmin cards would orphan one beside the
+     grid's own rule background, so this grid takes a wider floor and settles
+     at two columns — and with an odd number of apps the last one takes the
+     full width rather than sitting alone. */
+  .app-grid.pairs{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));}
+  .app-grid.pairs > :last-child:nth-child(odd){grid-column:1 / -1;}
   .app .a-go .arrow{color:var(--brass);transition:transform .3s ease;}
   .app:hover .a-go .arrow{transform:translateX(4px);}
 
@@ -756,7 +758,7 @@
         <span class="idx">04</span>
         <h2>Garmin apps</h2>
       </div>
-      <div class="app-grid four reveal">
+      <div class="app-grid pairs reveal">
 
         <a class="app" href="/garmin/sprint-start/">
           <p class="a-tag">Garmin &middot; Watch app</p>
@@ -790,8 +792,16 @@
           <span class="a-go">Overview <span class="arrow">&rarr;</span></span>
         </a>
 
+        <a class="app" href="/garmin/watch-man/">
+          <p class="a-tag">Garmin &middot; Game</p>
+          <h3>Watch-Man</h3>
+          <p class="a-kind">Maze chase</p>
+          <p class="a-copy">A maze chase whose board was drawn for a round screen rather than squeezed onto one — four ghosts, four different hunting rules, and a level you can finish in about seventy seconds.</p>
+          <span class="a-go">Overview <span class="arrow">&rarr;</span></span>
+        </a>
+
       </div>
-      <p style="margin:26px 0 0;color:var(--paper-dim);font-size:16.5px;line-height:1.66;max-width:62ch;">Connect IQ apps and faces that do their whole job on the watch — no companion phone app, no account, no cloud. <a href="/garmin/" style="color:var(--brass);border-bottom:1px solid var(--brass-soft);">All four, with instructions for use&nbsp;&rarr;</a></p>
+      <p style="margin:26px 0 0;color:var(--paper-dim);font-size:16.5px;line-height:1.66;max-width:62ch;">Connect IQ apps, a watch face and a game, each doing its whole job on the watch — no companion phone app, no account, no cloud. <a href="/garmin/" style="color:var(--brass);border-bottom:1px solid var(--brass-soft);">All five, each with its own user guide&nbsp;&rarr;</a></p>
     </div>
   </section>
 

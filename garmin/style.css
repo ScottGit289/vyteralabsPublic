@@ -268,10 +268,18 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 /* Anchored sections must clear the sticky 70px header. */
 .band[id]{scroll-margin-top:92px;}
 
+/* With an odd number of apps the last card would sit alone beside the grid's
+   own rule background, which reads as a missing card rather than a deliberate
+   end. On a two-column track the odd one out takes the full width instead. */
+.app-grid > :last-child:nth-child(odd){grid-column:1 / -1;}
+
 /* A rendered preview. Ruled like the tables rather than boxed, and always
    captioned with what it is, because a render is not a photograph. */
 figure.shot{margin:26px 0 0;border:1px solid var(--line);background:var(--ink-3);padding:18px;}
 figure.shot img{display:block;width:100%;height:auto;}
+/* A single round screen, shown at something like its real size rather than
+   blown across the column. */
+figure.shot.device img{max-width:420px;margin:0 auto;}
 figure.shot figcaption{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;line-height:1.7;color:var(--muted);margin-top:16px;}
 
 /* ---------- Tables on a phone ---------- */

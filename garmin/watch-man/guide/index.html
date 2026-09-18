@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>User Guide — Watch-Man · Vytera Labs</title>
+<meta name="description" content="How to play Watch-Man on a Garmin watch: the controls, how each of the four ghosts hunts, the scoring, what the tunnels are for, and how the game gets harder level by level." />
+<link rel="canonical" href="https://www.vyteralabs.com/garmin/watch-man/guide/" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/garmin/style.css?v=4" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brandbar">
+        <a class="homelink" href="/" aria-label="Vytera Labs home"><span class="mark" aria-hidden="true">V</span><span>Vytera&nbsp;Labs</span></a>
+        <span class="brandtail"><span class="brandsep" aria-hidden="true">&rsaquo;</span><a class="brand" href="/garmin/watch-man/">Watch-Man</a></span>
+      </div>
+      <div class="nav-links">
+        <a href="/garmin/">All Garmin apps</a>
+        <a href="/garmin/watch-man/">Overview</a>
+        <a href="/garmin/watch-man/guide/" aria-current="page">User Guide</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap doc" id="main">
+  <p class="eyebrow">Watch-Man</p>
+  <h1>User Guide</h1>
+  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&nbsp;&nbsp;·&nbsp;&nbsp;<strong>For:</strong> Watch-Man on 19 Garmin watches&nbsp;&nbsp;·&nbsp;&nbsp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
+
+  <p>Clear the board of pellets without being caught. Four ghosts hunt you, each by its own rule, and the four power pellets are the only thing that turns the chase around.</p>
+
+  <div class="note">
+    <strong>If you read nothing else</strong>
+    <ul>
+      <li>Swipe to turn. A turn asked for slightly before a junction is held and taken at the corner, so you do not have to time it precisely.</li>
+      <li>A tap never pauses during play — pausing is on START and BACK only, and BACK needs two presses to leave.</li>
+      <li>The side tunnels slow ghosts to a third speed. They are the escape route.</li>
+      <li>Eat all four ghosts in one frightened window and that window alone is worth 3,000.</li>
+    </ul>
+  </div>
+
+  <div class="section"><h2 id="contents">Contents</h2></div>
+  <ul>
+    <li><a href="#the-controls">1. The controls</a></li>
+    <li><a href="#the-board">2. The board</a></li>
+    <li><a href="#how-the-ghosts-hunt">3. How the ghosts hunt</a></li>
+    <li><a href="#power-pellets">4. Power pellets and the frightened window</a></li>
+    <li><a href="#scoring">5. Scoring</a></li>
+    <li><a href="#getting-harder">6. How it gets harder</a></li>
+    <li><a href="#tactics">7. Three things worth knowing</a></li>
+  </ul>
+
+  <div class="section"><h2 id="the-controls">1. The controls</h2></div>
+  <div class="table-wrap"><table>
+    <thead>
+      <tr><th scope="col">Input</th><th scope="col">Action</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>Swipe</strong> up, down, left or right</td><td data-label="Action">Turn. This is the primary control.</td></tr>
+    <tr><td><strong>UP</strong> / <strong>DOWN</strong> buttons</td><td data-label="Action">Rotate your heading anticlockwise or clockwise.</td></tr>
+    <tr><td><strong>START</strong></td><td data-label="Action">Pause, resume, or restart after game over.</td></tr>
+    <tr><td><strong>BACK</strong></td><td data-label="Action">Pause. Press again to exit.</td></tr>
+    <tr><td><strong>Tap</strong></td><td data-label="Action">Resume when paused, restart when the game is over.</td></tr>
+    </tbody>
+  </table></div>
+  <p>A turn requested slightly before a junction is <strong>held and taken at the corner</strong>, so you do not have to time your swipes to the frame.</p>
+  <div class="note">
+    <strong>A tap never pauses during play.</strong> On a touch watch a swipe is sometimes reported as a tap, and losing a chase to that would be maddening — so pausing is on START and BACK only. BACK also takes two presses to leave, so a stray press cannot end a good run.
+  </div>
+
+  <div class="section"><h2 id="the-board">2. The board</h2></div>
+  <p>A 19 × 19 grid with void corners, so the maze fills a round screen as a disc. There are <strong>150 pellets</strong>, which is about seventy seconds of play, and <strong>four power pellets</strong> at the widest points of the board.</p>
+  <p>The two <strong>side tunnels wrap</strong>: leave by one edge and you arrive at the other. The <strong>ghost pen</strong> sits sealed at the centre.</p>
+  <p>Everything is drawn from your watch's screen size at runtime — tile size, sprite radii and the HUD — so the board is proportioned for the display you actually own.</p>
+
+  <div class="section"><h2 id="how-the-ghosts-hunt">3. How the ghosts hunt</h2></div>
+  <p>Each ghost has its own target, and knowing which is which is most of the skill.</p>
+  <div class="table-wrap"><table>
+    <thead>
+      <tr><th scope="col">Ghost</th><th scope="col">What it aims at</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>Red</strong></td><td data-label="What it aims at">Your tile, directly. It is the one on your shoulder.</td></tr>
+    <tr><td><strong>Pink</strong></td><td data-label="What it aims at">Four tiles ahead of you — it is trying to cut you off, not follow you.</td></tr>
+    <tr><td><strong>Cyan</strong></td><td data-label="What it aims at">The red ghost's position reflected through the tile two ahead of you. It gets more dangerous the closer the red one is.</td></tr>
+    <tr><td><strong>Orange</strong></td><td data-label="What it aims at">You, until it is within eight tiles — then it breaks for its own corner.</td></tr>
+    </tbody>
+  </table></div>
+  <p>They alternate between <strong>scatter</strong> and <strong>chase</strong> on a fixed schedule, and <strong>reverse on the spot</strong> whenever the mode flips. That reversal is your cue that the hunt has just changed.</p>
+
+  <div class="section"><h2 id="power-pellets">4. Power pellets and the frightened window</h2></div>
+  <p>Eating a power pellet frightens every ghost for a limited window. While frightened they can be eaten, and the score doubles each time within that one window: <strong>200, 400, 800, 1600</strong>. Clearing all four in a single window is worth 3,000 on its own.</p>
+  <p>The window does not last for ever, and it gets shorter as you go — see section 6.</p>
+
+  <div class="section"><h2 id="scoring">5. Scoring</h2></div>
+  <div class="table-wrap"><table>
+    <thead>
+      <tr><th scope="col">For</th><th scope="col">Points</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>Ghosts, in one frightened window</strong></td><td data-label="Points">200, then 400, then 800, then 1600.</td></tr>
+    <tr><td><strong>Bonus item</strong></td><td data-label="Points">100 per level, up to 1,000. It appears twice a level.</td></tr>
+    <tr><td><strong>Extra life</strong></td><td data-label="Points">Awarded at 5,000.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="section"><h2 id="getting-harder">6. How it gets harder</h2></div>
+  <div class="table-wrap"><table>
+    <thead>
+      <tr><th scope="col">What changes</th><th scope="col">How</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>Ghost speed</strong></td><td data-label="How">0.67× your speed on level 1, rising to 0.92× by level 6.</td></tr>
+    <tr><td><strong>Tunnel speed</strong></td><td data-label="How">Ghosts drag to a third of their speed through the side tunnels, at every level.</td></tr>
+    <tr><td><strong>Frightened window</strong></td><td data-label="How">Starts at seven seconds and shrinks to a floor of two, where it stays.</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>That floor is a deliberate departure from the arcade.</strong> The original game eventually withdraws the power pellet altogether — fair on a 28 × 31 board with long escape runs, but on a 19 × 19 one it removes your only tool and the game becomes unwinnable. Two seconds is short. It is not nothing.</p>
+
+  <div class="section"><h2 id="tactics">7. Three things worth knowing</h2></div>
+  <p><strong>The tunnels are the escape route.</strong> Ghosts move at a third speed through them at every level, so a tunnel buys you distance that the open board will not.</p>
+  <p><strong>Bait the orange one.</strong> It gives up inside eight tiles and heads for its corner, which makes its quarter of the board the safest place to clear pellets — as long as the others are elsewhere.</p>
+  <p><strong>Watch for the reversal.</strong> When every ghost turns round at once, the schedule has flipped between scatter and chase. If they have just turned towards you, the chase phase has started.</p>
+
+  <div class="section"><h2 id="help">When something is wrong</h2></div>
+  <p>If a swipe does not register, use the <strong>UP</strong> and <strong>DOWN</strong> buttons instead — they rotate your heading and work identically on watches whose touchscreen is disabled or gloved.</p>
+  <p>Anything else: <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>, with your watch model and the software version it is running, from <strong>Settings → System → About</strong>.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Watch-Man</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs game for Garmin. <a href="/" style="color:var(--brass);">Vytera Labs Ltd</a> is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/garmin/">All Garmin apps</a>
+        <a href="/garmin/watch-man/">Overview</a>
+        <a href="/garmin/watch-man/guide/">User Guide</a>
+        <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="/">vyteralabs.com</a></span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
