@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/garmin/style.css?v=1" />
+<link rel="stylesheet" href="/garmin/style.css?v=2" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Sprint Start — random start commands for Garmin · Vytera Labs" />
 <meta property="og:description" content="Get Ready, On Your Marks, Set, Go — held for a length you cannot predict, then timed to a thousandth of a second." />
@@ -84,10 +84,10 @@
       </div>
       <div class="table-wrap"><table>
         <tr><th>Stage</th><th>Cue</th><th>Duration</th></tr>
-        <tr><td><strong>Get Ready</strong></td><td>1 beep + 1 buzz</td><td>Fixed, 10s by default — optionally random</td></tr>
-        <tr><td><strong>On Your Marks</strong></td><td>1 beep + 1 buzz</td><td>Random, 4–10s by default</td></tr>
-        <tr><td><strong>Set</strong></td><td><strong>2</strong> beeps + <strong>2</strong> buzzes</td><td>Random, 3–7s by default</td></tr>
-        <tr><td><strong>Go</strong></td><td>1 beep + 1 buzz</td><td>Stopwatch starts, and runs until you stop it</td></tr>
+        <tr><td><strong>Get Ready</strong></td><td data-label="Cue">1 beep + 1 buzz</td><td data-label="Duration">Fixed, 10s by default — optionally random</td></tr>
+        <tr><td><strong>On Your Marks</strong></td><td data-label="Cue">1 beep + 1 buzz</td><td data-label="Duration">Random, 4–10s by default</td></tr>
+        <tr><td><strong>Set</strong></td><td data-label="Cue"><strong>2</strong> beeps + <strong>2</strong> buzzes</td><td data-label="Duration">Random, 3–7s by default</td></tr>
+        <tr><td><strong>Go</strong></td><td data-label="Cue">1 beep + 1 buzz</td><td data-label="Duration">Stopwatch starts, and runs until you stop it</td></tr>
       </table></div>
       <p><em>Set</em> is two beeps rather than one on purpose: it is the one command an athlete must never mistake for another, and a doubled cue is distinguishable at the far end of a track when a single one is not.</p>
     </div>
@@ -114,9 +114,9 @@
       <h3>The buttons</h3>
       <div class="table-wrap"><table>
         <tr><th>Button</th><th>Action</th></tr>
-        <tr><td><strong>START/STOP</strong> (top right)</td><td>Idle: begin the sequence. Running: stop the stopwatch. Mid-sequence: abort.</td></tr>
-        <tr><td><strong>BACK</strong> (bottom right)</td><td>Reset. Pressed again with nothing to reset, it closes the app.</td></tr>
-        <tr><td><strong>Hold UP</strong></td><td>Open settings.</td></tr>
+        <tr><td><strong>START/STOP</strong> (top right)</td><td data-label="Action">Idle: begin the sequence. Running: stop the stopwatch. Mid-sequence: abort.</td></tr>
+        <tr><td><strong>BACK</strong> (bottom right)</td><td data-label="Action">Reset. Pressed again with nothing to reset, it closes the app.</td></tr>
+        <tr><td><strong>Hold UP</strong></td><td data-label="Action">Open settings.</td></tr>
       </table></div>
       <div class="note">
         <strong>BACK only exits once the screen is already clear.</strong> A stray press during a session resets the timer instead of dropping you out of the app mid-rep.
@@ -126,13 +126,13 @@
       <p>Every value is a whole number of seconds, 0–60. Change them on the watch by holding <strong>UP</strong>, or from your phone — <strong>Garmin Connect → your device → Connect IQ Apps → Sprint Start → Settings</strong>. Both routes edit the same stored values.</p>
       <div class="table-wrap"><table>
         <tr><th>Setting</th><th>Default</th><th>What it does</th></tr>
-        <tr><td><strong>Randomise Get Ready</strong></td><td>Off</td><td>Draw the walk-up time at random instead of using a fixed length.</td></tr>
-        <tr><td><strong>Get Ready</strong> / <strong>Get Ready min</strong></td><td>10</td><td>Walk-up time — the lower bound when randomised.</td></tr>
-        <tr><td><strong>Get Ready max</strong></td><td>10</td><td>Upper bound, used only when randomised.</td></tr>
-        <tr><td><strong>Marks min</strong> / <strong>Marks max</strong></td><td>4 / 10</td><td>The <em>On Your Marks</em> hold range.</td></tr>
-        <tr><td><strong>Set min</strong> / <strong>Set max</strong></td><td>3 / 7</td><td>The <em>Set</em> hold range.</td></tr>
-        <tr><td><strong>Beeps</strong></td><td>On</td><td>Play tones.</td></tr>
-        <tr><td><strong>Vibration</strong></td><td>On</td><td>Vibrate.</td></tr>
+        <tr><td><strong>Randomise Get Ready</strong></td><td data-label="Default">Off</td><td data-label="What it does">Draw the walk-up time at random instead of using a fixed length.</td></tr>
+        <tr><td><strong>Get Ready</strong> / <strong>Get Ready min</strong></td><td data-label="Default">10</td><td data-label="What it does">Walk-up time — the lower bound when randomised.</td></tr>
+        <tr><td><strong>Get Ready max</strong></td><td data-label="Default">10</td><td data-label="What it does">Upper bound, used only when randomised.</td></tr>
+        <tr><td><strong>Marks min</strong> / <strong>Marks max</strong></td><td data-label="Default">4 / 10</td><td data-label="What it does">The <em>On Your Marks</em> hold range.</td></tr>
+        <tr><td><strong>Set min</strong> / <strong>Set max</strong></td><td data-label="Default">3 / 7</td><td data-label="What it does">The <em>Set</em> hold range.</td></tr>
+        <tr><td><strong>Beeps</strong></td><td data-label="Default">On</td><td data-label="What it does">Play tones.</td></tr>
+        <tr><td><strong>Vibration</strong></td><td data-label="Default">On</td><td data-label="What it does">Vibrate.</td></tr>
       </table></div>
       <p>If you raise a minimum above its maximum, the maximum is raised to match rather than leaving an impossible range.</p>
 

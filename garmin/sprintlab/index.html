@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/garmin/style.css?v=1" />
+<link rel="stylesheet" href="/garmin/style.css?v=2" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="SprintLab Track — rep timing for sprinters on Garmin · Vytera Labs" />
 <meta property="og:description" content="Times reps, controls rest, shows drop-off, and writes a normal FIT activity that syncs to Garmin Connect like any native run." />
@@ -70,11 +70,11 @@
       <p>A sprinter standing on the track in spikes should never have to navigate a menu to begin. The whole app is five screens deep, and the button that moves you forward is always the same one.</p>
       <div class="table-wrap"><table>
         <tr><th>Screen</th><th>What it shows</th></tr>
-        <tr><td><strong>Home</strong></td><td>The session you are about to run, a one-line summary of your last one, and START.</td></tr>
-        <tr><td><strong>Ready</strong></td><td>What is coming — set, rep and distance — and one button to start it.</td></tr>
-        <tr><td><strong>Rep</strong></td><td>The elapsed time, and deliberately nothing else. No heart rate, no rep counter, no distance.</td></tr>
-        <tr><td><strong>Rest</strong></td><td>The countdown, what you just ran against your session best, and what is next.</td></tr>
-        <tr><td><strong>Summary</strong></td><td>Every rep with its drop-off and heart-rate recovery, the session verdict, then save or discard.</td></tr>
+        <tr><td><strong>Home</strong></td><td data-label="What it shows">The session you are about to run, a one-line summary of your last one, and START.</td></tr>
+        <tr><td><strong>Ready</strong></td><td data-label="What it shows">What is coming — set, rep and distance — and one button to start it.</td></tr>
+        <tr><td><strong>Rep</strong></td><td data-label="What it shows">The elapsed time, and deliberately nothing else. No heart rate, no rep counter, no distance.</td></tr>
+        <tr><td><strong>Rest</strong></td><td data-label="What it shows">The countdown, what you just ran against your session best, and what is next.</td></tr>
+        <tr><td><strong>Summary</strong></td><td data-label="What it shows">Every rep with its drop-off and heart-rate recovery, the session verdict, then save or discard.</td></tr>
       </table></div>
       <div class="callout">
         <p>A sprinter glancing at the watch mid-effort has perhaps 150 milliseconds of attention, and every extra glyph costs some of it. So the rep screen is one number, filling the display.</p>
@@ -91,12 +91,12 @@
       <p>Six sessions, chosen with UP and DOWN on the Home screen so the start button is never more than one press away.</p>
       <div class="table-wrap"><table>
         <tr><th>Session</th><th>Shape</th></tr>
-        <tr><td><strong>6 × 60m / 3'</strong></td><td>Six reps, three minutes' rest.</td></tr>
-        <tr><td><strong>4 × 150m / 6'</strong></td><td>Four reps, six minutes' rest.</td></tr>
-        <tr><td><strong>3 × 300m / 10'</strong></td><td>Three reps, ten minutes' rest.</td></tr>
-        <tr><td><strong>2 × (3 × 200m)</strong></td><td>Two sets of three, four minutes between reps and twelve between sets.</td></tr>
-        <tr><td><strong>Speed endurance 120–150–180</strong></td><td>Three reps at three distances, walk-back recovery — you control the rest, so the rest clock counts <em>up</em> rather than down.</td></tr>
-        <tr><td><strong>Custom</strong></td><td>Your own sets, reps, distance, rest and set rest. Remembered between sessions.</td></tr>
+        <tr><td><strong>6 × 60m / 3'</strong></td><td data-label="Shape">Six reps, three minutes' rest.</td></tr>
+        <tr><td><strong>4 × 150m / 6'</strong></td><td data-label="Shape">Four reps, six minutes' rest.</td></tr>
+        <tr><td><strong>3 × 300m / 10'</strong></td><td data-label="Shape">Three reps, ten minutes' rest.</td></tr>
+        <tr><td><strong>2 × (3 × 200m)</strong></td><td data-label="Shape">Two sets of three, four minutes between reps and twelve between sets.</td></tr>
+        <tr><td><strong>Speed endurance 120–150–180</strong></td><td data-label="Shape">Three reps at three distances, walk-back recovery — you control the rest, so the rest clock counts <em>up</em> rather than down.</td></tr>
+        <tr><td><strong>Custom</strong></td><td data-label="Shape">Your own sets, reps, distance, rest and set rest. Remembered between sessions.</td></tr>
       </table></div>
     </div>
   </section>
@@ -135,10 +135,10 @@
       <p>One contract, fixed across every screen, so it can be learned once and used with cold hands.</p>
       <div class="table-wrap"><table>
         <tr><th>Button</th><th>Action</th></tr>
-        <tr><td><strong>START / ENTER</strong></td><td>The forward action: start the rep, stop the rep, end the rest, save.</td></tr>
-        <tr><td><strong>BACK / LAP</strong></td><td>Stops the rep while one is running. Otherwise, steps back.</td></tr>
-        <tr><td><strong>UP / DOWN</strong></td><td>Change the selection, or page the summary.</td></tr>
-        <tr><td><strong>MENU</strong></td><td>Settings — from Home only.</td></tr>
+        <tr><td><strong>START / ENTER</strong></td><td data-label="Action">The forward action: start the rep, stop the rep, end the rest, save.</td></tr>
+        <tr><td><strong>BACK / LAP</strong></td><td data-label="Action">Stops the rep while one is running. Otherwise, steps back.</td></tr>
+        <tr><td><strong>UP / DOWN</strong></td><td data-label="Action">Change the selection, or page the summary.</td></tr>
+        <tr><td><strong>MENU</strong></td><td data-label="Action">Settings — from Home only.</td></tr>
       </table></div>
       <div class="note">
         <strong>BACK is consumed everywhere inside a session.</strong> A stray press mid-set must never drop you out of the app and bin the recording, so leaving a session is always an explicit confirmation. Both buttons stop a running rep on purpose: a sprinter reaching for the watch at the line hits whichever is under the thumb, and a rep stopped by the "wrong" button is still a rep.
@@ -148,14 +148,14 @@
       <p>Set them on the watch with <strong>MENU</strong> from the Home screen, or from <strong>Garmin Connect → your device → Connect IQ Apps → SprintLab Track → Settings</strong>.</p>
       <div class="table-wrap"><table>
         <tr><th>Setting</th><th>Options</th><th>Default</th></tr>
-        <tr><td><strong>Timing mode</strong></td><td>Manual (START / LAP) · Auto-start on movement · Auto-stop by distance · Flying rep</td><td>Manual</td></tr>
-        <tr><td><strong>Vibration</strong></td><td>Off · Light · Normal · Strong</td><td>Normal</td></tr>
-        <tr><td><strong>Drop-off alert, 100m and under</strong></td><td>1–25%</td><td>5%</td></tr>
-        <tr><td><strong>Drop-off alert, over 100m</strong></td><td>1–25%</td><td>3%</td></tr>
-        <tr><td><strong>Rest until HR recovers</strong></td><td>On · Off</td><td>Off</td></tr>
-        <tr><td><strong>Resume at HR</strong></td><td>70–180 bpm</td><td>120 bpm</td></tr>
-        <tr><td><strong>Distance units</strong></td><td>Metres · Yards</td><td>Metres</td></tr>
-        <tr><td><strong>Auto-start sensitivity</strong></td><td>100–1200 mG</td><td>350 mG</td></tr>
+        <tr><td><strong>Timing mode</strong></td><td data-label="Options">Manual (START / LAP) · Auto-start on movement · Auto-stop by distance · Flying rep</td><td data-label="Default">Manual</td></tr>
+        <tr><td><strong>Vibration</strong></td><td data-label="Options">Off · Light · Normal · Strong</td><td data-label="Default">Normal</td></tr>
+        <tr><td><strong>Drop-off alert, 100m and under</strong></td><td data-label="Options">1–25%</td><td data-label="Default">5%</td></tr>
+        <tr><td><strong>Drop-off alert, over 100m</strong></td><td data-label="Options">1–25%</td><td data-label="Default">3%</td></tr>
+        <tr><td><strong>Rest until HR recovers</strong></td><td data-label="Options">On · Off</td><td data-label="Default">Off</td></tr>
+        <tr><td><strong>Resume at HR</strong></td><td data-label="Options">70–180 bpm</td><td data-label="Default">120 bpm</td></tr>
+        <tr><td><strong>Distance units</strong></td><td data-label="Options">Metres · Yards</td><td data-label="Default">Metres</td></tr>
+        <tr><td><strong>Auto-start sensitivity</strong></td><td data-label="Options">100–1200 mG</td><td data-label="Default">350 mG</td></tr>
       </table></div>
       <p class="muted small">Version 1 ships <strong>Manual</strong> timing. Auto-start on movement, auto-stop by distance and the flying rep are built into the settings ahead of the releases that implement them — until then, leave the mode on Manual.</p>
 

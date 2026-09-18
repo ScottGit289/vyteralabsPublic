@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/garmin/style.css?v=1" />
+<link rel="stylesheet" href="/garmin/style.css?v=2" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Aircraft Dial — analogue instrument watch face for Garmin · Vytera Labs" />
 <meta property="og:description" content="An analogue Connect IQ face built like a panel instrument: screwed bezel, three configurable sub-dials and four instrument lighting themes." />
@@ -126,15 +126,15 @@
       <h3>Every setting</h3>
       <div class="table-wrap"><table>
         <tr><th>Setting</th><th>Options</th><th>Default</th></tr>
-        <tr><td><strong>Instrument Lighting</strong></td><td>Night (white on black) · NVG Green · Amber Nav · Day VFR</td><td>Night</td></tr>
-        <tr><td><strong>Second Hand</strong></td><td>Off · Sub-dial, wrist-up · Sub-dial, always on · Centre sweep, wrist-up</td><td>Sub-dial, wrist-up</td></tr>
-        <tr><td><strong>Top Sub-dial</strong></td><td>Any data field</td><td>Battery</td></tr>
-        <tr><td><strong>Left Sub-dial</strong></td><td>Any data field</td><td>Steps</td></tr>
-        <tr><td><strong>Right Sub-dial</strong></td><td>Any data field</td><td>Heart Rate</td></tr>
-        <tr><td><strong>Bottom Window</strong></td><td>Any data field</td><td>Date</td></tr>
-        <tr><td><strong>Units</strong></td><td>Match watch settings · Metric · Statute</td><td>Match watch</td></tr>
-        <tr><td><strong>Pressure Unit</strong></td><td>hPa · inHg</td><td>hPa</td></tr>
-        <tr><td><strong>Luminous Markings</strong></td><td>On · Off</td><td>On</td></tr>
+        <tr><td><strong>Instrument Lighting</strong></td><td data-label="Options">Night (white on black) · NVG Green · Amber Nav · Day VFR</td><td data-label="Default">Night</td></tr>
+        <tr><td><strong>Second Hand</strong></td><td data-label="Options">Off · Sub-dial, wrist-up · Sub-dial, always on · Centre sweep, wrist-up</td><td data-label="Default">Sub-dial, wrist-up</td></tr>
+        <tr><td><strong>Top Sub-dial</strong></td><td data-label="Options">Any data field</td><td data-label="Default">Battery</td></tr>
+        <tr><td><strong>Left Sub-dial</strong></td><td data-label="Options">Any data field</td><td data-label="Default">Steps</td></tr>
+        <tr><td><strong>Right Sub-dial</strong></td><td data-label="Options">Any data field</td><td data-label="Default">Heart Rate</td></tr>
+        <tr><td><strong>Bottom Window</strong></td><td data-label="Options">Any data field</td><td data-label="Default">Date</td></tr>
+        <tr><td><strong>Units</strong></td><td data-label="Options">Match watch settings · Metric · Statute</td><td data-label="Default">Match watch</td></tr>
+        <tr><td><strong>Pressure Unit</strong></td><td data-label="Options">hPa · inHg</td><td data-label="Default">hPa</td></tr>
+        <tr><td><strong>Luminous Markings</strong></td><td data-label="Options">On · Off</td><td data-label="Default">On</td></tr>
       </table></div>
 
       <h3>The data fields you can choose from</h3>
@@ -148,10 +148,10 @@
       <p>The cost of the face is driven by its redraw schedule, not by how many data fields you switch on — an unused sensor is never opened at all.</p>
       <div class="table-wrap"><table>
         <tr><th>State</th><th>Work done</th></tr>
-        <tr><td>Asleep · seconds Off or wrist-up</td><td>One full redraw per minute.</td></tr>
-        <tr><td>Asleep · burn-in display (AMOLED)</td><td>One minimal, pixel-shifted redraw per minute.</td></tr>
-        <tr><td>Asleep · seconds Always on</td><td>The above, plus one small clipped repaint per second.</td></tr>
-        <tr><td>Wrist up · any second hand</td><td>One full redraw per second, while the wrist is up.</td></tr>
+        <tr><td>Asleep · seconds Off or wrist-up</td><td data-label="Work done">One full redraw per minute.</td></tr>
+        <tr><td>Asleep · burn-in display (AMOLED)</td><td data-label="Work done">One minimal, pixel-shifted redraw per minute.</td></tr>
+        <tr><td>Asleep · seconds Always on</td><td data-label="Work done">The above, plus one small clipped repaint per second.</td></tr>
+        <tr><td>Wrist up · any second hand</td><td data-label="Work done">One full redraw per second, while the wrist is up.</td></tr>
       </table></div>
       <p><strong>Second Hand → Off</strong> is the cheapest setting. <strong>Always on</strong> is the only one that costs anything while the watch is asleep — and if your watch reports that the per-second repaint is too expensive, the face drops itself back to wrist-up rather than letting the system freeze it.</p>
 

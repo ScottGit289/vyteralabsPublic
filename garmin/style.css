@@ -273,3 +273,38 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 figure.shot{margin:26px 0 0;border:1px solid var(--line);background:var(--ink-3);padding:18px;}
 figure.shot img{display:block;width:100%;height:auto;}
 figure.shot figcaption{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;line-height:1.7;color:var(--muted);margin-top:16px;}
+
+
+/* ---------- Tables on a phone ---------- */
+
+/* Measured at 320-430px, a three-column instruction table squeezes its label
+   column to 35-100px and grows rows to 191px: every label breaks to one word
+   per line. Below 560px the rows therefore stop being rows and become blocks —
+   the subject on its own line, then each remaining value under the column name
+   it belongs to, carried in `data-label` on the cell. Nothing is hidden and
+   nothing scrolls sideways; above 560px the table is untouched. */
+@media (max-width:560px){
+  .table-wrap{overflow-x:visible;}
+  .table-wrap table{display:block;min-width:0;}
+  .table-wrap tbody{display:block;}
+  .table-wrap tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+  /* The header row's labels now live on the cells, so the row itself goes. */
+  .table-wrap tr:first-child{display:none;}
+  .table-wrap tr:last-child{border-bottom:none;}
+  .table-wrap td{display:block;border:0;padding:0;}
+  .table-wrap td + td{margin-top:10px;}
+  /* The first cell is the row's subject — a heading, not a labelled value. */
+  .table-wrap td:first-child{color:var(--paper);font-weight:500;font-size:16.5px;line-height:1.35;}
+  .table-wrap td[data-label]::before{
+    content:attr(data-label);
+    display:block;
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+  /* An empty label would otherwise draw a blank line above the value. */
+  .table-wrap td[data-label=""]::before{display:none;}
+}

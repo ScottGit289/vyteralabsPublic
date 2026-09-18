@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/garmin/style.css?v=1" />
+<link rel="stylesheet" href="/garmin/style.css?v=2" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Vytera Compass — compass, wind, sun and weather for Garmin · Vytera Labs" />
 <meta property="og:description" content="A compass you would trust to navigate by, with the wind and the sun drawn on the dial and the weather one press away." />
@@ -114,21 +114,21 @@
       <p>Press <strong>UP</strong> or <strong>DOWN</strong> — or swipe, on a touchscreen — to page between them.</p>
       <div class="table-wrap"><table>
         <tr><th>Screen</th><th>What it shows</th></tr>
-        <tr><td><strong>Compass</strong></td><td>Dial, needle, three-digit heading, the <code>MAG</code> or <code>TRUE</code> tag, wind arrow, sun marker and bearing-lock chevron. Time and temperature beneath, and your coordinates when a position is held.</td></tr>
-        <tr><td><strong>Weather</strong></td><td>Condition, temperature and feels-like, wind with direction, humidity, precipitation, pressure and trend, three forecast hours, and a dated source line.</td></tr>
-        <tr><td><strong>Time and sun</strong></td><td>Clock, date, time zone, sunrise, sunset, twilight, the countdown to the next one, and the sun's current bearing and elevation.</td></tr>
-        <tr><td><strong>Settings</strong></td><td>Opened with MENU from anywhere.</td></tr>
+        <tr><td><strong>Compass</strong></td><td data-label="What it shows">Dial, needle, three-digit heading, the <code>MAG</code> or <code>TRUE</code> tag, wind arrow, sun marker and bearing-lock chevron. Time and temperature beneath, and your coordinates when a position is held.</td></tr>
+        <tr><td><strong>Weather</strong></td><td data-label="What it shows">Condition, temperature and feels-like, wind with direction, humidity, precipitation, pressure and trend, three forecast hours, and a dated source line.</td></tr>
+        <tr><td><strong>Time and sun</strong></td><td data-label="What it shows">Clock, date, time zone, sunrise, sunset, twilight, the countdown to the next one, and the sun's current bearing and elevation.</td></tr>
+        <tr><td><strong>Settings</strong></td><td data-label="What it shows">Opened with MENU from anywhere.</td></tr>
       </table></div>
 
       <h3>The buttons</h3>
       <div class="table-wrap"><table>
         <tr><th>Button</th><th>Action</th></tr>
-        <tr><td><strong>UP / DOWN</strong>, or swipe</td><td>Page between screens.</td></tr>
-        <tr><td><strong>ENTER</strong> (compass screen)</td><td>Lock the bearing you are facing. Press again while locked to flip to the back bearing.</td></tr>
-        <tr><td><strong>ENTER</strong> (time screen)</td><td>Switch between local time and UTC.</td></tr>
-        <tr><td><strong>Long-press ENTER</strong></td><td>Clear the locked bearing.</td></tr>
-        <tr><td><strong>MENU</strong></td><td>Open settings.</td></tr>
-        <tr><td><strong>BACK</strong></td><td>Exit. Leave this way — it is what guarantees the sensors are released.</td></tr>
+        <tr><td><strong>UP / DOWN</strong>, or swipe</td><td data-label="Action">Page between screens.</td></tr>
+        <tr><td><strong>ENTER</strong> (compass screen)</td><td data-label="Action">Lock the bearing you are facing. Press again while locked to flip to the back bearing.</td></tr>
+        <tr><td><strong>ENTER</strong> (time screen)</td><td data-label="Action">Switch between local time and UTC.</td></tr>
+        <tr><td><strong>Long-press ENTER</strong></td><td data-label="Action">Clear the locked bearing.</td></tr>
+        <tr><td><strong>MENU</strong></td><td data-label="Action">Open settings.</td></tr>
+        <tr><td><strong>BACK</strong></td><td data-label="Action">Exit. Leave this way — it is what guarantees the sensors are released.</td></tr>
       </table></div>
 
       <h3>Walking a locked bearing</h3>
@@ -144,16 +144,16 @@
       <h3>Every setting</h3>
       <div class="table-wrap"><table>
         <tr><th>Setting</th><th>Options</th></tr>
-        <tr><td><strong>Dial style</strong></td><td>Rotating dial with a fixed needle · Fixed dial with a rotating needle.</td></tr>
-        <tr><td><strong>North reference</strong></td><td>Magnetic · True (computed) · True (manual declination).</td></tr>
-        <tr><td><strong>Manual declination</strong></td><td>Degrees east of true north; negative for west. Printed on Ordnance Survey and most national map sheets.</td></tr>
-        <tr><td><strong>Units</strong></td><td>Follow device profile · Metric · Statute.</td></tr>
-        <tr><td><strong>Needle smoothing</strong></td><td>Low (responsive) · Medium · High (very steady).</td></tr>
-        <tr><td><strong>Colour theme</strong></td><td>Match display type · Dark · High contrast.</td></tr>
-        <tr><td><strong>Vibrate on course</strong></td><td>A short buzz when you come back within three degrees of a locked bearing.</td></tr>
-        <tr><td><strong>Fast refresh</strong></td><td>Keeps the needle at 5 Hz the whole time the app is open. Uses noticeably more battery.</td></tr>
-        <tr><td><strong>Show seconds</strong></td><td>On the time screen.</td></tr>
-        <tr><td><strong>Position features</strong></td><td>Turns on GPS for coordinates, sun position and computed declination. <strong>Off by default</strong> to save battery — the compass, clock and weather all work without it.</td></tr>
+        <tr><td><strong>Dial style</strong></td><td data-label="Options">Rotating dial with a fixed needle · Fixed dial with a rotating needle.</td></tr>
+        <tr><td><strong>North reference</strong></td><td data-label="Options">Magnetic · True (computed) · True (manual declination).</td></tr>
+        <tr><td><strong>Manual declination</strong></td><td data-label="Options">Degrees east of true north; negative for west. Printed on Ordnance Survey and most national map sheets.</td></tr>
+        <tr><td><strong>Units</strong></td><td data-label="Options">Follow device profile · Metric · Statute.</td></tr>
+        <tr><td><strong>Needle smoothing</strong></td><td data-label="Options">Low (responsive) · Medium · High (very steady).</td></tr>
+        <tr><td><strong>Colour theme</strong></td><td data-label="Options">Match display type · Dark · High contrast.</td></tr>
+        <tr><td><strong>Vibrate on course</strong></td><td data-label="Options">A short buzz when you come back within three degrees of a locked bearing.</td></tr>
+        <tr><td><strong>Fast refresh</strong></td><td data-label="Options">Keeps the needle at 5 Hz the whole time the app is open. Uses noticeably more battery.</td></tr>
+        <tr><td><strong>Show seconds</strong></td><td data-label="Options">On the time screen.</td></tr>
+        <tr><td><strong>Position features</strong></td><td data-label="Options">Turns on GPS for coordinates, sun position and computed declination. <strong>Off by default</strong> to save battery — the compass, clock and weather all work without it.</td></tr>
       </table></div>
 
       <h3>If the heading will not settle</h3>
