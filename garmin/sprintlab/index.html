@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/garmin/style.css?v=2" />
+<link rel="stylesheet" href="/garmin/style.css?v=3" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="SprintLab Track — rep timing for sprinters on Garmin · Vytera Labs" />
 <meta property="og:description" content="Times reps, controls rest, shows drop-off, and writes a normal FIT activity that syncs to Garmin Connect like any native run." />
@@ -33,10 +33,8 @@
       </div>
       <div class="nav-links">
         <a href="/garmin/">All Garmin apps</a>
-        <a href="/garmin/sprint-start/">Sprint Start</a>
-        <a href="/garmin/aircraft-dial/">Aircraft Dial</a>
-        <a href="/garmin/sprintlab/" aria-current="page">SprintLab Track</a>
-        <a href="/garmin/compass/">Compass</a>
+        <a href="/garmin/sprintlab/" aria-current="page">Overview</a>
+        <a href="/garmin/sprintlab/guide/">User Guide</a>
       </div>
     </nav>
   </div>
@@ -56,7 +54,7 @@
       </div>
       <div class="btn-row">
         <span class="mail-btn pending">Coming soon to the Connect&nbsp;IQ Store</span>
-        <a class="mail-btn" href="#instructions">Instructions for use <span class="arrow">→</span></a>
+        <a class="mail-btn" href="/garmin/sprintlab/guide/">Read the user guide <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -68,18 +66,7 @@
         <h2>Five screens, one thumb</h2>
       </div>
       <p>A sprinter standing on the track in spikes should never have to navigate a menu to begin. The whole app is five screens deep, and the button that moves you forward is always the same one.</p>
-      <div class="table-wrap"><table>
-        <thead>
-          <tr><th scope="col">Screen</th><th scope="col">What it shows</th></tr>
-        </thead>
-        <tbody>
-        <tr><td><strong>Home</strong></td><td data-label="What it shows">The session you are about to run, a one-line summary of your last one, and START.</td></tr>
-        <tr><td><strong>Ready</strong></td><td data-label="What it shows">What is coming — set, rep and distance — and one button to start it.</td></tr>
-        <tr><td><strong>Rep</strong></td><td data-label="What it shows">The elapsed time, and deliberately nothing else. No heart rate, no rep counter, no distance.</td></tr>
-        <tr><td><strong>Rest</strong></td><td data-label="What it shows">The countdown, what you just ran against your session best, and what is next.</td></tr>
-        <tr><td><strong>Summary</strong></td><td data-label="What it shows">Every rep with its drop-off and heart-rate recovery, the session verdict, then save or discard.</td></tr>
-        </tbody>
-      </table></div>
+      <p><strong>Home</strong> picks the session and starts it. <strong>Ready</strong> tells you what is coming. <strong>Rep</strong> is the elapsed time and deliberately nothing else. <strong>Rest</strong> is the countdown, what you just ran against your session best, and what is next. <strong>Summary</strong> is every rep with its drop-off and heart-rate recovery, then save or discard.</p>
       <div class="callout">
         <p>A sprinter glancing at the watch mid-effort has perhaps 150 milliseconds of attention, and every extra glyph costs some of it. So the rep screen is one number, filling the display.</p>
       </div>
@@ -93,19 +80,7 @@
         <h2>The session library</h2>
       </div>
       <p>Six sessions, chosen with UP and DOWN on the Home screen so the start button is never more than one press away.</p>
-      <div class="table-wrap"><table>
-        <thead>
-          <tr><th scope="col">Session</th><th scope="col">Shape</th></tr>
-        </thead>
-        <tbody>
-        <tr><td><strong>6 × 60m / 3'</strong></td><td data-label="Shape">Six reps, three minutes' rest.</td></tr>
-        <tr><td><strong>4 × 150m / 6'</strong></td><td data-label="Shape">Four reps, six minutes' rest.</td></tr>
-        <tr><td><strong>3 × 300m / 10'</strong></td><td data-label="Shape">Three reps, ten minutes' rest.</td></tr>
-        <tr><td><strong>2 × (3 × 200m)</strong></td><td data-label="Shape">Two sets of three, four minutes between reps and twelve between sets.</td></tr>
-        <tr><td><strong>Speed endurance 120–150–180</strong></td><td data-label="Shape">Three reps at three distances, walk-back recovery — you control the rest, so the rest clock counts <em>up</em> rather than down.</td></tr>
-        <tr><td><strong>Custom</strong></td><td data-label="Shape">Your own sets, reps, distance, rest and set rest. Remembered between sessions.</td></tr>
-        </tbody>
-      </table></div>
+      <p><strong>6 × 60m</strong> off three minutes. <strong>4 × 150m</strong> off six. <strong>3 × 300m</strong> off ten. <strong>2 × (3 × 200m)</strong>, four minutes between reps and twelve between sets. A <strong>120–150–180 speed-endurance ladder</strong> on walk-back recovery, where you control the rest so the clock counts up rather than down. And a <strong>custom</strong> session that remembers your own sets, reps, distance and rests.</p>
     </div>
   </section>
 
@@ -121,81 +96,11 @@
     </div>
   </section>
 
-  <section class="band" id="instructions">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="idx">04</span>
-        <h2>Instructions for use</h2>
-      </div>
-
-      <h3>Running a session</h3>
-      <div class="table-wrap"><table>
-        <thead>
-          <tr><th scope="col">Step</th><th scope="col">What to do</th></tr>
-        </thead>
-        <tbody>
-        <tr><td><strong>1</strong></td><td>Open SprintLab Track. On <strong>Home</strong>, press <strong>UP</strong> or <strong>DOWN</strong> to pick the session.</td></tr>
-        <tr><td><strong>2</strong></td><td>Press <strong>START</strong>. The <strong>Ready</strong> screen shows the rep you are about to run.</td></tr>
-        <tr><td><strong>3</strong></td><td>On the line, press <strong>START</strong> to begin the rep. The clock runs.</td></tr>
-        <tr><td><strong>4</strong></td><td>At the end of the rep, press <strong>START</strong> or <strong>BACK/LAP</strong> — either stops it. The rest clock begins.</td></tr>
-        <tr><td><strong>5</strong></td><td>Walk back. When you are ready early, press <strong>START</strong> to end the rest and arm the next rep. That does <em>not</em> start the rep clock — you still have to walk to the line.</td></tr>
-        <tr><td><strong>6</strong></td><td>After the last rep, the <strong>Summary</strong> appears. Page it with <strong>UP</strong> and <strong>DOWN</strong>, rate the session, then save or discard.</td></tr>
-        </tbody>
-      </table></div>
-
-      <h3>The buttons</h3>
-      <p>One contract, fixed across every screen, so it can be learned once and used with cold hands.</p>
-      <div class="table-wrap"><table>
-        <thead>
-          <tr><th scope="col">Button</th><th scope="col">Action</th></tr>
-        </thead>
-        <tbody>
-        <tr><td><strong>START / ENTER</strong></td><td data-label="Action">The forward action: start the rep, stop the rep, end the rest, save.</td></tr>
-        <tr><td><strong>BACK / LAP</strong></td><td data-label="Action">Stops the rep while one is running. Otherwise, steps back.</td></tr>
-        <tr><td><strong>UP / DOWN</strong></td><td data-label="Action">Change the selection, or page the summary.</td></tr>
-        <tr><td><strong>MENU</strong></td><td data-label="Action">Settings — from Home only.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="note">
-        <strong>BACK is consumed everywhere inside a session.</strong> A stray press mid-set must never drop you out of the app and bin the recording, so leaving a session is always an explicit confirmation. Both buttons stop a running rep on purpose: a sprinter reaching for the watch at the line hits whichever is under the thumb, and a rep stopped by the "wrong" button is still a rep.
-      </div>
-
-      <h3>Settings</h3>
-      <p>Set them on the watch with <strong>MENU</strong> from the Home screen, or from <strong>Garmin Connect → your device → Connect IQ Apps → SprintLab Track → Settings</strong>.</p>
-      <div class="table-wrap"><table>
-        <thead>
-          <tr><th scope="col">Setting</th><th scope="col">Options</th><th scope="col">Default</th></tr>
-        </thead>
-        <tbody>
-        <tr><td><strong>Timing mode</strong></td><td data-label="Options">Manual (START / LAP) · Auto-start on movement · Auto-stop by distance · Flying rep</td><td data-label="Default">Manual</td></tr>
-        <tr><td><strong>Vibration</strong></td><td data-label="Options">Off · Light · Normal · Strong</td><td data-label="Default">Normal</td></tr>
-        <tr><td><strong>Drop-off alert, 100m and under</strong></td><td data-label="Options">1–25%</td><td data-label="Default">5%</td></tr>
-        <tr><td><strong>Drop-off alert, over 100m</strong></td><td data-label="Options">1–25%</td><td data-label="Default">3%</td></tr>
-        <tr><td><strong>Rest until HR recovers</strong></td><td data-label="Options">On · Off</td><td data-label="Default">Off</td></tr>
-        <tr><td><strong>Resume at HR</strong></td><td data-label="Options">70–180 bpm</td><td data-label="Default">120 bpm</td></tr>
-        <tr><td><strong>Distance units</strong></td><td data-label="Options">Metres · Yards</td><td data-label="Default">Metres</td></tr>
-        <tr><td><strong>Auto-start sensitivity</strong></td><td data-label="Options">100–1200 mG</td><td data-label="Default">350 mG</td></tr>
-        </tbody>
-      </table></div>
-      <p class="muted small">Version 1 ships <strong>Manual</strong> timing. Auto-start on movement, auto-stop by distance and the flying rep are built into the settings ahead of the releases that implement them — until then, leave the mode on Manual.</p>
-
-      <h3>What lands in Garmin Connect</h3>
-      <p>SprintLab Track records through the watch's own activity recording, so it produces an ordinary FIT activity that syncs over the same path as a native run. The app uploads nothing itself and has no network code at all.</p>
-      <ul>
-        <li><strong>An activity in your timeline</strong>, titled <em>SprintLab Track</em> and typed as a track run, with duration, calories, average and max heart rate, and the heart-rate graph.</li>
-        <li><strong>A continuous heart-rate trace.</strong> The session records through the rests as well as the reps, so there are no gaps between efforts.</li>
-        <li><strong>One lap per rep and one lap per rest.</strong> Rep times are readable from the lap duration column alone — which matters, because that is the one place the data must survive even if Connect renders none of the custom fields.</li>
-      </ul>
-
-      <h3>If a rep time looks wrong</h3>
-      <p>Rep duration is taken at the lap boundary, which is precise to the instant you pressed the button. What the watch <em>displays</em> during a rep updates about once a second; the recorded time does not depend on that. If a rep is short by roughly the time you spent reaching for the watch, that is the rep you ran — press at the line, not after it.</p>
-    </div>
-  </section>
 
   <section class="band">
     <div class="wrap">
       <div class="sec-head">
-        <span class="idx">05</span>
+        <span class="idx">04</span>
         <h2>Devices and data</h2>
       </div>
       <p><strong>Watches:</strong> 15 models on Connect IQ System 6 (API 4.2) or later — Forerunner 255, 255 Music, 255S, 255S Music, 265, 265S, 955 and 965; fēnix 7, 7S and 7X; epix (Gen 2); Venu 3 and 3S; and Enduro 3.</p>
@@ -216,8 +121,7 @@
       <div class="foot-links">
         <a href="/garmin/">All Garmin apps</a>
         <a href="/garmin/sprintlab/">Overview</a>
-        <a href="#instructions">Instructions for use</a>
-        <a href="/sprintlab/">SprintLab for iPhone</a>
+        <a href="/garmin/sprintlab/guide/">User Guide</a>
         <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
       </div>
     </div>

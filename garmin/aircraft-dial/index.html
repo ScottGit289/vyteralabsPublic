@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/garmin/style.css?v=2" />
+<link rel="stylesheet" href="/garmin/style.css?v=3" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Aircraft Dial — analogue instrument watch face for Garmin · Vytera Labs" />
 <meta property="og:description" content="An analogue Connect IQ face built like a panel instrument: screwed bezel, three configurable sub-dials and four instrument lighting themes." />
@@ -33,10 +33,8 @@
       </div>
       <div class="nav-links">
         <a href="/garmin/">All Garmin apps</a>
-        <a href="/garmin/sprint-start/">Sprint Start</a>
-        <a href="/garmin/aircraft-dial/" aria-current="page">Aircraft Dial</a>
-        <a href="/garmin/sprintlab/">SprintLab Track</a>
-        <a href="/garmin/compass/">Compass</a>
+        <a href="/garmin/aircraft-dial/" aria-current="page">Overview</a>
+        <a href="/garmin/aircraft-dial/guide/">User Guide</a>
       </div>
     </nav>
   </div>
@@ -56,7 +54,7 @@
       </div>
       <div class="btn-row">
         <span class="mail-btn pending">Coming soon to the Connect&nbsp;IQ Store</span>
-        <a class="mail-btn" href="#instructions">Instructions for use <span class="arrow">→</span></a>
+        <a class="mail-btn" href="/garmin/aircraft-dial/guide/">Read the user guide <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -103,75 +101,11 @@
     </div>
   </section>
 
-  <section class="band" id="instructions">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="idx">03</span>
-        <h2>Instructions for use</h2>
-      </div>
-
-      <h3>Applying the face</h3>
-      <p>Open the watch face list on your watch, scroll to <strong>Aircraft Dial</strong>, and choose <strong>Apply</strong>.</p>
-
-      <h3>Changing what it shows</h3>
-      <p>There are two ways in, and both edit the same settings:</p>
-      <ul>
-        <li><strong>On the watch</strong> — select the face and choose <strong>Customize</strong>, the option beside Apply. Changes apply immediately.</li>
-        <li><strong>From the phone</strong> — <strong>Garmin Connect → your device → Watch Face Settings</strong>.</li>
-      </ul>
-      <div class="note">
-        <strong>If you sideloaded the face, use Customize on the watch.</strong> Garmin Connect can only edit settings for apps installed from the store, so a sideloaded face appears in the app count but cannot be opened from the phone. Customize does not involve the store. Older watches without on-device settings support show only Apply, and are limited to the phone route.
-      </div>
-
-      <h3>Every setting</h3>
-      <div class="table-wrap"><table>
-        <thead>
-          <tr><th scope="col">Setting</th><th scope="col">Options</th><th scope="col">Default</th></tr>
-        </thead>
-        <tbody>
-        <tr><td><strong>Instrument Lighting</strong></td><td data-label="Options">Night (white on black) · NVG Green · Amber Nav · Day VFR</td><td data-label="Default">Night</td></tr>
-        <tr><td><strong>Second Hand</strong></td><td data-label="Options">Off · Sub-dial, wrist-up · Sub-dial, always on · Centre sweep, wrist-up</td><td data-label="Default">Sub-dial, wrist-up</td></tr>
-        <tr><td><strong>Top Sub-dial</strong></td><td data-label="Options">Any data field</td><td data-label="Default">Battery</td></tr>
-        <tr><td><strong>Left Sub-dial</strong></td><td data-label="Options">Any data field</td><td data-label="Default">Steps</td></tr>
-        <tr><td><strong>Right Sub-dial</strong></td><td data-label="Options">Any data field</td><td data-label="Default">Heart Rate</td></tr>
-        <tr><td><strong>Bottom Window</strong></td><td data-label="Options">Any data field</td><td data-label="Default">Date</td></tr>
-        <tr><td><strong>Units</strong></td><td data-label="Options">Match watch settings · Metric · Statute</td><td data-label="Default">Match watch</td></tr>
-        <tr><td><strong>Pressure Unit</strong></td><td data-label="Options">hPa · inHg</td><td data-label="Default">hPa</td></tr>
-        <tr><td><strong>Luminous Markings</strong></td><td data-label="Options">On · Off</td><td data-label="Default">On</td></tr>
-        </tbody>
-      </table></div>
-
-      <h3>The data fields you can choose from</h3>
-      <p>Off, Date, Battery, Steps, Heart Rate, Calories, Distance, Floors Climbed, Active Minutes, Body Battery, Stress, Altitude, Barometric Pressure, Temperature, Notifications, and Time to Recovery.</p>
-
-      <h3>Two behaviours worth knowing</h3>
-      <p><strong>The Top Sub-dial setting is ignored while the second hand is in a sub-dial mode</strong>, because the seconds sweep occupies that slot. The on-device menu shows that row as "Seconds sub-dial" rather than offering a field that would have no effect. Set the second hand to <em>Off</em> or <em>Centre sweep</em> and the slot becomes yours.</p>
-      <p><strong>Asleep, the seconds needle parks at twelve</strong> rather than freezing wherever the once-a-minute redraw happened to land.</p>
-
-      <h3>Battery, and how to spend it</h3>
-      <p>The cost of the face is driven by its redraw schedule, not by how many data fields you switch on — an unused sensor is never opened at all.</p>
-      <div class="table-wrap"><table>
-        <thead>
-          <tr><th scope="col">State</th><th scope="col">Work done</th></tr>
-        </thead>
-        <tbody>
-        <tr><td>Asleep · seconds Off or wrist-up</td><td data-label="Work done">One full redraw per minute.</td></tr>
-        <tr><td>Asleep · burn-in display (AMOLED)</td><td data-label="Work done">One minimal, pixel-shifted redraw per minute.</td></tr>
-        <tr><td>Asleep · seconds Always on</td><td data-label="Work done">The above, plus one small clipped repaint per second.</td></tr>
-        <tr><td>Wrist up · any second hand</td><td data-label="Work done">One full redraw per second, while the wrist is up.</td></tr>
-        </tbody>
-      </table></div>
-      <p><strong>Second Hand → Off</strong> is the cheapest setting. <strong>Always on</strong> is the only one that costs anything while the watch is asleep — and if your watch reports that the per-second repaint is too expensive, the face drops itself back to wrist-up rather than letting the system freeze it.</p>
-
-      <h3>On watches that need burn-in protection</h3>
-      <p>Asleep on an AMOLED watch, the face draws outline-only hands, four ticks and nothing else, drifting inside a five-pixel box so no pixel is held lit.</p>
-    </div>
-  </section>
 
   <section class="band">
     <div class="wrap">
       <div class="sec-head">
-        <span class="idx">04</span>
+        <span class="idx">03</span>
         <h2>Built to be cheap to draw</h2>
       </div>
       <p><strong>No runtime trigonometry.</strong> Every angle the face uses lands on a whole degree, so a 360-entry fixed-point sine table built once at startup replaces every sine call. Hand, tick and needle geometry is integer arithmetic throughout.</p>
@@ -185,7 +119,7 @@
   <section class="band">
     <div class="wrap">
       <div class="sec-head">
-        <span class="idx">05</span>
+        <span class="idx">04</span>
         <h2>Devices and data</h2>
       </div>
       <p><strong>Watches:</strong> 28 models on Connect IQ 3.2 or later — epix (Gen 2); fēnix 6, 6S, 6 Pro, 6S Pro and 6X Pro; fēnix 7, 7S and 7X; Forerunner 255, 255S, 265, 265S, 745, 945, 955 and 965; Venu, Venu 2, Venu 2S, Venu 2 Plus, Venu 3, Venu 3S, Venu Sq and Venu Sq 2; vívoactive 4, 4S and 5.</p>
@@ -206,8 +140,7 @@
       <div class="foot-links">
         <a href="/garmin/">All Garmin apps</a>
         <a href="/garmin/aircraft-dial/">Overview</a>
-        <a href="#instructions">Instructions for use</a>
-        <a href="/garmin/compass/">Vytera Compass</a>
+        <a href="/garmin/aircraft-dial/guide/">User Guide</a>
         <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
       </div>
     </div>
