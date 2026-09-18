@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/sprintlab/style.css?v=4" />
+<link rel="stylesheet" href="/sprintlab/style.css?v=5" />
 </head>
 <body>
 
@@ -73,13 +73,17 @@
 
   <div class="section"><h2 id="tour">1. The six tabs</h2></div>
   <div class="table-wrap"><table>
-    <tr><th>Tab</th><th>What it is for</th></tr>
-    <tr><td><strong>Home</strong></td><td>Season stats, your latest result and quick actions.</td></tr>
-    <tr><td><strong>Train</strong></td><td>Log sessions and read progress graphs, trends and your consistency score.</td></tr>
-    <tr><td><strong>Ready</strong></td><td>The Performance Readiness dashboard and today's training call.</td></tr>
-    <tr><td><strong>PBs</strong></td><td>Personal bests grouped by distance, with wind and timing flags.</td></tr>
-    <tr><td><strong>Tools</strong></td><td>Sprint calculator and age-grade calculator.</td></tr>
-    <tr><td><strong>Settings</strong></td><td>Profile, wearables, intelligence, units, backup and deletion.</td></tr>
+    <thead>
+      <tr><th scope="col">Tab</th><th scope="col">What it is for</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>Home</strong></td><td data-label="What it is for">Season stats, your latest result and quick actions.</td></tr>
+    <tr><td><strong>Train</strong></td><td data-label="What it is for">Log sessions and read progress graphs, trends and your consistency score.</td></tr>
+    <tr><td><strong>Ready</strong></td><td data-label="What it is for">The Performance Readiness dashboard and today's training call.</td></tr>
+    <tr><td><strong>PBs</strong></td><td data-label="What it is for">Personal bests grouped by distance, with wind and timing flags.</td></tr>
+    <tr><td><strong>Tools</strong></td><td data-label="What it is for">Sprint calculator and age-grade calculator.</td></tr>
+    <tr><td><strong>Settings</strong></td><td data-label="What it is for">Profile, wearables, intelligence, units, backup and deletion.</td></tr>
+    </tbody>
   </table></div>
 
   <div class="section"><h2 id="profile">2. Setting up your athlete profile</h2></div>
@@ -91,11 +95,15 @@
 
   <h3>What the call means</h3>
   <div class="table-wrap"><table>
-    <tr><th>Score</th><th>Call</th><th>What it means</th></tr>
-    <tr><td>80–100</td><td><strong>Sprint</strong></td><td>Primed for quality speed work or a time trial.</td></tr>
-    <tr><td>60–79</td><td><strong>Gym</strong></td><td>Good for strength and power work; hold back top-end speed volume.</td></tr>
-    <tr><td>40–59</td><td><strong>Recovery</strong></td><td>Keep it light — tempo, technique or mobility only.</td></tr>
-    <tr><td>Below 40</td><td><strong>Rest</strong></td><td>Prioritise rest or very light movement today.</td></tr>
+    <thead>
+      <tr><th scope="col">Score</th><th scope="col">Call</th><th scope="col">What it means</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>80–100</td><td data-label="Call"><strong>Sprint</strong></td><td data-label="What it means">Primed for quality speed work or a time trial.</td></tr>
+    <tr><td>60–79</td><td data-label="Call"><strong>Gym</strong></td><td data-label="What it means">Good for strength and power work; hold back top-end speed volume.</td></tr>
+    <tr><td>40–59</td><td data-label="Call"><strong>Recovery</strong></td><td data-label="What it means">Keep it light — tempo, technique or mobility only.</td></tr>
+    <tr><td>Below 40</td><td data-label="Call"><strong>Rest</strong></td><td data-label="What it means">Prioritise rest or very light movement today.</td></tr>
+    </tbody>
   </table></div>
   <p>Two rules are worth knowing. If you have logged an injury or niggle in the last few days, <strong>the app will never tell you to sprint</strong>. And if it has no recovery data at all to read, it defaults to <strong>Gym</strong> rather than guessing at speed work.</p>
 
@@ -116,11 +124,15 @@
   <div class="section"><h2 id="metrics">4. Where each number comes from</h2></div>
   <p>Every metric carries its source, so you can judge how much to trust a score:</p>
   <div class="table-wrap"><table>
-    <tr><th>Source</th><th>Meaning</th></tr>
-    <tr><td><strong>Manual</strong></td><td>You typed it. A manual value always wins.</td></tr>
-    <tr><td><strong>Oura</strong>, <strong>Garmin</strong>, <strong>Apple</strong></td><td>Synced from that source.</td></tr>
-    <tr><td><strong>Calculated</strong></td><td>Derived from other values you have supplied.</td></tr>
-    <tr><td><strong>Estimated</strong></td><td>Inferred. The weakest of the four — treat a score built mostly on estimates with proportionate caution.</td></tr>
+    <thead>
+      <tr><th scope="col">Source</th><th scope="col">Meaning</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>Manual</strong></td><td data-label="Meaning">You typed it. A manual value always wins.</td></tr>
+    <tr><td><strong>Oura</strong>, <strong>Garmin</strong>, <strong>Apple</strong></td><td data-label="Meaning">Synced from that source.</td></tr>
+    <tr><td><strong>Calculated</strong></td><td data-label="Meaning">Derived from other values you have supplied.</td></tr>
+    <tr><td><strong>Estimated</strong></td><td data-label="Meaning">Inferred. The weakest of the four — treat a score built mostly on estimates with proportionate caution.</td></tr>
+    </tbody>
   </table></div>
   <p>When you edit a synced metric by hand, the original reading is kept underneath, so you can put it back.</p>
 
@@ -135,11 +147,15 @@
   <h3>Records are kept in separate books</h3>
   <p>A record is identified by distance <em>and</em> start type <em>and</em> timing method together. That is deliberate: comparing a flying 30 with a block 30, or a stopwatch time with electronic timing, tells you nothing.</p>
   <div class="table-wrap"><table>
-    <tr><th>Start type</th><th>Timing method</th></tr>
-    <tr><td>Blocks</td><td>Electronic (shown as <strong>FAT</strong>)</td></tr>
-    <tr><td>Standing</td><td>Hand (<strong>HT</strong>)</td></tr>
-    <tr><td>Flying</td><td>Phone (<strong>HT</strong>)</td></tr>
-    <tr><td></td><td>Estimate (<strong>est</strong>)</td></tr>
+    <thead>
+      <tr><th scope="col">Start type</th><th scope="col">Timing method</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>Blocks</td><td data-label="Timing method">Electronic (shown as <strong>FAT</strong>)</td></tr>
+    <tr><td>Standing</td><td data-label="Timing method">Hand (<strong>HT</strong>)</td></tr>
+    <tr><td>Flying</td><td data-label="Timing method">Phone (<strong>HT</strong>)</td></tr>
+    <tr><td></td><td data-label="Timing method">Estimate (<strong>est</strong>)</td></tr>
+    </tbody>
   </table></div>
 
   <h3>Wind</h3>
@@ -171,15 +187,19 @@
 
   <div class="section"><h2 id="settings">11. Settings reference</h2></div>
   <div class="table-wrap"><table>
-    <tr><th>Setting</th><th>What it does</th></tr>
-    <tr><td>Edit athlete profile</td><td>Your details, used for age grading and baselines.</td></tr>
-    <tr><td>Manage wearables</td><td>Connect, sync or disconnect Apple Health, Oura and Garmin.</td></tr>
-    <tr><td>Show wind-aided results</td><td>Whether wind-aided times appear in the PB list at all.</td></tr>
-    <tr><td>Use on-device intelligence</td><td>Apple Intelligence for insights, with the built-in coach as fallback.</td></tr>
-    <tr><td>Units</td><td>Metric (km/h) or Imperial (mph).</td></tr>
-    <tr><td>Export backup / Import backup</td><td>Move your data off the device, or back onto a new one.</td></tr>
-    <tr><td>Delete all data</td><td>Removes your profile, PBs and settings from this device.</td></tr>
-    <tr><td>Clear crash report</td><td>Discards a stored crash report.</td></tr>
+    <thead>
+      <tr><th scope="col">Setting</th><th scope="col">What it does</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>Edit athlete profile</td><td data-label="What it does">Your details, used for age grading and baselines.</td></tr>
+    <tr><td>Manage wearables</td><td data-label="What it does">Connect, sync or disconnect Apple Health, Oura and Garmin.</td></tr>
+    <tr><td>Show wind-aided results</td><td data-label="What it does">Whether wind-aided times appear in the PB list at all.</td></tr>
+    <tr><td>Use on-device intelligence</td><td data-label="What it does">Apple Intelligence for insights, with the built-in coach as fallback.</td></tr>
+    <tr><td>Units</td><td data-label="What it does">Metric (km/h) or Imperial (mph).</td></tr>
+    <tr><td>Export backup / Import backup</td><td data-label="What it does">Move your data off the device, or back onto a new one.</td></tr>
+    <tr><td>Delete all data</td><td data-label="What it does">Removes your profile, PBs and settings from this device.</td></tr>
+    <tr><td>Clear crash report</td><td data-label="What it does">Discards a stored crash report.</td></tr>
+    </tbody>
   </table></div>
 
   <div class="section"><h2 id="data">12. Backup, restore and delete</h2></div>

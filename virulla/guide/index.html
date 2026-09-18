@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/virulla/brand.css?v=4" />
+<link rel="stylesheet" href="/virulla/brand.css?v=5" />
 </head>
 <body>
 <header>
@@ -107,7 +107,13 @@
 <p>Open a chat and type as you would in any messenger. Text, photos and video are all encrypted on your device before they're sent.</p>
 <h3>What sending costs</h3>
 <p>Virulla uses <strong>credits</strong> so there's no subscription and no advertising. Each thing you send spends a small number of credits:</p>
-<div class="table-wrap"><table><tr><th>You send</th><th>Credits</th><th>Notes</th></tr><tr><td>A text message</td><td>1</td><td>Any length of text.</td></tr><tr><td>A photo</td><td>5</td><td>Encrypted before upload.</td></tr><tr><td>A video</td><td>10</td><td>Plays in-app; never written to disk unencrypted.</td></tr><tr><td>Receiving anything</td><td>Free</td><td>You're only charged for what you send.</td></tr></table></div>
+<div class="table-wrap"><table>
+        <thead>
+          <tr><th scope="col">You send</th><th scope="col">Credits</th><th scope="col">Notes</th></tr>
+        </thead>
+        <tbody><tr><td>A text message</td><td data-label="Credits">1</td><td data-label="Notes">Any length of text.</td></tr><tr><td>A photo</td><td data-label="Credits">5</td><td data-label="Notes">Encrypted before upload.</td></tr><tr><td>A video</td><td data-label="Credits">10</td><td data-label="Notes">Plays in-app; never written to disk unencrypted.</td></tr><tr><td>Receiving anything</td><td data-label="Credits">Free</td><td data-label="Notes">You're only charged for what you send.</td></tr>
+        </tbody>
+      </table></div>
 <p>Your current balance is shown at the top of the chat list. If you run low, Virulla prompts you to top up — see section&nbsp;4.</p>
 <h3>Photos &amp; video</h3>
 <p>Tap the attachment button in a chat to pick a photo or video. It's encrypted on your device, and only your contact can open it. Videos play inside Virulla and are never saved to your phone in readable form.</p>
@@ -119,7 +125,13 @@
 <div class="note"><strong>Welcome credits</strong><p>Every new account is loaded with <strong>50 credits</strong> — enough for around 50 text messages — so you can start chatting before you buy anything.</p></div>
 <h3>Buy a credit pack</h3>
 <p>Open <strong>Credits</strong> from the chat list (the balance chip) and choose a pack. Payment is handled securely by Apple; Virulla never sees your card details.</p>
-<div class="table-wrap"><table><tr><th>Pack</th><th>Credits</th><th>Good for roughly…</th></tr><tr><td>Starter</td><td>100</td><td>100 texts, or 20 photos.</td></tr><tr><td>Regular</td><td>500</td><td>500 texts, or 100 photos.</td></tr><tr><td>Value</td><td>2000</td><td>Heavy use, media, and groups.</td></tr></table></div>
+<div class="table-wrap"><table>
+        <thead>
+          <tr><th scope="col">Pack</th><th scope="col">Credits</th><th scope="col">Good for roughly…</th></tr>
+        </thead>
+        <tbody><tr><td>Starter</td><td data-label="Credits">100</td><td data-label="Good for roughly…">100 texts, or 20 photos.</td></tr><tr><td>Regular</td><td data-label="Credits">500</td><td data-label="Good for roughly…">500 texts, or 100 photos.</td></tr><tr><td>Value</td><td data-label="Credits">2000</td><td data-label="Good for roughly…">Heavy use, media, and groups.</td></tr>
+        </tbody>
+      </table></div>
 <p>Prices are shown in your local currency in the app. Credits never expire.</p>
 <h3>Redeem a gift code</h3>
 <p>If you've been given a Virulla gift code, open <strong>Credits ▸ Redeem a gift code</strong> and either scan it or paste it in. Valid credits are added to your balance instantly. Each code can be redeemed once on your device.</p>

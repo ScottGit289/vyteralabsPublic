@@ -271,6 +271,44 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
   th,td{padding:8px 10px;overflow-wrap:anywhere;}
   .doc .meta{overflow-wrap:anywhere;}
 }
+
+/* ---------- Tables on a phone ---------- */
+
+/* Measured in an iframe at 320-430px: these tables were never overflowing the
+   page, they were being squeezed. Auto layout gave the label column 35-100px,
+   so a heading like "Randomise Get Ready" broke to one word per line and rows
+   grew past 190px.
+
+   Below 560px a row therefore stops being a row and becomes a block: the
+   subject on its own line, then each remaining value under the name of the
+   column it came from, carried on the cell in `data-label`. The header row is
+   then redundant, so it is hidden — nothing is lost, because its text has moved
+   onto the cells. Above 560px the table is untouched. */
+@media (max-width:560px){
+  .table-wrap{overflow-x:visible;}
+  .table-wrap table{display:block;min-width:0;}
+  .table-wrap thead{display:none;}
+  .table-wrap tbody{display:block;}
+  .table-wrap tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+  .table-wrap tr:last-child{border-bottom:none;}
+  .table-wrap td,.table-wrap tbody th{display:block;border:0;padding:0;}
+  .table-wrap td + td,.table-wrap tbody th + td{margin-top:10px;}
+  /* The row's subject reads as its heading, whether it is a td or a row th. */
+  .table-wrap tr > :first-child{color:var(--paper);font-weight:500;font-size:16.5px;line-height:1.35;}
+  /* A row th is otherwise drawn in the small mono column-label style, which is
+     wrong once it is the heading of a block. */
+  .table-wrap tbody th{text-align:left;font-family:var(--sans);font-size:16.5px;letter-spacing:normal;text-transform:none;}
+  .table-wrap td[data-label]::before{
+    content:attr(data-label);
+    display:block;
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+}
 </style>
 <!-- cairn:css:end -->
 </head>
@@ -358,13 +396,13 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col">You type</th><th scope="col">You get</th></tr></thead>
 <tbody>
-<tr><td><code>#work</code></td><td>The tag <em>work</em></td></tr>
-<tr><td><code>@Board pack</code></td><td>The project or area <em>Board pack</em></td></tr>
-<tr><td><code>@"Q4 board pack"</code></td><td>Quoted, for names with spaces</td></tr>
-<tr><td><code>!</code> <code>!!</code> <code>!!!</code></td><td>Low, medium, high priority</td></tr>
-<tr><td><code>~45m</code> <code>~2h</code> <code>~1h30</code> <code>~1.5h</code></td><td>An estimate</td></tr>
-<tr><td><code>// call Jo first</code></td><td>A note</td></tr>
-<tr><td>A new line starting <code>-</code></td><td>A checklist item</td></tr>
+<tr><td><code>#work</code></td><td data-label="You get">The tag <em>work</em></td></tr>
+<tr><td><code>@Board pack</code></td><td data-label="You get">The project or area <em>Board pack</em></td></tr>
+<tr><td><code>@"Q4 board pack"</code></td><td data-label="You get">Quoted, for names with spaces</td></tr>
+<tr><td><code>!</code> <code>!!</code> <code>!!!</code></td><td data-label="You get">Low, medium, high priority</td></tr>
+<tr><td><code>~45m</code> <code>~2h</code> <code>~1h30</code> <code>~1.5h</code></td><td data-label="You get">An estimate</td></tr>
+<tr><td><code>// call Jo first</code></td><td data-label="You get">A note</td></tr>
+<tr><td>A new line starting <code>-</code></td><td data-label="You get">A checklist item</td></tr>
 </tbody>
 </table>
 </div>
@@ -406,12 +444,12 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col">Chip</th><th scope="col">Meaning</th></tr></thead>
 <tbody>
-<tr><td>Due Friday</td><td>Deadline, not a plan</td></tr>
-<tr><td>1h 30m</td><td>Estimate</td></tr>
-<tr><td>QBR</td><td>Project (created if it does not exist)</td></tr>
-<tr><td>#deep</td><td>Tag</td></tr>
-<tr><td>Medium priority</td><td>From <code>!!</code></td></tr>
-<tr><td>Deep focus</td><td>Inferred from the verb "draft"</td></tr>
+<tr><td>Due Friday</td><td data-label="Meaning">Deadline, not a plan</td></tr>
+<tr><td>1h 30m</td><td data-label="Meaning">Estimate</td></tr>
+<tr><td>QBR</td><td data-label="Meaning">Project (created if it does not exist)</td></tr>
+<tr><td>#deep</td><td data-label="Meaning">Tag</td></tr>
+<tr><td>Medium priority</td><td data-label="Meaning">From <code>!!</code></td></tr>
+<tr><td>Deep focus</td><td data-label="Meaning">Inferred from the verb "draft"</td></tr>
 </tbody>
 </table>
 </div>
@@ -480,12 +518,12 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col"></th><th scope="col">Project</th><th scope="col">Area</th></tr></thead>
 <tbody>
-<tr><td>Finishes</td><td>Yes — it has an end state</td><td>Never</td></tr>
-<tr><td>Example</td><td><em>Refit the kitchen</em></td><td><em>Health</em>, <em>Finance</em>, <em>Team</em></td></tr>
-<tr><td>Can go stalled</td><td>Yes, and the review says so</td><td>No — a quiet week under Health is normal</td></tr>
-<tr><td>Review cadence</td><td>Yes</td><td>No</td></tr>
-<tr><td>Drives the balance report</td><td>No</td><td>Yes</td></tr>
-<tr><td>Contains</td><td>To-dos, in sections</td><td>Projects, and loose to-dos</td></tr>
+<tr><td>Finishes</td><td data-label="Project">Yes — it has an end state</td><td data-label="Area">Never</td></tr>
+<tr><td>Example</td><td data-label="Project"><em>Refit the kitchen</em></td><td data-label="Area"><em>Health</em>, <em>Finance</em>, <em>Team</em></td></tr>
+<tr><td>Can go stalled</td><td data-label="Project">Yes, and the review says so</td><td data-label="Area">No — a quiet week under Health is normal</td></tr>
+<tr><td>Review cadence</td><td data-label="Project">Yes</td><td data-label="Area">No</td></tr>
+<tr><td>Drives the balance report</td><td data-label="Project">No</td><td data-label="Area">Yes</td></tr>
+<tr><td>Contains</td><td data-label="Project">To-dos, in sections</td><td data-label="Area">Projects, and loose to-dos</td></tr>
 </tbody>
 </table>
 </div>
@@ -603,16 +641,16 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col">Signal</th><th scope="col">Effect</th></tr></thead>
 <tbody>
-<tr><td>Overdue deadline</td><td>Largest single factor, growing with how late it is</td></tr>
-<tr><td>Due today</td><td>Very large</td></tr>
-<tr><td>Due within a fortnight</td><td>Sliding scale, closer is higher</td></tr>
-<tr><td>Already planned for today, or for a day now past</td><td>Large</td></tr>
-<tr><td>Priority you set</td><td>Proportional</td></tr>
-<tr><td>How long it has been waiting</td><td>Small and capped, so old work does not rot</td></tr>
-<tr><td>Project deadline closing in</td><td>Moderate</td></tr>
-<tr><td>Project deadline already passed</td><td>Larger, and growing with how late it is — but always below the same to-do's own overdue deadline</td></tr>
-<tr><td>Under ten minutes</td><td>Small quick-win bonus</td></tr>
-<tr><td>Blocked, or in Someday</td><td>Excluded outright</td></tr>
+<tr><td>Overdue deadline</td><td data-label="Effect">Largest single factor, growing with how late it is</td></tr>
+<tr><td>Due today</td><td data-label="Effect">Very large</td></tr>
+<tr><td>Due within a fortnight</td><td data-label="Effect">Sliding scale, closer is higher</td></tr>
+<tr><td>Already planned for today, or for a day now past</td><td data-label="Effect">Large</td></tr>
+<tr><td>Priority you set</td><td data-label="Effect">Proportional</td></tr>
+<tr><td>How long it has been waiting</td><td data-label="Effect">Small and capped, so old work does not rot</td></tr>
+<tr><td>Project deadline closing in</td><td data-label="Effect">Moderate</td></tr>
+<tr><td>Project deadline already passed</td><td data-label="Effect">Larger, and growing with how late it is — but always below the same to-do's own overdue deadline</td></tr>
+<tr><td>Under ten minutes</td><td data-label="Effect">Small quick-win bonus</td></tr>
+<tr><td>Blocked, or in Someday</td><td data-label="Effect">Excluded outright</td></tr>
 </tbody>
 </table>
 </div>
@@ -676,11 +714,11 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col">Tone</th><th scope="col">What it sounds like</th></tr></thead>
 <tbody>
-<tr><td><strong>Supportive</strong></td><td>Assumes the week was hard and says so kindly. No targets, no pressure.</td></tr>
-<tr><td><strong>Encouraging</strong></td><td>Leads with what went well, then points at the next achievable win.</td></tr>
-<tr><td><strong>Friendly</strong> <em>(default)</em></td><td>Plain and level-headed. What happened, and what is worth a look.</td></tr>
-<tr><td><strong>Just the facts</strong></td><td>The figures and their movement. No opinion, and no suggestion at all.</td></tr>
-<tr><td><strong>Direct</strong></td><td>Blunt about the gap between plan and outcome.</td></tr>
+<tr><td><strong>Supportive</strong></td><td data-label="What it sounds like">Assumes the week was hard and says so kindly. No targets, no pressure.</td></tr>
+<tr><td><strong>Encouraging</strong></td><td data-label="What it sounds like">Leads with what went well, then points at the next achievable win.</td></tr>
+<tr><td><strong>Friendly</strong> <em>(default)</em></td><td data-label="What it sounds like">Plain and level-headed. What happened, and what is worth a look.</td></tr>
+<tr><td><strong>Just the facts</strong></td><td data-label="What it sounds like">The figures and their movement. No opinion, and no suggestion at all.</td></tr>
+<tr><td><strong>Direct</strong></td><td data-label="What it sounds like">Blunt about the gap between plan and outcome.</td></tr>
 </tbody>
 </table>
 </div>
@@ -744,10 +782,10 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col">Say</th><th scope="col">Effect</th></tr></thead>
 <tbody>
-<tr><td>"Add a to-do to Cairn"</td><td>Siri asks what needs doing, then runs it through the same parser as the capture sheet — shorthand and all — and tells you which list it landed in</td></tr>
-<tr><td>"Add a to-do to <em>Q4 Planning</em> in Cairn"</td><td>The same, but filed straight into that project or area. Say the name of any open project or any area</td></tr>
-<tr><td>"What's on today in Cairn"</td><td>Reads back how many to-dos, roughly how long they will take, whether that exceeds your capacity, and the first three</td></tr>
-<tr><td>"Plan my day in Cairn"</td><td>Opens the app on the plan screen</td></tr>
+<tr><td>"Add a to-do to Cairn"</td><td data-label="Effect">Siri asks what needs doing, then runs it through the same parser as the capture sheet — shorthand and all — and tells you which list it landed in</td></tr>
+<tr><td>"Add a to-do to <em>Q4 Planning</em> in Cairn"</td><td data-label="Effect">The same, but filed straight into that project or area. Say the name of any open project or any area</td></tr>
+<tr><td>"What's on today in Cairn"</td><td data-label="Effect">Reads back how many to-dos, roughly how long they will take, whether that exceeds your capacity, and the first three</td></tr>
+<tr><td>"Plan my day in Cairn"</td><td data-label="Effect">Opens the app on the plan screen</td></tr>
 </tbody>
 </table>
 </div>
@@ -768,10 +806,10 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col">Link</th><th scope="col">Effect</th></tr></thead>
 <tbody>
-<tr><td><code>cairn://add?text=Call%20the%20plumber%20tomorrow</code></td><td>Opens capture, pre-filled, with the full shorthand applied</td></tr>
-<tr><td><code>cairn://today</code> <code>cairn://inbox</code> <code>cairn://upcoming</code> <code>cairn://anytime</code></td><td>Opens that list</td></tr>
-<tr><td><code>cairn://plan</code></td><td>Opens Plan My Day</td></tr>
-<tr><td><code>cairn://review</code></td><td>Opens the weekly review</td></tr>
+<tr><td><code>cairn://add?text=Call%20the%20plumber%20tomorrow</code></td><td data-label="Effect">Opens capture, pre-filled, with the full shorthand applied</td></tr>
+<tr><td><code>cairn://today</code> <code>cairn://inbox</code> <code>cairn://upcoming</code> <code>cairn://anytime</code></td><td data-label="Effect">Opens that list</td></tr>
+<tr><td><code>cairn://plan</code></td><td data-label="Effect">Opens Plan My Day</td></tr>
+<tr><td><code>cairn://review</code></td><td data-label="Effect">Opens the weekly review</td></tr>
 </tbody>
 </table>
 </div>
@@ -790,11 +828,11 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col">Gesture</th><th scope="col">Effect</th></tr></thead>
 <tbody>
-<tr><td>Swipe right</td><td>Today, or Tomorrow</td></tr>
-<tr><td>Swipe left</td><td>Someday, or Delete</td></tr>
-<tr><td>Tap</td><td>Open it</td></tr>
-<tr><td>Tap the circle</td><td>Complete it — an Undo appears for six seconds</td></tr>
-<tr><td>Long press</td><td>Priority, effort, scheduling and delete without opening anything</td></tr>
+<tr><td>Swipe right</td><td data-label="Effect">Today, or Tomorrow</td></tr>
+<tr><td>Swipe left</td><td data-label="Effect">Someday, or Delete</td></tr>
+<tr><td>Tap</td><td data-label="Effect">Open it</td></tr>
+<tr><td>Tap the circle</td><td data-label="Effect">Complete it — an Undo appears for six seconds</td></tr>
+<tr><td>Long press</td><td data-label="Effect">Priority, effort, scheduling and delete without opening anything</td></tr>
 </tbody>
 </table>
 </div>
@@ -809,8 +847,8 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col">Keys</th><th scope="col">Effect</th></tr></thead>
 <tbody>
-<tr><td>⌘N</td><td>New to-do</td></tr>
-<tr><td>⌘↩</td><td>Save the to-do you are typing</td></tr>
+<tr><td>⌘N</td><td data-label="Effect">New to-do</td></tr>
+<tr><td>⌘↩</td><td data-label="Effect">Save the to-do you are typing</td></tr>
 </tbody>
 </table>
 </div>
@@ -910,21 +948,21 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 <table>
 <thead><tr><th scope="col">Setting</th><th scope="col">Default</th><th scope="col">What it changes</th></tr></thead>
 <tbody>
-<tr><td>Working time</td><td>4h</td><td>Total minutes Plan My Day may commit</td></tr>
-<tr><td>Evening time</td><td>1h</td><td>Separate budget for <em>This Evening</em></td></tr>
-<tr><td>Longest deep block</td><td>1h 30m</td><td>Cap on the protected deep-focus band</td></tr>
-<tr><td>Buffer</td><td>20%</td><td>Share of working time held back</td></tr>
-<tr><td>Show the This Evening band</td><td>On</td><td>Hides the evening band in Today when off</td></tr>
-<tr><td>Default reminder time</td><td>09:00</td><td>Used when you switch a reminder on</td></tr>
-<tr><td>Appearance</td><td>System</td><td>System, Light or Dark</td></tr>
-<tr><td>Weekly review tone</td><td>Friendly</td><td>How the review is worded. Never changes a figure or a finding</td></tr>
-<tr><td>Keep finished work for</td><td>Everything</td><td>Deletes completed and cancelled work past the window, once a day</td></tr>
-<tr><td>Use the Inbox</td><td>On</td><td>Off sends undated, unfiled work straight to Anytime and removes the list</td></tr>
-<tr><td>Plan around my calendar</td><td>Off</td><td>Reads your calendar and subtracts booked meetings from your planning capacity. Read-only; needs Full Access because iOS has no read-only option</td></tr>
-<tr><td>Use Apple Intelligence</td><td>On</td><td>Master switch for the three optional written suggestions. Off leaves Cairn's own engine — which is the whole app — untouched</td></tr>
-<tr><td>Show tomorrow on Today</td><td>On</td><td>The Tomorrow section under Today</td></tr>
-<tr><td>Logbook grouping</td><td>Day</td><td>Day, Area, Project or Tag</td></tr>
-<tr><td>Offer to tidy up long captures</td><td>On</td><td>Shows the Apple Intelligence button in capture</td></tr>
+<tr><td>Working time</td><td data-label="Default">4h</td><td data-label="What it changes">Total minutes Plan My Day may commit</td></tr>
+<tr><td>Evening time</td><td data-label="Default">1h</td><td data-label="What it changes">Separate budget for <em>This Evening</em></td></tr>
+<tr><td>Longest deep block</td><td data-label="Default">1h 30m</td><td data-label="What it changes">Cap on the protected deep-focus band</td></tr>
+<tr><td>Buffer</td><td data-label="Default">20%</td><td data-label="What it changes">Share of working time held back</td></tr>
+<tr><td>Show the This Evening band</td><td data-label="Default">On</td><td data-label="What it changes">Hides the evening band in Today when off</td></tr>
+<tr><td>Default reminder time</td><td data-label="Default">09:00</td><td data-label="What it changes">Used when you switch a reminder on</td></tr>
+<tr><td>Appearance</td><td data-label="Default">System</td><td data-label="What it changes">System, Light or Dark</td></tr>
+<tr><td>Weekly review tone</td><td data-label="Default">Friendly</td><td data-label="What it changes">How the review is worded. Never changes a figure or a finding</td></tr>
+<tr><td>Keep finished work for</td><td data-label="Default">Everything</td><td data-label="What it changes">Deletes completed and cancelled work past the window, once a day</td></tr>
+<tr><td>Use the Inbox</td><td data-label="Default">On</td><td data-label="What it changes">Off sends undated, unfiled work straight to Anytime and removes the list</td></tr>
+<tr><td>Plan around my calendar</td><td data-label="Default">Off</td><td data-label="What it changes">Reads your calendar and subtracts booked meetings from your planning capacity. Read-only; needs Full Access because iOS has no read-only option</td></tr>
+<tr><td>Use Apple Intelligence</td><td data-label="Default">On</td><td data-label="What it changes">Master switch for the three optional written suggestions. Off leaves Cairn's own engine — which is the whole app — untouched</td></tr>
+<tr><td>Show tomorrow on Today</td><td data-label="Default">On</td><td data-label="What it changes">The Tomorrow section under Today</td></tr>
+<tr><td>Logbook grouping</td><td data-label="Default">Day</td><td data-label="What it changes">Day, Area, Project or Tag</td></tr>
+<tr><td>Offer to tidy up long captures</td><td data-label="Default">On</td><td data-label="What it changes">Shows the Apple Intelligence button in capture</td></tr>
 </tbody>
 </table>
 </div>

@@ -277,6 +277,44 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
   th,td{padding:8px 10px;overflow-wrap:anywhere;}
   .doc .meta{overflow-wrap:anywhere;}
 }
+
+/* ---------- Tables on a phone ---------- */
+
+/* Measured in an iframe at 320-430px: these tables were never overflowing the
+   page, they were being squeezed. Auto layout gave the label column 35-100px,
+   so a heading like "Randomise Get Ready" broke to one word per line and rows
+   grew past 190px.
+
+   Below 560px a row therefore stops being a row and becomes a block: the
+   subject on its own line, then each remaining value under the name of the
+   column it came from, carried on the cell in `data-label`. The header row is
+   then redundant, so it is hidden — nothing is lost, because its text has moved
+   onto the cells. Above 560px the table is untouched. */
+@media (max-width:560px){
+  .table-wrap{overflow-x:visible;}
+  .table-wrap table{display:block;min-width:0;}
+  .table-wrap thead{display:none;}
+  .table-wrap tbody{display:block;}
+  .table-wrap tr{display:block;padding:16px 0;border-bottom:1px solid var(--line);}
+  .table-wrap tr:last-child{border-bottom:none;}
+  .table-wrap td,.table-wrap tbody th{display:block;border:0;padding:0;}
+  .table-wrap td + td,.table-wrap tbody th + td{margin-top:10px;}
+  /* The row's subject reads as its heading, whether it is a td or a row th. */
+  .table-wrap tr > :first-child{color:var(--paper);font-weight:500;font-size:16.5px;line-height:1.35;}
+  /* A row th is otherwise drawn in the small mono column-label style, which is
+     wrong once it is the heading of a block. */
+  .table-wrap tbody th{text-align:left;font-family:var(--sans);font-size:16.5px;letter-spacing:normal;text-transform:none;}
+  .table-wrap td[data-label]::before{
+    content:attr(data-label);
+    display:block;
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+}
 </style>
 <!-- cairn:css:end -->
 </head>

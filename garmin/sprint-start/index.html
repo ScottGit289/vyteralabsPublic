@@ -83,11 +83,15 @@
         <h2>The sequence</h2>
       </div>
       <div class="table-wrap"><table>
-        <tr><th>Stage</th><th>Cue</th><th>Duration</th></tr>
+        <thead>
+          <tr><th scope="col">Stage</th><th scope="col">Cue</th><th scope="col">Duration</th></tr>
+        </thead>
+        <tbody>
         <tr><td><strong>Get Ready</strong></td><td data-label="Cue">1 beep + 1 buzz</td><td data-label="Duration">Fixed, 10s by default — optionally random</td></tr>
         <tr><td><strong>On Your Marks</strong></td><td data-label="Cue">1 beep + 1 buzz</td><td data-label="Duration">Random, 4–10s by default</td></tr>
         <tr><td><strong>Set</strong></td><td data-label="Cue"><strong>2</strong> beeps + <strong>2</strong> buzzes</td><td data-label="Duration">Random, 3–7s by default</td></tr>
         <tr><td><strong>Go</strong></td><td data-label="Cue">1 beep + 1 buzz</td><td data-label="Duration">Stopwatch starts, and runs until you stop it</td></tr>
+        </tbody>
       </table></div>
       <p><em>Set</em> is two beeps rather than one on purpose: it is the one command an athlete must never mistake for another, and a doubled cue is distinguishable at the far end of a track when a single one is not.</p>
     </div>
@@ -103,20 +107,28 @@
       <h3>Running a start</h3>
       <p>Open Sprint Start from the watch's app list. The idle screen shows the ranges it is currently set to.</p>
       <div class="table-wrap"><table>
-        <tr><th>Step</th><th>What to do</th></tr>
+        <thead>
+          <tr><th scope="col">Step</th><th scope="col">What to do</th></tr>
+        </thead>
+        <tbody>
         <tr><td><strong>1</strong></td><td>Press <strong>START/STOP</strong> (top right). <em>Get Ready</em> begins, with a countdown if that stage is fixed.</td></tr>
         <tr><td><strong>2</strong></td><td>Walk up on the <em>On Your Marks</em> cue, and settle. The screen turns amber. No countdown is shown.</td></tr>
         <tr><td><strong>3</strong></td><td>Come up on the double cue for <em>Set</em>. The screen turns red.</td></tr>
         <tr><td><strong>4</strong></td><td>Go on the single beep. The stopwatch is already running from that instant.</td></tr>
         <tr><td><strong>5</strong></td><td>Press <strong>START/STOP</strong> at the line to stop the clock. Press <strong>BACK</strong> to reset for the next rep.</td></tr>
+        </tbody>
       </table></div>
 
       <h3>The buttons</h3>
       <div class="table-wrap"><table>
-        <tr><th>Button</th><th>Action</th></tr>
+        <thead>
+          <tr><th scope="col">Button</th><th scope="col">Action</th></tr>
+        </thead>
+        <tbody>
         <tr><td><strong>START/STOP</strong> (top right)</td><td data-label="Action">Idle: begin the sequence. Running: stop the stopwatch. Mid-sequence: abort.</td></tr>
         <tr><td><strong>BACK</strong> (bottom right)</td><td data-label="Action">Reset. Pressed again with nothing to reset, it closes the app.</td></tr>
         <tr><td><strong>Hold UP</strong></td><td data-label="Action">Open settings.</td></tr>
+        </tbody>
       </table></div>
       <div class="note">
         <strong>BACK only exits once the screen is already clear.</strong> A stray press during a session resets the timer instead of dropping you out of the app mid-rep.
@@ -125,7 +137,10 @@
       <h3>Settings</h3>
       <p>Every value is a whole number of seconds, 0–60. Change them on the watch by holding <strong>UP</strong>, or from your phone — <strong>Garmin Connect → your device → Connect IQ Apps → Sprint Start → Settings</strong>. Both routes edit the same stored values.</p>
       <div class="table-wrap"><table>
-        <tr><th>Setting</th><th>Default</th><th>What it does</th></tr>
+        <thead>
+          <tr><th scope="col">Setting</th><th scope="col">Default</th><th scope="col">What it does</th></tr>
+        </thead>
+        <tbody>
         <tr><td><strong>Randomise Get Ready</strong></td><td data-label="Default">Off</td><td data-label="What it does">Draw the walk-up time at random instead of using a fixed length.</td></tr>
         <tr><td><strong>Get Ready</strong> / <strong>Get Ready min</strong></td><td data-label="Default">10</td><td data-label="What it does">Walk-up time — the lower bound when randomised.</td></tr>
         <tr><td><strong>Get Ready max</strong></td><td data-label="Default">10</td><td data-label="What it does">Upper bound, used only when randomised.</td></tr>
@@ -133,6 +148,7 @@
         <tr><td><strong>Set min</strong> / <strong>Set max</strong></td><td data-label="Default">3 / 7</td><td data-label="What it does">The <em>Set</em> hold range.</td></tr>
         <tr><td><strong>Beeps</strong></td><td data-label="Default">On</td><td data-label="What it does">Play tones.</td></tr>
         <tr><td><strong>Vibration</strong></td><td data-label="Default">On</td><td data-label="What it does">Vibrate.</td></tr>
+        </tbody>
       </table></div>
       <p>If you raise a minimum above its maximum, the maximum is raised to match rather than leaving an impossible range.</p>
 

@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/longevity/brand.css?v=4" />
+<link rel="stylesheet" href="/longevity/brand.css?v=5" />
 </head>
 <body>
 <header>
@@ -72,12 +72,16 @@
 
   <div class="section"><h2 id="tabs">1. The five tabs</h2></div>
   <div class="table-wrap"><table>
-    <tr><th>Tab</th><th>What it is for</th></tr>
-    <tr><td><strong>Home</strong></td><td>The live counter of your estimated remaining time.</td></tr>
-    <tr><td><strong>Forecast</strong></td><td>Lifespan, healthspan, survival odds, the six scores, factors and scenarios.</td></tr>
-    <tr><td><strong>Trends</strong></td><td>How your numbers and the forecast have moved over time.</td></tr>
-    <tr><td><strong>Health</strong></td><td>Connect and sync Apple Health and Oura.</td></tr>
-    <tr><td><strong>Settings</strong></td><td>Data export and deletion, appearance, the science, support.</td></tr>
+    <thead>
+      <tr><th scope="col">Tab</th><th scope="col">What it is for</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>Home</strong></td><td data-label="What it is for">The live counter of your estimated remaining time.</td></tr>
+    <tr><td><strong>Forecast</strong></td><td data-label="What it is for">Lifespan, healthspan, survival odds, the six scores, factors and scenarios.</td></tr>
+    <tr><td><strong>Trends</strong></td><td data-label="What it is for">How your numbers and the forecast have moved over time.</td></tr>
+    <tr><td><strong>Health</strong></td><td data-label="What it is for">Connect and sync Apple Health and Oura.</td></tr>
+    <tr><td><strong>Settings</strong></td><td data-label="What it is for">Data export and deletion, appearance, the science, support.</td></tr>
+    </tbody>
   </table></div>
 
   <div class="section"><h2 id="start">2. Getting started</h2></div>
@@ -106,12 +110,16 @@
   <div class="section"><h2 id="scores">6. The six scores</h2></div>
   <p>An overall score, plus five rings that each reflect their own inputs:</p>
   <div class="table-wrap"><table>
-    <tr><th>Ring</th><th>What feeds it</th></tr>
-    <tr><td><strong>Cardiovascular</strong></td><td>Blood pressure, ApoB/LDL, resting heart rate</td></tr>
-    <tr><td><strong>Metabolic</strong></td><td>HbA1c/glucose, body composition</td></tr>
-    <tr><td><strong>Fitness</strong></td><td>VO₂max, steps, exercise</td></tr>
-    <tr><td><strong>Lifestyle</strong></td><td>Smoking, alcohol</td></tr>
-    <tr><td><strong>Recovery</strong></td><td>Sleep, HRV</td></tr>
+    <thead>
+      <tr><th scope="col">Ring</th><th scope="col">What feeds it</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>Cardiovascular</strong></td><td data-label="What feeds it">Blood pressure, ApoB/LDL, resting heart rate</td></tr>
+    <tr><td><strong>Metabolic</strong></td><td data-label="What feeds it">HbA1c/glucose, body composition</td></tr>
+    <tr><td><strong>Fitness</strong></td><td data-label="What feeds it">VO₂max, steps, exercise</td></tr>
+    <tr><td><strong>Lifestyle</strong></td><td data-label="What feeds it">Smoking, alcohol</td></tr>
+    <tr><td><strong>Recovery</strong></td><td data-label="What feeds it">Sleep, HRV</td></tr>
+    </tbody>
   </table></div>
 
   <div class="section"><h2 id="factors">7. Risk factors and interventions</h2></div>
@@ -123,10 +131,14 @@
   <div class="section"><h2 id="scenarios">8. Scenario modelling</h2></div>
   <p>Three scenarios are computed by the model, never hard-coded, each recomputing the full survival curve:</p>
   <div class="table-wrap"><table>
-    <tr><th>Scenario</th><th>What it assumes</th></tr>
-    <tr><td><strong>Current</strong></td><td>Your profile exactly as entered.</td></tr>
-    <tr><td><strong>Optimised</strong></td><td>Modifiable factors moved toward evidence-based targets. It can never <em>worsen</em> an already-excellent value — a very fit person keeps their high VO₂max.</td></tr>
-    <tr><td><strong>Declining</strong></td><td>Modifiable factors deteriorate. It does not fabricate implausible collapses such as a smoking relapse.</td></tr>
+    <thead>
+      <tr><th scope="col">Scenario</th><th scope="col">What it assumes</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>Current</strong></td><td data-label="What it assumes">Your profile exactly as entered.</td></tr>
+    <tr><td><strong>Optimised</strong></td><td data-label="What it assumes">Modifiable factors moved toward evidence-based targets. It can never <em>worsen</em> an already-excellent value — a very fit person keeps their high VO₂max.</td></tr>
+    <tr><td><strong>Declining</strong></td><td data-label="What it assumes">Modifiable factors deteriorate. It does not fabricate implausible collapses such as a smoking relapse.</td></tr>
+    </tbody>
   </table></div>
   <p>The relative difference between scenarios is more trustworthy than the absolute figure in any one of them.</p>
 
@@ -148,10 +160,14 @@
   <div class="section"><h2 id="confidence">10. Data quality and confidence</h2></div>
   <p>The app scores its own confidence in your forecast, from 0–100, banded:</p>
   <div class="table-wrap"><table>
-    <tr><th>Band</th><th>Score</th></tr>
-    <tr><td><strong>High</strong></td><td>75 and above</td></tr>
-    <tr><td><strong>Moderate</strong></td><td>50 to 74</td></tr>
-    <tr><td><strong>Low</strong></td><td>Below 50</td></tr>
+    <thead>
+      <tr><th scope="col">Band</th><th scope="col">Score</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><strong>High</strong></td><td data-label="Score">75 and above</td></tr>
+    <tr><td><strong>Moderate</strong></td><td data-label="Score">50 to 74</td></tr>
+    <tr><td><strong>Low</strong></td><td data-label="Score">Below 50</td></tr>
+    </tbody>
   </table></div>
   <p>It is built from a weighted checklist of high-value inputs plus a bonus for averaged or windowed data, and it comes with a plain-language explanation naming the specific gaps. If your band is low, that list is your to-do list — blood pressure in particular expects repeated measurements rather than one reading.</p>
   <p>Use <strong>Settings → Recalculate now</strong> to force a fresh run after entering new data.</p>
@@ -177,17 +193,21 @@
 
   <div class="section"><h2 id="settings">13. Settings reference</h2></div>
   <div class="table-wrap"><table>
-    <tr><th>Setting</th><th>What it does</th></tr>
-    <tr><td>What Longevity reads from Apple Health</td><td>The exact list of categories requested.</td></tr>
-    <tr><td>Review permissions in the Health app</td><td>Opens Apple's own permission controls.</td></tr>
-    <tr><td>Export all data (JSON)</td><td>Back up, or move to a new device.</td></tr>
-    <tr><td>Import data</td><td>Restore from an export.</td></tr>
-    <tr><td>Delete all data</td><td>Permanently removes your profile and all stored forecasts from this device.</td></tr>
-    <tr><td>Appearance</td><td>System, Light or Dark.</td></tr>
-    <tr><td>The science &amp; sources</td><td>Full methodology and reference list.</td></tr>
-    <tr><td>Recalculate now</td><td>Re-runs the forecast immediately.</td></tr>
-    <tr><td>Diagnostics &amp; crash log</td><td>Stored on your device unless you choose to send it.</td></tr>
-    <tr><td>About &amp; legal</td><td>Version, privacy policy, terms and the medical disclaimer.</td></tr>
+    <thead>
+      <tr><th scope="col">Setting</th><th scope="col">What it does</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>What Longevity reads from Apple Health</td><td data-label="What it does">The exact list of categories requested.</td></tr>
+    <tr><td>Review permissions in the Health app</td><td data-label="What it does">Opens Apple's own permission controls.</td></tr>
+    <tr><td>Export all data (JSON)</td><td data-label="What it does">Back up, or move to a new device.</td></tr>
+    <tr><td>Import data</td><td data-label="What it does">Restore from an export.</td></tr>
+    <tr><td>Delete all data</td><td data-label="What it does">Permanently removes your profile and all stored forecasts from this device.</td></tr>
+    <tr><td>Appearance</td><td data-label="What it does">System, Light or Dark.</td></tr>
+    <tr><td>The science &amp; sources</td><td data-label="What it does">Full methodology and reference list.</td></tr>
+    <tr><td>Recalculate now</td><td data-label="What it does">Re-runs the forecast immediately.</td></tr>
+    <tr><td>Diagnostics &amp; crash log</td><td data-label="What it does">Stored on your device unless you choose to send it.</td></tr>
+    <tr><td>About &amp; legal</td><td data-label="What it does">Version, privacy policy, terms and the medical disclaimer.</td></tr>
+    </tbody>
   </table></div>
   <p>Because nothing is held anywhere else, an export is the only backup there is. Make one before changing phones — uninstalling the app removes your on-device data.</p>
 

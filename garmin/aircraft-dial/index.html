@@ -125,7 +125,10 @@
 
       <h3>Every setting</h3>
       <div class="table-wrap"><table>
-        <tr><th>Setting</th><th>Options</th><th>Default</th></tr>
+        <thead>
+          <tr><th scope="col">Setting</th><th scope="col">Options</th><th scope="col">Default</th></tr>
+        </thead>
+        <tbody>
         <tr><td><strong>Instrument Lighting</strong></td><td data-label="Options">Night (white on black) · NVG Green · Amber Nav · Day VFR</td><td data-label="Default">Night</td></tr>
         <tr><td><strong>Second Hand</strong></td><td data-label="Options">Off · Sub-dial, wrist-up · Sub-dial, always on · Centre sweep, wrist-up</td><td data-label="Default">Sub-dial, wrist-up</td></tr>
         <tr><td><strong>Top Sub-dial</strong></td><td data-label="Options">Any data field</td><td data-label="Default">Battery</td></tr>
@@ -135,6 +138,7 @@
         <tr><td><strong>Units</strong></td><td data-label="Options">Match watch settings · Metric · Statute</td><td data-label="Default">Match watch</td></tr>
         <tr><td><strong>Pressure Unit</strong></td><td data-label="Options">hPa · inHg</td><td data-label="Default">hPa</td></tr>
         <tr><td><strong>Luminous Markings</strong></td><td data-label="Options">On · Off</td><td data-label="Default">On</td></tr>
+        </tbody>
       </table></div>
 
       <h3>The data fields you can choose from</h3>
@@ -147,11 +151,15 @@
       <h3>Battery, and how to spend it</h3>
       <p>The cost of the face is driven by its redraw schedule, not by how many data fields you switch on — an unused sensor is never opened at all.</p>
       <div class="table-wrap"><table>
-        <tr><th>State</th><th>Work done</th></tr>
+        <thead>
+          <tr><th scope="col">State</th><th scope="col">Work done</th></tr>
+        </thead>
+        <tbody>
         <tr><td>Asleep · seconds Off or wrist-up</td><td data-label="Work done">One full redraw per minute.</td></tr>
         <tr><td>Asleep · burn-in display (AMOLED)</td><td data-label="Work done">One minimal, pixel-shifted redraw per minute.</td></tr>
         <tr><td>Asleep · seconds Always on</td><td data-label="Work done">The above, plus one small clipped repaint per second.</td></tr>
         <tr><td>Wrist up · any second hand</td><td data-label="Work done">One full redraw per second, while the wrist is up.</td></tr>
+        </tbody>
       </table></div>
       <p><strong>Second Hand → Off</strong> is the cheapest setting. <strong>Always on</strong> is the only one that costs anything while the watch is asleep — and if your watch reports that the per-second repaint is too expensive, the face drops itself back to wrist-up rather than letting the system freeze it.</p>
 
