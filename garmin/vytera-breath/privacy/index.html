@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privacy Policy — Vytera Compass · Vytera Labs</title>
-<meta name="description" content="The privacy policy for Vytera Compass, a Vytera Labs Garmin Connect IQ app: what it collects (nothing), the permissions it asks for and why, and what it stores on your watch." />
-<link rel="canonical" href="https://www.vyteralabs.com/garmin/compass/privacy/" />
+<title>Privacy Policy — Vytera Breath · Vytera Labs</title>
+<meta name="description" content="The privacy policy for Vytera Breath, a Vytera Labs Garmin Connect IQ app: what it collects (nothing), the permissions it asks for and why, and what it stores on your watch." />
+<link rel="canonical" href="https://www.vyteralabs.com/garmin/vytera-breath/privacy/" />
 <meta name="theme-color" content="#0B1017" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -24,26 +24,26 @@
     <nav class="nav">
       <div class="brandbar">
         <a class="homelink" href="/" aria-label="Vytera Labs home"><span class="mark" aria-hidden="true">V</span><span>Vytera&nbsp;Labs</span></a>
-        <span class="brandtail"><span class="brandsep" aria-hidden="true">&rsaquo;</span><a class="brand" href="/garmin/compass/">Vytera&nbsp;Compass</a></span>
+        <span class="brandtail"><span class="brandsep" aria-hidden="true">&rsaquo;</span><a class="brand" href="/garmin/vytera-breath/">Vytera&nbsp;Breath</a></span>
       </div>
       <div class="nav-links">
         <a href="/garmin/">All Garmin apps</a>
-        <a href="/garmin/compass/">Overview</a>
-        <a href="/garmin/compass/guide/">User Guide</a>
-        <a href="/garmin/compass/support/">Support</a>
-        <a href="/garmin/compass/privacy/" aria-current="page">Privacy</a>
-        <a href="/garmin/compass/terms/">Terms</a>
+        <a href="/garmin/vytera-breath/">Overview</a>
+        <a href="/garmin/vytera-breath/guide/">User Guide</a>
+        <a href="/garmin/vytera-breath/support/">Support</a>
+        <a href="/garmin/vytera-breath/privacy/" aria-current="page">Privacy</a>
+        <a href="/garmin/vytera-breath/terms/">Terms</a>
       </div>
     </nav>
   </div>
 </header>
 
 <main class="wrap doc" id="main">
-  <p class="eyebrow">Vytera Compass</p>
+  <p class="eyebrow">Vytera Breath</p>
   <h1>Privacy Policy</h1>
   <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&nbsp;&nbsp;·&nbsp;&nbsp;<strong>Effective:</strong> 18 September 2026&nbsp;&nbsp;·&nbsp;&nbsp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
 
-  <p>This policy covers <strong>Vytera Compass</strong>, a Garmin Connect IQ app published by <strong>Vytera Labs Ltd</strong>, a company registered in England and Wales, number 17389107.</p>
+  <p>This policy covers <strong>Vytera Breath</strong>, a Garmin Connect IQ app published by <strong>Vytera Labs Ltd</strong>, a company registered in England and Wales, number 17389107.</p>
 
   <div class="note">
     <strong>The short version</strong>
@@ -59,24 +59,26 @@
   <p>There is no sign-up, no account and no identifier. We operate no server for this app, and it contains no analytics, advertising or tracking code of any kind. Vytera Labs receives no data about you or your use of it — not your settings, not your results, not the fact that you opened it.</p>
 
   <div class="section"><h2 id="permissions">Permissions, and why</h2></div>
-  <p>Vytera Compass requests the following, and each one does a single job:</p>
+  <p>Vytera Breath requests the following, and each one does a single job:</p>
   <div class="table-wrap"><table>
     <thead>
       <tr><th scope="col">Permission</th><th scope="col">Why it is needed</th></tr>
     </thead>
     <tbody>
-    <tr><td><strong>Sensor</strong></td><td data-label="Why it is needed">Reads the magnetometer for your heading, and the barometer where the device has one.</td></tr>
-    <tr><td><strong>Sensor History</strong></td><td data-label="Why it is needed">Reads the watch’s own recorded pressure history to show the pressure trend.</td></tr>
-    <tr><td><strong>Positioning</strong></td><td data-label="Why it is needed">Used only if you switch <strong>Position features</strong> on yourself. It is off by default. When on, it provides your coordinates, the sun’s position and a computed declination — nothing else.</td></tr>
+    <tr><td><strong>Fit</strong></td><td data-label="Why it is needed">Records the session as an ordinary activity, adds a lap per round, and writes the developer fields that graph your breathing. Without it there is no activity in Garmin Connect at all.</td></tr>
+    <tr><td><strong>Sensor</strong></td><td data-label="Why it is needed">Live heart rate during every phase, and beat-to-beat intervals where your watch exposes them. Without it there is no biofeedback: no heart-rate-guided holds, no recovery reading, no coherence band.</td></tr>
+    <tr><td><strong>User Profile</strong></td><td data-label="Why it is needed">Read <strong>once</strong>, and only to seed a sensible default for the low-heart-rate check-in. Without it that check-in defaults to 40&nbsp;bpm, which is unremarkable for a trained endurance athlete and alarming for most people.</td></tr>
     </tbody>
   </table></div>
-  <p>The app has no Communications permission, so it cannot use the network at all. The weather it shows is the cache your watch already holds from its last sync with your phone, and every reading is displayed with its age.</p>
+  <p>No location, no communications and no background permission is requested. The app cannot use the network.</p>
 
   <div class="section"><h2 id="stores">What it stores, and where</h2></div>
-  <p>Your settings and any bearing you have locked live in the watch’s own application storage, and nowhere else. Your position, when position features are on, is used while the app is open and is not written anywhere.</p>
+  <p>Your settings, your configured protocols and your session history — the last few holds the targets are built from — live in the watch’s own application storage. <strong>Settings → Reset progression</strong> clears the history, and uninstalling removes all of it.</p>
 
   <div class="section"><h2 id="records">What leaves your watch</h2></div>
-  <p><strong>Nothing is recorded.</strong> No activity, no FIT file, no track, no timeline entry. The app does not log where you have been.</p>
+  <p><strong>A saved session is written to your watch as an ordinary activity</strong>, which is the point of the app. Your watch then syncs it to Garmin Connect over the same path as every other activity it records — this app takes no part in that and sends nothing itself.</p>
+  <p>Once the activity reaches Garmin Connect it is held by Garmin under <strong>Garmin’s own privacy policy</strong>, not ours. We never receive a copy. If you discard a session rather than saving it, nothing is written at all.</p>
+  <p>Heart-rate data from saved sessions feeds your watch’s own Body Battery and stress metrics exactly as any recorded activity does. This app cannot read those scores and cannot change them.</p>
 
   <div class="section"><h2 id="garmin">Garmin</h2></div>
   <p>Your watch, Garmin Connect and the Connect IQ Store are Garmin’s, not ours. Anything you do there — installing the app, editing its settings from your phone, or syncing your watch — is governed by <strong>Garmin’s own privacy policy</strong>. We have no visibility of it and no control over it.</p>
@@ -98,16 +100,16 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand">Vytera Compass</div>
+        <div class="foot-brand">Vytera Breath</div>
         <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app for Garmin. <a href="/" style="color:var(--brass);">Vytera Labs Ltd</a> is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
       </div>
       <div class="foot-links">
         <a href="/garmin/">All Garmin apps</a>
-        <a href="/garmin/compass/">Overview</a>
-        <a href="/garmin/compass/guide/">User Guide</a>
-        <a href="/garmin/compass/support/">Support</a>
-        <a href="/garmin/compass/privacy/">Privacy</a>
-        <a href="/garmin/compass/terms/">Terms</a>
+        <a href="/garmin/vytera-breath/">Overview</a>
+        <a href="/garmin/vytera-breath/guide/">User Guide</a>
+        <a href="/garmin/vytera-breath/support/">Support</a>
+        <a href="/garmin/vytera-breath/privacy/">Privacy</a>
+        <a href="/garmin/vytera-breath/terms/">Terms</a>
         <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
       </div>
     </div>
