@@ -53,7 +53,7 @@
   <div class="note">
     <strong>If you read nothing else</strong>
     <ul>
-      <li>Fill in your details in the <strong>Connect IQ app on your phone</strong>: Boardroom Card → Settings.</li>
+      <li>Fill in your details in the <strong>Connect IQ app on your phone</strong>: Boardroom Card → Settings, then tap <strong>Save</strong>. Leaving the page without saving loses your changes.</li>
       <li><strong>Down</strong> for the next card, <strong>Start</strong> (or tap) to see what you are sharing, <strong>Back</strong> to leave.</li>
       <li>Hold the watch 15–25&nbsp;cm from the other person's phone, screen facing it, and turn the brightness up.</li>
       <li>Anything in a code — including a Wi-Fi password — can be read by anyone who can see your screen.</li>
@@ -73,8 +73,15 @@
   </ul>
 
   <div class="section"><h2 id="setting-up">1. Setting up</h2></div>
-  <p>Install Boardroom Card from the Connect IQ Store. Then, on your phone, open the <strong>Connect IQ</strong> app (or Garmin Connect → Connect IQ Apps), choose your watch, then <strong>Boardroom Card → Settings</strong>. Fill in the fields that start <em>Profile 1:</em>, then tap <strong>Save</strong> at the top of the settings page. The watch picks up the change at its next sync.</p>
+  <ol>
+    <li>Install Boardroom Card from the Connect IQ Store.</li>
+    <li>On your phone, open the <strong>Connect IQ</strong> app (or Garmin Connect → Connect IQ Apps), choose your watch, then <strong>Boardroom Card → Settings</strong>.</li>
+    <li>All settings are on one page. Fill in the fields that start <em>Profile 1:</em> — at least <em>Profile 1: Full name</em>.</li>
+    <li>Tap <strong>Save</strong> at the top of the page. If you go back without saving, your changes are lost.</li>
+    <li>Let the watch sync with your phone, then open Boardroom Card on the watch.</li>
+  </ol>
   <p>Until a profile has a name, the watch shows <em>Add your details in the Connect IQ app on your phone</em> instead of a code. A contact card without a name is not a contact card.</p>
+  <p>Using version 1.0.0? Its settings were split into sections that the Connect IQ app could not save. Update to 1.0.1 or later from the Connect IQ Store; anything you had already saved is kept.</p>
 
   <div class="section"><h2 id="the-cards">2. The cards</h2></div>
   <p>The app builds a list of cards from your settings and moves through them in order, wrapping round at the end.</p>
@@ -121,19 +128,32 @@
   <p>When that happens, the preview screen says <em>Shortened to fit</em>. If even name, mobile and email will not fit, the card says <em>Card too long - shorten fields in settings.</em>.</p>
 
   <div class="section"><h2 id="settings">6. Settings</h2></div>
-  <p>All settings are edited in the Connect IQ app on your phone, on one page: each title starts with its section (<em>Profile 1:</em>, <em>Profile 2:</em>, <em>Profile 3:</em>, <em>Wi-Fi card:</em>). Tap <strong>Save</strong> when you are done; leaving the page without saving discards your changes. Every text field takes up to 64 characters.</p>
+  <p>All settings are edited in the Connect IQ app on your phone, on one page, in this order: Profile 1, Profile 2, Profile 3, Wi-Fi card, then Accent colour and Card order. Each title starts with its section, so you always know which profile you are editing. Every text field takes up to 64 characters.</p>
+  <p>Tap <strong>Save</strong> when you are done. Leaving the page without saving discards every change since the last save.</p>
+  <h3>Profiles</h3>
+  <p>Profiles 2 and 3 have the same settings as Profile 1, with <em>Profile 2:</em> or <em>Profile 3:</em> at the start of each title.</p>
   <div class="table-wrap"><table>
     <thead>
       <tr><th scope="col">Setting</th><th scope="col">Default</th><th scope="col">What it does</th></tr>
     </thead>
     <tbody>
-    <tr><td><strong>Show this profile</strong></td><td data-label="Default">Profile 1 on; 2 and 3 off</td><td data-label="What it does">Whether the profile's cards appear on the watch.</td></tr>
-    <tr><td><strong>Label</strong></td><td data-label="Default">Work, Personal, Board</td><td data-label="What it does">The name shown at the top of the profile's contact card, and in the glance.</td></tr>
-    <tr><td><strong>Full name, Job title, Company, Mobile, Email, Website, LinkedIn URL or handle, Note</strong></td><td data-label="Default">Empty</td><td data-label="What it does">What goes into the contact card. Only the full name is required.</td></tr>
-    <tr><td><strong>Extra LinkedIn-only card</strong></td><td data-label="Default">On</td><td data-label="What it does">Adds the profile's LinkedIn card, if it has a LinkedIn address.</td></tr>
-    <tr><td><strong>LinkedIn card name</strong></td><td data-label="Default">Empty (shows <em>LinkedIn</em>)</td><td data-label="What it does">The label on the LinkedIn card, so you can tell it from the contact card — for example <em>Work LinkedIn</em>.</td></tr>
+    <tr><td><strong>Profile 1: Show this profile</strong></td><td data-label="Default">Profile 1 on; 2 and 3 off</td><td data-label="What it does">Whether the profile's cards appear on the watch.</td></tr>
+    <tr><td><strong>Profile 1: Label (e.g. Work)</strong></td><td data-label="Default">Work, Personal, Board</td><td data-label="What it does">The name shown at the top of the profile's contact card, and in the glance.</td></tr>
+    <tr><td><strong>Profile 1: Full name</strong></td><td data-label="Default">Empty</td><td data-label="What it does">Required. A profile without a name shows no card.</td></tr>
+    <tr><td><strong>Profile 1: Job title, Company, Mobile, Email, Website, LinkedIn URL or handle, Note</strong></td><td data-label="Default">Empty</td><td data-label="What it does">What else goes into the contact card. Leave a field empty to leave it out.</td></tr>
+    <tr><td><strong>Profile 1: Extra LinkedIn-only card</strong></td><td data-label="Default">On</td><td data-label="What it does">Adds the profile's LinkedIn card, if it has a LinkedIn address.</td></tr>
+    <tr><td><strong>Profile 1: LinkedIn card name (e.g. LinkedIn)</strong></td><td data-label="Default">Empty (shows <em>LinkedIn</em>)</td><td data-label="What it does">The label on the LinkedIn card, so you can tell it from the contact card — for example <em>Work LinkedIn</em>.</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Wi-Fi card and appearance</h3>
+  <div class="table-wrap"><table>
+    <thead>
+      <tr><th scope="col">Setting</th><th scope="col">Default</th><th scope="col">What it does</th></tr>
+    </thead>
+    <tbody>
     <tr><td><strong>Wi-Fi card: Show on watch</strong></td><td data-label="Default">Off</td><td data-label="What it does">Adds the Wi-Fi card at the end of the list.</td></tr>
-    <tr><td><strong>Network name (SSID)</strong>, <strong>Password</strong></td><td data-label="Default">Empty</td><td data-label="What it does">The network to share. Leave the password empty for an open network.</td></tr>
+    <tr><td><strong>Wi-Fi card: Network name (SSID)</strong></td><td data-label="Default">Empty</td><td data-label="What it does">The network to share. The card appears only when this is set.</td></tr>
+    <tr><td><strong>Wi-Fi card: Password (WPA/WPA2)</strong></td><td data-label="Default">Empty</td><td data-label="What it does">Leave it empty for an open network. Anyone who sees the code can read it.</td></tr>
     <tr><td><strong>Accent colour</strong></td><td data-label="Default">Gold</td><td data-label="What it does">Gold, silver, rose gold, emerald, sapphire or crimson. The code itself is always black on white.</td></tr>
     <tr><td><strong>Card order</strong></td><td data-label="Default">By profile</td><td data-label="What it does"><em>By profile</em>: each profile's contact card followed by its LinkedIn card. <em>All contact cards first</em>: every contact card, then every LinkedIn card. The Wi-Fi card is always last.</td></tr>
     </tbody>
@@ -153,8 +173,12 @@
       <p>No enabled profile has a full name yet. Add one in the phone app's settings, save, and let the watch sync.</p>
     </details>
     <details>
+      <summary>My details disappear when I leave the settings page.</summary>
+      <p>Tap <strong>Save</strong> at the top of the settings page before you go back; going back without saving discards the changes. If there is no Save button, or no single page of settings with titles starting <em>Profile 1:</em>, you have version 1.0.0: update Boardroom Card from the Connect IQ Store. On iPhone, if the Save button vanishes after you change <em>Accent colour</em> or <em>Card order</em>, that is a Connect IQ app issue: save your text fields first, then change those two settings and save again.</p>
+    </details>
+    <details>
       <summary>I changed my settings but the watch still shows the old card.</summary>
-      <p>Settings reach the watch at its next sync with your phone. Open and close the app once the sync has finished.</p>
+      <p>Check you tapped <strong>Save</strong>. Saved settings reach the watch at its next sync with your phone; to force one, open Garmin Connect and sync the watch. Then close and reopen Boardroom Card.</p>
     </details>
     <details>
       <summary>The preview says “Shortened to fit”.</summary>
