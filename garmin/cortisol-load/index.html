@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cortisol Load — physiological stress estimate for Garmin · Vytera Labs</title>
+<meta name="description" content="A Garmin Connect IQ watch app that estimates physiological stress and recovery load from your watch's own signals, compared with your personal baseline. It does not measure cortisol. No phone, no account, no cloud." />
+<link rel="canonical" href="https://www.vyteralabs.com/garmin/cortisol-load/" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/garmin/style.css?v=6" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Cortisol Load — physiological stress estimate for Garmin · Vytera Labs" />
+<meta property="og:description" content="Your watch's stress and recovery signals, scored against your own baseline. An estimate, not a cortisol test." />
+<meta property="og:url" content="https://www.vyteralabs.com/garmin/cortisol-load/" />
+<meta property="og:site_name" content="Vytera Labs" />
+<meta property="og:image" content="https://www.vyteralabs.com/garmin/cortisol-load/preview.png" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brandbar">
+        <a class="homelink" href="/" aria-label="Vytera Labs home"><span class="mark" aria-hidden="true">V</span><span>Vytera&nbsp;Labs</span></a>
+        <span class="brandtail"><span class="brandsep" aria-hidden="true">&rsaquo;</span><a class="brand" href="/garmin/cortisol-load/">Cortisol&nbsp;Load</a></span>
+      </div>
+      <div class="nav-links">
+        <a href="/garmin/">All Garmin apps</a>
+        <a href="/garmin/cortisol-load/" aria-current="page">Overview</a>
+        <a href="/garmin/cortisol-load/guide/">User Guide</a>
+        <a href="/garmin/cortisol-load/support/">Support</a>
+        <a href="/garmin/cortisol-load/privacy/">Privacy</a>
+        <a href="/garmin/cortisol-load/terms/">Terms</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">A Vytera Labs app · Garmin Connect IQ</p>
+      <h1>How far from your normal<br><em>is your body today?</em></h1>
+      <p class="lede">Cortisol Load takes the stress and recovery signals your Garmin watch already measures — resting heart rate, stress, Body Battery, training load, sleep score where the watch has it, and an optional two-minute HRV check — and scores them against your own baseline, not a population average. One number from 0 to 100, where 50 is your normal. It is an estimate of physiological stress. It does not measure cortisol.</p>
+      <div class="meta-row">
+        <span>51 Garmin watches</span>
+        <span>Your own 28-day baseline</span>
+        <span>No phone, no account</span>
+      </div>
+      <div class="btn-row">
+        <span class="mail-btn pending">Coming soon to the Connect&nbsp;IQ Store</span>
+        <a class="mail-btn" href="/garmin/cortisol-load/guide/">Read the user guide <span class="arrow">→</span></a>
+      </div>
+      <figure class="shot">
+        <img src="/garmin/cortisol-load/preview.png" alt="Cortisol Load on a round watch showing a score of 76, High, increasing by 24 against the 7-day average, with confidence High and contributors HRV down, resting heart rate up and sleep down; beside it the Signals page with an arrow for each signal." width="1440" height="720" loading="lazy" />
+        <figcaption>A preview render, not a photograph. It is drawn from the app's own screen layout, with the figures its scoring engine produces for the built-in "high stress" demo scenario.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">01</span>
+        <h2>Measured against you, not against everyone</h2>
+      </div>
+      <p>A resting heart rate of 58 is ordinary for one person and a warning sign for another. So Cortisol Load never compares you with a population. Each signal is compared with your own rolling baseline — 28 days by default — using the median and a robust spread, so one unusual day cannot move it.</p>
+      <p>The score is the confidence-weighted average of whichever signals your watch genuinely provides today. <strong>50 is your normal.</strong> Above 60 means your signals, taken together, sit on the stressed side of your baseline; below 40, on the recovered side.</p>
+      <div class="cards">
+        <div class="cell">
+          <h3>Score and state</h3>
+          <p>0–100, shown as Very Low, Low, Moderate, High or Very High, with the change against your 7-day average.</p>
+        </div>
+        <div class="cell">
+          <h3>Confidence</h3>
+          <p>From <em>Building baseline</em> to <em>High</em>, based on how many days of data you have and how many signals are present. It never claims more than the data supports.</p>
+        </div>
+        <div class="cell">
+          <h3>Contributors</h3>
+          <p>Which signals moved and which way: HRV down, resting heart rate up, sleep down. Tap through for the plain-language explanation.</p>
+        </div>
+        <div class="cell">
+          <h3>Trend</h3>
+          <p>The last 7 or 28 days against your own reference level. The axis carries no units, because the score is an estimate, not a medical quantity.</p>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="/garmin/cortisol-load/screens.png" alt="Four Cortisol Load pages on round watches: the score page at 76 High; the Signals page listing HRV, resting HR, sleep, stress, Body Battery, respiration, training load and body temperature with arrows or n/a; a 7-day trend chart rising to today; and the explanation page listing HRV below baseline, resting heart rate above baseline, sleep below baseline and Garmin stress above baseline." width="1920" height="1080" loading="lazy" />
+        <figcaption>Preview renders of the Score, Signals, Trend and Explanation pages, from the app's own layout and scoring engine on built-in demo data.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">02</span>
+        <h2>The signals, and the honest gaps</h2>
+      </div>
+      <p>Connect IQ apps can read far less than Garmin Connect shows on your phone. Cortisol Load uses exactly what a watch app is allowed to read, and says so when something is missing.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Signal</th><th scope="col">Used?</th></tr></thead>
+        <tbody>
+        <tr><td><strong>Resting heart rate</strong></td><td data-label="Used?">Yes — Garmin's daily value.</td></tr>
+        <tr><td><strong>Stress</strong></td><td data-label="Used?">Yes — your 24-hour all-day stress average.</td></tr>
+        <tr><td><strong>Body Battery</strong></td><td data-label="Used?">Yes — the 24-hour peak, usually your post-sleep level.</td></tr>
+        <tr><td><strong>Training load</strong></td><td data-label="Used?">Yes — recent active minutes against your usual, plus Garmin's recovery time.</td></tr>
+        <tr><td><strong>Sleep score</strong></td><td data-label="Used?">On API 6.0 watches only: fēnix 8, Forerunner 570 and 970, Venu 4, vívoactive 6, Enduro 3 and others.</td></tr>
+        <tr><td><strong>HRV</strong></td><td data-label="Used?">Through a two-minute seated check you start from the menu. Garmin's overnight HRV and HRV Status are not available to apps.</td></tr>
+        <tr><td><strong>Respiration</strong></td><td data-label="Used?">Optional, in experimental mode.</td></tr>
+        <tr><td><strong>Body temperature</strong></td><td data-label="Used?">No — not available to Connect IQ apps.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout">
+        <p>A missing signal is never filled in with a guess. The score is built from what is genuinely there, and the screen says so: <em>Based on 4 of 5 signals</em>. For the first seven days it shows <em>Baseline building</em> and no number at all.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">03</span>
+        <h2>What it is not</h2>
+      </div>
+      <p><strong>It does not measure cortisol.</strong> No watch can. Cortisol Load is inspired by the link between autonomic activity — the balance your heart-rate signals reflect — and the body's stress response, and it is named for that idea. It does not estimate a cortisol level, it is not a medical device, and it is for information only. It does not diagnose, treat or predict any condition.</p>
+      <p><strong>Training is not the enemy.</strong> Hard training raises the score, as it should — exercise is a stressor, and a healthy one. The app labels it <em>Training load</em>, separately from the physiological signals, and never tells you to stop exercising.</p>
+      <p>If your score stays high for days, the explanation says what the evidence supports and no more: persistent changes can have many causes — sleep, training, hydration, alcohol, illness — and if you are concerned about how you feel, speak with a healthcare professional.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">04</span>
+        <h2>Devices and data</h2>
+      </div>
+      <p><strong>Watches:</strong> 51 round-screen models on Connect IQ API 5.0 or later, including Forerunner 165 to 970, fēnix 7, 8 and E, epix (Gen 2) and epix Pro, Venu 2, 3 and 4, vívoactive 5 and 6, Enduro 3, Instinct 3 AMOLED, MARQ (Gen 2), Approach S50 and S70, Descent G2 and Mk3, and D2. The full list is in the <a href="/garmin/cortisol-load/guide/#devices">user guide</a>.</p>
+      <p><strong>Permissions:</strong> three, each for one job. <strong>Sensor History</strong> reads your stress and Body Battery history. <strong>Sensor</strong> reads beat-to-beat intervals, only during the HRV check you start. <strong>User Profile</strong> reads Garmin's resting heart rate.</p>
+      <p><strong>Data:</strong> no phone, no companion app, no account, no cloud, no network permission. Up to 90 days of daily values stay on the watch, and you can delete them from the menu at any time. Nothing is sent to Vytera Labs.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Cortisol Load</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app for Garmin. <a href="/" style="color:var(--brass);">Vytera Labs Ltd</a> is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/garmin/">All Garmin apps</a>
+        <a href="/garmin/cortisol-load/">Overview</a>
+        <a href="/garmin/cortisol-load/guide/">User Guide</a>
+        <a href="/garmin/cortisol-load/support/">Support</a>
+        <a href="/garmin/cortisol-load/privacy/">Privacy</a>
+        <a href="/garmin/cortisol-load/terms/">Terms</a>
+        <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="/">vyteralabs.com</a></span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
