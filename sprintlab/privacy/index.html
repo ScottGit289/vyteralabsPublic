@@ -64,13 +64,13 @@
   <p>Wearable sign-in tokens are held in the device keychain and are never written to a backup export.</p>
 
   <div class="section" id="sources"><h2>Connecting a health source (optional, off by default)</h2></div>
-  <p>SprintLab can link to a health source — such as Oura, Garmin or Apple Health — to blend recovery data such as sleep, heart-rate variability and resting heart rate into your training readiness. This is entirely optional and switched off until you enable it and connect.</p>
+  <p>SprintLab can link to a health source — such as Oura or Apple Health — to blend recovery data such as sleep, heart-rate variability and resting heart rate into your training readiness. This is entirely optional and switched off until you enable it and connect.</p>
 
-  <h3>Cloud wearables (Oura, Garmin)</h3>
+  <h3>Cloud wearables (such as Oura)</h3>
   <ul>
     <li>Sign-in uses the vendor's official OAuth page. SprintLab never sees your wearable account password.</li>
     <li>Your device fetches the health metrics you approved directly from the vendor's servers. That data flows straight to your phone and is stored there — it never passes through, or is stored on, any SprintLab service.</li>
-    <li><strong>Oura only:</strong> completing Oura sign-in requires Oura's confidential app secret, which cannot safely live inside a phone app. So the sign-in hand-off — the step that turns your approval into an access token — is relayed through a small SprintLab-operated service (running on Cloudflare at <code>auth.sprintlab.uk</code> and <code>apitoken.sprintlab.uk</code>) that holds that secret. It processes only the sign-in exchange; it is not sent, and does not store, your Oura health data. Garmin uses the direct cloud flow with no such relay.</li>
+    <li><strong>Oura only:</strong> completing Oura sign-in requires Oura's confidential app secret, which cannot safely live inside a phone app. So the sign-in hand-off — the step that turns your approval into an access token — is relayed through a small SprintLab-operated service (running on Cloudflare at <code>auth.sprintlab.uk</code> and <code>apitoken.sprintlab.uk</code>) that holds that secret. It processes only the sign-in exchange; it is not sent, and does not store, your Oura health data.</li>
     <li>You choose the scope of data at the vendor's consent screen, and you can disconnect at any time, which deletes the saved sign-in and all synced health data from your device.</li>
     <li>Your use of the wearable and its own app remains governed by that vendor's privacy policy.</li>
   </ul>
