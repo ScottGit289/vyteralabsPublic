@@ -77,7 +77,7 @@
   <ul>
     <li>Sign-in uses Oura's official OAuth page. Sinew never sees your Oura account password.</li>
     <li>Your device fetches the health metrics you approved directly from Oura's servers. That data flows straight to your phone and is stored there — it never passes through, or is stored on, any Sinew service.</li>
-    <li>Completing Oura sign-in requires Oura's confidential app secret, which cannot safely live inside a phone app. So the sign-in hand-off — the step that turns your approval into an access token — is relayed through a small Sinew-operated service (running on Cloudflare at <code>sinew-auth.vyteralabs.com</code> and <code>sinew-token.vyteralabs.com</code>) that holds that secret. It processes only the sign-in exchange; it keeps nothing, and it is not sent, and never sees, your Oura health data.</li>
+    <li>Completing Oura sign-in requires Oura's confidential app secret, which cannot safely live inside a phone app. So the sign-in hand-off — the step that turns your approval into an access token — is relayed through a small Sinew-operated service (running on Cloudflare at <code>auth-sinew.scott-e9f.workers.dev</code> and <code>apitoken-sinew.scott-e9f.workers.dev</code>) that holds that secret. It processes only the sign-in exchange; it keeps nothing, and it is not sent, and never sees, your Oura health data.</li>
     <li>You choose the scope of data at Oura's consent screen, and you can disconnect at any time, which deletes the saved sign-in and all synced health data from your device.</li>
     <li>Your use of the ring and Oura's own app remains governed by Oura's privacy policy.</li>
   </ul>
