@@ -280,7 +280,8 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
 .doc .cta .btn-row{margin-top:16px;}
 .doc .sources{font-size:14px;color:var(--muted);}
 .doc .sources li{margin:6px 0;}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin:26px 0 0;padding:0;list-style:none;}
+.doc .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin:26px 0 0;padding:0;list-style:none;border:0;background:transparent;}
+.doc .cards li{margin:0;}
 .cards li{border:1px solid var(--line);background:var(--ink-3);padding:22px 24px;display:flex;flex-direction:column;gap:10px;}
 .cards .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);}
 .cards h2{padding-top:0;font-size:22px;line-height:1.2;}
