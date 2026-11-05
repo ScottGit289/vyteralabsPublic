@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.vyteralabs.com/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -230,7 +230,7 @@
   </url>
   <url>
     <loc>https://www.vyteralabs.com/garmin/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -416,7 +416,7 @@
   </url>
   <url>
     <loc>https://www.vyteralabs.com/garmin/vytera-breath/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -428,7 +428,7 @@
   </url>
   <url>
     <loc>https://www.vyteralabs.com/garmin/vytera-breath/support/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -440,7 +440,7 @@
   </url>
   <url>
     <loc>https://www.vyteralabs.com/garmin/vytera-breath/terms/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -476,7 +476,7 @@
   </url>
   <url>
     <loc>https://www.vyteralabs.com/garmin/box-to-box/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -488,7 +488,7 @@
   </url>
   <url>
     <loc>https://www.vyteralabs.com/garmin/box-to-box/support/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -500,7 +500,7 @@
   </url>
   <url>
     <loc>https://www.vyteralabs.com/garmin/box-to-box/terms/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -575,5 +575,53 @@
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.vyteralabs.com/garmin/clearsight/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vyteralabs.com/garmin/clearsight/support/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.vyteralabs.com/garmin/clearsight/privacy/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.vyteralabs.com/garmin/clearsight/terms/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.vyteralabs.com/garmin/boardroom/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.vyteralabs.com/garmin/boardroom/support/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.vyteralabs.com/garmin/boardroom/privacy/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.vyteralabs.com/garmin/boardroom/terms/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
