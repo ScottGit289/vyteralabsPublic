@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>User Guide — Cortisol Load · Vytera Labs</title>
-<meta name="description" content="How to use Cortisol Load on a Garmin watch: the five pages, the first seven days, the HRV check, every setting with its default, how the score and confidence are calculated, and what to do if a signal shows n/a." />
+<title>User Guide — Stress Load Monitor · Vytera Labs</title>
+<meta name="description" content="How to use Stress Load Monitor on a Garmin watch: the five pages, the first seven days, the HRV check, every setting with its default, how the score and confidence are calculated, and what to do if a signal shows n/a." />
 <link rel="canonical" href="https://www.vyteralabs.com/garmin/cortisol-load/guide/" />
 <meta name="theme-color" content="#0B1017" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -24,7 +24,7 @@
     <nav class="nav">
       <div class="brandbar">
         <a class="homelink" href="/" aria-label="Vytera Labs home"><span class="mark" aria-hidden="true">V</span><span>Vytera&nbsp;Labs</span></a>
-        <span class="brandtail"><span class="brandsep" aria-hidden="true">&rsaquo;</span><a class="brand" href="/garmin/cortisol-load/">Cortisol&nbsp;Load</a></span>
+        <span class="brandtail"><span class="brandsep" aria-hidden="true">&rsaquo;</span><a class="brand" href="/garmin/cortisol-load/">Stress&nbsp;Load&nbsp;Monitor</a></span>
       </div>
       <div class="nav-links">
         <a href="/garmin/">All Garmin apps</a>
@@ -39,11 +39,11 @@
 </header>
 
 <main class="wrap doc" id="main">
-  <p class="eyebrow">Cortisol Load</p>
+  <p class="eyebrow">Stress Load Monitor</p>
   <h1>User Guide</h1>
   <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&ensp;·&ensp;<strong>Updated:</strong> 27 September 2026&ensp;·&ensp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
 
-  <p>Cortisol Load scores how far your watch's stress and recovery signals are from your own normal, from 0 to 100, where 50 is your baseline. It is an estimate of physiological stress. It does not measure cortisol and is not a medical device.</p>
+  <p>Stress Load Monitor scores how far your watch's stress and recovery signals are from your own normal, from 0 to 100, where 50 is your baseline. It is an estimate of physiological stress. It does not measure cortisol and is not a medical device.</p>
 
   <div class="note">
     <strong>If you read nothing else</strong>
@@ -86,7 +86,7 @@
   <p>Your previous seven days of active minutes are read from Garmin's own history on first launch, so the training-load signal can start sooner — but they do not count towards the seven days, which need physiological data.</p>
 
   <div class="section"><h2 id="hrv-check">3. The HRV check</h2></div>
-  <p>Garmin's overnight HRV and HRV Status are not available to Connect IQ apps. Cortisol Load offers the next best thing: a two-minute seated measurement of <strong>RMSSD</strong> from your beat-to-beat intervals.</p>
+  <p>Garmin's overnight HRV and HRV Status are not available to Connect IQ apps. Stress Load Monitor offers the next best thing: a two-minute seated measurement of <strong>RMSSD</strong> from your beat-to-beat intervals.</p>
   <div class="table-wrap"><table>
   <thead><tr><th scope="col">Step</th><th scope="col">What to do</th></tr></thead>
   <tbody>
@@ -108,7 +108,7 @@
   </table></div>
 
   <div class="section"><h2 id="settings">5. Settings</h2></div>
-  <p>Set them on the watch: press <strong>SELECT → Settings</strong>. Or from your phone: <strong>Garmin Connect → your device → Connect IQ Apps → Cortisol Load → Settings</strong>. Both edit the same values; changes apply when you leave the settings menu.</p>
+  <p>Set them on the watch: press <strong>SELECT → Settings</strong>. Or from your phone: <strong>Garmin Connect → your device → Connect IQ Apps → Stress Load Monitor → Settings</strong>. Both edit the same values; changes apply when you leave the settings menu.</p>
   <div class="table-wrap"><table>
   <thead><tr><th scope="col">Setting</th><th scope="col">Options</th><th scope="col">Default</th></tr></thead>
   <tbody>
@@ -124,10 +124,9 @@
   <ul>
     <li><strong>Your baseline</strong> for each signal is the median of your recent days, with a robust measure of your normal day-to-day spread. One abnormal day cannot redefine it.</li>
     <li><strong>Each signal becomes a 0–100 score</strong> from how far today is from your baseline, in units of your own spread. 50 is at baseline. The effect of any one signal is capped, so a single extreme reading cannot dominate.</li>
-    <li><strong>Direction matters:</strong> lower HRV, lower sleep score and lower Body Battery, and higher resting heart rate, stress and respiration, count towards load.</li>
-    <li><strong>Sleep</strong> averages your last three nights, so one short night counts for about a third of a run of short nights.</li>
+    <li><strong>Direction matters:</strong> lower HRV and lower Body Battery, and higher resting heart rate, stress and respiration, count towards load.</li>
     <li><strong>Training load</strong> compares your last three days of intensity minutes with your usual level, plus any Garmin recovery time still to run. Unusual load raises it; usual training does not.</li>
-    <li><strong>The composite</strong> is a weighted average of the signals present today — HRV 30, resting HR 20, sleep 20, training load 15, stress 10, Body Battery 10, respiration 5 — re-weighted over whichever exist, and at least one must be physiological.</li>
+    <li><strong>The composite</strong> is a weighted average of the signals present today — HRV 30, resting HR 20, training load 15, stress 10, Body Battery 10, respiration 5 — re-weighted over whichever exist, and at least one must be physiological.</li>
     <li><strong>Time zones:</strong> travelling does not reset your baseline or look like a change in you. Confidence drops one step for that day, because overnight data may be incomplete. If the watch clock jumps backwards, the app shows <strong>Clock change detected</strong> and no score until the clock is consistent.</li>
   </ul>
 
@@ -148,7 +147,7 @@
   <div class="table-wrap"><table>
   <thead><tr><th scope="col">What you see</th><th scope="col">Why, and what to do</th></tr></thead>
   <tbody>
-  <tr><td><strong>Sleep shows n/a</strong></td><td data-label="Why, and what to do">Your watch has a sleep score, but its firmware does not yet let apps read it. Garmin provides this from Connect IQ API 6.0.2. Until then Sleep is n/a and its weight passes to the other signals. It is picked up automatically if a firmware update adds it.</td></tr>
+  <tr><td><strong>Sleep shows n/a</strong></td><td data-label="Why, and what to do">Expected on every watch. Garmin makes its sleep score available only to watch faces, not to apps like this one, so Sleep is always n/a and the score is built from the other signals.</td></tr>
   <tr><td><strong>HRV shows no data</strong></td><td data-label="Why, and what to do">No check today. Press SELECT → Measure HRV.</td></tr>
   <tr><td><strong>Stress or Body Battery shows no data</strong></td><td data-label="Why, and what to do">The app needs at least eight hours of the watch's own history. Wear it overnight and open the app in the morning.</td></tr>
   <tr><td><strong>Still “Baseline building”</strong></td><td data-label="Why, and what to do">Days count only when the app is opened. Open it once a day.</td></tr>
@@ -159,7 +158,7 @@
 
   <div class="section"><h2 id="devices">9. Supported watches</h2></div>
   <p>51 round-screen watches on Connect IQ API 5.0 or later.</p>
-  <p class="small"><strong>Connect IQ API 6.0 (sleep score readable by apps, per Garmin):</strong> D2 Mach 2 Pro · Enduro 3 · fēnix 8 (43 mm, 47 mm, 51 mm), fēnix 8 Pro, fēnix 8 Solar (47 mm, 51 mm), fēnix E · Forerunner 570 (42 mm, 47 mm), Forerunner 970 · tactix 8 · Venu 4 (41 mm, 45 mm) · vívoactive 6</p>
+  <p class="small"><strong>Connect IQ API 6.0:</strong> D2 Mach 2 Pro · Enduro 3 · fēnix 8 (43 mm, 47 mm, 51 mm), fēnix 8 Pro, fēnix 8 Solar (47 mm, 51 mm), fēnix E · Forerunner 570 (42 mm, 47 mm), Forerunner 970 · tactix 8 · Venu 4 (41 mm, 45 mm) · vívoactive 6</p>
   <p class="small"><strong>API 5.0 to 5.2:</strong> Approach S50, Approach S70 (42 mm, 47 mm) · D2 Air X10, D2 Mach 1, D2 Mach 2 · Descent G2, Descent Mk3 (43 mm, 51 mm) · epix (Gen 2), epix Pro (42 mm, 47 mm, 51 mm) · fēnix 7, 7 Pro, 7X, 7X Pro, and the Solar editions without Wi-Fi · Forerunner 165, 165 Music, 255, 255 Music, 265, 265S, 955, 965 · Instinct 3 AMOLED (45 mm, 50 mm) · MARQ (Gen 2), MARQ Aviator (Gen 2) · Venu 2, Venu 2S, Venu 2 Plus, Venu 3, Venu 3S · vívoactive 5</p>
   <p class="muted small">Not offered: rectangular screens (Venu Sq 2, Venu X1), the Instinct semi-octagon screens and Instinct Crossover, whose hands cross the display, round screens under 260 pixels (Forerunner 255S, fēnix 7S), Edge cycling computers and handheld units, and watches below Connect IQ API 5.0 such as the Forerunner 245 and 945, fēnix 6 and the first Venu.</p>
 </main>
@@ -168,7 +167,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand">Cortisol Load</div>
+        <div class="foot-brand">Stress Load Monitor</div>
         <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app for Garmin. <a href="/" style="color:var(--brass);">Vytera Labs Ltd</a> is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
       </div>
       <div class="foot-links">
