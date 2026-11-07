@@ -41,15 +41,15 @@
 <main class="wrap doc" id="main">
   <p class="eyebrow">Stress Load Monitor</p>
   <h1>User Guide</h1>
-  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&ensp;·&ensp;<strong>Updated:</strong> 27 September 2026&ensp;·&ensp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
+  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&ensp;·&ensp;<strong>Updated:</strong> 7 November 2026&ensp;·&ensp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
 
   <p>Stress Load Monitor scores how far your watch's stress and recovery signals are from your own normal, from 0 to 100, where 50 is your baseline. It is an estimate of physiological stress. It does not measure cortisol and is not a medical device.</p>
 
   <div class="note">
     <strong>If you read nothing else</strong>
     <ul>
-      <li>Wear the watch day and night, and <strong>open the app once each morning</strong>. It reads your signals when opened; it has no background service.</li>
-      <li>For the first <strong>seven days</strong> it shows <strong>Baseline building</strong> and no score. That is by design.</li>
+      <li>Wear the watch day and night. The app <strong>records your signals in the background every few hours</strong>, so you don't need to open it every day. Opening it in the morning gives the most consistent reading.</li>
+      <li>Until it has <strong>seven days</strong> of data it shows <strong>Baseline building</strong> and no score. That is by design. History already on your watch counts, so the wait is often shorter.</li>
       <li>For HRV, press <strong>SELECT → Measure HRV</strong> each morning, seated and still, at roughly the same time.</li>
       <li><strong>50 is your normal.</strong> A high score after hard training is expected; it is not advice to stop.</li>
     </ul>
@@ -83,7 +83,9 @@
 
   <div class="section"><h2 id="first-week">2. The first seven days</h2></div>
   <p>A personal baseline needs days of data. From day 1 to day 6 the score page shows <strong>Baseline building — Day n of 7</strong> and the signals being collected, but no number, because a precise-looking score on thin data would mislead. From day 7 the score appears with <strong>Moderate</strong> confidence, rising to <strong>Good</strong> at 14 days and <strong>High</strong> at 28.</p>
-  <p>Your previous seven days of active minutes are read from Garmin's own history on first launch, so the training-load signal can start sooner — but they do not count towards the seven days, which need physiological data.</p>
+  <p><strong>The wait is often shorter than seven days.</strong> On first launch the app reads the stress and Body Battery history your watch already holds and turns each complete past day into a day of baseline. A day counts only if the watch recorded most of it (at least 16 hours), so a partial day is skipped rather than guessed. How many days your watch keeps depends on the model and its firmware. Resting heart rate has no history the app can read, so it builds from the day you install.</p>
+  <p>After that, the app records your resting heart rate, stress and Body Battery in the background every few hours, so days keep counting even when you don't open it.</p>
+  <p>Your previous seven days of active minutes are also read on first launch, so the training-load signal can start sooner — but they do not count towards the seven days, which need physiological data.</p>
 
   <div class="section"><h2 id="hrv-check">3. The HRV check</h2></div>
   <p>Garmin's overnight HRV and HRV Status are not available to Connect IQ apps. Stress Load Monitor offers the next best thing: a two-minute seated measurement of <strong>RMSSD</strong> from your beat-to-beat intervals.</p>
@@ -149,8 +151,8 @@
   <tbody>
   <tr><td><strong>Sleep shows n/a</strong></td><td data-label="Why, and what to do">Expected on every watch. Garmin makes its sleep score available only to watch faces, not to apps like this one, so Sleep is always n/a and the score is built from the other signals.</td></tr>
   <tr><td><strong>HRV shows no data</strong></td><td data-label="Why, and what to do">No check today. Press SELECT → Measure HRV.</td></tr>
-  <tr><td><strong>Stress or Body Battery shows no data</strong></td><td data-label="Why, and what to do">The app needs at least eight hours of the watch's own history. Wear it overnight and open the app in the morning.</td></tr>
-  <tr><td><strong>Still “Baseline building”</strong></td><td data-label="Why, and what to do">Days count only when the app is opened. Open it once a day.</td></tr>
+  <tr><td><strong>Stress or Body Battery shows no data</strong></td><td data-label="Why, and what to do">The app needs at least eight hours of the watch's own history. Wear it overnight; the next background update or opening the app will pick it up.</td></tr>
+  <tr><td><strong>Still “Baseline building”</strong></td><td data-label="Why, and what to do">The baseline needs seven days of data. Wear the watch day and night: days are recorded in the background, and past days the watch still holds are added the first time you open the app each day.</td></tr>
   <tr><td><strong>High after a hard session</strong></td><td data-label="Why, and what to do">Expected: training is a stressor. Check whether the contributors are Training load and Resting HR; they usually settle within a day or two.</td></tr>
   <tr><td><strong>“Clock change detected”</strong></td><td data-label="Why, and what to do">The watch clock moved backwards. It clears once the time is correct again. If it persists, SELECT → Reset stored data starts afresh.</td></tr>
   </tbody>

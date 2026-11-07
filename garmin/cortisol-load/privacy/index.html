@@ -41,7 +41,7 @@
 <main class="wrap doc" id="main">
   <p class="eyebrow">Stress Load Monitor</p>
   <h1>Privacy Policy</h1>
-  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&ensp;·&ensp;<strong>Effective:</strong> 5 November 2026&ensp;·&ensp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
+  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&ensp;·&ensp;<strong>Effective:</strong> 7 November 2026&ensp;·&ensp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
 
   <p>This policy covers <strong>Vyteralabs Stress Load Monitor</strong>, a Garmin Connect IQ app published by <strong>Vytera Labs Ltd</strong>, a company registered in England and Wales, number 17389107.</p>
 
@@ -62,11 +62,12 @@
   <p>Stress Load Monitor reads data your watch already holds, and processes it only on the watch:</p>
   <ul>
     <li>Garmin's resting heart rate for the day;</li>
-    <li>your all-day stress and Body Battery history for the previous 24 hours;</li>
+    <li>your all-day stress and Body Battery history held on the watch, to rebuild a daily value for each recent day;</li>
     <li>your daily active minutes and Garmin's recovery time;</li>
     <li>your respiration rate, only if you turn on experimental mode;</li>
     <li>your beat-to-beat heart intervals, only during a two-minute HRV check that you start. The raw intervals are discarded when the check ends; only the result is kept.</li>
   </ul>
+  <p>A background task on the watch reads the day's resting heart rate, stress and Body Battery every few hours and stores them with your other daily values. It runs entirely on the watch and makes no network request.</p>
   <p>These are health-related data. We treat them as such by never letting them leave the device.</p>
 
   <div class="section"><h2 id="permissions">Permissions, and why</h2></div>
@@ -76,6 +77,7 @@
     <tr><td><strong>Sensor History</strong></td><td data-label="Why it is needed">Reads your stress and Body Battery history.</td></tr>
     <tr><td><strong>Sensor</strong></td><td data-label="Why it is needed">Reads beat-to-beat intervals during the HRV check, and at no other time.</td></tr>
     <tr><td><strong>User Profile</strong></td><td data-label="Why it is needed">Reads Garmin's resting heart rate.</td></tr>
+    <tr><td><strong>Background</strong></td><td data-label="Why it is needed">Records the day's values every few hours, so days count towards your baseline without opening the app.</td></tr>
     </tbody>
   </table></div>
   <p>The app has no Communications permission, so it cannot use the network at all, and no Positioning permission, so it never reads your location.</p>
