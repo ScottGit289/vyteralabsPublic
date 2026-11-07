@@ -391,13 +391,13 @@ footer{border-top:1px solid var(--line);padding:52px 0 44px;position:relative;z-
     <li>No crash reporting.</li>
     <li>No advertising, no advertising identifier, no tracking.</li>
     <li>No third-party libraries or SDKs.</li>
-    <li>No network requests. Cairn opens no connection of its own; the single exception is Apple's rating prompt, <a href="#rating">described below</a> — Apple's request, not ours.</li>
-    <li>No subscription and no in-app purchases. Cairn is bought once.</li>
+    <li>No network requests of its own. Two things go through Apple instead: Cairn Pro purchases, handled by the App Store, and Apple's rating prompt, <a href="#rating">described below</a>.</li>
+    <li>No purchase data reaches us. Apple processes Cairn Pro purchases and free trials; the app checks Apple's signed record on the device and we have no server to receive anything.</li>
   </ul>
-  <p>The last two are the same promise. A subscription needs the app to keep asking Apple whether you are still paying — a permanent dependency on the network, rather than one prompt you can decline — and nothing in Cairn stops working if you never open the App Store again. <a href="/cairn/terms/">The terms set out what you are buying.</a></p>
+  <p>Pro keeps working offline: Apple's record of it is cached on the device. Your library is never involved in a purchase, and nothing is deleted when Pro ends. <a href="/cairn/terms/">The terms set out what you are buying.</a></p>
 
   <div class="section" id="rating"><h2>Rating Cairn</h2></div>
-  <p>After you finish a project, Cairn may ask iOS to show Apple's standard rating prompt. This is the only part of the app connected to anything outside your device, so it is worth being exact about what happens.</p>
+  <p>After you finish a project, Cairn may ask iOS to show Apple's standard rating prompt. Together with Cairn Pro purchases, this is the only part of the app connected to anything outside your device, so it is worth being exact about what happens.</p>
   <ul>
     <li><strong>Cairn asks; iOS decides.</strong> The request is a hint. iOS shows the prompt or ignores it, enforces its own limit of roughly three prompts a year, and never tells us which it did. Cairn additionally asks at most once per version, never within 120 days of the last time, and only after you have completed at least three projects.</li>
     <li><strong>Cairn opens no connection.</strong> The prompt is drawn by iOS, not by Cairn, and the app's own code makes no network request to display it.</li>
