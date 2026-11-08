@@ -49,7 +49,7 @@
     <strong>If you read nothing else</strong>
     <ul>
       <li>Wear the watch day and night. The app <strong>records your signals in the background every few hours</strong>, so you don't need to open it every day. Opening it in the morning gives the most consistent reading.</li>
-      <li>Until it has <strong>seven days</strong> of data it shows <strong>Baseline building</strong>. That is by design.</li>
+      <li>For the first <strong>three days</strong> it shows <strong>Baseline building</strong> and no score. From <strong>day 4</strong> a score appears, marked <strong>Low</strong> confidence until day 7. That is by design.</li>
       <li>For HRV, press <strong>SELECT → Measure HRV</strong> each morning, seated and still, at roughly the same time.</li>
       <li><strong>50 is your normal.</strong> A high score after hard training is expected; it is not advice to stop.</li>
     </ul>
@@ -82,7 +82,7 @@
   <p class="muted small">States: 0–19 Very Low · 20–39 Low · 40–59 Moderate · 60–79 High · 80–100 Very High. The colour of the number follows the state.</p>
 
   <div class="section"><h2 id="first-week">2. The first seven days</h2></div>
-  <p>A personal baseline needs days of data. Until there is enough data the score page shows <strong>Baseline building — Day n of 7</strong> and no number, because a precise-looking score on thin data would mislead. From day 7 the score appears with <strong>Moderate</strong> confidence, rising to <strong>Good</strong> at 14 days and <strong>High</strong> at 28.</p>
+  <p>A personal baseline needs days of data. Each signal needs three earlier days before today can be compared with it, so for days 1 to 3 the score page shows <strong>Baseline building — Day n of 7</strong> and no number. From day 4 the score appears with <strong>Confidence: Low</strong> in yellow: treat it as a rough guide. From day 7 confidence is <strong>Moderate</strong>, rising to <strong>Good</strong> at 14 days and <strong>High</strong> at 28. Allow 4 to 7 days before relying on a result.</p>
   <p><strong>You start a day ahead.</strong> On first launch the app reads the stress and Body Battery history your watch makes available to apps — typically about the last 24 hours — and counts the previous day if it holds at least eight hours of data. The screen shows how much it found: <em>Watch history: 1 d (23 h)</em>. Resting heart rate has no history the app can read, so it builds from the day you install.</p>
   <p>After that, the app records your resting heart rate, stress and Body Battery in the background every few hours, so days keep counting even when you don't open it.</p>
   <p>Your previous seven days of active minutes are also read on first launch, so the training-load signal can start sooner — but they do not count towards the seven days, which need physiological data.</p>
@@ -137,7 +137,7 @@
   <thead><tr><th scope="col">Days of data</th><th scope="col">Confidence</th></tr></thead>
   <tbody>
   <tr><td>Under 3</td><td data-label="Confidence">Building baseline (no score)</td></tr>
-  <tr><td>3–6</td><td data-label="Confidence">Low (no score shown until day 7)</td></tr>
+  <tr><td>3–6</td><td data-label="Confidence">Low (score shown, yellow)</td></tr>
   <tr><td>7–13</td><td data-label="Confidence">Moderate</td></tr>
   <tr><td>14–27</td><td data-label="Confidence">Good</td></tr>
   <tr><td>28 or more</td><td data-label="Confidence">High</td></tr>
@@ -152,7 +152,7 @@
   <tr><td><strong>Sleep shows n/a</strong></td><td data-label="Why, and what to do">Expected on every watch. Garmin makes its sleep score available only to watch faces, not to apps like this one, so Sleep is always n/a and the score is built from the other signals.</td></tr>
   <tr><td><strong>HRV shows no data</strong></td><td data-label="Why, and what to do">No check today. Press SELECT → Measure HRV.</td></tr>
   <tr><td><strong>Stress or Body Battery shows no data</strong></td><td data-label="Why, and what to do">The app needs at least eight hours of the watch's own history. Wear it overnight; the next background update or opening the app will pick it up.</td></tr>
-  <tr><td><strong>Still “Baseline building”</strong></td><td data-label="Why, and what to do">The baseline needs seven days of data. Wear the watch day and night: days are recorded in the background, and past days the watch still holds are added the first time you open the app each day.</td></tr>
+  <tr><td><strong>Still “Baseline building”</strong></td><td data-label="Why, and what to do">Expected for the first three days. The first score appears on day 4. Wear the watch day and night: days are recorded in the background.</td></tr>
   <tr><td><strong>High after a hard session</strong></td><td data-label="Why, and what to do">Expected: training is a stressor. Check whether the contributors are Training load and Resting HR; they usually settle within a day or two.</td></tr>
   <tr><td><strong>“Clock change detected”</strong></td><td data-label="Why, and what to do">The watch clock moved backwards. It clears once the time is correct again. If it persists, SELECT → Reset stored data starts afresh.</td></tr>
   </tbody>
