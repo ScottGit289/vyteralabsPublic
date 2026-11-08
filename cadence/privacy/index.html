@@ -40,7 +40,7 @@
 <main class="wrap doc" id="main">
   <p class="eyebrow">Cadence</p>
   <h1>Privacy Policy</h1>
-  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&ensp;·&ensp;<strong>Effective:</strong> 11 September 2026&ensp;·&ensp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
+  <p class="meta"><strong>Publisher:</strong> Vytera Labs Ltd&ensp;·&ensp;<strong>Effective:</strong> 7 November 2026&ensp;·&ensp;<a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a></p>
 
   <p>Vytera Labs builds Cadence to be <strong>private by design</strong>. This policy explains, in plain language, what the app does and does not do with your data.</p>
 
@@ -55,7 +55,7 @@
 
   <div class="section"><h2>What we collect</h2></div>
   <p><strong>Nothing.</strong> Not “nothing identifiable”, not “only anonymised usage data”. Nothing. The app contains no networking code, links no third-party frameworks, and has no mechanism capable of transmitting your information anywhere.</p>
-  <p>One Apple framework does reach outside the app: StoreKit, used solely to ask iOS to show the standard “rate this app” sheet. It carries none of your data and returns nothing to Cadence. See <a href="#rating">Rating the app</a> below.</p>
+  <p>One Apple framework does reach outside the app: StoreKit, used for two things — buying or subscribing to Cadence Pro, and asking iOS to show the standard “rate this app” sheet. Neither carries any of your habit data, and nothing goes to us. See <a href="#purchases">Buying Pro and the free trial</a> and <a href="#rating">Rating the app</a> below.</p>
   <div class="table-wrap">
     <table>
       <thead>
@@ -91,6 +91,16 @@
 
   <div class="section"><h2>Notifications</h2></div>
   <p>Reminders are <strong>local notifications</strong>, scheduled by iOS on your device. Cadence never registers for remote notifications, so no device token is ever created and there is no channel through which anything could be pushed to you.</p>
+
+  <div class="section" id="purchases"><h2>Buying Pro and the free trial</h2></div>
+  <p>Cadence is free, with optional Cadence Pro: a monthly or annual subscription, each with a free seven-day trial, or a one-off Lifetime purchase. All three are Apple in-app purchases.</p>
+  <ul>
+    <li><strong>Apple handles the whole transaction.</strong> The purchase sheet, your Apple Account, your payment method, renewals, cancellations and refunds belong to Apple. Cadence never sees a card number, a name, an email address or an Apple Account identifier.</li>
+    <li><strong>Cadence checks what you own on your device.</strong> StoreKit gives the app a record of your purchases signed by Apple, and Cadence verifies that signature locally. There is no receipt server: the app has no networking code, so it has nowhere to send it.</li>
+    <li><strong>What the app keeps:</strong> whether Lifetime is owned, and for a subscription its plan, when the current period ends, whether it is a trial and whether it renews — in your device’s own settings store, so the right screen appears before the App Store has answered. Those values are not part of your backup file, and StoreKit overwrites them every time it is asked.</li>
+    <li><strong>One free trial per Apple Account.</strong> Apple decides who is eligible, without Cadence storing anything about you.</li>
+  </ul>
+  <p>Apple processes these purchases under its own privacy policy. We receive the same anonymous sales and subscription reports any developer receives from Apple; they do not identify you and contain none of your habit data. That is why the App Store privacy label remains “Data Not Collected”.</p>
 
   <div class="section" id="rating"><h2>Rating the app</h2></div>
   <p>After three days on which you complete everything you had planned, Cadence may ask iOS to show Apple’s standard “rate this app” sheet. That sheet belongs to iOS, not to Cadence.</p>
