@@ -76,9 +76,9 @@
       <tr><th scope="col">Tab</th><th scope="col">What it is for</th></tr>
     </thead>
     <tbody>
-    <tr><td><strong>Home</strong></td><td data-label="What it is for">The live counter of your estimated remaining time.</td></tr>
-    <tr><td><strong>Forecast</strong></td><td data-label="What it is for">Lifespan, healthspan, survival odds, the six scores, factors and scenarios.</td></tr>
-    <tr><td><strong>Trends</strong></td><td data-label="What it is for">How your numbers and the forecast have moved over time.</td></tr>
+    <tr><td><strong>Home</strong></td><td data-label="What it is for">The live counter of your estimated remaining time, your level, badges and a daily nudge. Every tile can be tapped for an explanation.</td></tr>
+    <tr><td><strong>Forecast</strong></td><td data-label="What it is for">Lifespan, healthspan, survival odds, the six scores, factors, power-ups and scenarios.</td></tr>
+    <tr><td><strong>Trends</strong></td><td data-label="What it is for">How your numbers and the forecast have moved over time, with your personal bests.</td></tr>
     <tr><td><strong>Health</strong></td><td data-label="What it is for">Connect and sync Apple Health and Oura.</td></tr>
     <tr><td><strong>Settings</strong></td><td data-label="What it is for">Data export and deletion, appearance, the science, support.</td></tr>
     </tbody>
@@ -86,13 +86,18 @@
 
   <div class="section"><h2 id="start">2. Getting started</h2></div>
   <p>There is no sign-in and no account. Open the app and enter what you know.</p>
-  <p>You do not need every metric, but the estimate is only as good as its inputs. The highest-value numbers to get right early are <strong>blood pressure, smoking status, HbA1c or glucose, ApoB or LDL cholesterol, and a measure of fitness such as VO₂max</strong> — these carry the most weight in the published evidence behind the model.</p>
+  <p>You do not need every metric, but the estimate is only as good as its inputs. The highest-value numbers to get right early are <strong>blood pressure, smoking status, body measurements, and a measure of fitness such as VO₂max</strong> — these carry the most weight in the published evidence behind the model.</p>
   <p>If a score shows <em>no data</em>, that whole area is missing. Adding any one of its inputs will light it up.</p>
-  <p>If you have recent blood results from your GP or a private panel, enter them. A value you type is used exactly as entered.</p>
+  <p>The app does not ask for blood-test results. Everything it needs is something you can measure at home or already know. A value you type is used exactly as entered.</p>
 
   <div class="section"><h2 id="home">3. The Home counter and widgets</h2></div>
   <p>Your estimated remaining time appears on the Home screen, and as a Home-Screen or Lock-Screen widget.</p>
-  <p>It is a running expression of the same forecast the rest of the app produces — not a countdown to an event. When your inputs improve, it moves.</p>
+  <p>It is a running expression of the same forecast the rest of the app produces — not a countdown to an event. When your inputs improve, it moves. The counter runs to the <strong>median</strong> of your forecast: the same midpoint shown as your estimated lifespan.</p>
+  <h3>Your level</h3>
+  <p>Your overall score places you on one of six levels, from <strong>Fresh Start</strong> to <strong>Centenarian in Training</strong>. Tap the level card to see <strong>why you are at this level</strong> — what is lifting your score and what is pulling it down — and <strong>how to reach the next one</strong>: each change you could make, its target, and the score points it is worth.</p>
+  <h3>Badges, "Still to come" and the daily boost</h3>
+  <p>Thirteen badges are earned from your own numbers; tap one to see how to earn it. <strong>Still to come</strong> turns your median estimate into sunrises, weekends and full moons — playful arithmetic, not a prediction. <strong>Today's boost</strong> is one short nudge a day, each restating a cited effect and naming its source.</p>
+  <p>Every tile on the Home screen can be tapped to see what the number means and how it was worked out.</p>
 
   <div class="section"><h2 id="forecast">4. Lifespan, healthspan and survival odds</h2></div>
   <p>The Forecast tab reports:</p>
@@ -108,14 +113,15 @@
   <p>Like healthspan, it is a communication device rather than a validated assay — useful for seeing direction of travel, not for putting on a form.</p>
 
   <div class="section"><h2 id="scores">6. The six scores</h2></div>
-  <p>An overall score, plus five rings that each reflect their own inputs:</p>
+  <p>An overall score, plus five rings that each reflect their own inputs. Tap a ring to see your own values behind it.</p>
+  <p><strong>Overall</strong> is your whole forecast on one scale: 62 is the population average for your age and sex. The <strong>five area rings are status lights</strong>: 99 is the best that area can be, 75 means you are on the recommended or typical value, and it falls towards 1 as the area gets as bad as it can. Green is 70 and above, amber 45 to 69, red below 45. A ring shows how an area is doing, not how much it matters — the points on each power-up show what a change is worth.</p>
   <div class="table-wrap"><table>
     <thead>
       <tr><th scope="col">Ring</th><th scope="col">What feeds it</th></tr>
     </thead>
     <tbody>
-    <tr><td><strong>Cardiovascular</strong></td><td data-label="What feeds it">Blood pressure, ApoB/LDL, resting heart rate</td></tr>
-    <tr><td><strong>Metabolic</strong></td><td data-label="What feeds it">HbA1c/glucose, body composition</td></tr>
+    <tr><td><strong>Cardiovascular</strong></td><td data-label="What feeds it">Blood pressure, resting heart rate</td></tr>
+    <tr><td><strong>Body</strong></td><td data-label="What feeds it">Body composition (BMI, waist-to-height)</td></tr>
     <tr><td><strong>Fitness</strong></td><td data-label="What feeds it">VO₂max, steps, exercise</td></tr>
     <tr><td><strong>Lifestyle</strong></td><td data-label="What feeds it">Smoking, alcohol</td></tr>
     <tr><td><strong>Recovery</strong></td><td data-label="What feeds it">Sleep, HRV</td></tr>
@@ -126,6 +132,7 @@
   <p>Each risk factor is shown with its hazard ratio, whether it is <strong>protective, harmful or neutral</strong>, whether it is <strong>modifiable</strong>, your current value, a reference value, a plain interpretation, an <strong>evidence level</strong> (high, moderate or weak) and the study it comes from.</p>
   <p>That last part matters: if you want to challenge a number, the app gives you what you need to do it.</p>
   <p>For <strong>interventions</strong>, the model is recomputed with only that one factor optimised, and the results are ranked by the hazard reduction that factor itself provides. Each shows your current value, an evidence-based target, and the model-implied shift in survival probability and median lifespan.</p>
+  <p>On the Forecast tab these appear as <strong>power-ups</strong>, each with the overall-score points it is worth. Points add up, which is how the level screen can tell you which changes get you to the next level.</p>
   <p>The app deliberately <strong>never says an intervention "adds N years"</strong>, because this composite is not a single formally validated intervention model. Treat the ranking as the useful output — it tells you where the leverage is.</p>
 
   <div class="section"><h2 id="scenarios">8. Scenario modelling</h2></div>
@@ -153,6 +160,9 @@
   <p><strong>Health tab → Oura</strong>. You sign in on Oura's own secure page, so the app never sees your Oura password. The tokens are stored in your device Keychain and used only to read your Oura data — sleep, HRV and resting heart rate. Your data goes directly from Oura's servers to your device; Vytera Labs never receives or proxies it.</p>
   <p>To disconnect: <strong>Health tab → Oura → Disconnect</strong>, which deletes the stored tokens.</p>
 
+  <h3>More than one device</h3>
+  <p>If a watch and a ring both record the same night, Apple Health holds both records. The app counts that night once: sleep is averaged over the hours you were actually asleep, however many devices saw them. If Apple Health and Oura are both connected, each metric comes from whichever you synced last — they are never added together.</p>
+
   <h3>Averages, not single readings</h3>
   <p>Wearable data is read as <strong>30-, 90- and 365-day windows, with 90-day preferred</strong>, because averaged data is far more stable than one reading. One bad night's sleep should not move a lifespan estimate.</p>
   <p>A value you type is used exactly as entered and <strong>overrides any wearable average for that metric until the next sync</strong> — which is what you want when you have a proper clinical measurement.</p>
@@ -173,7 +183,7 @@
   <p>Use <strong>Settings → Recalculate now</strong> to force a fresh run after entering new data.</p>
 
   <div class="section"><h2 id="model">11. How the model works</h2></div>
-  <p>It is a proportional-hazards survival model. It starts from an age- and sex-specific mortality baseline and adjusts it using published, all-cause hazard ratios from large cohort studies and meta-analyses — blood pressure, smoking, diabetes and HbA1c, ApoB and cholesterol, fitness and VO₂max, adiposity, activity, alcohol, kidney disease and more.</p>
+  <p>It is a proportional-hazards survival model. It starts from an age- and sex-specific mortality baseline and adjusts it using published, all-cause hazard ratios from large cohort studies and meta-analyses — blood pressure, smoking, diagnosed diabetes, fitness and VO₂max, adiposity, activity, alcohol, kidney disease and more.</p>
   <p>Two design choices are worth knowing:</p>
   <ul>
     <li><strong>Correlated inputs are clustered</strong> so they are not double-counted. Entering four measures of the same underlying thing does not multiply its effect.</li>
@@ -184,7 +194,8 @@
   <div class="section"><h2 id="limits">12. Limitations — please read</h2></div>
   <ul>
     <li>The baseline life table uses <strong>approximate SSA 2021 anchors</strong>.</li>
-    <li>Hazard ratios are applied as all-cause and independent after clustering. Real interactions and partial mediation are only approximately handled — lipids, for example, are attenuated because much of their effect runs through cardiovascular disease.</li>
+    <li>Hazard ratios are applied as all-cause and independent after clustering. Real interactions and partial mediation are only approximately handled.</li>
+    <li>The app does not ask for blood-test results. Cholesterol, ApoB, Lp(a), HbA1c and glucose are not modelled, so the estimate cannot see risk that only shows up in bloods. Diabetes counts from the diagnosis alone.</li>
     <li>The composite is an <strong>evidence-assembled model, not a single prospectively validated risk score.</strong></li>
     <li>Coefficients are drawn largely from <strong>higher-income-country cohorts</strong> and may not transport perfectly to all populations.</li>
     <li><strong>Longevity age and healthspan are communication devices, not validated assays.</strong></li>
