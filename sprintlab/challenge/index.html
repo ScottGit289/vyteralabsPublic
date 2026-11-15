@@ -54,13 +54,14 @@
       var q = new URLSearchParams(location.search);
       var d = parseInt(q.get('d'), 10), t = parseInt(q.get('t'), 10);
       var n = (q.get('n') || '').replace(/[^\p{L}\p{N} .'-]/gu, '').trim().slice(0, 24);
+      var st = q.get('s') === 'f' ? 'f' : q.get('s') === 's' ? 's' : '';
       if (!(d >= 1 && d <= 400 && t > 0)) return;
       var mps = d / (t / 100);
       if (mps > 13 || mps < 1) return;
-      document.getElementById('c-title').textContent = (n ? 'Beat ' + n + '\u2019s time' : 'Beat this time') + ' over ' + d + ' m';
+      document.getElementById('c-title').textContent = (n ? 'Beat ' + n + '\u2019s time' : 'Beat this time') + ' over ' + d + ' m' + (st === 'f' ? ' flying' : '');
       document.getElementById('c-time').textContent = (t / 100).toFixed(2);
       document.getElementById('c-sub').textContent = 'seconds \u00b7 ' + (mps * 3.6).toFixed(1) + ' km/h \u00b7 ' + mps.toFixed(2) + ' m/s';
-      document.getElementById('c-open').href = 'sprintlab://challenge?d=' + d + '&t=' + t + (n ? '&n=' + encodeURIComponent(n) : '');
+      document.getElementById('c-open').href = 'sprintlab://challenge?d=' + d + '&t=' + t + (st ? '&s=' + st : '') + (n ? '&n=' + encodeURIComponent(n) : '');
     })();
   </script>
 </main>
