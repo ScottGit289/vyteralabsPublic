@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You have been challenged — SprintLab · Vytera Labs</title>
+<meta name="description" content="A friend has sent you a sprint time to beat. Open it in SprintLab and time your own sprint on video." />
+<link rel="canonical" href="https://www.vyteralabs.com/sprintlab/challenge/" />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#0B1017" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/sprintlab/style.css?v=5" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brandbar">
+        <a class="homelink" href="/" aria-label="Vytera Labs home"><span class="mark" aria-hidden="true">V</span><span>Vytera&nbsp;Labs</span></a>
+        <span class="brandtail"><span class="brandsep" aria-hidden="true">&rsaquo;</span><a class="brand" href="/sprintlab/">SprintLab</a></span>
+      </div>
+      <div class="nav-links">
+        <a href="/sprintlab/">Overview</a>
+        <a href="/sprintlab/guide/">Guide</a>
+        <a href="/sprintlab/support/">Support</a>
+        <a href="/sprintlab/privacy/">Privacy</a>
+        <a href="/sprintlab/terms/">Terms</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap doc" id="main" style="text-align:center">
+  <p class="eyebrow">SprintLab challenge</p>
+  <h1 id="c-title">You have been challenged</h1>
+  <p id="c-time" style="font-size:clamp(64px,18vw,112px);font-weight:600;line-height:1.05;margin:18px 0 6px;font-variant-numeric:tabular-nums">&nbsp;</p>
+  <p class="meta" id="c-sub">Open this link on your iPhone.</p>
+  <div class="btn-row" style="justify-content:center;margin-top:28px">
+    <a class="mail-btn solid" id="c-open" href="sprintlab://challenge">Open in SprintLab <span class="arrow">→</span></a>
+    <a class="mail-btn" href="https://apps.apple.com/gb/app/id6795292333">Get SprintLab on the App&nbsp;Store <span class="arrow">→</span></a>
+  </div>
+  <p style="margin-top:32px">Film one sprint on your phone and SprintLab times it frame by frame. Beat the time, then send your own back.</p>
+  <p class="small muted">No account is needed. This page stores nothing: the challenge is carried in the link itself.</p>
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search);
+      var d = parseInt(q.get('d'), 10), t = parseInt(q.get('t'), 10);
+      var n = (q.get('n') || '').replace(/[^\p{L}\p{N} .'-]/gu, '').trim().slice(0, 24);
+      if (!(d >= 5 && d <= 400 && t > 0)) return;
+      var mps = d / (t / 100);
+      if (mps > 13 || mps < 1) return;
+      document.getElementById('c-title').textContent = (n ? 'Beat ' + n + '\u2019s time' : 'Beat this time') + ' over ' + d + ' m';
+      document.getElementById('c-time').textContent = (t / 100).toFixed(2);
+      document.getElementById('c-sub').textContent = 'seconds \u00b7 ' + (mps * 3.6).toFixed(1) + ' km/h \u00b7 ' + mps.toFixed(2) + ' m/s';
+      document.getElementById('c-open').href = 'sprintlab://challenge?d=' + d + '&t=' + t + (n ? '&n=' + encodeURIComponent(n) : '');
+    })();
+  </script>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">SprintLab</div>
+        <p style="color:var(--muted);font-size:14px;margin:10px 0 0;max-width:34ch;">A Vytera Labs app. <a href="/" style="color:var(--brass);">Vytera Labs Ltd</a> is a subsidiary of <a href="https://www.dellowholdings.com" style="color:var(--brass);">Dellow Holdings Ltd</a>.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/sprintlab/">Overview</a>
+        <a href="/sprintlab/guide/">User Guide</a>
+        <a href="/sprintlab/support/">Support</a>
+        <a href="/sprintlab/privacy/">Privacy Policy</a>
+        <a href="/sprintlab/terms/">Terms of Use (EULA)</a>
+        <a href="mailto:info@vyteralabs.com">info@vyteralabs.com</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© <span id="year">2026</span> Vytera Labs Ltd. All rights reserved.</span>
+      <span><a href="https://www.instagram.com/vyteralabs/" rel="noopener">Instagram</a>&ensp;·&ensp;<a href="https://www.facebook.com/people/Vytera-Labs-Ltd/61595079447779/" rel="noopener">Facebook</a>&ensp;·&ensp;<a href="https://www.tiktok.com/@vyteralabs" rel="noopener">TikTok</a>&ensp;·&ensp;<a href="/">vyteralabs.com</a></span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
