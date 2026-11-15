@@ -54,7 +54,7 @@
       var q = new URLSearchParams(location.search);
       var d = parseInt(q.get('d'), 10), t = parseInt(q.get('t'), 10);
       var n = (q.get('n') || '').replace(/[^\p{L}\p{N} .'-]/gu, '').trim().slice(0, 24);
-      if (!(d >= 5 && d <= 400 && t > 0)) return;
+      if (!(d >= 1 && d <= 400 && t > 0)) return;
       var mps = d / (t / 100);
       if (mps > 13 || mps < 1) return;
       document.getElementById('c-title').textContent = (n ? 'Beat ' + n + '\u2019s time' : 'Beat this time') + ' over ' + d + ' m';
