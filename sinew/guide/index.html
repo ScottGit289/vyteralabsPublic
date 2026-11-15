@@ -91,26 +91,35 @@
 
   <div class="section"><h2 id="logging">2. Logging a workout, step by step</h2></div>
   <ol>
-    <li><strong>Start.</strong> On the Train tab, tap <strong>Start workout</strong>. Begin blank, or pick one of your templates.</li>
-    <li><strong>Pick an exercise by muscle group.</strong> Tap <strong>Add exercise</strong>. The full-screen picker is grouped by muscle-group chips — Chest, Back, Shoulders, Biceps, Triceps, Forearms, Core, Quads, Hamstrings, Glutes, Calves and Full body — with search, your recent exercises, and the option to create a custom exercise if the one you need is not in the library of more than 150.</li>
-    <li><strong>Use last.</strong> The exercise appears with last session's sets greyed in. Tap <strong>Use last</strong> to fill them in as a starting point, then change whatever is different today.</li>
-    <li><strong>Add sets.</strong> Each set row has a weight stepper that moves by your chosen increment, a reps stepper, and a tick to mark the set done. RPE is optional.</li>
-    <li><strong>Rest.</strong> After you tick a set, the rest timer starts on its own and counts down the seconds you set. If you have turned it off in Settings, nothing happens and you carry on.</li>
+    <li><strong>Start.</strong> Tap <strong>Start workout</strong> on Home or the Train tab. Pick one of your templates, <strong>Repeat last workout</strong>, or <strong>Start fresh</strong> with an empty workout.</li>
+    <li><strong>Pick an exercise by muscle group.</strong> Tap <strong>Add exercise</strong>. The full-screen picker is grouped by muscle-group chips — Chest, Back, Shoulders, Biceps, Triceps, Forearms, Core, Quads, Hamstrings, Glutes, Calves and Full body — with search, your recent exercises, and the option to create a custom exercise if the one you need is not in the library of more than 190. Search matches names, muscles and gym slang, so “bicep”, “lats” or “abs machine” all work, and “life fitness” or “hammer strength” lists those machines.</li>
+    <li><strong>Last time, filled in.</strong> The exercise appears with last session’s sets already filled in as a starting point. Change whatever is different today.</li>
+    <li><strong>Log sets.</strong> Each set row has a weight stepper that moves by your chosen increment, a reps stepper and a tick to mark the set done. Tap the weight or reps to type a number instead. Ticking the last set adds the next one, prefilled.</li>
+    <li><strong>Rest.</strong> After you tick a set, the rest timer starts on its own and counts down the seconds you set. It stays pinned under the header while you scroll. If you have turned it off in Settings, nothing happens and you carry on.</li>
     <li><strong>Finish.</strong> Tap <strong>Finish</strong>. The summary shows your volume, any personal bests hit and the change in estimated 1RM for each exercise, and the workout is saved.</li>
     <li><strong>Apple Health.</strong> If you have connected Apple Health and turned on <strong>Write workouts</strong>, the completed workout is written to Health as well. It is opt-in and off until you turn it on; see <a href="#health">section 5</a>.</li>
   </ol>
   <p>The workout in progress is saved after every change. If the phone dies, a call comes in or iOS closes the app, you pick up exactly where you were.</p>
+  <h3>During a workout</h3>
+  <ul>
+    <li><strong>Lock.</strong> A ticked set locks, shown by a small padlock, so a stray tap cannot change it. To edit it, tap its tick or its set number and choose <strong>Unlock to edit</strong>.</li>
+    <li><strong>Warm-ups.</strong> Tap a set number to mark it as a warm-up (shown as W) or delete it. Warm-up sets do not count towards volume or records.</li>
+    <li><strong>Reorder.</strong> Use the up and down arrows beside an exercise to move it.</li>
+    <li><strong>Swap for a machine.</strong> The <strong>…</strong> menu beside an exercise offers its machine equivalent — the chest press for a bench press, say. Sets you have already ticked stay with the original exercise, so its history is not rewritten. The same menu fills in last session’s sets again or removes the exercise.</li>
+    <li><strong>Pause.</strong> The pause button beside Finish stops the clock and takes you back, so you can look at your trends mid-session. Home shows the workout as paused; tap it to carry on, and the clock restarts.</li>
+  </ul>
 
   <div class="section"><h2 id="templates">3. Templates and history</h2></div>
-  <p>A template is a saved list of exercises — “Push day”, say — that you can start a workout from, so a routine you repeat does not have to be rebuilt each time.</p>
-  <p>The quickest way to make one is from a workout you have already done: open it in the <strong>History</strong> list on the Train tab and choose <strong>Duplicate as template</strong>. From then on it appears as a choice when you tap Start workout.</p>
-  <p>History lists every saved workout with per-workout detail. Swipe a workout to delete it.</p>
+  <p>A template is a saved list of exercises — “Push day”, say — that you can start a workout from, so a routine you repeat does not have to be rebuilt each time. Build one on the Train tab, start from a starter programme, or save any finished workout as a template: you are asked for its name.</p>
+  <p>When you start a template, Sinew asks where the sets should come from: <strong>last session’s sets and weights</strong>, the <strong>template defaults</strong>, or <strong>sets and reps only</strong> with no weights. It only asks when there is a real choice.</p>
+  <p>When you finish a workout started from a template, you can save that session’s sets, weights and reps as the template’s defaults, so next time starts from today. The template editor shows each exercise’s defaults, such as 3 × 8 · 60 kg.</p>
+  <p>History lists every saved workout with per-workout detail. Open one to repeat it, save it as a template or delete it.</p>
 
   <div class="section"><h2 id="cardio">4. Cardio</h2></div>
   <p>On the <strong>Cardio</strong> tab, tap to log a session: the activity (run, bike, row, swim, walk, HIIT or other), duration, distance, average heart rate, RPE and notes. Distance follows the unit you set in Settings, kilometres or miles.</p>
   <p>Out of that you get your weekly load in minutes and distance, a pace trend for each activity, and your best efforts. The trend reads all of your history.</p>
   <h3>Importing from Apple Health</h3>
-  <p>Workouts recorded by an Apple Watch or by another app can be imported from Apple Health, so a tracked run does not have to be typed in again. Imports are de-duplicated: a workout that is already in Sinew is not added a second time. Connect Apple Health first, as described next.</p>
+  <p>Workouts recorded by an Apple Watch or by another app can be imported from Apple Health, so a tracked run does not have to be typed in again. Imports are de-duplicated: a workout that is already in Sinew is not added a second time, and a session you logged in Sinew is not counted again when your watch's copy of it syncs. This also works for a session logged later for an earlier day, matched by activity, date and length. Connect Apple Health first, as described next.</p>
 
   <div class="section"><h2 id="health">5. Apple Health</h2></div>
   <p>Entirely optional, and read natively on the device through HealthKit — no sign-in, no relay, no network. Go to <strong>Settings → Apple Health</strong>, tap <strong>Connect</strong>, and tap Allow for the categories you want to share on Apple's permission sheet.</p>
